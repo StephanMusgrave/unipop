@@ -38,3 +38,28 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'devise'
+
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk'
+gem 'bootstrap-sass'
+gem 'thin'
+gem 'websocket-rails'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'poltergeist'
+  gem "factory_girl_rails"
+  gem 'capybara-email'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+end
+
+

@@ -1,0 +1,19 @@
+
+<%= form_for @listing, html: { multipart: true } do |f| %>
+
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+
+	<%= f.label :price %>
+	<%= f.text_field :price %>
+
+	<%= f.label :location %>
+	<%= f.text_field :location %>
+
+	<% if @listing.new_record? %>
+	  <%= f.submit "Add my stuff" %>
+	<% else %>	
+		<%= f.submit "Confirm edits" %> 
+	<% end %>
+
+<% end %>

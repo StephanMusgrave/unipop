@@ -3,7 +3,6 @@ Given(/^I am on the home page$/) do
 end
 
 Given(/^there are no listings$/) do
-  
 end
 
 Then(/^I should see the message "(.*?)"$/) do |content|

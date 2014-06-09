@@ -56,7 +56,7 @@ group :development, :test do
   gem "factory_girl_rails"
   gem 'capybara-email'
   gem 'cucumber'
-  gem 'cucumber-rails'	
+  gem 'cucumber-rails', require: false
 end
 
 group :production do

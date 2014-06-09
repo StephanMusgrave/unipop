@@ -1,0 +1,7 @@
+<% if @all_listings.any? %>
+	<% @all_listings.each do |listing| %>
+		<%= listing.description %>
+	<% end %>
+<% else %>
+	There are no items yet
+<% end %>

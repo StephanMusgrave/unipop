@@ -57,7 +57,6 @@ group :development, :test do
   gem 'capybara-email'
   gem 'cucumber'
   gem 'cucumber-rails'	
-
 end
 
 group :production do

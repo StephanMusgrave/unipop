@@ -55,6 +55,9 @@ group :development, :test do
   gem 'poltergeist'
   gem "factory_girl_rails"
   gem 'capybara-email'
+  gem 'cucumber'
+  gem 'cucumber-rails'	
+
 end
 
 group :production do

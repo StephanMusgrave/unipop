@@ -33,7 +33,7 @@ Features / Layout
 
 Homepage - grid layout - aligned photos no text - individual pics link to item page - search by tags - add new item - user dashboard - sign up - sign in - logout.
 
-Item Page - main pic - other pics in background (swipe to access) - price - distance from buyer - description - tags - I want it button - seller profile link
+Item Page - main pic - other pics in background (swipe to access) - price - distance from buyer - description - tags - I want it button - seller profile link - edit button (visible to seller only)
 
 I want it Page v1 - (no other buyers yet) Buyer/seller chat page - end negotiation - placeholder? [NTH] green dot to indicate if online
 

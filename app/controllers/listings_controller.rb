@@ -5,6 +5,9 @@ class ListingsController < ApplicationController
 
 	def new
 		@listing = Listing.new
-		puts @listing.inspect
+	end
+
+	def edit
+		@listing = Listing.find params[:id]
 	end
 end

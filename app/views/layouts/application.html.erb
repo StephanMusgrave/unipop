@@ -8,6 +8,10 @@
 </head>
 <body>
 
+<% if user_signed_in? %>
+	Logged in in as <%= current_user.email %>
+<% end %>
+
 <%= yield %>
 
 </body>

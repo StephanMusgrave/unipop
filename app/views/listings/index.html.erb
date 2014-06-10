@@ -2,6 +2,8 @@
 <% if @all_listings.any? %>
 	<% @all_listings.each do |listing| %>
 		<%= listing.description %>
+		<%= listing.price %>
+		<%= listing.location %>
 		<%= listing.id %>
 	<% end %>
 <% else %>

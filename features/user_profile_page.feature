@@ -25,7 +25,7 @@ Scenario: Can only change your own profile picture
 Scenario: Signing out
 	Given I visit Ollie's page
 	Then I click on "Sign out"
-	And I should be signed out	
+	And I should be signed out
 
 Scenario: Visiting a user profile when not signed in
 	Given I visit Ollie's page

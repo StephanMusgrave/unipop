@@ -250,7 +250,6 @@ DEPENDENCIES
   capybara
   capybara-email
   coffee-rails (~> 4.0.0)
-  cucumber
   cucumber-rails
   database_cleaner
   devise

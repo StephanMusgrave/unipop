@@ -19,7 +19,7 @@ Scenario: Uploading a profile picture
 	And I should not see a default profile picture
 
 Scenario: Can only change your own profile picture
-	Given I visit Louise's profile
+	Given I visit Louise's page
 	Then I should not see "Update User"
 
 Scenario: Signing out

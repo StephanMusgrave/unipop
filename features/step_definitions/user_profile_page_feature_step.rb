@@ -6,7 +6,7 @@ Then(/^I should see "(.*?)"$/) do |words|
   expect(page).to have_content words
 end
 
-Then(/^I should see a profile picutre$/) do
+Then(/^I should see a profile picture$/) do
   expect(page).to have_css 'img.profile-picture'
 end
 
@@ -39,4 +39,10 @@ Given(/^I visit "(.*?)"$/) do |page_path|
 	visit "/#{page_path}"
 
 end
+
+Given(/^I upload a profile picture$/) do
+	attach_file("profile-picture", Rails.root.join('spec/images/profile_picture.jpg'))
+end
+
+
 

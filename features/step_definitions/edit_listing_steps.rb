@@ -23,7 +23,8 @@ Then(/^I click save changes$/) do
   click_on 'Save'
 end
 
-Then(/^I should see my revised listing on the home page$/) do
+Then(/^I should see my revised listing$/) do
   expect(page).to have_content "Makers Notebook - hardly used - for sale"
   expect(page).to have_content "0.45"
 end
+

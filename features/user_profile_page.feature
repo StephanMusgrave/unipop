@@ -19,7 +19,7 @@ Scenario: Uploading a profile picture
 	And I should not see a default profile picture
 
 Scenario: Can only change your own profile picture
-	Given I visit Louise's profile
+	Given I visit Louise's page
 	Then I should not see "Update User"
 
 Scenario: Signing out
@@ -27,7 +27,7 @@ Scenario: Signing out
 	Then I click on "Sign out"
 	And I should be signed out
 
-Scenario: Visiting a user profile when not signed in
+Scenario: You cannot visit a user profile unless signed in
 	Given I visit Ollie's page
 	Then I click on "Sign out"
 	Then I visit Ollie's page

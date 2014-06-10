@@ -7,15 +7,15 @@ end
 
 Then(/^I click delete$/) do
   visit listing_path @my_listing
+  page.evaluate_script('window.confirm = function() { return true; }')
   click_on 'Delete'
+
   end
 
-Then(/^I click confirm$/) do
-  click_link 'Confirm'
+Then(/^I click OK to confirm$/) do
+  expect(current_path).to eq '/listings'
 end
 
 Then(/^I should not see my listing$/) do
-  expect(current_path).to eq '/'
-
   expect(page).not_to have_content 'Makers Notebook for sale'
 end

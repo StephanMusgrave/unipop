@@ -5,6 +5,9 @@
 # files.
 ENV["RAILS_ENV"] = 'test'
 require 'cucumber/rails'
+require_relative 'database_cleaner'
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
 
 
 # Capybara defaults to CSS3 selectors rather than XPath.

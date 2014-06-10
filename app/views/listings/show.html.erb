@@ -6,4 +6,5 @@
 	<%= @listing.location %>
 
 <%=link_to 'Edit', edit_listing_path %>
-<%=link_to 'Delete', listing_path(@listing), method: :delete %>
+<%=link_to 'Delete', listing_path(@listing), method: :delete, data: {
+ confirm: 'Confirm'} %>

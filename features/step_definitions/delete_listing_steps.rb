@@ -11,7 +11,7 @@ Then(/^I click delete$/) do
   end
 
 Then(/^I click confirm$/) do
-  click_on 'confirm'
+  click_link 'Confirm'
 end
 
 Then(/^I should not see my listing$/) do

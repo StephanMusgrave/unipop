@@ -27,7 +27,7 @@ class ListingsController < ApplicationController
   def update
     @listing = Listing.find(params[:id])
     if @listing.update(params[:listing].permit(:description, :price, :location))
-      redirect_to listing_path params[:id]
+      redirect_to '/listings'
     else
     	flash[:notice] = 'Edits not saved'
       render 'edit'
@@ -38,6 +38,6 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
     @listing.destroy
     flash[:notice] = 'Listing successfully deleted'
-    redirect_to '/'
+    redirect_to '/listings'
   end
 end

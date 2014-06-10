@@ -55,7 +55,6 @@ group :test do
   gem 'poltergeist'
   gem "factory_girl_rails"
   gem 'capybara-email'
-  gem 'cucumber'
   gem 'cucumber-rails', require: false
 end
 

@@ -45,4 +45,11 @@ Given(/^I upload a profile picture$/) do
 end
 
 
+Then(/^I should be signed out$/) do
+	expect(the_user.signed_in?).to be false
+end
+
+
+
+
 

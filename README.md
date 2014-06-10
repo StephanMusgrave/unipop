@@ -37,7 +37,10 @@ Sign Up Page
 
 Public Profile Page
 -------------------
- - first name + last name initial - list of items for sale - [NTH] add as a favourite seller - [NTH] Facebook photo
+ - first name + last name initial 
+ - list of items for sale 
+ - [NTH] add as a favourite seller 
+ - [NTH] Facebook photo
 
 Edit Profile Page
 -----------------
@@ -46,11 +49,12 @@ Edit Profile Page
 Login Page
 ----------
  - email address + password / Facebook login
+- [NTH] Search by location for items near to me
+- Rule to keep items for sale fresh - 48hrs days after first I want it click - post is automatically removed from view and deleted 48hrs after that unless seller confirms item still available - reset each time a negotiation is ended by wither seller or buyer
 
-[NTH] Search by location for items near to me
-Rule to keep items for sale fresh - 48hrs days after first I want it click - post is automatically removed from view and deleted 48hrs after that unless seller confirms item still available - reset each time a negotiation is ended by wither seller or buyer
+- Once seller clicks ‘sold’ then for unsuccessful buyers who were waiting then item shows as sold on their dashboard.
 
-Once seller clicks ‘sold’ then for unsuccessful buyers who were waiting - item shows as sold on their dashboard.
+
 
 
 

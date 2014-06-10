@@ -48,7 +48,7 @@ gem 'websocket-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 
-group :development, :test do
+group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner'

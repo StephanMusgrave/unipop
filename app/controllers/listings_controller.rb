@@ -7,10 +7,8 @@ class ListingsController < ApplicationController
 		@listing = Listing.new
 	end
 
-
-
 	def show
-		@listing
+		@listing = Listing.find params[:id]
 	end
 
 	def edit
@@ -20,7 +18,7 @@ class ListingsController < ApplicationController
   def update
     @listing = Listing.find(params[:id])
     if @listing.update(params[:listing].permit(:description, :price, :location))
-      redirect_to '/listings'
+      redirect_to listing_path params[:id]
     else
     	flash[:notice] = 'Edits not saved'
       render 'edit'

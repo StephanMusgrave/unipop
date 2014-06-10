@@ -6,4 +6,4 @@ And I want to change something
 Then I click the Edit button
 And I complete the edit form
 And I click save changes
-Then I should see my revised listing on the home page
+Then I should see my revised listing

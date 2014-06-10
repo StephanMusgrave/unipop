@@ -9,6 +9,7 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(params['listing'].permit(:description, :price, :location))
+
     if @listing.save
       redirect_to '/'
       else 

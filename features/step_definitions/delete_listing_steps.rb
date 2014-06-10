@@ -16,5 +16,6 @@ end
 
 Then(/^I should not see my listing$/) do
   expect(current_path).to eq '/'
+
   expect(page).not_to have_content 'Makers Notebook for sale'
 end

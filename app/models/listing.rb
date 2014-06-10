@@ -3,5 +3,6 @@ class Listing < ActiveRecord::Base
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   belongs_to :seller, class_name: 'User', foreign_key: 'seller_id'
+  has_and_belongs_to_many :buyers, class_name: 'User', foreign_key: 'buyer_id'
 
 end

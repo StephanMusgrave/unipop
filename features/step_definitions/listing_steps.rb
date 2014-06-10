@@ -1,5 +1,5 @@
 Then(/^the listing should belong to me$/) do
-	expect(seller.listings).to include? "shoes"
+	expect(user.listings).to include? "shoes"
 end
 
 Then(/^the seller of the listing should be me$/) do

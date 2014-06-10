@@ -2,10 +2,6 @@ Given(/^I visit the sign up page$/) do
   visit '/users/sign_up'
 end
 
-Then(/^I should see "(.*?)"$/) do |words|
-  expect(page).to have_content words
-end
-
 Then(/^I should see a profile picture$/) do
   expect(page).to have_css 'img.profile-picture'
 end
@@ -46,7 +42,7 @@ end
 
 
 Then(/^I should be signed out$/) do
-	expect(the_user.signed_in?).to be false
+	expect(page).not_to have_content 'Logged in as ollie@ollie.com'
 end
 
 

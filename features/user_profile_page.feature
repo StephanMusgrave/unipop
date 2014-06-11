@@ -38,3 +38,5 @@ Scenario: View user's items for sale
 	Given Ollie has one item for sale
 	When I visit Ollie's page
 	Then I should see "1 item for sale"
+
+Scenario:

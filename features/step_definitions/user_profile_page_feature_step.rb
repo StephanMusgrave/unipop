@@ -63,7 +63,7 @@ end
 
 And(/^Ollie has (\d+) listing for sale$/) do |listing|
 	@listing = Listing.create!({
-		description: 'Makers Notebook for sale',
+		description: 'My lovely shoes',
 		price: 0.35,
 		seller: @user
 	})

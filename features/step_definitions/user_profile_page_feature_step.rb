@@ -63,7 +63,7 @@ end
 
 And(/^Ollie has (\d+) listing for sale$/) do |listing|
 	@listing = Listing.create!({
-		description: 'Makers Notebook for sale',
+		description: 'My lovely shoes',
 		price: 0.35,
 		seller: @user
 	})
@@ -71,4 +71,8 @@ end
 
 Then(/^I should see (\d+) item for sale$/) do |listing|
   expect(page).to have_content('1 item for sale')
+end
+
+Then(/^I should be redirected to an edit page$/) do
+  expect(current_path).to eq('/users/edit')
 end

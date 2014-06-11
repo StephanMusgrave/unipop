@@ -1,8 +1,5 @@
-Given(/^I have a listing$/) do
-	@my_listing = Listing.create({
-		description: 'Makers Notebook for sale',
-		price: 0.35
-	})
+And(/^I have a listing$/) do
+  user_listing
 end
 
 Given(/^I want to change something$/) do
@@ -24,7 +21,12 @@ Then(/^I click save changes$/) do
 end
 
 Then(/^I should see my revised listing$/) do
+  expect(current_path).to eq listing_path @my_listing
   expect(page).to have_content "Makers Notebook - hardly used - for sale"
   expect(page).to have_content "0.45"
+end
+
+Then(/^I should not see an Edit button$/) do
+  expect(page).not_to have_content 'Edit'
 end
 

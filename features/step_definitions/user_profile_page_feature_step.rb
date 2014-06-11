@@ -23,12 +23,12 @@ Given(/^I am already signed in$/) do
 end
 
 def the_user
-	@user = User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
+	@user ||= User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
 end
 
-def the_user2
-	@user2 = User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
-end
+# def the_user2
+# 	@user2 = User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
+# end
 
 Given(/^I visit Ollie's page$/) do
   visit user_path User.find_by(email:'ollie@ollie.com')

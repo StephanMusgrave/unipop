@@ -1,11 +1,12 @@
 <h1>This is your dashboard</h1>
 
 <h2>Listings you want</h2>
-You want 1 items
+
+You want <%= current_user.want_listings.all.count %> items
 
 <%= link_to "Browse", '/' %>
 
 <h2>Listings you are selling</h2>
-You are selling 1 items
+You are selling <%= current_user.sales_listings.all.count %> items
 
 <%= link_to "Add something to sell", 'listings/new' %>

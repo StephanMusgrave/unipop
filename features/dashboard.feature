@@ -5,20 +5,20 @@ Feature: A user's dashboard
 
 Background: Being logged in
 	Given I am already signed in
-	And there is a listing
-	And I visit "dashboard"
+	And I don't have any listings to sell
 
 Scenario: I want no listings
-	Given I don't want any listings
+	Given I visit "dashboard"
 	Then I should see "You want 0 items"
 	And I should see link "Browse"
 
 Scenario: I have no listings to sell
-	Given I don't have any listings to sell
+	And I visit "dashboard"
 	Then I should see "You are selling 0 items"
 	And I should see link "Add something to sell"
 
 Scenario: I have listings for sale
-	Given I have one item for sale
+	And there is a listing
+	And I visit "dashboard"
 	Then I should see "You are selling 1 item"
 

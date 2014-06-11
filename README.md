@@ -3,7 +3,7 @@ Project X
 
 Team members
 ----
-[Emma],[Louise],[Muhanad],[Ollie],[Shelley],[Stefania],[Steve]
+[Emma], [Louise], [Muhanad], [Ollie], [Shelley], [Stefania], [Steve]
 
 Technologies used
 -----------------
@@ -116,12 +116,12 @@ Login Page
 
 [App on Heroku]:http://projectx-makers.herokuapp.com/
 
-[Emma]https://github.com/Em01
+[Emma]:https://github.com/Em01
 [Louise]:https://github.com/loulai
-[Muhanad]https://github.com/muhanad40
-[Ollie]https://github.com/odelevingne
-[Shelley]https://github.com/ShelleyHope
-[Stefania]https://github.com/stefaniacardenas
+[Muhanad]:https://github.com/muhanad40
+[Ollie]:https://github.com/odelevingne
+[Shelley]:https://github.com/ShelleyHope
+[Stefania]:https://github.com/stefaniacardenas
 [Steve]:https://github.com/StephanMusgrave
 
 

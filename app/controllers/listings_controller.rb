@@ -1,8 +1,8 @@
 class ListingsController < ApplicationController
 
-  # TODO: authenticate
-
-	def index
+  before_action :authenticate_user!, except:[:index]
+	
+  def index
 		@all_listings = Listing.all
 	end
 

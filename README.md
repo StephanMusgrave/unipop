@@ -9,16 +9,14 @@ Technologies used
 -----------------
 - Ruby
 - Rails
- - [Heroku]
-- Papertrail
-- New Relic
-- Heroku Secrets
-
- - TDD
-- Cucumber
-- Rspec
-- Capybara
-
+- [Heroku]
+ - Papertrail
+ - New Relic
+ - Heroku Secrets
+- TDD
+ - Cucumber
+ - Rspec
+ - Capybara
 - Postgresql
 - Devise
 - Git

@@ -11,4 +11,7 @@ class User < ActiveRecord::Base
 
   has_many :sales_listings, class_name: 'Listing', foreign_key: 'seller_id'
   has_and_belongs_to_many :want_listings, class_name: 'Listing', foreign_key: 'buyer_id', join_table: 'buyers_listings'
+
+  validates_presence_of :first_name, :last_name
+
 end

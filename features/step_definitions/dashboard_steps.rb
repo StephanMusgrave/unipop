@@ -17,3 +17,7 @@ And(/there is a listing/) do
 end
 
 
+Given(/^I don't have any listings to sell$/) do
+  
+end
+

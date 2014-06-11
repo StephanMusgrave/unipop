@@ -8,7 +8,13 @@ Background: Being logged in
 	And there is a listing
 	And I visit "dashboard"
 
-Scenario: No listings that I want
+Scenario: I want no listings
 	Given I don't want any listings
 	Then I should see "You want 0 items"
 	And I should see link "Browse"
+
+Scenario: I have no listings to sell
+	Given I don't have any listings to sell
+	Then I should see "You are selling 0 items"
+	And I should see link "Add something to sell"
+

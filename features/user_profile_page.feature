@@ -39,4 +39,4 @@ Scenario: View user's items for sale
 	When I visit Ollie's page
 	Then I should see "1 item for sale"
 
-Scenario:
+	

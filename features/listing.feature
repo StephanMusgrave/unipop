@@ -1,5 +1,5 @@
 Feature: A listing
-	In order do stuff with the relationship between a seller and a listing
+	In order to do stuff with the relationship between a seller and a listing
 	As a listing
 	A listing should know that it has a seller
 

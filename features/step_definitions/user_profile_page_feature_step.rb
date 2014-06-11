@@ -23,7 +23,7 @@ Given(/^I am already signed in$/) do
 end
 
 def the_user
-	user = User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
+	@user = User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
 end
 
 def the_user2
@@ -37,7 +37,6 @@ end
 
 Given(/^I visit "(.*?)"$/) do |page_path|
 	visit "/#{page_path}"
-
 end
 
 Given(/^I upload a profile picture$/) do
@@ -61,8 +60,5 @@ end
 Then(/^I should not see "(.*?)"$/) do |content|
 	expect(page).not_to have_content('Update User')
 end
-
-
-
 
 

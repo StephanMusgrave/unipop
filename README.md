@@ -1,11 +1,45 @@
 Project X
 === 
 
+Team members
+----
+[Emma], [Louise], [Muhanad], [Ollie], [Shelley], [Stefania] and [Steve]
+
 Technologies used
 -----------------
- - Heroku
-- Paperclip
+- Ruby
+- Rails
+ - [Heroku]
+- Papertrail
 - New Relic
+- Heroku Secrets
+
+ - TDD
+- Cucumber
+- Rspec
+- Capybara
+
+- Postgresql
+- Devise
+- Git
+- Paperclip
+- HTML5
+- CSS3
+
+Production version:
+----
+[App on Heroku]
+
+
+To run the development version:
+----
+```sh
+git clone git@github.com:StephanMusgrave/ProjectX.git
+cd projectx
+bin/rake db:migrate
+bin/rails server
+open http://localhost:3000/
+```
 
 Features / Layout
 -----------------
@@ -20,7 +54,7 @@ Homepage
 - user dashboard 
 - sign up 
 - sign in 
-- logout.
+- logout
 
 Item Page
 ---------
@@ -89,8 +123,15 @@ Login Page
 - Once seller clicks ‘sold’ then for unsuccessful buyers who were waiting then item shows as sold on their dashboard.
 
 
+[App on Heroku]:http://projectx-makers.herokuapp.com/
 
-
+[Emma]:https://github.com/Em01
+[Louise]:https://github.com/loulai
+[Muhanad]:https://github.com/muhanad40
+[Ollie]:https://github.com/odelevingne
+[Shelley]:https://github.com/ShelleyHope
+[Stefania]:https://github.com/stefaniacardenas
+[Steve]:https://github.com/StephanMusgrave
 
 
 This README would normally document whatever steps are necessary to get the

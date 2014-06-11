@@ -1,13 +1,12 @@
-Given(/^I want to delete my listing$/) do
+And(/^I visit my listing$/) do
   user_listing
 end
 
-Then(/^I click delete$/) do
+And(/^I click delete$/) do
   visit listing_path @my_listing
   # page.evaluate_script('window.confirm = function() { return true; }')
   click_on 'Delete'
-  
-  end
+end
 
 And(/^I click OK to confirm$/) do
   expect(current_path).to eq '/listings'

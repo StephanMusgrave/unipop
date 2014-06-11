@@ -6,6 +6,7 @@ Feature: A user's dashboard
 Background: Being logged in
 	Given I am already signed in
 	And there is a listing
+	And I visit "dashboard"
 
 Scenario: No listings that I want
 	Given I don't want any listings

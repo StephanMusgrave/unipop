@@ -3,17 +3,26 @@ Project X
 
 Team members
 ----
-[Emma], [Louise], [Muhanad], [Ollie], [Shelley], [Stefania], [Steve]
+[Emma], [Louise], [Muhanad], [Ollie], [Shelley], [Stefania] and [Steve]
 
 Technologies used
 -----------------
+- Ruby
+- Rails
  - [Heroku]
-- Paperclip
+- Papertrail
 - New Relic
+- Heroku Secrets
+
+ - TDD
+- Cucumber
+- Rspec
+- Capybara
 
 - Postgresql
 - Devise
 - Git
+- Paperclip
 - HTML5
 - CSS3
 

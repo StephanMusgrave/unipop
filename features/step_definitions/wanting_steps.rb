@@ -11,7 +11,6 @@ Then(/^I should be able to want a listing$/) do
 end
 
 Then(/^the listing should show I am on the waitlist$/) do
-  # expect(current_user.want_listing).to eq
   expect(current_path).to eq listing_path @listing
   expect(page).not_to have_link 'I want it!'
 end

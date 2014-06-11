@@ -4,7 +4,10 @@
   <%= @listing.description %>
 	<%= @listing.price %>
 	<%= @listing.location %>
-	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
+
+	<% unless user_signed_in? && current_user.want_listings.include?(@listing) %>
+		<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
+	<% end %>
 
 
 <%=link_to 'Edit', edit_listing_path %>

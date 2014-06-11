@@ -10,5 +10,5 @@ Background: Being logged in
 
 Scenario: No listings that I want
 	Given I don't want any listings
-	Then I should see "Get some stuff man"
+	Then I should see "You want 0 items"
 	And I should see link "Browse"

@@ -27,7 +27,7 @@ def the_user
 end
 
 def the_user2
-	user2 = User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
+	@user2 = User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
 end
 
 Given(/^I visit Ollie's page$/) do

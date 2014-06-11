@@ -34,7 +34,7 @@ Scenario: You cannot visit a user profile unless signed in
 	Then I should see "Sign in"
 
 Scenario: View user's items for sale
-	Given I am signed in
+	Given I am already signed in
 	Given Ollie has one item for sale
 	When I visit Ollie's page
 	Then I should see "1 item for sale"

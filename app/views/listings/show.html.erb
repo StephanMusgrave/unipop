@@ -4,6 +4,7 @@
   <%= @listing.description %>
 	<%= @listing.price %>
 	<%= @listing.location %>
+	<%= image_tag @listing.picture(:medium) , class: 'listing-picture' %>
 	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
 
 

@@ -7,6 +7,27 @@ Technologies used
 - Paperclip
 - New Relic
 
+- Git
+- HTML5
+- CSS3
+
+
+How to run the development version:
+----
+```sh
+git clone git@github.com:StephanMusgrave/ProjectX.git
+cd projectx
+bin/rails server
+open http://localhost:3000/
+```
+How to run the production version:
+----
+```sh
+open http://projectx-makers.herokuapp.com/
+```
+
+
+
 Features / Layout
 -----------------
 

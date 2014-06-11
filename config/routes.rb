@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :listings
+  resources :listings do
+  	resources :buyers
+  end
+  
   root 'listings#index'
 
   devise_for :users

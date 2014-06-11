@@ -3,7 +3,7 @@ Feature: User profile page
 	As a user of this website
 	I want to see a user profile page
 
-Background: I am signed in as Ollie
+Background: I am signed in As Ollie
 	Given I am already signed in
 
 Scenario: Default profile information
@@ -25,7 +25,7 @@ Scenario: Can only change your own profile picture
 Scenario: Signing out
 	Given I visit Ollie's page
 	Then I click on "Sign out"
-	And I should be signed out	
+	And I should be signed out
 
 Scenario: You cannot visit a user profile unless signed in
 	Given I visit Ollie's page

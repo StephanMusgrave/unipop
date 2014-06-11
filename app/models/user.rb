@@ -4,9 +4,14 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
+
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "spec/images/profile_picture.jpg"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   validates_presence_of :first_name, :last_name
+
+  has_many :sales_listings, class_name: 'Listing', foreign_key: 'sales_listing_id'
+  has_many :want_listings, class_name: 'Listing', foreign_key: 'want_listing_id'
 
 end

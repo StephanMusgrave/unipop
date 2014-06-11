@@ -37,7 +37,6 @@ end
 
 Given(/^I visit "(.*?)"$/) do |page_path|
 	visit "/#{page_path}"
-
 end
 
 Given(/^I upload a profile picture$/) do
@@ -61,8 +60,5 @@ end
 Then(/^I should not see "(.*?)"$/) do |content|
 	expect(page).not_to have_content('Update User')
 end
-
-
-
 
 

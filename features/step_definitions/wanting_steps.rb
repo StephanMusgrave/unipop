@@ -8,10 +8,10 @@ end
 
 Then(/^I should be able to want a listing$/) do
   click_on "I want it!"
-  end
+end
 
-Then(/^the listing should add me to the waitlist$/) do
-  expect(listing.buyers).to include current_user
+Then(/^the listing should show I am on the waitlist$/) do
+  expect(@listing.buyers).to include "Ollie" 
 end
 
 def new_listing

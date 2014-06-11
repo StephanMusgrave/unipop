@@ -17,7 +17,6 @@ Then(/^the listing should belong to seller$/) do
 	expect(Listing.last.seller.first_name).to eq "Ollie"
 end
 
-
 Then(/^I can see a picture$/) do
   expect(page).to have_css('img.listing-picture')
 end

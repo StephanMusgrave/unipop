@@ -38,3 +38,8 @@ Scenario: View user's items for sale
 	When I visit Ollie's page
 	Then I should see 1 item for sale
 
+Scenario: The edit button
+	Given I visit Ollie's page
+	And I click on "Edit profile"
+	Then I should be redirected to an edit page
+

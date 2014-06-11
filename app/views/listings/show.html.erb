@@ -4,10 +4,6 @@
 	<%= @listing.price %>
 	<%= @listing.location %>
 	<%= image_tag @listing.picture(:medium) , class: 'listing-picture' %>
-	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
-	<%= @listing.description %>
-	<%= @listing.price %>
-	<%= @listing.location %>
 
 <% unless user_signed_in? && current_user.want_listings.include?(@listing) %>
 	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>

@@ -34,3 +34,9 @@ Scenario: Visiting a user profile when not signed in
 	Then I click on "Sign out"
 	Then I visit Ollie's page
 	Then I should see "Sign in"
+
+Scenario: View user's items for sale
+	Given I am signed in
+	Given Ollie has one item for sale
+	When I visit Ollie's page
+	Then I should see "1 item"

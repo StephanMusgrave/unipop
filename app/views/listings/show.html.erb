@@ -1,0 +1,11 @@
+<!-- need to add in if statement around current_user==@listing.user -->
+
+
+  <%= @listing.description %>
+	<%= @listing.price %>
+	<%= @listing.location %>
+
+
+<%=link_to 'Edit', edit_listing_path %>
+<%=link_to 'Delete', listing_path(@listing), method: :delete, data: {
+ confirm: 'OK'} %>

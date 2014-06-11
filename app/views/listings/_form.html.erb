@@ -1,0 +1,23 @@
+<% if @listing.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this post from being saved:</h2>
+<% end %>
+
+<%= form_for @listing, html: { multipart: true } do |f| %>
+
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+
+	<%= f.label :price %>
+	<%= f.text_field :price %>
+
+	<%= f.label :location %>
+	<%= f.text_field :location %>
+
+	<% if @listing.new_record? %>
+  <%= f.submit "Add my stuff" %>
+  <% else %>
+  <%= f.submit "Save" %>
+	<% end %>
+
+<% end %>

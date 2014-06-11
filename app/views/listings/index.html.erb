@@ -1,0 +1,11 @@
+<%= link_to '+', new_listing_path %>	
+<% if @all_listings.any? %>
+	<% @all_listings.each do |listing| %>
+		<%= link_to listing.description, listing_path(listing) %>
+		<%= listing.price %>
+		<%= listing.location %>
+		<%= listing.id %> <br>
+	<% end %>
+<% else %>
+	There are no items yet
+<% end %>

@@ -34,7 +34,7 @@ def user_listing
     seller_id: @user.id
   })
 end
-
+  
 def another_user_listing
   the_user2
   @another_listing = Listing.create({

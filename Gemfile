@@ -46,7 +46,7 @@ gem 'bootstrap-sass'
 gem 'thin'
 gem 'websocket-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-
+gem 'newrelic_rpm'
 
 group :test do
   gem 'rspec-rails'

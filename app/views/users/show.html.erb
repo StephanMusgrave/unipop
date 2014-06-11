@@ -15,4 +15,10 @@
 
 <%= link_to "Sign out", destroy_user_session_path, method: :delete%>
 
-0 items for sale
+<p> 
+	<%= pluralize(@user_listings.count, 'item') %> for sale
+</p>
+<% @user_listings.each do |listing| %>
+	<%= listing.description %>
+	<!-- it display the listing description, will change this to picture as soon as we have a picture field -->
+<% end %>

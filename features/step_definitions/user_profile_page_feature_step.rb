@@ -61,4 +61,14 @@ Then(/^I should not see "(.*?)"$/) do |content|
 	expect(page).not_to have_content('Update User')
 end
 
+And(/^Ollie has (\d+) listing for sale$/) do |listing|
+	@listing = Listing.create!({
+		description: 'Makers Notebook for sale',
+		price: 0.35,
+		seller: @user
+	})
+end
 
+Then(/^I should see (\d+) item for sale$/) do |listing|
+  expect(page).to have_content('1 item for sale')
+end

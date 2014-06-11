@@ -14,5 +14,10 @@ end
 
 Given(/^I don't have any listings to sell$/) do
   expect(@user.want_listings.count).to eq 0
+
+end
+
+Given(/^I have one item for sale$/) do
+  expect(@user.sell_listings.count).to eq 1  
 end
 

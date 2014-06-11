@@ -3,7 +3,7 @@ Feature: User profile page
 	As a user of this website
 	I want to see a user profile page
 
-Background: I am signed in as Ollie
+Background: I am signed in As Ollie
 	Given I am already signed in
 
 Scenario: Default profile information

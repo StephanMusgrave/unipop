@@ -1,6 +1,12 @@
 Project X
 === 
 
+Technologies used
+-----------------
+ - Heroku
+- Paperclip
+- New Relic
+
 Features / Layout
 -----------------
 

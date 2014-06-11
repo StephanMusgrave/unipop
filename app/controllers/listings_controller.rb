@@ -1,4 +1,7 @@
 class ListingsController < ApplicationController
+
+  # TODO: authenticate
+
 	def index
 		@all_listings = Listing.all
 	end
@@ -7,7 +10,7 @@ class ListingsController < ApplicationController
 		@listing = Listing.new
 	end
 
-  def create
+  def create    
     @listing = Listing.new(params['listing'].permit(:description, :price, :location))
     @listing.seller = current_user
 

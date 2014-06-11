@@ -8,6 +8,8 @@ Feature: Wanting an item
     And I want to buy some stuff
     Then I should be able to want a listing
 
-    And the listing should add me to the waitlist
+    And the listing should show I am on the waitlist
+
+
     
 

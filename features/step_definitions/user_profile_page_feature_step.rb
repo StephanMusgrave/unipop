@@ -23,7 +23,7 @@ Given(/^I am already signed in$/) do
 end
 
 def the_user
-	@user = User.create(id: 5 , email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
+	@user = User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
 end
 
 def the_user2
@@ -37,7 +37,6 @@ end
 
 Given(/^I visit "(.*?)"$/) do |page_path|
 	visit "/#{page_path}"
-
 end
 
 Given(/^I upload a profile picture$/) do
@@ -63,16 +62,13 @@ Then(/^I should not see "(.*?)"$/) do |content|
 end
 
 And(/^Ollie has (\d+) listing for sale$/) do |listing|
-	@listing = Listing.create({
+	@listing = Listing.create!({
 		description: 'Makers Notebook for sale',
 		price: 0.35,
-		seller_id: 5
+		seller: @user
 	})
 end
 
 Then(/^I should see (\d+) item for sale$/) do |listing|
   expect(page).to have_content('1 item for sale')
 end
-
-
-

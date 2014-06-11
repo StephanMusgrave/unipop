@@ -8,10 +8,12 @@ end
 
 Then(/^I should be able to want a listing$/) do
   click_on "I want it!"
-  end
+end
 
-Then(/^the listing should add me to the waitlist$/) do
-  expect(listing.buyers).to include current_user
+Then(/^the listing should show I am on the waitlist$/) do
+  # expect(current_user.want_listing).to eq
+  expect(current_path).to eq listing_path @listing
+  expect(page).not_to have_link 'I want it!'
 end
 
 def new_listing
@@ -20,3 +22,4 @@ def new_listing
     price: 0.35
   })
 end
+

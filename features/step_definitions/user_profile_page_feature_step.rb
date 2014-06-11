@@ -23,11 +23,11 @@ Given(/^I am already signed in$/) do
 end
 
 def the_user
-	user = User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
+	@user = User.create(id: 5 , email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
 end
 
 def the_user2
-	user2 = User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
+	@user2 = User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
 end
 
 Given(/^I visit Ollie's page$/) do
@@ -62,7 +62,17 @@ Then(/^I should not see "(.*?)"$/) do |content|
 	expect(page).not_to have_content('Update User')
 end
 
+And(/^Ollie has (\d+) listing for sale$/) do |listing|
+	@listing = Listing.create({
+		description: 'Makers Notebook for sale',
+		price: 0.35,
+		seller_id: 5
+	})
+end
 
+Then(/^I should see (\d+) item for sale$/) do |listing|
+  expect(page).to have_content('1 item for sale')
+end
 
 
 

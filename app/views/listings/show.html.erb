@@ -9,9 +9,7 @@
 	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
 <% end %>
 
-
-<%=link_to 'Edit', edit_listing_path %>
-
 <% if current_user == @listing.seller %>
+	<%=link_to 'Edit', edit_listing_path %>
 	<%=link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'OK'} %>
 <% end %>

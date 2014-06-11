@@ -1,9 +1,5 @@
 Given(/^I want to delete my listing$/) do
-  @my_listing = Listing.create({
-    description: 'Makers Notebook for sale',
-    price: 0.35, 
-    seller_id: @user.id
-  })
+  user_listing
 end
 
 Then(/^I click delete$/) do
@@ -29,6 +25,14 @@ end
 
 Then(/^I should not see a delete button$/) do
   expect(page).not_to have_content 'Delete'
+end
+
+def user_listing
+    @my_listing = Listing.create({
+    description: 'Makers Notebook for sale',
+    price: 0.35, 
+    seller_id: @user.id
+  })
 end
 
 def another_user_listing

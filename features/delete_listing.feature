@@ -2,9 +2,9 @@ Feature: Delete listing
 @javascript
 
 Scenario: Deleting my own listing
-	Given I am already signed in
-  And I want to delete my listing
-  Then I click delete 
+  Given I am already signed in
+  And I visit my listing
+  And I click delete 
   And I click OK to confirm
   Then I should not see my listing
 

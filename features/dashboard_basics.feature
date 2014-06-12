@@ -43,11 +43,6 @@ Scenario: Ollie has two listings for sale
 	And Ollie visits "dashboard"
 	Then Ollie should see "You are selling 2 items."
 
-Scenario: Ollie can see descriptions of the two listings he has for sale
-	And Ollie has one football and one bike for sale
-	And Ollie visits "dashboard"
-	Then Ollie should see "a football"
-	Then Ollie should see "fabulous bike"
 
 
 

@@ -3,13 +3,25 @@ Feature: Wanting an item
   As a user
   I can register my interest
 
-Scenario: Trying to buy as the first buyer
+Background: Being logged in with another user's item for sale
 	Given Ollie is signed in
 	And Louise has one notebook for sale
+
+Scenario: Trying to buy as the first buyer
 	And Ollie is on the home page
 	And Ollie clicks on Louise's listing
 	And Ollie clicks 'I want it!'
 	Then Ollie enters a chatroom to speak with Louise
+
+Scenario: Trying to buy as the second buyer of a listing
+	Given Steve has clicked 'I want it!' on Louise's listing
+	And Ollie is on the home page
+	And Ollie clicks on Louise's listing
+	And Ollie clicks 'I want it!'
+	Then Ollie is referred to his dashboard
+	And Ollie is told he's been added to the waitlist
+
+
 
   
 

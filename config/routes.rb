@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :listings do
+    resource :map
   	resources :buyers do
   	  resource :chat
   	end

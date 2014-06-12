@@ -41,6 +41,7 @@ gem 'thin'
 gem 'websocket-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'newrelic_rpm'
+gem 'gmaps4rails', '~> 2.1.2'
 
 group :test do
   gem 'rspec-rails'

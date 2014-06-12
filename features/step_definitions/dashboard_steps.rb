@@ -64,7 +64,7 @@ Then(/^Ollie should see link "(.*?)"$/) do |link_name|
 end
 
 Given(/^Ollie has one football for sale/) do
-  Listing.create(description: "a football", price: "2000", seller: ollie)
+  @ollies_football = Listing.create(description: "a football", price: "2000", seller: ollie)
   expect(ollie.sales_listings.all.count).to eq 1
 end
 

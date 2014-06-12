@@ -62,6 +62,14 @@ Then(/^Ollie is told he's been added to the waitlist$/) do
   expect(page).to have_content "my makers academy black notebook"
 end
 
+Given(/^Ollie clicks on his football listing$/) do
+  click_on @ollies_football.description
+  expect(current_path).to eq listing_path @ollies_football
+end
+
+Then(/^he doesn't see an 'I want it!' button$/) do
+  expect(page).not_to have_content "I want it!"
+end
 
 def shelley
    @shelley ||= User.create(email:'shell@e.com', password:'12345678', password_confirmation:'12345678', first_name:'Shelley', last_name:'Hope')

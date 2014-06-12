@@ -75,7 +75,7 @@ Given(/^Ollie has one football and one bike for sale$/) do
 end
 
 Given(/^Louise has one notebook for sale$/) do
-  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", seller: louise) 
+  louises_notebook 
   expect(louise.sales_listings.all.count).to eq 1 
 end
 
@@ -107,6 +107,10 @@ end
 
 def steve
   @steve ||= User.create(email:'steve@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'steve', last_name:'Musgrave')
+end
+
+def louises_notebook
+  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", seller: louise) 
 end
 
 

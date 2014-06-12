@@ -14,7 +14,6 @@ Scenario: Default profile information
 Scenario: Uploading a profile picture
 	Given I visit Ollie's page
 	And I upload a profile picture
-	And I click on "Update User"
 	Then I should see a profile picture
 	And I should not see a default profile picture
 

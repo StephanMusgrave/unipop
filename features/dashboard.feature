@@ -9,24 +9,30 @@ Background: Being logged in
 
 Scenario: Ollie wants no listings
 	Given Ollie visits "dashboard"
-	Then Ollie should see "You want 0 items"
+	Then Ollie should see "You want 0 items."
 	And Ollie should see link "Browse"
 
 Scenario: Ollie has no listings to sell
 	And Ollie visits "dashboard"
-	Then Ollie should see "You are selling 0 items"
+	Then Ollie should see "You are selling 0 items."
 	And Ollie should see link "Add something to sell"
 
 Scenario: Ollie has one football for sale
-	And Ollie has one football as a listing
+	And Ollie has one football for sale
 	And Ollie visits "dashboard"
-	Then Ollie should see "You are selling 1 item"
+	Then Ollie should see "You are selling 1 item."
 
-Scenario: Ollie has wants
-	And Louise has one notebook as a listing
+Scenario: Ollie wants one listing
+	And Louise has one notebook for sale
 	And Ollie is signed in
 	And Ollie wants Louise's notebook
 	And Ollie visits "dashboard"
-	Then Ollie should see "You want 1 item"
+	Then Ollie should see "You want 1 item."
+
+Scenario: Ollie has two listings for sale
+	And Ollie has one football and one bike for sale
+	And Ollie visits "dashboard"
+	Then Ollie should see "You are selling 2 items."
+
 
 

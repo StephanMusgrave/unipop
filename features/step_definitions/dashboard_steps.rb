@@ -39,8 +39,8 @@ Given(/^Louise Logs in$/) do
   login_as the_user2
 end
 
-#-- Changing 'I' to 'Ollie'
-  # creating users with names, eg. Ollie is not the_user anymore
+#--- Changing 'I' to 'Ollie'
+ #-- creating users with names, eg. ollie is not the_user anymore
 
 Given(/^Ollie is signed in$/) do
   login_as ollie
@@ -63,12 +63,18 @@ Then(/^Ollie should see link "(.*?)"$/) do |link_name|
   expect(page).to have_link(link_name)
 end
 
-Given(/^Ollie has one football as a listing$/) do
+Given(/^Ollie has one football for sale/) do
   Listing.create(description: "a football", price: "2000", seller: ollie)
   expect(ollie.sales_listings.all.count).to eq 1
 end
 
-Given(/^Louise has one notebook as a listing$/) do
+Given(/^Ollie has one football and one bike for sale$/) do
+  Listing.create(description: "a football", price: "2000", seller: ollie)
+  Listing.create(description: "fabulous bike", price: "999", seller: ollie)
+  expect(ollie.sales_listings.all.count).to eq 2
+end
+
+Given(/^Louise has one notebook for sale$/) do
   @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", seller: louise) 
   expect(louise.sales_listings.all.count).to eq 1 
 end

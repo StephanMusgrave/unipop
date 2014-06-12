@@ -3,13 +3,13 @@ Feature: Wanting an item
   As a user
   I can register my interest
 
-  Scenario: Trying to buy
-    Given I am already signed in
-    And I want to buy some stuff
-    Then I should be able to want a listing
+Scenario: Trying to buy
+	Given Ollie is signed in
+	And Louise has one notebook as a listing
+	And Ollie is on the home page
+	And Ollie clicks on Louise's listing
+	And Ollie clicks 'I want it!'
+	Then Ollie enters a chatroom to speak with Louise
 
-    And the listing should show I am on the waitlist
-
-
-    
+  
 

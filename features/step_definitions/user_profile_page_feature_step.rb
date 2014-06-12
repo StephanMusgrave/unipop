@@ -3,7 +3,7 @@ Given(/^I visit the sign up page$/) do
 end
 
 Then(/^I should see a profile picture$/) do
-  expect(page).to have_css 'img.profile-picture'
+  expect(page).to have_css'img.profile-picture'
 end
 
 When(/^I fill in "(.*?)" with "(.*?)"$/) do |field_name, stuff|
@@ -34,15 +34,16 @@ Given(/^I visit Ollie's page$/) do
   visit user_path User.find_by(email:'ollie@ollie.com')
 end
 
-
 Given(/^I visit "(.*?)"$/) do |page_path|
 	visit "/#{page_path}"
 end
 
 Given(/^I upload a profile picture$/) do
-	attach_file("profile-picture", Rails.root.join('spec/images/profile_picture.jpg'))
+	click_on('Edit profile')
+	attach_file("Profile picture", Rails.root.join('spec/images/profile_picture.jpg'))
+	fill_in 'Current password', with: '12345678'
+	click_on('Update')
 end
-
 
 Then(/^I should be signed out$/) do
 	expect(page).not_to have_content 'Logged in as ollie@ollie.com'

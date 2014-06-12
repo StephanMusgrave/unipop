@@ -14,8 +14,8 @@ Rails.application.routes.draw do
 
   resource :dashboard #, :only => [:index]
 
-  devise_for :users
-  resources :users, :only => [:show, :update]
+  devise_for :users, :controllers => { :registrations => "registrations" }
+  resources :users, :only => [:show]
 
 end
 

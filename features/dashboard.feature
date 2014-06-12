@@ -12,6 +12,22 @@ Scenario: Ollie wants no listings
 	Then Ollie should see "You want 0 items."
 	And Ollie should see link "Browse"
 
+Scenario: Ollie wants one listing
+	And Louise has one notebook for sale
+	And Ollie is signed in
+	And Ollie wants Louise's notebook
+	And Ollie visits "dashboard"
+	Then Ollie should see "You want 1 item."
+
+Scenario: Ollie wants two listings
+	And Louise has one notebook for sale
+	And Steve has an iphone for sale
+	And Ollie is signed in
+	And Ollie wants Louise's notebook
+	And Ollie wants Steve's iphone
+	And Ollie visits "dashboard"
+	Then Ollie should see "You want 2 items."
+
 Scenario: Ollie has no listings to sell
 	And Ollie visits "dashboard"
 	Then Ollie should see "You are selling 0 items."
@@ -21,13 +37,6 @@ Scenario: Ollie has one football for sale
 	And Ollie has one football for sale
 	And Ollie visits "dashboard"
 	Then Ollie should see "You are selling 1 item."
-
-Scenario: Ollie wants one listing
-	And Louise has one notebook for sale
-	And Ollie is signed in
-	And Ollie wants Louise's notebook
-	And Ollie visits "dashboard"
-	Then Ollie should see "You want 1 item."
 
 Scenario: Ollie has two listings for sale
 	And Ollie has one football and one bike for sale

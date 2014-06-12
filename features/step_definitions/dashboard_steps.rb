@@ -85,6 +85,16 @@ Given(/^Ollie wants Louise's notebook$/) do
   click_on("I want it!")
 end
 
+Given(/^Steve has an iphone for sale$/) do
+  @steves_iphone = Listing.create(description: "an iphone", price: "50", seller: steve)
+end
+
+Given(/^Ollie wants Steve's iphone$/) do
+visit '/'
+  click_on(@steves_iphone.description)
+  click_on("I want it!")  
+end
+
 def ollie
   @ollie ||= User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
 end
@@ -92,5 +102,12 @@ end
 def louise
   @louise ||= User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
 end
+
+#---------- Creating Steve
+
+def steve
+  @steve ||= User.create(email:'steve@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'steve', last_name:'Musgrave')
+end
+
 
 

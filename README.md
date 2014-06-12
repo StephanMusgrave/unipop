@@ -1,5 +1,5 @@
 Project X
-=== 
+====
 
 Team members
 ----

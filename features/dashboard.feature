@@ -22,3 +22,7 @@ Scenario: I have listings for sale
 	And I visit "dashboard"
 	Then I should see "You are selling 1 item"
 
+Scenario: I have no wants
+	And I visit "dashboard"
+	Then I should see "You want 0 items"
+	And I should see link "Browse"

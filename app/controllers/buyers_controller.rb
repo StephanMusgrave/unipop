@@ -11,4 +11,11 @@ class BuyersController < ApplicationController
 	  	redirect_to new_listing_buyer_chat_path(@listing, current_user)
 	  end
 	end
+
+	def destroy
+	  @listing = Listing.find params[:listing_id]
+	  current_user.want_listings.delete(@listing)
+	  redirect_to '/'
+	  flash[:notice] = "You've just unwanted an item, why not check out some more cool stuff?"
+	end
 end

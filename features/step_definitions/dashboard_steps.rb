@@ -8,7 +8,6 @@ Given(/there is a listing/) do
   expect(the_user.sales_listings.all.count).to eq 1
 end
 
-
 Given(/^I don't have any listings to sell$/) do
   the_user.sales_listings.destroy_all
   expect(the_user.sales_listings.all.count).to eq 0

@@ -3,7 +3,7 @@ Feature: Wanting an item
   As a user
   I can register my interest
 
-Scenario: Trying to buy
+Scenario: Trying to buy as the first buyer
 	Given Ollie is signed in
 	And Louise has one notebook for sale
 	And Ollie is on the home page

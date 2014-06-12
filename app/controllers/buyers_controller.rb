@@ -5,7 +5,7 @@ class BuyersController < ApplicationController
 	  current_user.want_listings << @listing
 
 	  if @listing.buyers.many?
-	  	redirect_to @listing
+	  	redirect_to '/dashboard'
 	  else
 	  	redirect_to new_listing_buyer_chat_path(@listing, current_user)
 	  end

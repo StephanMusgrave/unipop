@@ -38,7 +38,7 @@ Given(/^Ollie clicks 'I want it!'$/) do
 end
 
 Then(/^Ollie enters a chatroom to speak with Louise$/) do
-  expect(current_path).to eq "/listings/#{@louises_notebook.id}/chatroom"
+  expect(current_path).to eq "/listings/#{@louises_notebook.id}/buyers/#{@ollie.id}/chat/new"
 end
 
 

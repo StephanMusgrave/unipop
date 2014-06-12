@@ -11,7 +11,7 @@ class ListingsController < ApplicationController
 	end
 
   def create    
-    @listing = Listing.new(params['listing'].permit(:description, :price, :location, :picture, :hashtags))
+    @listing = Listing.create(params['listing'].permit(:description, :price, :location, :picture, :hashtag_names))
     @listing.seller = current_user
 
     if @listing.save

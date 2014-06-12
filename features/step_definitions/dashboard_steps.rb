@@ -50,9 +50,17 @@ Given(/^Ollie visits "(.*?)"$/) do |page_name|
   visit "/#{page_name}"
 end
 
+Given(/^Ollie visits "(.*?)"$/) do |page_name|
+  visit "/#{page_name}"
+end
+
 Given(/^Ollie is signed in and on the homepage$/) do
   login_as ollie
   visit '/'
+end
+
+Given(/^Ollie is on the correct page to create a listing$/) do
+  visit 'listings/new'
 end
 
 Then(/^Ollie should see "(.*?)"$/) do |stuff|

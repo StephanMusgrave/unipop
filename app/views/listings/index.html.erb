@@ -5,7 +5,10 @@
 		<%= link_to listing.description, listing_path(listing) %>
 		<%= listing.price %>
 		<%= listing.location %>
-		<%= listing.id %> <br>
+		<%= listing.id %>
+		<% listing.hashtags.each do |hashtag| %>
+			<i><%= hashtag.name %></i>
+		<% end %><br>
 	<% end %>
 <% else %>
 	There are no items yet

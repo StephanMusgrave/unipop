@@ -1,8 +1,8 @@
 <h1>This is <%= current_user.first_name.capitalize %>'s dashboard</h1>
 
 <h2>Listings you are selling</h2>
-You are selling <%= pluralize(@sales_listings.count, "item") %>.<br>
 
+You are selling <%= pluralize(@sales_listings.count, "item") %>.<br>
 
 <% @sales_listings.each do |sales_listing| %>
   <%= sales_listing.description %><br>
@@ -12,10 +12,8 @@ You are selling <%= pluralize(@sales_listings.count, "item") %>.<br>
   
 <h2>Listings you want</h2>
 You want <%= pluralize(current_user.want_listings.count, "item") %>.<br>
-
 <% current_user.want_listings.each do |want_listing| %>
   <%= want_listing.description %><br>
 <% end %>
 
 <%= link_to "Browse", '/' %>
-

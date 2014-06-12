@@ -2,7 +2,12 @@ Feature: A search box
 
 Background: Ollie is logged in
 	Given Ollie is signed in
+	And Louise has one notebook for sale
+	And Steve has an iphone for sale
 
-Scenario: searching by hashtags
-	
+Scenario: searching with one hashtag
+	Given Ollie visits the homepage
+	And Ollie enters "notebook" in the search box
+	Then Ollie should see Louise's notebook as a listing
+	And Ollie shouldn't see Steve's iphone as a listing
 

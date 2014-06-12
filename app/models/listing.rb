@@ -17,6 +17,10 @@ class Listing < ActiveRecord::Base
 			hashtag = Hashtag.find_or_create_by(name: one_hashtag)
 			hashtags << hashtag
 		end
-
 	end
+
+# def self.search(search_input)
+# 	splitted_search_terms = search_input.split(', ')
+# 	where("hashtags.each{|hashtag| hashtag.name = ?}", params[:search])
+# end
 end

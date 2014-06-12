@@ -56,7 +56,7 @@ Given(/^Ollie visits "(.*?)"$/) do |page_name|
 end
 
 Then(/^Ollie should see "(.*?)"$/) do |stuff|
-  expect(page).to have_content(stuff)
+  expect(page.body).to have_content(stuff)
 end
 
 Then(/^Ollie should see link "(.*?)"$/) do |link_name|

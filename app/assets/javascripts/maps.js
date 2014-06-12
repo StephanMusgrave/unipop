@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var listingId = $('#map').data('listing.location');
+  var listingId = $('#map').data('listing-id');
 
   if(listingId) {
     $.get('/listings/' + listingId + '.json', function(listing){
@@ -10,7 +10,7 @@ $(document).ready(function(){
       });
 
       GMaps.geocode({
-        address: listing.address,
+        address: listing.location,
         callback: function(results, status) {
           if (status == 'OK') {
             var latlng = results[0].geometry.location;

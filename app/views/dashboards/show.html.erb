@@ -2,11 +2,12 @@
 
 <h2>Listings you want</h2>
 
-You want <%= current_user.want_listings.count %> items
+You want <%= pluralize(current_user.want_listings.count, "item") %>.
+
 
 <%= link_to "Browse", '/' %>
 
 <h2>Listings you are selling</h2>
-You are selling <%= current_user.sales_listings.count %> items
+You are selling <%= pluralize(current_user.sales_listings.count, "item") %>.
 
 <%= link_to "Add something to sell", 'listings/new' %>

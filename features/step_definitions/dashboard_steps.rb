@@ -1,5 +1,3 @@
-
-
 Then(/^I should see link "(.*?)"$/) do |link_name|
   expect(page).to have_link(link_name)
 end
@@ -40,3 +38,53 @@ end
 Given(/^Louise Logs in$/) do
   login_as the_user2
 end
+
+#-- Changing 'I' to 'Ollie'
+  # creating users with names, eg. Ollie is not the_user anymore
+
+Given(/^Ollie is signed in$/) do
+  login_as ollie
+end
+
+Given(/^Ollie doesn't have any listings to sell$/) do
+  ollie.sales_listings.destroy_all
+  expect(ollie.sales_listings.all.count).to eq 0
+end
+
+Given(/^Ollie visits "(.*?)"$/) do |page_name|
+  visit "/#{page_name}"
+end
+
+Then(/^Ollie should see "(.*?)"$/) do |stuff|
+  expect(page).to have_content(stuff)
+end
+
+Then(/^Ollie should see link "(.*?)"$/) do |link_name|
+  expect(page).to have_link(link_name)
+end
+
+Given(/^Ollie has one football as a listing$/) do
+  Listing.create(description: "a football", price: "2000", seller: ollie)
+  expect(ollie.sales_listings.all.count).to eq 1
+end
+
+Given(/^Louise has one notebook as a listing$/) do
+  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", seller: louise) 
+  expect(louise.sales_listings.all.count).to eq 1 
+end
+
+Given(/^Ollie wants Louise's notebook$/) do
+  visit '/'
+  click_on(@louises_notebook.description)
+  click_on("I want it!")
+end
+
+def ollie
+  @ollie ||= User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
+end
+
+def louise
+  @louise ||= User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
+end
+
+

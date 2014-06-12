@@ -4,32 +4,29 @@ Feature: A user's dashboard
 	I want to to see listings that I want and I am selling
 
 Background: Being logged in
-	Given I am already signed in
-	And I don't have any listings to sell
+	Given Ollie is signed in
+	And Ollie doesn't have any listings to sell
 
-Scenario: I want no listings
-	Given I visit "dashboard"
-	Then I should see "You want 0 items"
-	And I should see link "Browse"
+Scenario: Ollie wants no listings
+	Given Ollie visits "dashboard"
+	Then Ollie should see "You want 0 items"
+	And Ollie should see link "Browse"
 
-Scenario: I have no listings to sell
-	And I visit "dashboard"
-	Then I should see "You are selling 0 items"
-	And I should see link "Add something to sell"
+Scenario: Ollie has no listings to sell
+	And Ollie visits "dashboard"
+	Then Ollie should see "You are selling 0 items"
+	And Ollie should see link "Add something to sell"
 
-Scenario: I have listings for sale
-	And there is a listing
-	And I visit "dashboard"
-	Then I should see "You are selling 1 item"
+Scenario: Ollie has one football for sale
+	And Ollie has one football as a listing
+	And Ollie visits "dashboard"
+	Then Ollie should see "You are selling 1 item"
 
-Scenario: I have wants
-	Given Everyone logs out 
-	And Louise Logs in
-	And Louise makes a listing
-	And Everyone logs out
-	And I am already signed in
-	And I want the listing
-	And I visit "dashboard"
-	Then I should see "You want 1 item"
+Scenario: Ollie has wants
+	And Louise has one notebook as a listing
+	And Ollie is signed in
+	And Ollie wants Louise's notebook
+	And Ollie visits "dashboard"
+	Then Ollie should see "You want 1 item"
 
 

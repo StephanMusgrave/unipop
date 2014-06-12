@@ -22,7 +22,14 @@ Scenario: I have listings for sale
 	And I visit "dashboard"
 	Then I should see "You are selling 1 item"
 
-Scenario: I have no wants
+Scenario: I have wants
+	Given Everyone logs out 
+	And Louise Logs in
+	And Louise makes a listing
+	And Everyone logs out
+	And I am already signed in
+	And I want the listing
 	And I visit "dashboard"
-	Then I should see "You want 0 items"
-	And I should see link "Browse"
+	Then I should see "You want 1 item"
+
+

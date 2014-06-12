@@ -4,6 +4,10 @@ class BuyersController < ApplicationController
 	  @listing = Listing.find params[:listing_id]
 	  current_user.want_listings << @listing
 
-	  redirect_to @listing
+	  if @listing.buyers.many?
+	  	redirect_to @listing
+	  else
+	  	redirect_to new_listing_buyer_chat_path(@listing, current_user)
+	  end
 	end
 end

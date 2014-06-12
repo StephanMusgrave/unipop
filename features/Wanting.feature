@@ -5,7 +5,7 @@ Feature: Wanting an item
 
 Scenario: Trying to buy
 	Given Ollie is signed in
-	And Louise has one notebook as a listing
+	And Louise has one notebook for sale
 	And Ollie is on the home page
 	And Ollie clicks on Louise's listing
 	And Ollie clicks 'I want it!'

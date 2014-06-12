@@ -8,8 +8,9 @@
   
 	<%= image_tag @listing.picture(:medium) , class: 'listing-picture' %>
 
-<% unless user_signed_in? && current_user.want_listings.include?(@listing) %>
+<% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>
 	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
+
 <% end %>
 
 <% if current_user == @listing.seller %>

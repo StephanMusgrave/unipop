@@ -1,3 +1,4 @@
+
 Feature: Wanting an item
   In order to buy an item
   As a user
@@ -14,7 +15,7 @@ Scenario: Trying to buy as the first buyer
 	Then Ollie enters a chatroom to speak with Louise
 
 Scenario: Trying to buy as the second buyer of a listing
-	Given Steve has clicked 'I want it!' on Louise's listing
+	Given Shelley has clicked 'I want it!' on Louise's listing
 	And Ollie is on the home page
 	And Ollie clicks on Louise's listing
 	And Ollie clicks 'I want it!'

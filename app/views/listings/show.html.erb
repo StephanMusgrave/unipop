@@ -5,7 +5,10 @@
 	<%= @listing.location %>
   <div id='map' data-listing-id='<%= @listing.id %>'>
   </div>
-  
+  <% if @current_location %>
+  	<%= @current_location %>
+  	<%= @listing.distance_from(@current_location) %>
+  <% end %>
 	<%= image_tag @listing.picture(:medium) , class: 'listing-picture' %>
 
 <% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>

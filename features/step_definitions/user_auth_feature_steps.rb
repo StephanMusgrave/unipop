@@ -11,7 +11,7 @@
 # 	expect(current_path).to eq '/'
 # end
 
-# Given(/^I sign up with a anvalid email$/) do
+# Given(/^I sign up with a invalid email$/) do
 # 	fill_in 'First name', with: 'Ollie'
 # 	fill_in 'Last name', with: 'Invalid'
 # 	fill_in 'Email', with: 'ollie@hotmail.com'

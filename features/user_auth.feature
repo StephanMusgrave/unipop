@@ -11,5 +11,5 @@ Scenario: Login with a valid email
 	Then I should be redirected to the homepage
 
 Scenario: Login with an invalid email
-	And I sign up with a anvalid email
+	And I sign up with a invalid email
 	Then I should be see 'Email is invalid'

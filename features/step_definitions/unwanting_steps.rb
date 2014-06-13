@@ -10,7 +10,7 @@ Then(/^Ollie clicks 'Changed my mind'$/) do
 	click_on 'Changed my mind'
 end
 
-Then(/^he is taken to the home page to begin browsing again$/) do
+Then(/^he is taken to the homepage to begin browsing again$/) do
 	expect(current_path).to eq '/'
 end
 

@@ -98,7 +98,6 @@ Then(/^Ollie shouldn't see Steve's iphone as a listing$/) do
   expect(page).not_to have_content(@steves_iphone.description)
 end
 
-
 #------- Stuff to do with Louise
 Given(/^Louise has one notebook for sale$/) do
   @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", hashtag_names: "notebook, black", seller: louise)

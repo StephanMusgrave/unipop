@@ -8,9 +8,6 @@
 	<%= f.label :description %>
 	<%= f.text_field :description %>
 
-	<%= f.label :hashtags %>	
-	<%= f.text_field :hashtags %>
-
 	<%= f.label :price %>
 	<%= f.text_field :price %>
 
@@ -19,6 +16,9 @@
 
 	<%= f.label :picture %>	
 	<%= f.file_field :picture %>
+
+	<%= f.label :hashtag_names, "Hashtags" %>	
+	<%= f.text_field :hashtag_names %>
 
 	<% if @listing.new_record? %>
   <%= f.submit "Add my stuff" %>

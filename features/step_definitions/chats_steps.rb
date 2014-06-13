@@ -15,19 +15,12 @@ Then(/^Ollie sees "(.*?)" in the chat field$/) do |content|
   find("input[placeholder=#{content}]")
 end
 
-Given(/^Ollie opens the chat with "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given(/^Ollie fills in the chat field with "(.*?)"$/) do |content|
+fill_in 'comment', :with => content
+
 end
 
-Then(/^Louise sees Ollie's message about her notebook listing$/) do
+
+Then(/^Ollie sees "(.*?)" on the chat page$/) do |arg1|
   pending # express the regexp above with the code you wish you had
 end
-
-Then(/^Louise says "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^Ollie says "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-

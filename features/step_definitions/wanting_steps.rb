@@ -7,8 +7,8 @@ Given(/^Ollie clicks on Louise's notebook listing$/) do
   expect(current_path).to eq listing_path @louises_notebook
 end
 
-Given(/^Ollie clicks "I want it!"$/) do
-  click_on "I want it!"
+Given(/^Ollie clicks "(.*?)"$/) do |clicky|
+  click_on clicky
 end
 
 Then(/^Ollie enters chatroom to speak with Louise about her notebook$/) do

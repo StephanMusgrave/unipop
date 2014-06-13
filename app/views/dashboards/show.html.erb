@@ -1,4 +1,5 @@
 <h1>This is <%= current_user.first_name.capitalize %>'s dashboard</h1>
+<%= flash[:notice] %>
 
 <% if @sales_listings.any? %>
 	<h2>Listings you are selling</h2>
@@ -6,6 +7,14 @@
 	<ul>
 		<% @sales_listings.each do |sales_listing| %>
 		  <li><%= sales_listing.description %></li>
+		  <li><% if sales_listing.buyers.count == 0 %>
+		  		  <%= "0 in queue" %>
+          <% elsif sales_listing.buyers.count == 1 %>
+            <%= "1 in queue" %>
+          <% else %>
+            <%= "1+ in queue" %>  
+          <% end %>
+       </li>   
 		<% end %>
 	</ul>
 	<%= link_to "Add something to sell", 'listings/new' %>

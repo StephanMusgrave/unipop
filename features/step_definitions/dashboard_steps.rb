@@ -8,7 +8,6 @@ Given(/there is a listing/) do
   expect(the_user.sales_listings.all.count).to eq 1
 end
 
-
 Given(/^I don't have any listings to sell$/) do
   the_user.sales_listings.destroy_all
   expect(the_user.sales_listings.all.count).to eq 0
@@ -64,7 +63,7 @@ Then(/^Ollie should see link "(.*?)"$/) do |link_name|
 end
 
 Given(/^Ollie has one football for sale/) do
-  Listing.create(description: "a football", price: "2000", seller: ollie)
+  @ollies_football = Listing.create(description: "a football", price: "2000", seller: ollie)
   expect(ollie.sales_listings.all.count).to eq 1
 end
 
@@ -80,7 +79,7 @@ end
 
 #------- Stuff to do with Louise
 Given(/^Louise has one notebook for sale$/) do
-  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", seller: louise) 
+  louises_notebook 
   expect(louise.sales_listings.all.count).to eq 1 
 end
 
@@ -114,6 +113,10 @@ Given(/^Ollie wants Steve's iphone$/) do
 visit '/'
   click_on(@steves_iphone.description)
   click_on("I want it!")  
+end
+
+def louises_notebook
+  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", seller: louise) 
 end
 
 

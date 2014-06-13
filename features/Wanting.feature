@@ -22,7 +22,11 @@ Scenario: Trying to buy as the second buyer of a listing
 	Then Ollie is referred to his dashboard
 	And Ollie is told he's been added to the waitlist
 
-
+Scenario: A user cannot want their own listing
+	Given Ollie has one football for sale
+	And Ollie is on the home page
+	And Ollie clicks on his football listing
+	Then he doesn't see an 'I want it!' button
 
   
 

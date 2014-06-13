@@ -16,6 +16,12 @@ ActiveRecord::Schema.define(version: 20140613150817) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "add_ip_address_to_users", force: true do |t|
+    t.string   "ip_address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "buyers_listings", id: false, force: true do |t|
     t.integer "listing_id", null: false
     t.integer "buyer_id",   null: false
@@ -56,6 +62,11 @@ ActiveRecord::Schema.define(version: 20140613150817) do
   end
 
   add_index "listings", ["seller_id"], name: "index_listings_on_seller_id", using: :btree
+
+  create_table "listings_tags", id: false, force: true do |t|
+    t.integer "listing_id", null: false
+    t.integer "tag_id",     null: false
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

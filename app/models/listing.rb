@@ -15,8 +15,8 @@ class Listing < ActiveRecord::Base
 
 	def hashtag_names=(hashtag_input)
 		return if hashtag_input.blank?
-		formatted_hashtags = hashtag_input.downcase.chars.uniq!.join
-		formatted_hashtags.split(/[\s,|.]+/).each do |one_hashtag|
+		formatted_hashtags = hashtag_input.downcase.split(/[\s,|.]+/).uniq
+ 		formatted_hashtags.each do |one_hashtag|
 			hashtag = Hashtag.find_or_create_by(name: one_hashtag)
 			hashtags << hashtag
 		end

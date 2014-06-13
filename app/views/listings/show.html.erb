@@ -6,11 +6,6 @@
   <div id='map' data-listing-id='<%= @listing.id %>'>
   </div>
 
-  <% if @current_location %>
-  	<%= @current_location %>
-  	<%= @listing.distance_from(@current_location) %>
-  <% end %>
-
 	<%= image_tag @listing.picture(:medium) , class: 'listing-picture' %>
   <div id='map' data-listing-id='<%= @listing.id %>'>
   </div>

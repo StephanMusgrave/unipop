@@ -6,9 +6,6 @@ class Listing < ActiveRecord::Base
   has_and_belongs_to_many :buyers, class_name: 'User', association_foreign_key: 'buyer_id', join_table: 'buyers_listings'
   has_and_belongs_to_many :hashtags
 
-  geocoded_by :location
-  after_validation :geocode  
-
   def hashtag_names
   	''
   end

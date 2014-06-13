@@ -4,6 +4,12 @@ class ListingsController < ApplicationController
 	
   def index
 		@all_listings = Listing.all
+
+    # if self.params[:search]
+    # @listings = Listing.search(params[:search]).order("created_at DESC")
+    # else
+    # @listings = Listing.all.order('created_at DESC')
+    # end
 	end
 
 	def new

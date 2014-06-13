@@ -11,16 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140613150117) do
+ActiveRecord::Schema.define(version: 20140613150817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "add_ip_address_to_users", force: true do |t|
-    t.string   "ip_address"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "buyers_listings", id: false, force: true do |t|
     t.integer "listing_id", null: false
@@ -84,6 +78,7 @@ ActiveRecord::Schema.define(version: 20140613150117) do
     t.datetime "avatar_updated_at"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "ip_address"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

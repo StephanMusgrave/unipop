@@ -11,13 +11,14 @@ class Listing < ActiveRecord::Base
   	self.hashtags.each do |hashtag|
   		listing_hashtags << hashtag.name
   	end
-  	listing_hashtags.join(',')
+  	listing_hashtags.join(', ')
   end
 
 	def hashtag_names=(hashtag_input)
 		return if hashtag_input.blank?
 		formatted_hashtags = hashtag_input.downcase
-		formatted_hashtags.split(/[\s,|.]+/).each do |one_hashtag|
+		self.hashtags.delete_all
+		formatted_hashtags.split(/[\s,|.]+/).uniq.each do |one_hashtag|
 			hashtag = Hashtag.find_or_create_by(name: one_hashtag)
 			hashtags << hashtag
 		end

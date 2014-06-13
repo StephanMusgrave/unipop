@@ -21,13 +21,6 @@ ActiveRecord::Schema.define(version: 20140613150817) do
     t.integer "buyer_id",   null: false
   end
 
-  create_table "geocodes", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.float    "latitude"
-    t.float    "longitude"
-  end
-
   create_table "hashtags", force: true do |t|
     t.string   "name"
     t.datetime "created_at"

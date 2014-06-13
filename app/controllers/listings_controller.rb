@@ -5,9 +5,8 @@ class ListingsController < ApplicationController
   def index
 		@all_listings = Listing.all
 
-    @listing_location = Listing.geocoded
-
-    @current_location = request.location   
+    @current_location = Listing.geocoded 
+      
     if params[:location].present?
       @listing = Listing.near(params[:location], params[:distance] || 10, order: :distance)
     else

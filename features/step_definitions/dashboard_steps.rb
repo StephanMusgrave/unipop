@@ -49,10 +49,6 @@ Given(/^Ollie visits "(.*?)"$/) do |page_name|
   visit "/#{page_name}"
 end
 
-Given(/^Ollie visits "(.*?)"$/) do |page_name|
-  visit "/#{page_name}"
-end
-
 Given(/^Ollie is signed in and on the homepage$/) do
   login_as ollie
   visit '/'
@@ -105,11 +101,7 @@ end
 
 #------- Stuff to do with Louise
 Given(/^Louise has one notebook for sale$/) do
-<<<<<<< HEAD
-  louises_notebook 
-=======
-  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", hashtag_names: "notebook, black", seller: louise) 
->>>>>>> b594658cbcd945853bf8e84e632c86280a615791
+  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", hashtag_names: "notebook, black", seller: louise)
   expect(louise.sales_listings.all.count).to eq 1 
 end
 

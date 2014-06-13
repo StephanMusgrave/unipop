@@ -49,10 +49,6 @@ Given(/^Ollie visits "(.*?)"$/) do |page_name|
   visit "/#{page_name}"
 end
 
-Given(/^Ollie visits "(.*?)"$/) do |page_name|
-  visit "/#{page_name}"
-end
-
 Given(/^Ollie is signed in and on the homepage$/) do
   login_as ollie
   visit '/'
@@ -85,9 +81,27 @@ def ollie
   @ollie ||= User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
 end
 
+Given(/^Ollie visits the homepage$/) do
+  visit '/'
+end
+
+Given(/^Ollie enters "(.*?)" in the search box$/) do |search_words|
+  fill_in 'search', with: 'search_words'
+  click_on 'Search'
+end
+
+Then(/^Ollie should see Louise's notebook as a listing$/) do
+  expect(page).to have_content(@louises_notebook.description)
+end
+
+Then(/^Ollie shouldn't see Steve's iphone as a listing$/) do
+  expect(page).not_to have_content(@steves_iphone.description)
+end
+
+
 #------- Stuff to do with Louise
 Given(/^Louise has one notebook for sale$/) do
-  louises_notebook 
+  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", hashtag_names: "notebook, black", seller: louise)
   expect(louise.sales_listings.all.count).to eq 1 
 end
 
@@ -99,6 +113,9 @@ def louise
   @louise ||= User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
 end
 
+def louises_notebook
+  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", seller: louise) 
+end
 
 #------- Stuff to do with Steve
 Given(/^Steve has an iphone for sale$/) do
@@ -123,9 +140,7 @@ visit '/'
   click_on("I want it!")  
 end
 
-def louises_notebook
-  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", seller: louise) 
-end
+
 
 
 

@@ -10,7 +10,7 @@ Background: Logging in as Ollie
 Scenario: Adding a new hashtag
 	Given I can see a "Hashtags" field
 	When I fill in the "Hashtags" field with "bottle, water, 750ml"
-	And I click "Add my stuff"
-	Then I should be on the homepage
+	And I click on "Add my stuff"
+	Then I should be on the page of my listing
 
 

@@ -4,6 +4,7 @@ class ListingsController < ApplicationController
 	
   def index
 		@all_listings = Listing.all
+
     @listing_location = Listing.geocoded
 
     @current_location = request.location   
@@ -12,6 +13,12 @@ class ListingsController < ApplicationController
     else
       @all_listings = Listing.all
     end
+
+    # if self.params[:search]
+    # @listings = Listing.search(params[:search]).order("created_at DESC")
+    # else
+    # @listings = Listing.all.order('created_at DESC')
+    # end
 
 	end
 

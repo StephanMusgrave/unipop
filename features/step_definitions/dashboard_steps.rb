@@ -113,6 +113,9 @@ def louise
   @louise ||= User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
 end
 
+def louises_notebook
+  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", seller: louise) 
+end
 
 #------- Stuff to do with Steve
 Given(/^Steve has an iphone for sale$/) do
@@ -137,9 +140,7 @@ visit '/'
   click_on("I want it!")  
 end
 
-def louises_notebook
-  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", seller: louise) 
-end
+
 
 
 

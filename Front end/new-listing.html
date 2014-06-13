@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header>
+	<div id="back-btn" class="col-xs-1">
+		<a href="#" style="color:white">
+			<i class="glyphicon glyphicon-chevron-left"></i>
+		</a>
+	</div>
+	<div id="section-title" class="col-xs-6">Project-Y</div>
+	<button id="menu-btn" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<div class="clearfix"></div>
+</header>
+
+<div id="new-listing-section" class="container">
+
+	<div id="profile-id">
+		<a href="#">
+			<img src="img/profile-pic.jpg" alt="..." class="img-responsive img-circle">
+		</a>
+		<div id="name">
+			<a href="#">John Doe</a>
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<form id="post-new-form" class="form">
+		<div class="form-group">
+			<label for="product-picture-file">Picture:</label>
+			<input class="form-control" type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+		</div>
+		<div class="form-group">
+			<label for="product-picture-file">Description:</label>
+			<textarea class="form-control"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="product-picture-file">Tags:</label>
+			<input type="text" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label for="product-picture-file">Location:</label><br/>
+			<input type="text" placeholder="Zipcode/Postcode" class="form-control" size="30" style="display:inline;width:auto;" />
+			<a href="" class="btn btn-primary glyphicon glyphicon-map-marker" style="display:inline;"></a>
+		</div>
+		<div id="post-btn" class="text-center">
+			<button type="submit" class="btn btn-primary btn-lg">
+				POST&nbsp;
+				<i class="glyphicon glyphicon-plus"></i>
+			</button>
+		</div>
+	</form>
+
+</div>
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

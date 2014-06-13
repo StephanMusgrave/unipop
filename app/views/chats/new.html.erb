@@ -1,8 +1,16 @@
+<script type="text/javascript" src="app/assets/javascripts/script.js"></script>
+
 <h1>Chatroom for <%= @listing.seller.first_name %>'s: <%= @listing.description %> 
   Interested buyer: + ' '<%= @buyer.first_name %></h1>
 
  Start typing here to chat with <%=@seller_name%>
 
+
+<ul>
+
+</ul>
+
+
 <input type="text" name="comment" placeholder="Begin_chatting">
-<button type="submit" value="Send">Send</button>
+<button id="send_button" type="submit" value="Send">Send</button>
 

@@ -21,6 +21,7 @@ fill_in 'comment', :with => content
 end
 
 
-Then(/^Ollie sees "(.*?)" on the chat page$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^Ollie sees "(.*?)" on the chat page$/) do |content|
+  expect(page).to have_css('li')
+  expect(page).to have_content(content)
 end

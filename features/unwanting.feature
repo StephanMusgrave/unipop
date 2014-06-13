@@ -7,6 +7,6 @@ Scenario: A User decides they no longer want an item
 	Given Ollie is signed in
 	And Ollie visits a listing he has already wanted
 	Then Ollie clicks 'Changed my mind'
-	Then he is taken to the home page to begin browsing again
+	Then he is taken to the homepage to begin browsing again
 	And he is told he has been unwanted it
 

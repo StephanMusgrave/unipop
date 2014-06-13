@@ -105,7 +105,7 @@ Given(/^Louise has one notebook for sale$/) do
   expect(louise.sales_listings.all.count).to eq 1 
 end
 
-Given(/^Louise Logs in$/) do
+Given(/^Louise logs in$/) do
   login_as louise
 end
 

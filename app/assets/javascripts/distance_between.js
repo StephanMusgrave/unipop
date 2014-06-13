@@ -32,3 +32,5 @@ function roundVal(val) {
 	var result = Math.round(val*Math.pow(10,dec))/Math.pow(10,dec);
 	return result;
 }
+
+

@@ -20,9 +20,19 @@ describe Listing do
 			end
 		end
 
-		context '	two hashtags seperated by commas' do
-			it 'adds it to the database' do
+		context 'separating two hashtags' do
+			it 'adds two hashtags if separated by one space and one comma' do
 				my_listing.hashtag_names = 'bottle, 750ml'
+				expect(my_listing.hashtags.count).to eq 2
+			end
+
+			it 'adds two hashtags if separated by two spaces and one comma' do
+				my_listing.hashtag_names = 'bottle,  750ml'
+				expect(my_listing.hashtags.count).to eq 2
+			end
+
+			it 'adds two hashtags if separated by one space' do
+				my_listing.hashtag_names = 'bottle 750ml'
 				expect(my_listing.hashtags.count).to eq 2
 			end
 		end

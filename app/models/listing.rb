@@ -7,12 +7,16 @@ class Listing < ActiveRecord::Base
   has_and_belongs_to_many :hashtags
 
   def hashtag_names
-  	''
+  	listing_hashtags = []
+  	self.hashtags.each do |hashtag|
+  		listing_hashtags << hashtag.name
+  	end
+  	listing_hashtags.join(',')
   end
 
 	def hashtag_names=(hashtag_input)
 		return if hashtag_input.blank?
-		formatted_hashtags = hashtag_input.downcase.chars.uniq!.join
+		formatted_hashtags = hashtag_input.downcase
 		formatted_hashtags.split(/[\s,|.]+/).each do |one_hashtag|
 			hashtag = Hashtag.find_or_create_by(name: one_hashtag)
 			hashtags << hashtag

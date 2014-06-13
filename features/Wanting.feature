@@ -17,7 +17,7 @@ Scenario: Trying to buy as the first buyer
 Scenario: Trying to buy as the second buyer of a listing
 	Given Shelley has clicked 'I want it!' on Louise's listing
 	And Ollie is on the homepage
-	And Ollie clicks on Louise's listing
+	And Ollie clicks on Louise's notebook listing
 	And Ollie clicks "I want it!"
 	Then Ollie is referred to his dashboard
 	And Ollie is told he's been added to the waitlist

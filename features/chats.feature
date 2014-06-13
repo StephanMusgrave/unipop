@@ -10,6 +10,11 @@ Background: Being logged in and having wanted another user's listing
   And Ollie clicks on Louise's notebook listing
   And Ollie is the first buyer to click "I want it!"
 
+Scenario: First seeing the chat room
+  Given Ollie enters chatroom to speak with Louise about her notebook
+  Then Ollie sees "Chatroom for Louise's: my makers academy black notebook"
+  And Ollie sees "Start typing here to chat with Louise" in the chat field
+
 Scenario: First buyer and seller logged in
   Given Louise logs in 
   Given Ollie enters chatroom to speak with Louise about her notebook

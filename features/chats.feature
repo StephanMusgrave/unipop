@@ -13,7 +13,7 @@ Background: Being logged in and having wanted another user's listing
 Scenario: First seeing the chat room
   Given Ollie enters chatroom to speak with Louise about her notebook
   Then Ollie sees "Chatroom for Louise's: my makers academy black notebook"
-  And Ollie sees "Start typing here to chat with Louise" in the chat field
+  And Ollie sees "Begin_chatting" in the chat field
 
 Scenario: First buyer and seller logged in
   Given Louise logs in 

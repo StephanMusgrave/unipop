@@ -12,6 +12,22 @@ end
 
 Then(/^Ollie sees "(.*?)" in the chat field$/) do |content|
   find_field("comment")
-  find("comment[placeholder=#{content}]")
+  find("input[placeholder=#{content}]")
+end
+
+Given(/^Ollie opens the chat with "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^Louise sees Ollie's message about her notebook listing$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^Louise says "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^Ollie says "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
 end
 

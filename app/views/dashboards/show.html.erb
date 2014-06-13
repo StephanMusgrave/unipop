@@ -7,6 +7,14 @@
 	<ul>
 		<% @sales_listings.each do |sales_listing| %>
 		  <li><%= sales_listing.description %></li>
+		  <li><% if sales_listing.buyers.count == 0 %>
+		  		  <%= "0 in queue" %>
+          <% elsif sales_listing.buyers.count == 1 %>
+            <%= "1 in queue" %>
+          <% else %>
+            <%= "1+ in queue" %>  
+          <% end %>
+       </li>   
 		<% end %>
 	</ul>
 	<%= link_to "Add something to sell", 'listings/new' %>

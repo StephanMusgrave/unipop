@@ -8,7 +8,6 @@ Given(/there is a listing/) do
   expect(the_user.sales_listings.all.count).to eq 1
 end
 
-
 Given(/^I don't have any listings to sell$/) do
   the_user.sales_listings.destroy_all
   expect(the_user.sales_listings.all.count).to eq 0
@@ -35,13 +34,8 @@ Given(/^Everyone logs out$/) do
   logout
 end
 
-Given(/^Louise Logs in$/) do
-  login_as the_user2
-end
 
-#--- Changing 'I' to 'Ollie'
- #-- creating users with names, eg. ollie is not the_user anymore
-
+#------ Stuff to do with Ollie
 Given(/^Ollie is signed in$/) do
   login_as ollie
 end
@@ -53,6 +47,19 @@ end
 
 Given(/^Ollie visits "(.*?)"$/) do |page_name|
   visit "/#{page_name}"
+end
+
+Given(/^Ollie visits "(.*?)"$/) do |page_name|
+  visit "/#{page_name}"
+end
+
+Given(/^Ollie is signed in and on the homepage$/) do
+  login_as ollie
+  visit '/'
+end
+
+Given(/^Ollie is on the correct page to create a listing$/) do
+  visit 'listings/new'
 end
 
 Then(/^Ollie should see "(.*?)"$/) do |stuff|
@@ -74,39 +81,46 @@ Given(/^Ollie has one football and one bike for sale$/) do
   expect(ollie.sales_listings.all.count).to eq 2
 end
 
+def ollie
+  @ollie ||= User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
+end
+
+#------- Stuff to do with Louise
 Given(/^Louise has one notebook for sale$/) do
   louises_notebook 
   expect(louise.sales_listings.all.count).to eq 1 
 end
 
-Given(/^Ollie wants Louise's notebook$/) do
-  visit '/'
-  click_on(@louises_notebook.description)
-  click_on("I want it!")
-end
-
-Given(/^Steve has an iphone for sale$/) do
-  @steves_iphone = Listing.create(description: "an iphone", price: "50", seller: steve)
-end
-
-Given(/^Ollie wants Steve's iphone$/) do
-visit '/'
-  click_on(@steves_iphone.description)
-  click_on("I want it!")  
-end
-
-def ollie
-  @ollie ||= User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
+Given(/^Louise Logs in$/) do
+  login_as louise
 end
 
 def louise
   @louise ||= User.create(email:'louise@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Louise', last_name:'Lai')
 end
 
-#---------- Creating Steve
+
+#------- Stuff to do with Steve
+Given(/^Steve has an iphone for sale$/) do
+  @steves_iphone = Listing.create(description: "an iphone", price: "50", seller: steve)
+end
 
 def steve
   @steve ||= User.create(email:'steve@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'steve', last_name:'Musgrave')
+end
+
+
+#--- a mixture of Ollie, Louise and Steve
+Given(/^Ollie wants Louise's notebook$/) do
+  visit '/'
+  click_on(@louises_notebook.description)
+  click_on("I want it!")
+end
+
+Given(/^Ollie wants Steve's iphone$/) do
+visit '/'
+  click_on(@steves_iphone.description)
+  click_on("I want it!")  
 end
 
 def louises_notebook

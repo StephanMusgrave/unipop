@@ -28,7 +28,5 @@ Scenario: A user cannot want their own listing
 	And Ollie clicks on his football listing
 	Then he doesn't see an 'I want it!' button
 
-
-
   
 

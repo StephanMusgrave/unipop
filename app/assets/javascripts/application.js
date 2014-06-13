@@ -17,7 +17,7 @@
 
 GMaps.geolocate({
   success: function(position) {
-    map.setCenter(position.coords.latitude, position.coords.longitude);
+    var user_location(position.coords.latitude, position.coords.longitude);
   },
   error: function(error) {
     alert('Geolocation failed: '+error.message);

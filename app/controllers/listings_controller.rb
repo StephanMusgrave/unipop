@@ -10,11 +10,11 @@ class ListingsController < ApplicationController
     if params[:location].present?
       @listing = Listing.near(params[:location], params[:distance] || 10, order: :distance)
     elsif params[:search]
-      @tag = Hashtag.find_by(name: params[:search])
-      if @tag
-        @all_listings = @tag.listings.order(created_at: :desc)
+      @hashtag = Hashtag.find_by(name: params[:search])
+      if @hashtag
+        @all_listings = @hashtag.listings.order(created_at: :desc)
       else
-        flash.now[:notice] = "Couldn't find that tag"
+        flash.now[:notice] = "Couldn't find that hashtag"
         @all_listings = Listing.all
       end
     else

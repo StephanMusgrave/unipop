@@ -37,7 +37,7 @@ class ListingsController < ApplicationController
     @listing.seller = current_user
 
     if @listing.save
-      redirect_to listing_path @listing
+      redirect_to '/'
       else 
         render 'new'
       end

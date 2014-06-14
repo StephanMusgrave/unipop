@@ -2,6 +2,7 @@
 header {
 	background: #008ED1;
 	margin-bottom: 10px;
+  min-height: 55px;
 }
 header #section-title {
 	font-weight: bold;
@@ -22,21 +23,37 @@ header #section-title {
 	margin: 15px 0 0 10px;
 	padding:0;
 }
-
-
-/* Home view */
-#home .listing {
-	padding:3px;
+#desktop-top-controls {
+  margin-top: 6px;
+  color: #fff;
+  cursor: pointer;
+  width: auto;
 }
-#home .listing img {
+#desktop-top-controls #search {
+
+}
+#desktop-top-controls .dropdown-toggle {
+  background: #0E5B80;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+#desktop-top-controls #search {
+  float: right;
+  margin-top: 4px;
+}
+#desktop-top-controls #user-nav {
+  width: auto;
+  float:right;
+}
+.listings-grid .listing {
+	padding: 7px;
+}
+.listings-grid .listing img {
 	border-radius: 4px;
 	border:1px solid #c9c9c9;
 }
-#home .listing img:hover {
+.listings-grid .listing img:hover {
 	border: 1px solid #888;
-}
-#home .listing.col-md-4 {
-	padding: 10px;
 }
 
 

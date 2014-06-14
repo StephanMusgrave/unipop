@@ -53,7 +53,9 @@ class ListingsController < ApplicationController
 
   def update
     @listing = Listing.find(params[:id])
-    if @listing.update(params[:listing].permit(:description, :price, :location))
+    @previous_hashtag_names = @listing.hashtags.map {|hashtag| hashtag.name}
+    if @listing.update(params[:listing].permit(:description, :price, :location, :hashtag_names))
+      # raise "#{@listing.hashtags.map {|hashtag| hashtag.name}}"
       redirect_to listing_path @listing
     else
     	flash[:notice] = 'Edits not saved'

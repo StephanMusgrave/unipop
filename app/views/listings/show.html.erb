@@ -6,9 +6,9 @@
   <div id='map' data-listing-id='<%= @listing.id %>'>
   </div>
 
+  <script type="text/javascript" src="app/assets/listings.js"> </script>
+
 	<%= image_tag @listing.picture(:medium) , class: 'listing-picture' %>
-  <div id='map' data-listing-id='<%= @listing.id %>'>
-  </div>
   
 <% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>
 	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
@@ -17,8 +17,11 @@
 <% if current_user.want_listings.include?(@listing) %>
 	<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, data: { confirm: "Click OK if you definitely don't want this anymore"} %>
 <% end %>
+Distance <div id='distance' data-listing-id='<%= @listing.id %>' >
+
 
 <% if current_user == @listing.seller %>
 	<%=link_to 'Edit', edit_listing_path %>
 	<%=link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'Click OK to confirm the deletion'} %>
 <% end %>
+

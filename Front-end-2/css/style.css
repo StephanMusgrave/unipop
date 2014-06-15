@@ -222,8 +222,10 @@ header #user-device-menu ul li a:hover {
 }
 .listings .listing img {
 	border-radius: 4px;
+	border:1px solid #E3BBFF;
+}
+.listings .listing img:hover {
 	border:1px solid #9d13ff;
-
 }
 @media (max-width: 440px) {
 	.listings .listing {

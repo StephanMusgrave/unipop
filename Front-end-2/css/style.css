@@ -103,9 +103,6 @@ header #header-right #search {
 	width: 270px;
 	float: right;
 }
-header #search-device {
-
-}
 header #search form,
 header #search-device {
 	position: relative;
@@ -119,6 +116,9 @@ header #search-device button {
 	right: 2px;
 	top: 4px;
 	font-size: 20px;
+}
+header #header-right #search form input {
+	font-size: 18px;
 }
 header #search-device {
 	margin: 5px 0px;

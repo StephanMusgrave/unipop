@@ -216,6 +216,9 @@ header #user-device-menu ul li a:hover {
 .listings {
 	margin-top: 25px;
 }
+.listings h2 {
+	margin: 0 0 20px 0;
+}
 .listings .listing {
 	float: left;
 	margin-bottom: 25px;

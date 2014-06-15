@@ -8,8 +8,8 @@ Feature: Item listing page
     And Ollie visits the homepage
 
   Scenario: Ollie views a listing
-    And Shelley has one hamster for sale
-    And Ollie clicks on Shelley's hamster description
+    Given Muhanad has one hamster for sale
+    And Ollie clicks on Muhanad's hamster description
     And Ollie sees a picture
 
 

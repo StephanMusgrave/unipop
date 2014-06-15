@@ -16,4 +16,4 @@
 /tmp
 secrets.yml
 .DS_Store
-*.jpg
+# *.jpg

@@ -39,7 +39,13 @@ ActiveRecord::Schema.define(version: 20140615140822) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
     t.integer  "seller_id"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "picture"
   end
 
@@ -74,6 +80,7 @@ ActiveRecord::Schema.define(version: 20140615140822) do
     t.datetime "avatar_updated_at"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "ip_address"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

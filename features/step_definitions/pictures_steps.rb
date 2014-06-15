@@ -4,7 +4,7 @@ end
 
 Given(/^Ollie clicks on Muhanad's hamster description$/) do
   click_on @muhanad_hamster.description
-  expect(current_path).to eq listing_path muhanad_hamster
+  expect(current_path).to eq listing_path @muhanad_hamster
 end
 
 And(/^Ollie sees a picture$/) do

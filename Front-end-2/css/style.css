@@ -6,6 +6,15 @@ Dark Grey: #676767;
 */
 
 /* Global styles */
+.primary-color {
+	color: #9d13ff !important;
+}
+.primary-dark-color {
+	color: #570095 !important;
+}
+.primary-light-color {
+	color: #ab52ea !important;
+}
 header {
 	background: #8e2ad5 url(../img/header-bg.png) repeat-x;
 	min-height: 54px;

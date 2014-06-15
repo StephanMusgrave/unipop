@@ -91,27 +91,38 @@
 	</div>
 </header>
 
-<div class="listings container">
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+<div class="container">
+	<h2 class="primary-dark-color"><strong>Edit Profile</strong></h2>
+
+	<div id="edit-profile-form">
+		<form class="form">
+			<div id="picture">
+				<img src="img/profile-pic.jpg" class="img-responsive img-circle">
+			</div>
+			<div id="change-picture" class="col-xs-5">
+				<label class="primary-color" for="picture">Change picture:</label>
+				<input type="file" class="btn btn-primary inline" />
+			</div>
+			<div class="clearfix"></div>
+			<div class="form-group">
+				<label for="fullname" class="primary-color">Full name:</label>
+				<input type="text" id="fullname" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="location" class="primary-color">Location:</label>
+				<input type="text" id="location" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="university-email" class="primary-color">University Email:</label>
+				<input type="text" id="university-email" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="password" class="primary-color">Password:</label>
+				<input type="text" id="password" class="form-control" />
+			</div>
+			<input type="submit" class="btn btn-primary btn-lg" value="Save" />
+		</form>
 	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="clearfix"></div>
-	<div id="loading-more" class="primary-light-color text-center"><h3><strong>Loading more...<strong></h3></div>
 </div>
 
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

@@ -6,6 +6,9 @@ Dark Grey: #676767;
 */
 
 /* Global styles */
+body {
+	padding-bottom: 40px;
+}
 .primary-color {
 	color: #9d13ff !important;
 }
@@ -15,9 +18,16 @@ Dark Grey: #676767;
 .primary-light-color {
 	color: #ab52ea !important;
 }
+.light-grey {
+	color: #969696 !important;
+}
+.inline {
+	display: inline;
+}
 header {
 	background: #8e2ad5 url(../img/header-bg.png) repeat-x;
 	min-height: 54px;
+	margin-bottom: 20px;
 }
 header #logo {
 	float:left;
@@ -234,4 +244,232 @@ header #user-device-menu ul li a:hover {
 	.listings .listing {
 		width: 50%;
 	}
+}
+
+/* Profile */
+#profile-info {
+	margin-top: 30px;
+}
+#profile-info #picture {
+	width: 170px;
+	float: left;
+	margin-right: 20px;
+}
+@media(max-width:650px) {
+	#profile-info #picture {
+		width: 120px;
+	}
+}
+#profile-info a#edit-link {
+	margin-top: 10px;
+	display: block;
+}
+#profile-info a#edit-link {
+	text-decoration: underline;
+}
+#profile-info a#edit-link:hover {
+	text-decoration: none;
+}
+.listings #tabs {
+	border-bottom: 2px solid #9d13ff;
+}
+.listings #tabs li {
+	margin-bottom: 0;
+}
+.listings #tabs li a {
+	background: #E6E6E6;
+	border:0;
+	color: #585858;
+	font-weight: bold;
+	font-size: 18px;
+}
+.listings #tabs li.active a {
+	background: #9d13ff;
+	color: #fff;
+}
+.listings .tab-content {
+	padding-top: 20px;
+}
+
+#edit-profile-form label {
+	font-size: 18px;
+}
+#edit-profile-form form input[type=file] {
+	width: 200px;
+}
+#edit-profile-form #picture {
+	width: 11%;
+	float: left;
+	margin-bottom: 20px;
+}
+#edit-profile-form #change-picture {
+	margin-top: 40px;
+}
+@media(max-width: 991px) {
+	#edit-profile-form #change-picture {
+		margin-top: 15px;
+	}
+}
+@media(max-width: 400px) {
+	#edit-profile-form input.btn {
+		width:100%;
+	}
+}
+@media(max-width: 650px) {
+	#edit-profile-form #picture {
+		width: 90px;
+	}
+}
+
+/* Sign in */
+#sign-in-form {
+	padding-left: 0;
+}
+@media(max-width: 600px) {
+	#sign-in-form {
+		width: 100%;
+	}
+}
+
+
+/* Sell an item */
+#sell-an-item form input#location {
+	width: 200px;
+}
+
+
+/* Item */
+#single-item #item-description {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+#single-item #item-img {
+	border: 1px solid #9d13ff;
+	border-radius: 4px;
+	overflow: hidden;
+}
+@media(max-width: 700px) {
+	#item-img img {
+		display: inline;
+	}
+	#item-img {
+		width: 100%;
+	}
+	#item-details {
+		width: 100%;
+	}
+	#single-item #item-description {
+		margin-top:20px;
+	}
+}
+#single-item #price-distance {
+	padding-left: 0;
+}
+#single-item #price input {
+	width: 100px;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+#single-item #price {
+	font-size: 29px;
+	font-weight: bold;
+}
+#single-item #distance {
+	font-size: 18px;
+	color: #8d8d8d;
+}
+#single-item #i-want-this-btn {
+	padding: 7px 30px;
+	font-size: 24px;
+	margin-top: 10px;
+}
+
+/* Chat - List */
+#conversations ul li {
+	position: relative;
+	border-bottom: 1px solid #9d13ff;
+	padding: 10px 0;
+}
+#conversations ul li.new .chat-name {
+	font-weight: bold;
+}
+#conversations ul li.new {
+	background: rgb(244, 234, 255);
+}
+#conversations ul li a {
+	display: block;
+}
+#conversations .chat-name {
+	font-size: 19px;
+	margin-top: 12px;
+}
+#conversations .last-msg {
+	color: #B9B6B6;
+}
+#conversations .remove-btn {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto 0;
+	height: 22px;
+	font-size: 20px;
+}
+
+
+/* Chat - Chat */
+#chat-window {
+
+}
+#chat-window .convo-img {
+	padding: 0 10px;
+	float:right;
+	max-width: 60px;
+}
+#chat-window .convo {
+	color: #fff;
+}
+#chat-window .convo .msg-info {
+	color: #D391FF;
+	font-size:12px;
+	margin-top: 5px;
+}
+#chat-window .convo-right {
+	position: relative;
+	padding: 10px;
+	background: #9d13ff;
+	margin: 5px 5px;
+	max-width: 300px;
+	min-width: 280px;
+	float: right;
+	border-radius: 4px;
+}
+#chat-window .convo-right .convo-img {
+	float: right;
+}
+#chat-window .convo-right:after {
+   position:absolute;
+   content: ""; 
+   top:15px;right:-10px;
+   border-width: 10px 0 10px 15px;
+   border-color: transparent  #9d13ff;
+   border-style: solid;
+}
+#chat-window .convo-left {
+	position:relative;
+	left: 15px;
+	padding: 10px;
+	background: #9d13ff;
+	margin: 5px 5px;
+	max-width: 300px;
+	min-width: 280px;
+	border-radius: 4px;
+}
+#chat-window .convo-left:before {
+   position:absolute;
+   content: ""; 
+   top:15px;left:-10px;
+   border-width: 10px 15px 10px 0px;
+   border-color: transparent  #9d13ff;
+   border-style: solid;
 }

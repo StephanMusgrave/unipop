@@ -91,27 +91,32 @@
 	</div>
 </header>
 
-<div class="listings container">
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="clearfix"></div>
-	<div id="loading-more" class="primary-light-color text-center"><h3><strong>Loading more...<strong></h3></div>
+<div id="sell-an-item" class="container">
+	<h2 class="primary-dark-color"><strong>Sell an item</strong></h2>
+	<form class="form">
+		<div class="col-xs-12 col-sm-6">
+			<div class="form-group">
+				<label for="picture" class="primary-color">Picture:</label>
+				<input type="file" id="picture" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="description" class="primary-color">Description:</label>
+				<textarea id="description" rows="4" class="form-control"></textarea>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<div class="form-group">
+				<label for="tags" class="primary-color">Tags:</label>
+				<input type="text" id="tags" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="location" class="primary-color">Location:</label><br/>
+				<input type="location" id="location" size="30" class="inline form-control" />
+				<a href="" class="btn btn-primary glyphicon glyphicon-map-marker" style="display:inline;"></a>
+			</div>
+			<input type="submit" class="btn btn-primary btn-lg" value="Post item" />
+		</div>
+	</form>
 </div>
 
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

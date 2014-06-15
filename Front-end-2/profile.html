@@ -91,27 +91,43 @@
 	</div>
 </header>
 
+<div id="profile-info" class="container">
+	<div id="picture">
+		<img src="img/profile-pic.jpg" class="img-responsive img-circle">
+	</div>
+	<div id="info">
+		<h2 class="primary-color">John Doe</h2>
+		<div class="light-grey">London, UK</div>
+		<a id="edit-link" href="#">Edit Profile</a>
+	</div>
+</div>
+
 <div class="listings container">
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+
+	<ul id="tabs" class="nav nav-tabs">
+	  <li class="active"><a href="#selling" data-toggle="tab">Selling</a></li>
+	  <li><a href="#wants" data-toggle="tab">Wants</a></li>
+	</ul>
+
+	<div class="tab-content">
+	  <div class="tab-pane active" id="selling">
+	  	<div class="listing col-xs-4">
+				<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+			</div>
+			<div class="listing col-xs-4">
+				<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+			</div>
+			<div class="listing col-xs-4">
+				<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+			</div>
+	  </div>
+	  <div class="tab-pane" id="wants">
+			<div class="listing col-xs-4">
+				<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+			</div>
+	  </div>
 	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="listing col-xs-4">
-		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
-	</div>
-	<div class="clearfix"></div>
-	<div id="loading-more" class="primary-light-color text-center"><h3><strong>Loading more...<strong></h3></div>
+
 </div>
 
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

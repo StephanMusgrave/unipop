@@ -1,9 +1,16 @@
 class ListingsController < ApplicationController
 
-  # TODO: authenticate
-
-	def index
+  before_action :authenticate_user!, except:[:index]
+	
+  def index
 		@all_listings = Listing.all
+
+    # if self.params[:search]
+    # @listings = Listing.search(params[:search]).order("created_at DESC")
+    # else
+    # @listings = Listing.all.order('created_at DESC')
+    # end
+
 	end
 
 	def new
@@ -11,7 +18,7 @@ class ListingsController < ApplicationController
 	end
 
   def create    
-    @listing = Listing.new(params['listing'].permit(:description, :price, :location))
+    @listing = Listing.create(params['listing'].permit(:description, :price, :location, :picture, :hashtag_names))
     @listing.seller = current_user
 
     if @listing.save
@@ -32,7 +39,7 @@ class ListingsController < ApplicationController
   def update
     @listing = Listing.find(params[:id])
     if @listing.update(params[:listing].permit(:description, :price, :location))
-      redirect_to '/listings'
+      redirect_to listing_path @listing
     else
     	flash[:notice] = 'Edits not saved'
       render 'edit'

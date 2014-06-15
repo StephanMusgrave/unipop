@@ -1,11 +1,38 @@
-<!-- need to add in if statement around current_user==@listing.user -->
 
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="geolocation.js"></script>
 
   <%= @listing.description %>
 	<%= @listing.price %>
 	<%= @listing.location %>
+  <div id='map' data-listing-id='<%= @listing.id %>'>
+  </div>
 
+<%= image_tag @listing.picture(:medium) , class: 'listing-picture' %>
+  
+<% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>
+	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
+<% end %>
 
-<%=link_to 'Edit', edit_listing_path %>
-<%=link_to 'Delete', listing_path(@listing), method: :delete, data: {
- confirm: 'OK'} %>
+<% if current_user.want_listings.include?(@listing) %>
+	<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, data: { confirm: "Click OK if you definitely don't want this anymore"} %>
+<% end %>
+Distance <div id='distance' data-listing-id='<%= @listing.id %>' >
+</div>
+
+<script>
+	$(document).ready(function(){
+		var user_lat = haversine(user_lat, user_lng, want_listing_lat, want_listing_lng);
+		var user_lng = position.coords.longitude;
+		var want_listing_lat = latlng.lat();
+		var want_listing_lng = latlng.lng();
+	});
+</script>
+<p>
+<div id="distance"></div>
+
+<% if current_user == @listing.seller %>
+	<%=link_to 'Edit', edit_listing_path %>
+	<%=link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'Click OK to confirm the deletion'} %>
+<% end %>
+

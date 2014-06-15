@@ -14,7 +14,6 @@ Scenario: Default profile information
 Scenario: Uploading a profile picture
 	Given I visit Ollie's page
 	And I upload a profile picture
-	And I click on "Update User"
 	Then I should see a profile picture
 	And I should not see a default profile picture
 
@@ -34,7 +33,12 @@ Scenario: You cannot visit a user profile unless signed in
 	Then I should see "Sign in"
 
 Scenario: View user's items for sale
-	Given I am signed in
-	Given Ollie has one item for sale
+	Given Ollie has 1 listing for sale
 	When I visit Ollie's page
-	Then I should see "1 item for sale"
+	Then I should see 1 item for sale
+
+Scenario: The edit button
+	Given I visit Ollie's page
+	And I click on "Edit profile"
+	Then I should be redirected to an edit page
+

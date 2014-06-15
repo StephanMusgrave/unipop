@@ -14,6 +14,12 @@
 	<%= f.label :location %>
 	<%= f.text_field :location %>
 
+	<%= f.label :picture %>	
+	<%= f.file_field :picture %>
+
+	<%= f.label :hashtag_names, "Hashtags" %>	
+	<%= f.text_field :hashtag_names %>
+
 	<% if @listing.new_record? %>
   <%= f.submit "Add my stuff" %>
   <% else %>

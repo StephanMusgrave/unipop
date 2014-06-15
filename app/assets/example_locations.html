@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Locations - Joe's Pizza Co.</title>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<meta name="description" content="Locations of Joe's Pizza Co. restaurants in New York City.">
+	<meta name="keywords" content="new york pizza,pizza restaurants,joes pizza,joes new york">
+  <meta name="author" content="YOUR NAME">
+</head>
+<body>
+	<!-- Page Container -->
+	<div id="container">
+		<!-- Header -->
+		<header>
+			<!-- Logo -->
+			<div id="logo">
+				<h1>Joe's Pizza Co.</h1>
+			</div>
+			<!-- Navigation -->
+			<nav>
+				<ul>
+			    <li>
+			      <a href="index.html" title="Joe's Pizza Co.">
+			        Home
+			      </a>
+			    </li>
+			    <li>
+			      <a href="about.html" title="Find out more about Joe's Pizza Co.">
+			        About
+			      </a>
+			    </li>
+			    <li>
+			      <a href="news.html" title="Latest News about Joe's Pizza Co.">
+			        News
+			      </a>
+			    </li>
+			    <li>
+			      <a href="menu.html" title="The restaurant menu for Joe's Pizza Co.">
+			        Menu
+			      </a>
+			    </li>
+			    <li>
+			      <a href="locations.html" title="Joe's Pizza Co. restaurant locations." class="active">
+			        Locations
+			      </a>
+			    </li>
+			    <li>
+			      <a href="bookings.html" title="Make a booking.">
+			        Bookings
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+		</header>
+
+		<!-- Main Content -->
+		<div>
+			<!-- Page Text -->
+			<section id="page-text">
+			  <h1>Locations</h1>
+        <meta id="company-name" itemprop="name" content="Joe's Pizza Co.">
+
+        <section id="location1" itemscope itemtype="http://schema.org/LocalBusiness" itemref="company-name">
+          <h1 itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">310 West 38th Street</span>, <span itemprop="addressRegion">NY</span>
+          </h1>
+          <img src="img/map1.png" alt="Joe's Pizza at 310 West 38th Street, NY" itemprop="image">
+          <p class="location-phone" itemprop="telephone">212 012 3456</p>
+          <h2>Opening Hours:</h2>
+          <p>
+            <time itemprop="openingHours" datetime="Mo-Fr 12:00-22:00">Mon-Fri: 12:00 - 22:00</time><br>
+            <time itemprop="openingHours" datetime="Sa,Su 11:00-23:00">Sat-Sun: 11:00 - 23:00</time>
+          </p>
+          <div id="location1distance"></div>
+        </section>
+
+        <section id="location2" itemscope itemtype="http://schema.org/LocalBusiness" itemref="company-name">
+          <h1 itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">2450 Broadway</span>, <span itemprop="addressRegion">NY</span>
+          </h1>
+          <img src="img/map2.png" alt="Joe's Pizza at 2450 Broadway, NY" itemprop="image">
+          <p class="location-phone" itemprop="telephone">212 012 3457</p>
+          <h2>Opening Hours:</h2>
+          <p>
+            <time itemprop="openingHours" datetime="Mo-Fr 12:00-22:00">Mon-Fri: 12:00 - 22:00</time><br>
+            <time itemprop="openingHours" datetime="Sa,Su 11:00-23:00">Sat-Sun: 11:00 - 23:00</time>
+          </p>
+          <div id="location2distance"></div>
+        </section>
+
+        <section id="location3" itemscope itemtype="http://schema.org/LocalBusiness" itemref="company-name">
+          <h1 itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">200 West 44th Street</span>, <span itemprop="addressRegion">NY</span>
+          </h1>
+          <img src="img/map3.png" alt="Joe's Pizza at 200 West 44th Street, NY" itemprop="image">
+          <p class="location-phone" itemprop="telephone">212 012 3458</p>
+          <h2>Opening Hours:</h2>
+          <p>
+            <time itemprop="openingHours" datetime="Mo-Fr 12:00-22:00">Mon-Fri: 12:00 - 22:00</time><br>
+            <time itemprop="openingHours" datetime="Sa,Su 11:00-23:00">Sat-Sun: 11:00 - 23:00</time>
+          </p>
+          <div id="location3distance"></div>
+        </section>
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<footer>
+		  <small>&copy; 2012 Joe's Pizza Co. All Rights Reserved</small> - <a href="sitemap.html" title="Links to all the pages on this website">Sitemap</a>
+		</footer>
+	</div>
+
+  <script src="js/geo.js"></script>
+  <script src="js/geolocation.js"></script>
+</body>
+</html>

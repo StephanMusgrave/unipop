@@ -1,6 +1,6 @@
 <%= @user.first_name%> <%= @user.last_name.chars.first %>
 <% if @user.avatar.blank? %>
-	<img src="images/default_avatar.jpg" class="default-profile-picture">
+	<img src="/images/default_avatar.jpg" class="default-profile-picture">
 <% else %>
 	<%= image_tag @user.avatar.url(:medium), class: 'profile-picture' %>
 <% end %>

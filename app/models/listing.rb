@@ -30,11 +30,3 @@ class Listing < ActiveRecord::Base
 		end
 	end
 end
-
-
-
-# def self.search(search_input)
-# 	splitted_search_terms = search_input.split(', ')
-# 	where("hashtags.each{|hashtag| hashtag.name = ?}", params[:search])
-# end 
-

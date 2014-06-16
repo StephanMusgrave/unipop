@@ -3,9 +3,27 @@ class ListingsController < ApplicationController
   before_action :authenticate_user!, except:[:index]
 	
   def index
-		@all_listings = Listing.all
+    # @all_listings = Listing.search(params[:search])
 
-    # @current_location = Listing.geocoded 
+    # if @all_listings.empty?
+    #   flash[:notice] = "Couldn't find that tag"
+    # else
+    #   flash[:notice] = nil
+    # end
+
+    # # if params[:search]
+    # #   @tag = Hashtag.find_by(name: params[:search])
+    # #   if @tag
+    # #     @all_listings = @tag.listings.order(created_at: :desc)
+    # #   else
+    # #     flash.now[:notice] = "Couldn't find that tag"
+    # #     @all_listings = Listing.all
+    # #   end
+    # # else
+    # #   @all_listings = Listing.all
+    # # end
+
+    @all_listings = Listing.all
       
     if params[:location].present?
       @listing = Listing.near(params[:location], params[:distance] || 10, order: :distance)
@@ -20,11 +38,7 @@ class ListingsController < ApplicationController
     else
       @all_listings = Listing.all
     end
-    # if self.params[:search]
-    # @listings = Listing.search(params[:search]).order("created_at DESC")
-    # else
-    # @listings = Listing.all.order('created_at DESC')
-    # end
+
 
 	end
 
@@ -37,7 +51,7 @@ class ListingsController < ApplicationController
     @listing.seller = current_user
 
     if @listing.save
-      redirect_to '/'
+      redirect_to '/dashboard'
       else 
         render 'new'
       end

@@ -2,6 +2,10 @@ Given(/^I visit the sign up page$/) do
   visit '/users/sign_up'
 end
 
+Then(/^I should see a default profile picture$/) do
+  expect(page).to have_css'img.default-profile-picture'
+end
+
 Then(/^I should see a profile picture$/) do
   expect(page).to have_css'img.profile-picture'
 end

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header>
+
+	<div class="container">
+		<div id="logo">
+			<a href="#"><img src="img/logo.png" /></a>
+		</div>
+		<div id="navigation">
+			<ul class="list-unstyled list-inline">
+				<li><a href="#">Browse <i class="glyphicon glyphicon-shopping-cart"></i></a></li><li><a href="#">Sell <i class="glyphicon glyphicon-usd"></i></a></li>
+			</ul>
+		</div>
+		<div id="header-right">
+			<div id="user-chat">
+				<a href="#"><i class="glyphicon glyphicon-comment"></i></a>
+			</div>
+			<div id="user-menu">
+				<div class="dropdown-toggle" data-toggle="dropdown">
+					<img src="img/profile-pic.jpg" width="30" class="img-circle">
+					John Doe <span class="caret"></span>
+				</div>
+				<ul class="dropdown-menu" role="menu">
+					<li>
+						<a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							&nbsp;Edit Profile
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="glyphicon glyphicon-log-out"></i>
+							&nbsp;Sign Out
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="search">
+				<form class="form">
+					<input type="text" class="form-control" placeholder="Search..." />
+					<button><i class="glyphicon glyphicon-search"></i></button>
+				</form>
+			</div>
+		</div>
+		<button id="menu-btn" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#user-device-menu">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="user-device-menu">
+			<ul class="nav navbar-nav visible-xs text-right">
+				<li id="user-id">
+					<img src="img/profile-pic.jpg" width="30" class="img-circle">
+					&nbsp;John Doe
+				</li>
+				<li>
+					<a href="#">
+						<i class="glyphicon glyphicon-user"></i>
+						&nbsp;Edit Profile
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="glyphicon glyphicon-comment"></i>
+						&nbsp;Chat
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="glyphicon glyphicon-log-out"></i>
+						&nbsp;Sign Out
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+		<form id="search-device" class="form visible-sm visible-xs">
+			<input type="text" class="form-control" placeholder="Search..." />
+			<button><i class="glyphicon glyphicon-search"></i></button>
+		</form>
+	</div>
+</header>
+
+<div class="listings container">
+	<div class="listing col-xs-4">
+		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+	</div>
+	<div class="listing col-xs-4">
+		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+	</div>
+	<div class="listing col-xs-4">
+		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+	</div>
+	<div class="listing col-xs-4">
+		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+	</div>
+	<div class="listing col-xs-4">
+		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+	</div>
+	<div class="listing col-xs-4">
+		<a href="#"><img src="img/hand-bag.jpg" class="img-responsive" alt="" /></a>
+	</div>
+	<div class="clearfix"></div>
+	<div id="loading-more" class="primary-light-color text-center"><h3><strong>Loading more...<strong></h3></div>
+</div>
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/masonry.min.js"></script>
+
+</body>
+</html>

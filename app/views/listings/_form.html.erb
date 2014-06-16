@@ -4,8 +4,15 @@
 <% end %>
 
 <%= form_for @listing, html: { multipart: true } do |f| %>
-
-	<%= f.label :description %>
+  
+  <%= f.fields_for :questions do |builder| %>
+    <fieldset>
+      <%= builder.label :picture %>
+      <%= builder.file_field :image_container %>
+    </fieldset>
+    <% end %>
+	
+  <%= f.label :description %>
 	<%= f.text_field :description %>
 
 	<%= f.label :price %>
@@ -13,9 +20,6 @@
 
 	<%= f.label :location %>
 	<%= f.text_field :location %>
-
-	<%= f.label :picture %>	
-	<%= f.file_field :picture %>
 
 	<%= f.label :hashtag_names, "Hashtags" %>	
 	<%= f.text_field :hashtag_names %>

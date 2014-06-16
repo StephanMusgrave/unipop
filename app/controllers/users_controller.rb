@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 		authenticate_user!
 		@user = User.find(params[:id])
 		@user_listings = Listing.where(seller: @user)
-		# @user_location = User.geocoded 
 	end
 
 	# def create 

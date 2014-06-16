@@ -11,6 +11,6 @@ Scenario: Adding a new hashtag
 	Given I can see a "Hashtags" field
 	When I fill in the "Hashtags" field with "bottle, water, 750ml"
 	And I click on "Add my stuff"
-	Then I should be on the page of my listing
+	Then I should be on my "dashboard"
 
 

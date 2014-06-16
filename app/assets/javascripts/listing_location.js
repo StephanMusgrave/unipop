@@ -5,8 +5,8 @@ $(document).ready(function(){
     $.get('/listings/' + listingId + '.json', function(listing){
       map = new GMaps({
         div: '#map',
-        lat: 51.365,
-        lng: -0.095
+        lat: 51.5072,
+        lng: -0.1275
       });
 
       GMaps.geocode({
@@ -19,6 +19,7 @@ $(document).ready(function(){
               lat: latlng.lat(),
               lng: latlng.lng()
             });
+            $("#distance").text('Distance: ' + haversine(latlng.lat(), latlng.lng(), user_lat, user_lng) + ' miles')
           }
         }
       });

@@ -1,7 +1,8 @@
 GMaps.geolocate({
   success: function(position) {
-    var user_lat = position.coords.latitude;
-    var user_lng = position.coords.longitude;
+    user_lat = position.coords.latitude;
+    user_lng = position.coords.longitude;
+    // alert(user_lat + user_lng);
   },
   error: function(error) {
     alert('Geolocation failed: '+error.message);

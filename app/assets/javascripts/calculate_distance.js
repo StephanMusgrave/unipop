@@ -28,7 +28,7 @@ if (typeof Number.prototype.toRad == 'undefined') {
 
 // Rounds a number to 2 decimal places
 function roundVal(val) {
-	var dec = 2;
+	var dec = 1;
 	var result = Math.round(val*Math.pow(10,dec))/Math.pow(10,dec);
 	return result;
 }

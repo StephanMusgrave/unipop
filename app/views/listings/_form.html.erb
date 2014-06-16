@@ -4,16 +4,7 @@
 <% end %>
 
 <%= form_for @listing, html: { multipart: true } do |f| %>
-  
-  <%= f.fields_for :image_containers do |builder| %>
-    <fieldset>
-      <%= builder.label :name %><br />
-      <%= builder.text_field :name %><br />
-      <%= builder.hidden_field :_destroy %>
-      <%= link_to "remove", '#', class: "remove_fields" %>
-    </fieldset>
-    <% end %>
-	
+  	
   <% link_to_add_fields "Add Picture", f, :image_containers %>
   <%= f.label :description %>
 	<%= f.text_field :description %>

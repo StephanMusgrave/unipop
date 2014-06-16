@@ -86,8 +86,9 @@ Given(/^Ollie visits the homepage$/) do
 end
 
 Given(/^Ollie enters "(.*?)" in the search box$/) do |search_words|
-  fill_in 'search', with: 'search_words'
-  click_on 'Search'
+  fill_in 'search', with: 'search_words', match: :first
+  # click_on 'Search'
+  find('.magnifying-btn').click
 end
 
 Then(/^Ollie should see Louise's notebook as a listing$/) do

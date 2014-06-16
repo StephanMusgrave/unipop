@@ -1,3 +1,8 @@
+<%= form_tag(listings_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "e.g. shoes" %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+
 <h1><%= link_to '+', new_listing_path %></h1><br>
 <%= flash[:notice] %>
 

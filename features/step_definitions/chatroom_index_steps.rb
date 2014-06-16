@@ -11,8 +11,8 @@ Given(/^Ollie has messaged Louise about her bookshelf$/) do
 end
 
 Given(/^Ollie clicks the chatroom button$/) do
-  page.find('.glyphicon.glyphicon-comment').click
-    # click_on("i[class=glyphicon glyphicon-comment]")
+  page.find('#chatrooms-icon').click
+  visit '/chatrooms'
 end
 
 Given(/^Ollie is the first to want both items$/) do
@@ -25,29 +25,28 @@ end
 Given(/^Steve is the first to want Louise's lamp$/) do
   steve
   @steve.want_listings << @louises_lamp
+  Chatroom.create(listing:@louises_lamp)
 end
 
 
 Given(/^Ollie is on the chatroom index$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(current_path).to eq chatrooms_path
 end
 
-Given(/^Louise is signed in$/) do
-  pending # express the regexp above with the code you wish you had
-end
 
 Given(/^Louise is on the homepage$/) do
-  pending # express the regexp above with the code you wish you had
+  visit '/'
 end
 
 Given(/^Louise clicks the chatroom button$/) do
-  pending # express the regexp above with the code you wish you had
+  page.find('#chatrooms-icon').click
+  visit '/chatrooms'
 end
 
 Given(/^Louise is on the chatroom index$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(current_path).to eq chatrooms_path
 end
 
-Then(/^Louise sees "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^Louise sees "(.*?)"$/) do |content|
+  expect(page).to have_content(content)
 end

@@ -17,4 +17,9 @@ def show
 	end
 end
 
+def index
+	@want_listings = current_user.want_listings
+	@sales_listings = current_user.sales_listings
+end
+
 end

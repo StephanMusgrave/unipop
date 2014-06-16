@@ -14,9 +14,13 @@ class User < ActiveRecord::Base
 
   validates_presence_of :first_name, :last_name
 
-  def all_chatrooms
-    (want_listings.map(&:chatroom) + sales_listings.map(&:chatroom)).compact
+  def buyers_listings_chatrooms
+    (want_listings.map(&:chatroom)).compact
   end
-end
 
+ def buyers_listings_chatrooms
+    (sales_listings.map(&:chatroom)).compact
+  end
+
+end
 

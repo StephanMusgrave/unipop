@@ -33,4 +33,6 @@ Scenario: Seeing all the chatrooms you are involved in as a seller
   And Louise sees "Hey, I wanna buy your notebook"
   And Louise sees "Hey, I wanna buy your bookshelf"
   And Louise sees "Get in touch with the buyer!"
-  And Louise sees "No messages yet!"
+
+Scenario: 
+ 

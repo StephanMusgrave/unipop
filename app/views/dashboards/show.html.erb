@@ -10,9 +10,9 @@
 		  <li><% if sales_listing.buyers.count == 0 %>
 		  		  <%= "0 in queue" %>
           <% elsif sales_listing.buyers.count == 1 %>
-            <%= "1 in queue" %>
+            <%= link_to "1 in queue", listing_chatroom_path(sales_listing) %>
           <% else %>
-            <%= "1+ in queue" %>  
+            <%= link_to "1+ in queue", listing_chatroom_path(sales_listing) %>  
           <% end %>
        </li>   
 		<% end %>

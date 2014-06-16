@@ -79,7 +79,6 @@ ActiveRecord::Schema.define(version: 20140614173115) do
     t.datetime "avatar_updated_at"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "ip_address"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

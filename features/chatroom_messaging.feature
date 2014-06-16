@@ -13,7 +13,7 @@ Background: Being logged in and having wanted another user's listing
 Scenario: Sending a chat message
   Given Ollie enters chatroom to speak with Louise about her notebook
   And Ollie fills in the chat field with "Hey, I wanna buy your notebook"
-  And Ollie presses the "Enter"
+  And Ollie clicks "Create Comment"
   Then Ollie sees "Hey, I wanna buy your notebook" on the chat page
 
 # Scenario: First buyer and seller logged in

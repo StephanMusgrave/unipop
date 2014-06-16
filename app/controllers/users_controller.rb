@@ -6,18 +6,4 @@ class UsersController < ApplicationController
 		@user_listings = Listing.where(seller: @user)
 	end
 
-	# def create 
-	# 	@user = User.new(params[:id])
-	# 	if @user.save!
-	# 	redirect_to user_path current_user
-	# 	end
-	# end
-
-	# def update
-	# 	# @user = User.find(params[:id])
-	# 	current_user.update(params[:user].permit(:avatar, :first_name, :last_name))
-		
-	# 	redirect_to user_path current_user
-	# end
-
 end

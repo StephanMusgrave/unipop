@@ -60,7 +60,7 @@
 			<div id="search">
 				<%= form_tag(listings_path, :method => "get", id: "search-form", class: 'form') do %>
 					<%= text_field_tag :search, params[:search], placeholder: "e.g. shoes", class: 'form-control' %>
-					<%= button_tag(type: 'submit') do %>
+					<%= button_tag(type: 'submit', class: 'magnifying-btn') do %>
 						<i class="glyphicon glyphicon-search"></i>
 					<% end %>
 				<% end %>

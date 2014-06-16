@@ -15,6 +15,15 @@ class Listing < ActiveRecord::Base
   has_and_belongs_to_many :hashtags
   has_one :chatroom
 
+  def self.search(query)
+    if query 
+      tag = Hashtag.find_by(name: query)
+      tag ? tag.listings.order(created_at: :desc) : []
+    else
+      self.all
+    end
+  end
+
   def hashtag_names
   	''
   end

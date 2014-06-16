@@ -1,0 +1,12 @@
+<h1>New chatroom page</h1>
+
+	<%= form_for [@listing, @chatroom, @comment] do |f| %>
+		<%= f.label :body, "Comment" %>
+		<%= f.text_area :body, placeholder: "chat"%><br />
+		<%= f.submit %>
+	<%end%>				
+
+	<% @chatroom.comments.each do |comment| %>
+		<h4><%= time_ago_in_words comment.created_at %> ago, <%= comment.user.first_name %> said:</h4>
+		<p><%= comment.body %>
+	<% end %>

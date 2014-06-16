@@ -5,11 +5,27 @@ class ListingsController < ApplicationController
   def index
 		@all_listings = Listing.all
 
+    # @current_location = Listing.geocoded 
+      
+    if params[:location].present?
+      @listing = Listing.near(params[:location], params[:distance] || 10, order: :distance)
+    elsif params[:search]
+      @tag = Hashtag.find_by(name: params[:search])
+      if @tag
+        @all_listings = @tag.listings.order(created_at: :desc)
+      else
+        flash.now[:notice] = "Couldn't find that tag"
+        @all_listings = Listing.all
+      end
+    else
+      @all_listings = Listing.all
+    end
     # if self.params[:search]
     # @listings = Listing.search(params[:search]).order("created_at DESC")
     # else
     # @listings = Listing.all.order('created_at DESC')
     # end
+
 	end
 
 	def new
@@ -21,7 +37,7 @@ class ListingsController < ApplicationController
     @listing.seller = current_user
 
     if @listing.save
-      redirect_to listing_path @listing
+      redirect_to '/'
       else 
         render 'new'
       end
@@ -37,7 +53,7 @@ class ListingsController < ApplicationController
 
   def update
     @listing = Listing.find(params[:id])
-    if @listing.update(params[:listing].permit(:description, :price, :location))
+    if @listing.update(params[:listing].permit(:description, :price, :location, :hashtag_names))
       redirect_to listing_path @listing
     else
     	flash[:notice] = 'Edits not saved'

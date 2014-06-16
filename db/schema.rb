@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140613100906) do
+ActiveRecord::Schema.define(version: 20140616124314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,25 @@ ActiveRecord::Schema.define(version: 20140613100906) do
     t.integer "listing_id", null: false
     t.integer "buyer_id",   null: false
   end
+
+  create_table "chatrooms", force: true do |t|
+    t.integer  "listing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "chatrooms", ["listing_id"], name: "index_chatrooms_on_listing_id", using: :btree
+
+  create_table "comments", force: true do |t|
+    t.integer  "chatroom_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "comments", ["chatroom_id"], name: "index_comments_on_chatroom_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "hashtags", force: true do |t|
     t.string   "name"

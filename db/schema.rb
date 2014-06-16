@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140613100906) do
-=======
 ActiveRecord::Schema.define(version: 20140614173115) do
->>>>>>> c710f18c58de2b529da441049e18434d42752bc4
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,7 +79,6 @@ ActiveRecord::Schema.define(version: 20140614173115) do
     t.datetime "avatar_updated_at"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "ip_address"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

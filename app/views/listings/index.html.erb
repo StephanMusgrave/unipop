@@ -11,7 +11,7 @@
 		<%= link_to listing.description, listing_path(listing) %>
 		<%= listing.price %>
 		<%= listing.location %>
-		<% listing.hashtags.each do |hashtag| %>
+		<% listing.hashtags.uniq.each do |hashtag| %>
 			<i><%= hashtag.name %></i>
     		<% end %><br>
 	<% end %>

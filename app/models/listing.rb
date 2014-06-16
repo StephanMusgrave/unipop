@@ -27,7 +27,6 @@ class Listing < ActiveRecord::Base
 			hashtags << hashtag
 		end
 	end
-
 end
 
 

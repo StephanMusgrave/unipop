@@ -12,6 +12,6 @@ Background: Being logged in and having wanted another user's listing
 
 Scenario: First seeing the chat room
   Given Ollie enters chatroom to speak with Louise about her notebook
-  Then Ollie sees "Start chatting!" in the comments field
+  Then Ollie sees "chat" in the comments field
  
 

@@ -11,16 +11,16 @@ Then(/^Ollie sees "(.*?)"$/) do |content|
 end
 
 Then(/^Ollie sees "(.*?)" in the comments field$/) do |content|
-  find_field("comment")
-  find("input[placeholder=#{content}]")
+  find_field("Comment")
+  find("textarea[placeholder=#{content}]")
 end
 
 Given(/^Ollie fills in the chat field with "(.*?)"$/) do |content|
-fill_in 'comment', :with => content
-
+  fill_in 'Comment', :with => content
 end
 
 Then(/^Ollie sees "(.*?)" on the chat page$/) do |content|
   expect(page).to have_css('li')
   expect(page).to have_content(content)
 end
+

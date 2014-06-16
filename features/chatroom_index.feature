@@ -3,12 +3,11 @@ Feature: Chatroom index
   As a buyer or as a seller
   I can see a chatroom index
 
-Background: A buyer has sent a message to seller about an item
+Background: A seller has items for sale
 	Given Ollie is signed in
 	And Louise has one notebook for sale
 	And Louise has one bookshelf for sale
 	And Louise has one lamp for sale
-  And Louise has one lamp for sale
   And Ollie is the first to want both items
   And Ollie has messaged Louise about her notebook
   And Ollie has messaged Louise about her bookshelf

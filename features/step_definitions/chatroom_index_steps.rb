@@ -11,7 +11,8 @@ Given(/^Ollie has messaged Louise about her bookshelf$/) do
 end
 
 Given(/^Ollie clicks the chatroom button$/) do
-  click_on("i[class=glyphicon glyphicon-comment]")
+  page.find('.glyphicon.glyphicon-comment').click
+    # click_on("i[class=glyphicon glyphicon-comment]")
 end
 
 Given(/^Ollie is the first to want both items$/) do

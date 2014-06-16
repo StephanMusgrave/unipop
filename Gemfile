@@ -35,6 +35,7 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+# gem 'paperclip-rack', require: 'paperclip/rack'
 gem 'aws-sdk'
 gem 'bootstrap-sass'
 gem 'thin'
@@ -45,6 +46,7 @@ gem 'gmaps4rails', '~> 2.1.2'
 gem 'geocoder'
 
 group :test do
+  # gem 'rmagick'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner'

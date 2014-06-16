@@ -8,6 +8,15 @@ class Listing < ActiveRecord::Base
   has_one :chatroom
   has_many :image_containers
 
+  def self.search(query)
+    if query 
+      tag = Hashtag.find_by(name: query)
+      tag ? tag.listings.order(created_at: :desc) : []
+    else
+      self.all
+    end
+  end
+
   def hashtag_names
   	''
   end

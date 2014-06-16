@@ -86,8 +86,9 @@ Given(/^Ollie visits the homepage$/) do
 end
 
 Given(/^Ollie enters "(.*?)" in the search box$/) do |search_words|
-  fill_in 'search', with: 'search_words'
-  click_on 'Search'
+  fill_in 'search', with: 'search_words', match: :first
+  # click_on 'Search'
+  find('.magnifying-btn').click
 end
 
 Then(/^Ollie should see Louise's notebook as a listing$/) do
@@ -101,7 +102,13 @@ end
 
 #------- Stuff to do with Louise
 Given(/^Louise has one notebook for sale$/) do
-  @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", hashtag_names: "notebook, black", seller: louise)
+  @louises_notebook = Listing.create(
+    description: "my makers academy black notebook", 
+    price: "22", 
+    hashtag_names: "notebook, black", 
+    seller: louise, 
+    picture: "/spec/images/profile_picture.jpg")
+  
   expect(louise.sales_listings.all.count).to eq 1 
 end
 

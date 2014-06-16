@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   resources :listings do
+    resource :chatroom
     resource :map
-  	resources :buyers do
-  	  resource :chat
-  	end
+  	resources :buyers
   end
 
   get 'dashboards/show'

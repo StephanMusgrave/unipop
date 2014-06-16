@@ -1,6 +1,6 @@
 Given(/^I want to sell some stuff$/) do
   visit '/'
-  click_on '+'
+  click_on 'Sell'
 end
 
 Then(/^I should be able to post a listing$/) do
@@ -9,7 +9,7 @@ Then(/^I should be able to post a listing$/) do
   attach_file('Picture', Rails.root.join('public/images/product_image.jpg'))
   click_on 'Add my stuff'
   @listing = Listing.last.id
-  expect(current_path).to eq "/listings/#{@listing}"
+  expect(current_path).to eq "/dashboard"
   expect(page).to have_content 'Test'
 end
 

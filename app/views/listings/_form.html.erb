@@ -5,10 +5,10 @@
 
 <%= form_for @listing, html: { multipart: true } do |f| %>
   
-  <%= f.fields_for :questions do |builder| %>
+  <%= f.fields_for :image_containers do |builder| %>
     <fieldset>
-      <%= builder.label :picture %>
-      <%= builder.file_field :image_container %>
+      <%= builder.label :name %>
+      <%= builder.text_field :name %>
     </fieldset>
     <% end %>
 	

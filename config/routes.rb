@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :listings do
     resource :map
+    resource :image_container
   	resources :buyers do
   	  resource :chat
   	end

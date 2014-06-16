@@ -22,3 +22,7 @@
 	<%=link_to 'Edit', edit_listing_path %>
 	<%=link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'Click OK to confirm the deletion'} %>
 <% end %>
+
+<% @listing.image_containers.each do |imgc| %>
+  <%= image_tag imgc.picture.url(:medium) %>
+<% end %>

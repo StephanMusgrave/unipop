@@ -3,13 +3,8 @@
   <%= @listing.description %>
 	<%= @listing.price %>
 	<%= @listing.location %>
-  <div id='map' data-listing-id='<%= @listing.id %>'>
-  </div>
+  <div id='map' data-listing-id='<%= @listing.id %>'></div>
 
-	
-  <div id='map' data-listing-id='<%= @listing.id %>'>
-  </div>
-  
 <% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>
 	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
 <% end %>
@@ -21,6 +16,10 @@
 <% if current_user == @listing.seller %>
 	<%=link_to 'Edit', edit_listing_path %>
 	<%=link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'Click OK to confirm the deletion'} %>
+<% end %>
+
+<% @listing.image_containers.each do |imgc| %>
+  <%= image_tag imgc.picture.url(:medium) %>
 <% end %>
 
 

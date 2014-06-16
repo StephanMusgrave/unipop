@@ -35,27 +35,27 @@
 						<% end %>
 						<%= current_user.first_name %> <span class="caret"></span>
 					</div>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<%= link_to user_profile_path do %>
+								<i class="glyphicon glyphicon-user"></i>
+								&nbsp;View Profile
+							<% end %>
+						</li>
+						<li>
+							<%= link_to edit_user_registration_path do %>
+								<i class="glyphicon glyphicon-pencil"></i>
+								&nbsp;Edit Profile
+							<% end %>
+						</li>
+						<li>
+							<%= link_to('<i class="glyphicon glyphicon-log-out"></i>
+								&nbsp;Sign Out'.html_safe, destroy_user_session_path, :method => :delete) %>
+						</li>
+					</ul>
 				<% else %>
-					<%= link_to('Sign in', new_user_session_path) %>
+					<%= link_to('Sign in', new_user_session_path, id: 'sign-in-link') %>
 				<% end %>
-				<ul class="dropdown-menu" role="menu">
-					<li>
-						<a href="/user/edit">
-							<i class="glyphicon glyphicon-user"></i>
-							&nbsp;Edit Profile
-						</a>
-					</li>
-					<li>
-						<a href="/user/signout">
-							<i class="glyphicon glyphicon-user"></i>
-							&nbsp;Profile
-						</a>
-					</li>
-					<li>
-						<%= link_to('<i class="glyphicon glyphicon-log-out"></i>
-							&nbsp;Sign Out'.html_safe, destroy_user_session_path, :method => :delete) %>
-					</li>
-				</ul>
 			</div>
 			<div id="search">
 				<%= form_tag(listings_path, :method => "get", id: "search-form", class: 'form') do %>
@@ -74,28 +74,39 @@
 		</button>
 		<div class="collapse navbar-collapse" id="user-device-menu">
 			<ul class="nav navbar-nav visible-xs text-right">
-				<li id="user-id">
-					<img src="/images/profile-pic.jpg" width="30" class="img-circle">
-					&nbsp;John Doe
-				</li>
-				<li>
-					<a href="#">
-						<i class="glyphicon glyphicon-user"></i>
-						&nbsp;Edit Profile
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="glyphicon glyphicon-comment"></i>
-						&nbsp;Chat
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="glyphicon glyphicon-log-out"></i>
-						&nbsp;Sign Out
-					</a>
-				</li>
+				<% if current_user %>
+					<li id="user-id">
+						<% if current_user.avatar.blank? %>
+							<img src="/images/default_avatar.jpg" width="30" alt="Default avatar" class="img-circle" />
+						<% else %>
+							<img src="<%= current_user.avatar %>" width="30" alt="Default avatar" class="img-circle" />
+						<% end %>
+						&nbsp;<%= current_user.first_name %>
+					</li>
+					<li>
+						<%= link_to user_profile_path do %>
+							<i class="glyphicon glyphicon-user"></i>
+							&nbsp;View Profile
+						<% end %>
+					</li>
+					<li>
+						<%= link_to edit_user_registration_path do %>
+							<i class="glyphicon glyphicon-pencil"></i>
+							&nbsp;Edit Profile
+						<% end %>
+					</li>
+					<li>
+						<%= link_to('<i class="glyphicon glyphicon-log-out"></i>
+							&nbsp;Sign Out'.html_safe, destroy_user_session_path, :method => :delete) %>
+					</li>
+				<% else %>
+					<li>
+						<%= link_to(new_user_session_path) do %>
+							<i class="glyphicon glyphicon-log-in"></i>
+							&nbsp;Sign In
+						<% end %>
+					</li>
+				<% end %>
 			</ul>
 		</div>
 		<div class="clearfix"></div>

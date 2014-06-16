@@ -14,7 +14,7 @@
 
 	<div class="container">
 		<div id="logo">
-			<a href="#"><img src="/images/logo.png" /></a>
+			<a href="/"><img src="/images/logo.png" /></a>
 		</div>
 		<div id="navigation">
 			<ul class="list-unstyled list-inline">
@@ -28,17 +28,27 @@
 			<div id="user-menu">
 				<% if current_user %>
 					<div class="dropdown-toggle" data-toggle="dropdown">
-						<img src="/images/profile-pic.jpg" width="30" class="img-circle">
-						<%= current_user.first_name ? current_user.first_name : "" %> <span class="caret"></span>
+						<% if current_user.avatar.blank? %>
+							<img src="/images/default_avatar.jpg" width="30" alt="Default avatar" class="img-circle" />
+						<% else %>
+							<img src="<%= current_user.avatar %>" width="30" alt="Default avatar" class="img-circle" />
+						<% end %>
+						<%= current_user.first_name %> <span class="caret"></span>
 					</div>
 				<% else %>
 					<%= link_to('Sign in', new_user_session_path) %>
 				<% end %>
 				<ul class="dropdown-menu" role="menu">
 					<li>
-						<a href="/user/signout">
+						<a href="/user/edit">
 							<i class="glyphicon glyphicon-user"></i>
 							&nbsp;Edit Profile
+						</a>
+					</li>
+					<li>
+						<a href="/user/signout">
+							<i class="glyphicon glyphicon-user"></i>
+							&nbsp;Profile
 						</a>
 					</li>
 					<li>

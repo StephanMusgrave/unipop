@@ -9,6 +9,7 @@ end
 def show
 	@listing = Listing.find(params[:listing_id])
 	@chatroom = @listing.chatroom || Chatroom.create(listing: @listing)
+	@comment = Comment.new
 
 	unless current_user == @chatroom.buyer || current_user == @chatroom.seller
 		flash[:notice] = 'Access unauthorized'

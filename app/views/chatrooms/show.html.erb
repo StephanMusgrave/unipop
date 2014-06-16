@@ -1,1 +1,8 @@
-show.html.erb
+<h1>New chatroom page</h1>
+
+	<%= form_for [@listing, @chatroom, @comment] do |f| %>
+		<%= f.label :comment, "Comment:" %>
+		<%= f.text_area :body, placeholder: "Start chatting!"%><br />
+		<%= f.submit %>
+	<%end%>				
+

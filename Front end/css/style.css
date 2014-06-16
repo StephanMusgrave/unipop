@@ -1,0 +1,231 @@
+/* Global styles */
+header {
+	background: #008ED1;
+	margin-bottom: 10px;
+  min-height: 55px;
+}
+header #section-title {
+	font-weight: bold;
+	color: #fff;
+	font-size: 20px;
+	margin-top:15px;
+	padding-left: 10px;
+}
+#menu-btn {
+	background: #fff;
+	margin-top: 15px;
+}
+#menu-btn .icon-bar {
+	background: black;
+}
+#back-btn {
+	font-size: 25px;
+	margin: 15px 0 0 10px;
+	padding:0;
+}
+#desktop-top-controls {
+  margin-top: 6px;
+  color: #fff;
+  cursor: pointer;
+  width: auto;
+}
+#desktop-top-controls #search {
+
+}
+#desktop-top-controls .dropdown-toggle {
+  background: #0E5B80;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+#desktop-top-controls #search {
+  float: right;
+  margin-top: 4px;
+}
+#desktop-top-controls #user-nav {
+  width: auto;
+  float:right;
+}
+.listings-grid .listing {
+	padding: 7px;
+}
+.listings-grid .listing img {
+	border-radius: 4px;
+	border:1px solid #c9c9c9;
+}
+.listings-grid .listing img:hover {
+	border: 1px solid #888;
+}
+
+
+/* Profile view */
+
+#profile-section #profile-id {
+	margin: 10px;
+}
+#profile-section #profile-id img {
+	width: 65px;
+	float: left;
+}
+#profile-section #profile-id #name {
+	font-size: 17px;
+	font-weight: bold;
+	margin: 20px 0 0 10px;
+	float: left;
+}
+#profile-section #tabs {
+	margin-top: 20px;
+}
+
+
+/* Single product view */
+
+#single-section #profile-id {
+	margin: 10px;
+}
+#single-section #profile-id img {
+	width: 65px;
+	float: left;
+}
+#single-section #profile-id #name {
+	font-size: 17px;
+	font-weight: bold;
+	margin: 20px 0 0 10px;
+	float: left;
+}
+#single-section #tabs {
+	margin-top: 20px;
+}
+#single-section #product-pic {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 20px;
+	overflow: hidden;
+}
+#single-section #product-details {
+	margin-top: 10px;
+}
+#single-section #product-details #description {
+	font-size: 16px;
+}
+#single-section #product-details #other #distance {
+	font-size: 16px;
+}
+#single-section #product-details #other #price {
+	font-size: 19px;
+	font-weight: bold;
+}
+#single-section #i-want-this-btn .btn {
+	width:100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/* Post new listing view */
+#new-listing-section #profile-id {
+	margin: 10px;
+}
+#new-listing-section #profile-id img {
+	width: 65px;
+	float: left;
+}
+#new-listing-section #profile-id #name {
+	font-size: 17px;
+	font-weight: bold;
+	margin: 20px 0 0 10px;
+	float: left;
+}
+#new-listing-section #post-new-form {
+	margin-top:20px;
+}
+#new-listing-section #post-new-form #post-btn .btn {
+	width: 100%;
+	margin-top:5px;
+	margin-bottom:30px;
+}
+
+
+/* Chat view */
+#chat-section #profile-id {
+	margin: 10px;
+}
+#chat-section #profile-id img {
+	width: 65px;
+	float: left;
+}
+#chat-section #profile-id #name {
+	font-size: 17px;
+	font-weight: bold;
+	margin: 20px 0 0 10px;
+	float: left;
+}
+#chat-section .chat-convo  {
+	border-bottom:1px solid #ccc;
+}
+#chat-section .chat-convo .convo-product-pic {
+	padding: 5px;
+}
+#chat-section .chat-convo .convo-name {
+	padding-left: 0;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top:15px;
+}
+#chat-section .chat-convo .convo-delete {
+	font-size: 20px;
+	text-align:center;
+	color: red;
+	margin-top:15px;
+}
+
+
+/* Chat convo view */
+#chat-convo-section #conversation {
+	max-height: 410px;
+	overflow: scroll;
+}
+#chat-convo-section .convo .convo-img {
+	padding-right: 0;
+}
+#chat-convo-section .convo.convo-right{
+	position:relative;
+   padding: 10px;
+   background: #ddd;
+   margin: 5px 5px;
+   max-width: 240px;
+   float: right;
+   border-radius: 4px;
+}
+#chat-convo-section .convo.convo-right:after {
+   position:absolute;
+   content: ""; 
+   top:15px;right:-10px;
+   border-width: 10px 0 10px 15px;
+   border-color: transparent  #ddd;
+   border-style: solid;
+}
+#chat-convo-section .convo.convo-left {
+   position:relative;
+   left: 15px;
+   padding: 10px;
+   background: #aaa;
+   margin: 5px 5px;
+   max-width: 250px;
+   border-radius: 4px;
+}
+#chat-convo-section .convo.convo-left:before {
+   position:absolute;
+   content: ""; 
+   top:15px;left:-10px;
+   border-width: 10px 15px 10px 0px;
+   border-color: transparent  #aaa;
+   border-style: solid;
+}
+#chat-convo-section form {
+	margin-top: 10px;
+}
+#chat-convo-section form #convo-text-box {
+	margin-right:0;
+}
+#chat-convo-section form #send-btn {
+	margin-left:;
+}

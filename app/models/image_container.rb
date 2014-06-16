@@ -9,6 +9,6 @@ class ImageContainer < ActiveRecord::Base
   # }
   
   # validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
-
+  #attr_accessible :content, :listing_id
   belongs_to :listing
 end

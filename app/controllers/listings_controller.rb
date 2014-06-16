@@ -37,7 +37,7 @@ class ListingsController < ApplicationController
     @listing.seller = current_user
 
     if @listing.save
-      redirect_to '/'
+      redirect_to '/dashboard'
       else 
         render 'new'
       end

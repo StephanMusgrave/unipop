@@ -38,7 +38,7 @@ class ListingsController < ApplicationController
 
   def update
     @listing = Listing.find(params[:id])
-    if @listing.update(params[:listing].permit(:description, :price, :location))
+    if @listing.update(params[:listing].permit(:description, :price, :location, :hashtag_names))
       redirect_to listing_path @listing
     else
     	flash[:notice] = 'Edits not saved'

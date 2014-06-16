@@ -46,7 +46,7 @@ gem 'gmaps4rails', '~> 2.1.2'
 gem 'geocoder'
 
 group :test do
-  gem 'rmagick'
+  # gem 'rmagick'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner'

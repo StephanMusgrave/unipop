@@ -1,6 +1,6 @@
 Given(/^I want to sell some stuff$/) do
   visit '/'
-  click_on '+'
+  click_on 'Sell'
 end
 
 Then(/^I should be able to post a listing$/) do

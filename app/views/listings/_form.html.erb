@@ -7,9 +7,11 @@
 
 		<%= form_for @listing, html: { multipart: true }, class: 'form' do |f| %>
 
-			<div id="listing-picture">
-				<%= image_tag @listing.picture, width: 100 %>
-			</div>
+			<% if !@listing.picture.blank? %>
+				<div id="listing-picture">
+					<%= image_tag @listing.picture, width: 100 %>
+				</div>
+			<% end %>
 			<div id="listing-picture-field">
 				<div class="form-group">
 					<%= f.label :picture, class: 'primary-color' %>

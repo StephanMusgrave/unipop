@@ -1,29 +1,48 @@
-<% if @listing.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this post from being saved:</h2>
-<% end %>
+<div class="container">
+	<div id="edit-listing" class="col-xs-12 col-sm-7">
+		<% if @listing.errors.any? %>
+		  <div id="error_explanation">
+		    <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this post from being saved:</h2>
+		<% end %>
 
-<%= form_for @listing, html: { multipart: true } do |f| %>
+		<%= form_for @listing, html: { multipart: true }, class: 'form' do |f| %>
 
-	<%= f.label :description %>
-	<%= f.text_field :description %>
+			<div id="listing-picture">
+				<%= image_tag @listing.picture, width: 100 %>
+			</div>
+			<div id="listing-picture-field">
+				<div class="form-group">
+					<%= f.label :picture, class: 'primary-color' %>
+					<%= f.file_field :picture, class: 'form-control' %>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="form-group">
+				<%= f.label :description, class: 'primary-color' %>
+				<%= f.text_field :description, class: 'form-control' %>
+			</div>
 
-	<%= f.label :price %>
-	<%= f.text_field :price %>
+			<div class="form-group">
+				<%= f.label :price, class: 'primary-color' %>
+				<%= f.text_field :price, class: 'form-control' %>
+			</div>
 
-	<%= f.label :location %>
-	<%= f.text_field :location %>
+			<div class="form-group">
+				<%= f.label :location, class: 'primary-color' %>
+				<%= f.text_field :location, class: 'form-control' %>
+			</div>
 
-	<%= f.label :picture %>	
-	<%= f.file_field :picture %>
+			<div class="form-group">
+				<%= f.label :hashtag_names, "Hashtags", class: 'primary-color' %>
+				<%= f.text_field :hashtag_names, class: 'form-control' %>
+			</div>
 
-	<%= f.label :hashtag_names, "Hashtags" %>	
-	<%= f.text_field :hashtag_names %>
+			<% if @listing.new_record? %>
+				<%= f.submit "Add my stuff", class: 'btn btn-primary' %>
+		  <% else %>
+				<%= f.submit "Save", class: 'btn btn-primary' %>
+			<% end %>
 
-	<% if @listing.new_record? %>
-  <%= f.submit "Add my stuff" %>
-  <% else %>
-  <%= f.submit "Save" %>
-	<% end %>
-
-<% end %>
+		<% end %>
+	</div>
+</div>

@@ -29,7 +29,7 @@
 				<% if current_user %>
 					<div class="dropdown-toggle" data-toggle="dropdown">
 						<img src="/images/profile-pic.jpg" width="30" class="img-circle">
-						<%= current_user.first_name+" " + current_user.last_name %> <span class="caret"></span>
+						<%= current_user.first_name ? current_user.first_name : "" %> <span class="caret"></span>
 					</div>
 				<% else %>
 					<%= link_to('Sign in', new_user_session_path) %>

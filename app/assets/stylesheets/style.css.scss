@@ -146,6 +146,11 @@ header #header-right #user-menu #sign-in-link {
 	padding: 12px;
 	display: block;
 }
+@media(max-width:991px) {
+	header #header-right #user-menu #sign-in-link {
+		text-align: right;
+	}
+}
 header #header-right #user-menu a#sign-in-link:hover {
 	text-decoration: none;
 }

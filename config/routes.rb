@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :chatrooms, only: [:index]
+
   resources :listings do
     resource :map
   	resources :buyers

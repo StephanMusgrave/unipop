@@ -102,7 +102,6 @@ end
 #------- Stuff to do with Louise
 Given(/^Louise has one notebook for sale$/) do
   @louises_notebook = Listing.create(description: "my makers academy black notebook", price: "22", hashtag_names: "notebook, black", seller: louise)
-  expect(louise.sales_listings.all.count).to eq 1 
 end
 
 Given(/^Louise logs in$/) do

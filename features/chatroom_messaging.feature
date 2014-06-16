@@ -25,7 +25,6 @@ Scenario: Accessing the chatroom as a seller
   And Louise clicks "1 in queue"
   And Louise is in the chatroom for her notebook
   Then Louise sees "Ollie said: Hey, I wanna buy your notebook" on the page
-  
 
   
 

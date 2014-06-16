@@ -17,10 +17,11 @@ class Listing < ActiveRecord::Base
 
 
   def hashtag_names
-  	''
+  	hashtags.map(&:name).join(', ')
   end
 
 	def hashtag_names=(hashtag_input)
+    hashtags.clear
 		return if hashtag_input.blank?
 		formatted_hashtags = hashtag_input.downcase.split(/[\s,|.]+/).uniq
  		formatted_hashtags.each do |one_hashtag|

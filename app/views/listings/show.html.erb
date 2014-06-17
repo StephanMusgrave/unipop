@@ -30,7 +30,7 @@
 				<%= link_to "I want it!", listing_buyers_path(@listing), method: :post, class: 'btn btn-primary btn-lg', id: 'i-want-this-btn' %>
 			<% end %>
 			<% if current_user.want_listings.include?(@listing) %>
-				<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, data: { confirm: "Click OK if you definitely don't want this anymore"} %>
+				<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, class: 'btn btn-warning btn-lg', data: { confirm: "Click OK if you definitely don't want this anymore"} %>
 			<% end %>
 		</div>
 	</div>

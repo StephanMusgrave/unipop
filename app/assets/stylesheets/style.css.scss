@@ -362,10 +362,10 @@ header #user-device-menu ul li a:hover {
 	border-radius: 4px;
 	overflow: hidden;
 }
+#item-img img {
+	display: inline;
+}
 @media(max-width: 700px) {
-	#item-img img {
-		display: inline;
-	}
 	#item-img {
 		width: 100%;
 	}
@@ -397,6 +397,11 @@ header #user-device-menu ul li a:hover {
 	font-size: 24px;
 	margin-top: 10px;
 }
+#edit-listing #listing-picture {
+}
+#edit-listing #listing-picture-field {
+}
+
 
 /* Chat - List */
 #conversations ul li {

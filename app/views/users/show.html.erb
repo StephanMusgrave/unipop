@@ -9,7 +9,6 @@
 	<div id="info">
 		<h2 class="primary-color"><%= @user_info.first_name %> <%= @user_info.last_name %></h2>
 		<div class="light-grey" style="display:none;">London, UK</div>
-		<a  href=""></a>
 		<%= link_to 'Edit Profile', edit_user_registration_path, id:'edit-link' %>
 	</div>
 </div>
@@ -28,6 +27,11 @@
 				<div class="listing col-xs-4">
 					<%= link_to '/listings' + listing.id.to_s do %>
 						<img src="<%= listing.picture %>" class="img-responsive" />
+					<% end %>
+					<% if current_user.id == listing.seller.id && listing.buyers.count > 0 %>
+						<a href="#">
+							<span class="label label-primary">1 in queue</span>
+						</a>
 					<% end %>
 				</div>
 			<% end %>

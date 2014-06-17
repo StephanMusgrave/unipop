@@ -6,7 +6,7 @@ Given(/^there are no listings$/) do
 end
 
 Then(/^I should see the message "(.*?)"$/) do |content|
-  expect(page.body).to include content
+  expect(page).to have_content content
 end
 
 Given(/^there is one listing$/) do
@@ -17,5 +17,5 @@ Given(/^there is one listing$/) do
 end
 
 Then(/^I should see "(.*?)"$/) do |content|
-  expect(page.body).to include(content)
+  expect(page).to have_content content
 end

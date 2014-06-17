@@ -25,6 +25,22 @@
 			<% end %>
 
 			<div class='form-group'>
+<<<<<<< HEAD
+				<%= f.label :current_password, class: 'primary-color' %> <i>(Enter your current password to confirm your changes)</i><br />
+				<%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
+			</div>
+			
+			<div class='form-group'>
+				<%= f.label :password, class: 'primary-color' %> <i>(New Password - leave blank if you don't want to change it)</i><br />
+				<%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+			</div>
+
+			<div class='form-group'>
+				<%= f.label :password_confirmation, class: 'primary-color' %><i>(Confirm new Password)</i><br />
+				<%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+			</div>
+
+=======
 				<%= f.label :current_password, 'Current Password', class: 'primary-color' %> <i>(we need your current password to confirm your changes)</i><br />
 				<%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
 			</div>
@@ -38,6 +54,7 @@
 				<%= f.label :password_confirmation, 'Re-type New Password', class: 'primary-color' %><br />
 				<%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
 			</div>
+>>>>>>> 93c0ffe6ee9d9903bb08c9f500dfe376ea3bbfdd
 
 			<div class='form-group'>
 				<%= f.label :avatar, 'Profile picture', class: 'primary-color' %><br />  

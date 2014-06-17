@@ -27,5 +27,5 @@ When(/^Louise visits the homepage$/) do
 end
 
 Then(/^Louise should not see Ollie's football as a listing$/) do
-  pending # express the regexp above with the code you wish you had
+	expect(page).not_to have_css('.listing-main-pic')
 end

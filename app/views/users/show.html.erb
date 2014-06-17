@@ -26,7 +26,7 @@
 			<% @user_selling.each do |listing| %>
 				<div class="listing col-xs-4">
 					<%= link_to '/listings/' + listing.id.to_s do %>
-						<img src="<%= listing.picture %>" class="img-responsive" />
+						<img src="<%= listing.main_pic %>" class="img-responsive" />
 					<% end %>
 					<% if current_user.id == listing.seller.id && listing.buyers.count > 0 %>
 						<a href="#">
@@ -41,7 +41,7 @@
 				<% @user_wants.each do |listing| %>
 					<div class="listing col-xs-4">
 						<%= link_to '/listings/' + listing.id.to_s do %>
-							<img src="<%= listing.picture %>" class="img-responsive" />
+							<img src="<%= listing.main_pic %>" class="img-responsive" />
 						<% end %>
 					</div>
 				<% end %>

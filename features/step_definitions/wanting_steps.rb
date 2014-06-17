@@ -3,7 +3,7 @@ Given(/^Ollie is on the homepage$/) do
 end
 
 Given(/^Ollie clicks on Louise's notebook listing$/) do
-  click_on @louises_notebook.picture
+  find('.listing:first a').click
   expect(current_path).to eq listing_path @louises_notebook
 end
 
@@ -12,7 +12,7 @@ Given(/^Ollie clicks "(.*?)"$/) do |clicky|
 end
 
 Then(/^Ollie enters chatroom to speak with Louise about her notebook$/) do
-  expect(current_path).to eq "/listings/#{@louises_notebook.id}/buyers/#{@ollie.id}/chatrooms"
+  expect(current_path).to eq "/listings/#{@louises_notebook.id}/chatroom"
 end
 
 Then(/^the listing should show that Ollie is on the waitlist$/) do
@@ -37,7 +37,7 @@ Then(/^Ollie is told he's been added to the waitlist$/) do
 end
 
 Given(/^Ollie clicks on his football listing$/) do
-  click_on @ollies_football.picture
+  first('.listing a').click
   expect(current_path).to eq listing_path @ollies_football
 end
 

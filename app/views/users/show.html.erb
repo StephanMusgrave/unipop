@@ -25,7 +25,7 @@
 		<div class="tab-pane active" id="selling">
 			<% @user_selling.each do |listing| %>
 				<div class="listing col-xs-4">
-					<%= link_to '/listings' + listing.id.to_s do %>
+					<%= link_to '/listings/' + listing.id.to_s do %>
 						<img src="<%= listing.picture %>" class="img-responsive" />
 					<% end %>
 					<% if current_user.id == listing.seller.id && listing.buyers.count > 0 %>
@@ -40,7 +40,7 @@
 			<div class="tab-pane" id="wants">
 				<% @user_wants.each do |listing| %>
 					<div class="listing col-xs-4">
-						<%= link_to '/listings' + listing.id.to_s do %>
+						<%= link_to '/listings/' + listing.id.to_s do %>
 							<img src="<%= listing.picture %>" class="img-responsive" />
 						<% end %>
 					</div>

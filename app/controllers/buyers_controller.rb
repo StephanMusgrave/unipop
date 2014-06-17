@@ -8,7 +8,7 @@ class BuyersController < ApplicationController
 	  	redirect_to '/dashboard'
 	  	flash[:notice] = 'You have been added to the waiting list for this item'
 	  else
-	  	redirect_to "@listing.id/chatroom"
+	  	redirect_to listing_chatroom_path(@listing)
 	  end
 	end
 

@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
   def index
     @all_listings = Listing.search(params[:search])
 
-    if @all_listings.empty?
+    if @all_listings.empty? && params[:search]
       flash[:notice] = "Couldn't find that tag"
     else
       flash[:notice] = nil
@@ -38,12 +38,13 @@ class ListingsController < ApplicationController
 
   end
 
-  def new
-    @listing = Listing.new
-  end
+	def new
+		@listing = Listing.new
+    3.times { @listing.image_containers.new }
+	end
 
   def create    
-    @listing = Listing.create(params['listing'].permit(:description, :price, :location, :picture, :hashtag_names))
+    @listing = Listing.create(params['listing'].permit(:description, :price, :location, :hashtag_names, :image_containers_attributes => [:picture, :original_filename, :content_type, :headers]))
     @listing.seller = current_user
 
     if @listing.save
@@ -63,7 +64,8 @@ class ListingsController < ApplicationController
 
   def update
     @listing = Listing.find(params[:id])
-    if @listing.update(params[:listing].permit(:description, :price, :location, :hashtag_names))
+
+    if @listing.update(params[:listing].permit(:description, :price, :location, :image_containers_attributes => [:id,:name]))
       redirect_to listing_path @listing
     else
       flash[:notice] = 'Edits not saved'

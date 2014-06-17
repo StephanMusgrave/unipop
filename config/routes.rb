@@ -3,10 +3,13 @@ Rails.application.routes.draw do
 
   resources :listings do
     resource :map
-  	resources :buyers
+    resources :buyers do
+      resource :chat
+    end
     resource :chatroom do
       resources :comments
     end
+    resource :image_container
   end
 
   get 'dashboards/show'

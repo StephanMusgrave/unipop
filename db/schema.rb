@@ -76,10 +76,17 @@ ActiveRecord::Schema.define(version: 20140617093334) do
     t.datetime "picture_updated_at"
     t.integer  "seller_id"
     t.string   "image_container"
-    t.string   "picture"
   end
 
   add_index "listings", ["seller_id"], name: "index_listings_on_seller_id", using: :btree
+
+  create_table "pictures", force: true do |t|
+    t.integer  "listing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pictures", ["listing_id"], name: "index_pictures_on_listing_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -102,6 +109,7 @@ ActiveRecord::Schema.define(version: 20140617093334) do
     t.datetime "avatar_updated_at"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "ip_address"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

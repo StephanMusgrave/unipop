@@ -11,6 +11,9 @@ class ListingsController < ApplicationController
       flash[:notice] = nil
     end
 
+    @listings_per_page = Listing.paginate(page: params[:page], per_page: 15).order('created_at DESC')
+
+
     # @all_listings = Listing.all
 
     # @current_location = Listing.geocoded 

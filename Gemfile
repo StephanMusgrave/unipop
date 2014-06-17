@@ -56,7 +56,6 @@ group :test do
   gem "factory_girl_rails"
   gem 'capybara-email'
   gem 'cucumber-rails', require: false
-  gem 'betterlorem', '~> 0.1.2'
 end
 
 group :production do

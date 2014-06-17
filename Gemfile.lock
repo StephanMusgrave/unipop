@@ -57,7 +57,6 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
     bcrypt (3.1.7)
-    betterlorem (0.1.2)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.10)
@@ -253,7 +252,6 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk
-  betterlorem (~> 0.1.2)
   bootstrap-sass
   bootstrap-will_paginate (~> 0.0.10)
   capybara

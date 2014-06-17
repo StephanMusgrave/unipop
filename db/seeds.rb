@@ -9,5 +9,5 @@
 50.times do |i|
 	puts "adding listing #{i}"
 	listing = Listing.create(description: "Beautiful shoes #{i}")
-	listing.image_containers << ImageContainer.create(picture: Rails.root.join('public/images/product_image.jpg').open)
+	listing.image_containers << ImageContainer.create(picture: Rails.root.join('public/images/redshoes.jpg').open)
 end

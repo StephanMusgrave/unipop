@@ -22,6 +22,8 @@ Given(/^Ollie has agreed to sell Louise his football$/) do
 	louise
   @louise.want_listings << @ollies_football
   @ollies_football.sold = true
+  Chatroom.create(listing:@ollies_football)
+
 end
 
 When(/^Louise visits the homepage$/) do
@@ -39,4 +41,16 @@ end
 
 Then(/^Ollie should see "(.*?)" next to his football listing$/) do |content|
 	pending # expect(page).to have_content(content)
+end
+
+Given(/^Louise has decided she doesn't want it anymore$/) do
+	@ollies_football.chatroom.comments.create(body:"I don't want your stupid football anymore", user:@louise)
+end
+
+Given(/^Ollie goes to the home page$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^Ollie sees his football$/) do
+  pending # express the regexp above with the code you wish you had
 end

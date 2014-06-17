@@ -40,7 +40,6 @@ class ListingsController < ApplicationController
 
 	def new
 		@listing = Listing.new
-    3.times { @listing.image_containers.new }
 	end
 
   def create    
@@ -65,7 +64,7 @@ class ListingsController < ApplicationController
   def update
     @listing = Listing.find(params[:id])
 
-    if @listing.update(params[:listing].permit(:description, :price, :location, :image_containers_attributes => [:id,:name]))
+    if @listing.update(params[:listing].permit(:description, :price, :location, :image_containers_attributes => [:picture, :original_filename, :content_type, :headers]))
       redirect_to listing_path @listing
     else
     	flash[:notice] = 'Edits not saved'

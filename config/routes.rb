@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resource :chatroom do
       resources :comments
     end
-    resource :image_container
+    resources :image_containers
   end
 
   get 'dashboards/show'

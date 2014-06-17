@@ -5,7 +5,11 @@
 
 <%= form_for @listing, html: { multipart: true } do |f| %>
   	
+  <%= f.fields_for :image_containers do |builder| %>
+    <%= render 'image_container_fields', f: builder %>  
+  <% end %>
   <% link_to_add_fields "Add Picture", f, :image_containers %>
+
   <%= f.label :description %>
 	<%= f.text_field :description %>
 

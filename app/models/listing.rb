@@ -1,20 +1,17 @@
-class Listing < ActiveRecord::Base
-	has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" },
-  :default_url => "/images/:style/missing.png",
-  storage: :s3,
-  s3_credentials: {
-    bucket: 'ProjectX-Makers',
-    access_key_id: Rails.application.secrets.s3_access_key,
-    secret_access_key: Rails.application.secrets.s3_secret_key
-  }
-
-  validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
-
+class Listing < ActiveRecord::Base   
+  
+  #attr_accessible :name, :image_containers_attributes
   belongs_to :seller, class_name: 'User'
   has_and_belongs_to_many :buyers, class_name: 'User', association_foreign_key: 'buyer_id', join_table: 'buyers_listings'
   has_and_belongs_to_many :hashtags
   has_one :chatroom
+  has_many :image_containers
+  accepts_nested_attributes_for :image_containers, allow_destroy: true
 
+  def main_pic
+    image_containers.first.picture
+  end
+  
   def self.search(query)
     if query 
       tag = Hashtag.find_by(name: query)

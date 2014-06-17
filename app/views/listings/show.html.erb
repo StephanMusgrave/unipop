@@ -24,7 +24,11 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <%= image_tag imgc.picture.url(:medium) %>
+      <img src="..." alt="...">
+      
+      <% @listing.image_containers.reverse.each do |imgc| %>
+		  <%= image_tag imgc.picture.url(:medium) %>
+		<% end %>
 
 
       <div class="carousel-caption">

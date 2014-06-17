@@ -57,6 +57,12 @@ ActiveRecord::Schema.define(version: 20140614173115) do
     t.integer "hashtag_id", null: false
   end
 
+  create_table "image_containers", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "listings", force: true do |t|
     t.string   "description"
     t.decimal  "price"
@@ -64,16 +70,19 @@ ActiveRecord::Schema.define(version: 20140614173115) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
     t.integer  "seller_id"
-    t.float    "latitude"
-    t.float    "longitude"
+    t.string   "image_container"
   end
 
   add_index "listings", ["seller_id"], name: "index_listings_on_seller_id", using: :btree
+
+  create_table "pictures", force: true do |t|
+    t.integer  "listing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pictures", ["listing_id"], name: "index_pictures_on_listing_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

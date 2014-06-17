@@ -40,6 +40,7 @@ class ListingsController < ApplicationController
 
 	def new
 		@listing = Listing.new
+    @listing.image_containers.new
 	end
 
   def create    

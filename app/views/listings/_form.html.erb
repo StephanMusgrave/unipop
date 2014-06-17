@@ -30,17 +30,28 @@
 
       <div id="listing-images">
         <% @listing.image_containers.each do |image| %>
-          <div class="listing-image" id="listing-image-<%= image.id %>" data-id='<%= image.id %>'>
-            <%= image_tag image.picture, width: 100 %>
-            <button type="button" class="btn btn-sm btn-danger remove-listing-image-btn">
-              <i class="glyphicon glyphicon-remove"></i>
-              Delete image
-            </button>
-          </div>
+          <% unless image.new_record? %>
+            <div class="listing-image" id="listing-image-<%= image.id %>" data-id='<%= image.id %>'>
+              <%= image_tag image.picture, width: 100 %>
+              <button type="button" class="btn btn-sm btn-danger remove-listing-image-btn">
+                <i class="glyphicon glyphicon-remove"></i>
+                Delete image
+              </button>
+            </div>
+          <% end %>
         <% end %>
       </div>
 
       <br/>
+
+      <% if @listing.new_record? %>
+        <div class="form-group">
+          <%= f.fields_for :image_containers do |x| %>
+            <%= x.label :picture, "Picture", class: 'primary-color' %>
+            <%= x.file_field :picture, class: 'form-control' %>
+          <% end %>
+        </div>
+      <% end %>
 
       <div id="listing-picture-field"></div>
 

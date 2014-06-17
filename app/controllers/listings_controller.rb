@@ -40,7 +40,6 @@ class ListingsController < ApplicationController
 
 	def new
 		@listing = Listing.new
-    3.times { @listing.image_containers.new }
 	end
 
   def create    

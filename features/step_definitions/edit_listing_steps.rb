@@ -7,8 +7,9 @@ Given(/^I want to change something$/) do
 end
 
 Then(/^I click the Edit button$/) do
+  puts page.html
    # p page.source
-   click_on 'Edit'
+   click_on 'Edit listing'
 end
 
 Then(/^I complete the edit form$/) do

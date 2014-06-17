@@ -107,7 +107,7 @@ Given(/^Louise has one notebook for sale$/) do
     price: "22", 
     hashtag_names: "notebook, black", 
     seller: louise, 
-    picture: "/spec/images/profile_picture.jpg")
+    picture: Rails.root.join("spec/images/profile_picture.jpg").open)
   
   expect(louise.sales_listings.all.count).to eq 1 
 end

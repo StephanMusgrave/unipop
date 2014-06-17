@@ -30,7 +30,7 @@ def user_listing
     description: 'Makers Notebook for sale',
     price: 0.35, 
     seller_id: @user.id, 
-    picture: File.new(Rails.root.join('public/images/product_image.jpg'))
+    picture:Rails.root.join('public/images/product_image.jpg').open
   })
 end
   
@@ -40,6 +40,6 @@ def another_user_listing
     description: 'Not my listing',
     price: 0.35, 
     seller_id: @user2.id, 
-    picture: File.new(Rails.root.join('public/images/product_image.jpg'))
+    picture: Rails.root.join('public/images/product_image.jpg').open
   })
 end

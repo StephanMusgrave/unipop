@@ -3,7 +3,7 @@
 		<% @all_listings.shuffle.each do |listing| %>
 			<div class="listing col-xs-4">
 				<%= link_to listing_path(listing) do %>
-					<img src="<%= listing.picture %>" class="img-responsive" alt="" />
+					<%= image_tag listing.main_pic, class: 'img-responsive' %>
 				<% end %>	
 			</div>
 		<% end %>

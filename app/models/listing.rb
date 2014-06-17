@@ -8,6 +8,10 @@ class Listing < ActiveRecord::Base
   has_many :image_containers
   accepts_nested_attributes_for :image_containers, allow_destroy: true
 
+  def main_pic
+    image_containers.first.picture
+  end
+  
   def self.search(query)
     if query 
       tag = Hashtag.find_by(name: query)

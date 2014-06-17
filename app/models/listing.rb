@@ -9,7 +9,7 @@ class Listing < ActiveRecord::Base
   accepts_nested_attributes_for :image_containers, allow_destroy: true
 
   def main_pic
-    image_containers.first.picture
+    image_containers.any? ? image_containers.first.picture : 'no image'
   end
   
   def self.search(query)
@@ -34,6 +34,10 @@ class Listing < ActiveRecord::Base
 			hashtags << hashtag
 		end
 	end
+
+  def last_comment
+    chatroom.comments.last
+  end
 end
 
 

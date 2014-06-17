@@ -10,20 +10,21 @@ Background: Being logged in and having wanted another user's listing
   And Ollie clicks on Louise's notebook listing
   And Ollie is the first buyer to click "I want it!"
 
-Scenario: Sending a chat message
+Scenario: Sending a chat message as a buyer
   Given Ollie enters chatroom to speak with Louise about her notebook
   And Ollie fills in the chat field with "Hey, I wanna buy your notebook"
-  And Ollie presses the "Enter"
+  And Ollie clicks "Create Comment"
   Then Ollie sees "Hey, I wanna buy your notebook" on the chat page
+  And Ollie sees "less than a minute ago, Ollie said:"
 
-# Scenario: First buyer and seller logged in
-#   Given Louise logs in 
-#   Given Ollie enters chatroom to speak with Louise about her notebook
-#   And Ollie opens the chat with "Hi I'm interested in buying your lovely notebook."
-#   Then Louise sees Ollie's message about her notebook listing
-#   And Louise says "Great, meet me in union bar at 1pm with the readdies"
-#   And Ollie says "OK, see you there my number is 07775 678678"
-  
+Scenario: Accessing the chatroom as a seller
+  Given Ollie has messaged Louise about her notebook
+  And Ollie signs out
+  And Louise signs in and is on her dashboard
+  And Louise sees "1 in queue" on the page
+  And Louise clicks "1 in queue"
+  And Louise is in the chatroom for her notebook
+  Then Louise sees "Ollie said: Hey, I wanna buy your notebook" on the page
 
   
 

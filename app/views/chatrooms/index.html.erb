@@ -1,0 +1,26 @@
+<h2>Buying (<%= current_user.want_listings.count%>)</h2>
+
+<% @want_listings.each do |want_listing| %>
+	<% if want_listing.chatroom.comments.any? %>
+		<i><%= want_listing.chatroom.comments.last.body %></i><br>
+	<% else %>
+		<%= link_to "Get in touch with the seller!" , listing_chatroom_path(want_listing) %><br>
+	<% end %>
+<%end%>
+
+<h2>Selling (<%= current_user.sales_listings.count%>)</h2>
+<% if @sales_listings.empty? %>
+	<%= link_to "Sell some stuff", new_listing_path %>
+<% else %>
+	<% @sales_listings.each do |sales_listing| %>
+		<% if sales_listing.buyers.count == 0 %>
+			
+		<% elsif sales_listing.chatroom.comments.empty? %>
+			<%= link_to "Get in touch with the buyer!" , listing_chatroom_path(sales_listing) %><br>
+		<% else sales_listing.chatroom.comments.any? %>
+			<i>
+			<%= sales_listing.chatroom.comments.last.user.first_name %> said: <%= link_to sales_listing.chatroom.comments.last.body, listing_chatroom_path(sales_listing) %>
+			</i><br>
+		<% end %>
+	<%end%>
+<% end %>

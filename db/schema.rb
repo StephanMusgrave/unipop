@@ -29,6 +29,24 @@ ActiveRecord::Schema.define(version: 20140614173115) do
 
   add_index "chatrooms", ["listing_id"], name: "index_chatrooms_on_listing_id", using: :btree
 
+  create_table "comments", force: true do |t|
+    t.integer  "chatroom_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "comments", ["chatroom_id"], name: "index_comments_on_chatroom_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+
+  create_table "geocodes", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
+  end
+
   create_table "hashtags", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -79,6 +97,7 @@ ActiveRecord::Schema.define(version: 20140614173115) do
     t.datetime "avatar_updated_at"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "ip_address"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

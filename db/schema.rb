@@ -76,10 +76,22 @@ ActiveRecord::Schema.define(version: 20140617110228) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.integer  "seller_id"
+<<<<<<< HEAD
     t.boolean  "sold"
+=======
+    t.string   "image_container"
+>>>>>>> b1f2d3e38119a3fbc429c5e338ea2fe3ee87f4a7
   end
 
   add_index "listings", ["seller_id"], name: "index_listings_on_seller_id", using: :btree
+
+  create_table "pictures", force: true do |t|
+    t.integer  "listing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pictures", ["listing_id"], name: "index_pictures_on_listing_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

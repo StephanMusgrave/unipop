@@ -44,6 +44,8 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'newrelic_rpm'
 gem 'gmaps4rails', '~> 2.1.2'
 gem 'geocoder'
+gem 'will_paginate', '~> 3.0.5'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 
 group :test do
   # gem 'rmagick'
@@ -54,6 +56,7 @@ group :test do
   gem "factory_girl_rails"
   gem 'capybara-email'
   gem 'cucumber-rails', require: false
+  gem 'betterlorem', '~> 0.1.2'
 end
 
 group :production do

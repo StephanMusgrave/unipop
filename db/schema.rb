@@ -29,15 +29,23 @@ ActiveRecord::Schema.define(version: 20140617110228) do
 
   add_index "chatrooms", ["listing_id"], name: "index_chatrooms_on_listing_id", using: :btree
 
+  create_table "comments", force: true do |t|
+    t.integer  "chatroom_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "comments", ["chatroom_id"], name: "index_comments_on_chatroom_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+
   create_table "geocodes", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
   end
-
-  add_index "comments", ["chatroom_id"], name: "index_comments_on_chatroom_id", using: :btree
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "hashtags", force: true do |t|
     t.string   "name"
@@ -75,22 +83,10 @@ ActiveRecord::Schema.define(version: 20140617110228) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.integer  "seller_id"
-<<<<<<< HEAD
     t.boolean  "sold"
-=======
-    t.string   "image_container"
->>>>>>> b1f2d3e38119a3fbc429c5e338ea2fe3ee87f4a7
   end
 
   add_index "listings", ["seller_id"], name: "index_listings_on_seller_id", using: :btree
-
-  create_table "pictures", force: true do |t|
-    t.integer  "listing_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "pictures", ["listing_id"], name: "index_pictures_on_listing_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

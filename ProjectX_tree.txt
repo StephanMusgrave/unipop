@@ -1,27 +1,184 @@
 .
+├── Front\ end
+│   ├── chat-convo.html
+│   ├── chat.html
+│   ├── css
+│   │   ├── bootstrap-theme.min.css
+│   │   ├── bootstrap.min.css
+│   │   └── style.css
+│   ├── fonts
+│   │   ├── glyphicons-halflings-regular.eot
+│   │   ├── glyphicons-halflings-regular.svg
+│   │   ├── glyphicons-halflings-regular.ttf
+│   │   └── glyphicons-halflings-regular.woff
+│   ├── img
+│   │   ├── hand-bag.jpg
+│   │   └── profile-pic.jpg
+│   ├── index.html
+│   ├── js
+│   │   ├── bootstrap.js
+│   │   ├── bootstrap.min.js
+│   │   └── masonry.min.js
+│   ├── log-in.html
+│   ├── new-listing.html
+│   ├── profile.html
+│   ├── search-results.html
+│   └── single.html
+├── Front-end-2
+│   ├── DESIGN
+│   │   ├── Chat\ -\ list.jpg
+│   │   ├── Chat\ -\ single.jpg
+│   │   ├── Home.jpg
+│   │   ├── Profile\ -\ Edit.jpg
+│   │   ├── Profile\ -\ view.jpg
+│   │   ├── ProjectX.psd
+│   │   ├── Search\ results.jpg
+│   │   ├── Sell.jpg
+│   │   ├── Sign\ in.jpg
+│   │   ├── Single\ -\ edit.jpg
+│   │   └── Single\ -\ view.jpg
+│   ├── blank.html
+│   ├── chat-convo.html
+│   ├── chat-list.html
+│   ├── css
+│   │   ├── bootstrap-theme.min.css
+│   │   ├── bootstrap.min.css
+│   │   └── style.css
+│   ├── fonts
+│   │   ├── glyphicons-halflings-regular.eot
+│   │   ├── glyphicons-halflings-regular.svg
+│   │   ├── glyphicons-halflings-regular.ttf
+│   │   └── glyphicons-halflings-regular.woff
+│   ├── img
+│   │   ├── hand-bag.jpg
+│   │   ├── header-bg.png
+│   │   ├── logo.png
+│   │   └── profile-pic.jpg
+│   ├── index.html
+│   ├── js
+│   │   ├── bootstrap.js
+│   │   ├── bootstrap.min.js
+│   │   └── masonry.min.js
+│   ├── listing-edit.html
+│   ├── listing-view.html
+│   ├── profile-edit.html
+│   ├── profile.html
+│   ├── search-results.html
+│   ├── sell.html
+│   └── sign-in.html
 ├── Gemfile
 ├── Gemfile.lock
 ├── ProjectX_tree.txt
+├── Prototypes
+│   ├── Homepage.png
+│   ├── Item\ page.png
+│   ├── My\ Dashboard.png
+│   ├── New\ Item\ for\ sale\ page.png
+│   └── User\ page.png
 ├── README.md
 ├── Rakefile
 ├── app
 │   ├── assets
 │   │   ├── images
+│   │   │   └── header-bg.png
 │   │   ├── javascripts
-│   │   │   └── application.js
+│   │   │   ├── application.js
+│   │   │   ├── buyers.js.coffee
+│   │   │   ├── calculate_distance.js
+│   │   │   ├── chatrooms.js.coffee
+│   │   │   ├── comments.js.coffee
+│   │   │   ├── dashboards.js.coffee
+│   │   │   ├── image_container.js.coffee
+│   │   │   ├── listing_location.js
+│   │   │   ├── script.js
+│   │   │   ├── user_location.js
+│   │   │   └── users.js.coffee
 │   │   └── stylesheets
-│   │       └── application.css
+│   │       ├── application.css.scss
+│   │       ├── bootstrap-theme.min.css
+│   │       ├── buyers.css.scss
+│   │       ├── chatrooms.css.scss
+│   │       ├── comments.css.scss
+│   │       ├── dashboards.css.scss
+│   │       ├── image_container.css.scss
+│   │       ├── listings.css.scss
+│   │       ├── maps.css.scss
+│   │       ├── style.css.scss
+│   │       └── users.css.scss
 │   ├── controllers
 │   │   ├── application_controller.rb
-│   │   └── concerns
+│   │   ├── buyers_controller.rb
+│   │   ├── chatrooms_controller.rb
+│   │   ├── comments_controller.rb
+│   │   ├── concerns
+│   │   ├── dashboards_controller.rb
+│   │   ├── image_container_controller.rb
+│   │   ├── listings_controller.rb
+│   │   ├── maps_controller.rb
+│   │   ├── registrations_controller.rb
+│   │   └── users_controller.rb
 │   ├── helpers
-│   │   └── application_helper.rb
+│   │   ├── application_helper.rb
+│   │   ├── buyers_helper.rb
+│   │   ├── chatrooms_helper.rb
+│   │   ├── comments_helper.rb
+│   │   ├── dashboards_helper.rb
+│   │   ├── image_container_helper.rb
+│   │   ├── listings_helper.rb
+│   │   ├── maps_helper.rb
+│   │   └── users_helper.rb
 │   ├── mailers
 │   ├── models
-│   │   └── concerns
+│   │   ├── add_ip_address_to_user.rb
+│   │   ├── add_ip_address_to_users.rb
+│   │   ├── chatroom.rb
+│   │   ├── comment.rb
+│   │   ├── concerns
+│   │   ├── hashtag.rb
+│   │   ├── image_container.rb
+│   │   ├── listing.rb
+│   │   └── user.rb
 │   └── views
-│       └── layouts
-│           └── application.html.erb
+│       ├── chatrooms
+│       │   ├── index.html.erb
+│       │   └── show.html.erb
+│       ├── common
+│       │   └── _header.html.erb
+│       ├── dashboards
+│       │   └── show.html.erb
+│       ├── devise
+│       │   ├── confirmations
+│       │   │   └── new.html.erb
+│       │   ├── mailer
+│       │   │   ├── confirmation_instructions.html.erb
+│       │   │   ├── reset_password_instructions.html.erb
+│       │   │   └── unlock_instructions.html.erb
+│       │   ├── passwords
+│       │   │   ├── edit.html.erb
+│       │   │   └── new.html.erb
+│       │   ├── registrations
+│       │   │   ├── edit.html.erb
+│       │   │   └── new.html.erb
+│       │   ├── sessions
+│       │   │   └── new.html.erb
+│       │   ├── shared
+│       │   │   └── _links.erb
+│       │   └── unlocks
+│       │       └── new.html.erb
+│       ├── layouts
+│       │   └── application.html.erb
+│       ├── listings
+│       │   ├── _form.html.erb
+│       │   ├── _image_container_fields.html.erb
+│       │   ├── _old_form.html.erb
+│       │   ├── edit.html.erb
+│       │   ├── index.html.erb
+│       │   ├── new.html.erb
+│       │   ├── show.html.erb
+│       │   └── show.json.jbuilder
+│       ├── maps
+│       └── users
+│           └── show.html.erb
 ├── bin
 │   ├── bundle
 │   ├── rails
@@ -30,6 +187,7 @@
 ├── config
 │   ├── application.rb
 │   ├── boot.rb
+│   ├── cucumber.yml
 │   ├── database.yml
 │   ├── environment.rb
 │   ├── environments
@@ -39,42 +197,670 @@
 │   ├── initializers
 │   │   ├── backtrace_silencers.rb
 │   │   ├── cookies_serializer.rb
+│   │   ├── devise.rb
 │   │   ├── filter_parameter_logging.rb
 │   │   ├── inflections.rb
 │   │   ├── mime_types.rb
 │   │   ├── session_store.rb
 │   │   └── wrap_parameters.rb
 │   ├── locales
+│   │   ├── devise.en.yml
 │   │   └── en.yml
+│   ├── newrelic.yml
 │   ├── routes.rb
 │   └── secrets.yml
 ├── config.ru
 ├── db
+│   ├── migrate
+│   │   ├── 20140609150113_create_listings.rb
+│   │   ├── 20140609154920_add_attachment_picture_to_listings.rb
+│   │   ├── 20140609161154_devise_create_users.rb
+│   │   ├── 20140609170229_add_first_name_to_users.rb
+│   │   ├── 20140609170252_add_last_name_to_users.rb
+│   │   ├── 20140610110702_add_attachment_avatar_to_users.rb
+│   │   ├── 20140610161632_add_seller_to_listings.rb
+│   │   ├── 20140610182506_create_join_table_wait_list.rb
+│   │   ├── 20140612163351_create_hashtags.rb
+│   │   ├── 20140612164430_create_join_table_listings_hashtags.rb
+│   │   ├── 20140612200558_add_latitude_and_longitude_to_listings.rb
+│   │   ├── 20140613100906_add_latitude_and_longitude_to_user.rb
+│   │   ├── 20140614160859_create_chatrooms.rb
+│   │   ├── 20140614172915_remove_column.rb
+│   │   ├── 20140614173115_remove_buyer_id_from_chatrooms.rb
+│   │   ├── 20140615140822_add_picture_to_listings.rb
+│   │   ├── 20140615184639_remove_latitude_from_listings.rb
+│   │   ├── 20140615185844_remove_longitude_from_listings.rb
+│   │   ├── 20140616122032_create_comments.rb
+│   │   ├── 20140616122936_remove_picture_from_listings.rb
+│   │   ├── 20140616123657_create_image_containers.rb
+│   │   ├── 20140616124314_add_user_id_to_comments.rb
+│   │   ├── 20140616151905_add_image_container_relationship_to_listings.rb
+│   │   └── 20140617093334_add_attachment_picture_to_image_containers.rb
 │   ├── schema.rb
 │   └── seeds.rb
+├── features
+│   ├── Wanting.feature
+│   ├── add_listings.feature
+│   ├── chatroom_index.feature
+│   ├── chatroom_layout.feature
+│   ├── chatroom_messaging.feature
+│   ├── dashboard_basics.feature
+│   ├── dashboard_display.feature
+│   ├── delete_listing.feature
+│   ├── edit_listings.feature
+│   ├── edit_user_profile.feature
+│   ├── hashtags.feature
+│   ├── listing_location.feature
+│   ├── multiple_pictures.feature
+│   ├── search.feature
+│   ├── show_listings.feature
+│   ├── step_definitions
+│   │   ├── add_listing_steps.rb
+│   │   ├── chatroom_index_steps.rb
+│   │   ├── chatroom_steps.rb
+│   │   ├── dashboard_steps.rb
+│   │   ├── delete_listing_steps.rb
+│   │   ├── edit_listing_steps.rb
+│   │   ├── edit_user_profile_feature_steps.rb
+│   │   ├── hashtag_steps.rb
+│   │   ├── multiple_pictures_steps.rb
+│   │   ├── search_steps.rb
+│   │   ├── show_listing_steps.rb
+│   │   ├── unwanting_steps.rb
+│   │   ├── user_auth_feature_steps.rb
+│   │   ├── user_profile_page_feature_step.rb
+│   │   ├── waitlist_steps.rb
+│   │   └── wanting_steps.rb
+│   ├── support
+│   │   ├── database_cleaner.rb
+│   │   └── env.rb
+│   ├── unwanting.feature
+│   ├── user_auth.feature
+│   ├── user_profile_page.feature
+│   └── waitlist.feature
 ├── lib
 │   ├── assets
 │   └── tasks
+│       └── cucumber.rake
 ├── log
-│   └── development.log
+│   ├── development.log
+│   ├── newrelic_agent.log
+│   ├── production.log
+│   └── test.log
 ├── public
 │   ├── 404.html
 │   ├── 422.html
 │   ├── 500.html
 │   ├── favicon.ico
-│   └── robots.txt
+│   ├── images
+│   │   ├── default_avatar.jpg
+│   │   ├── logo.png
+│   │   └── product_image.jpg
+│   ├── robots.txt
+│   └── system
+│       ├── listings
+│       │   └── pictures
+│       │       └── 000
+│       │           └── 000
+│       │               └── 001
+│       │                   ├── medium
+│       │                   │   └── product_image.jpg
+│       │                   ├── original
+│       │                   │   └── product_image.jpg
+│       │                   └── thumb
+│       │                       └── product_image.jpg
+│       └── users
+│           └── avatars
+│               └── 000
+│                   └── 000
+│                       ├── 001
+│                       │   ├── medium
+│                       │   │   └── profile_picture.jpg
+│                       │   ├── original
+│                       │   │   └── profile_picture.jpg
+│                       │   └── thumb
+│                       │       └── profile_picture.jpg
+│                       ├── 002
+│                       │   ├── medium
+│                       │   │   ├── dove.jpeg
+│                       │   │   └── profile_picture.jpg
+│                       │   ├── original
+│                       │   │   ├── dove.jpeg
+│                       │   │   └── profile_picture.jpg
+│                       │   └── thumb
+│                       │       ├── dove.jpeg
+│                       │       └── profile_picture.jpg
+│                       ├── 005
+│                       │   ├── medium
+│                       │   │   └── profile_picture.jpg
+│                       │   ├── original
+│                       │   │   └── profile_picture.jpg
+│                       │   └── thumb
+│                       │       └── profile_picture.jpg
+│                       ├── 006
+│                       │   ├── medium
+│                       │   │   └── profile_picture.jpg
+│                       │   ├── original
+│                       │   │   └── profile_picture.jpg
+│                       │   └── thumb
+│                       │       └── profile_picture.jpg
+│                       ├── 010
+│                       │   ├── medium
+│                       │   │   └── profile_picture.jpg
+│                       │   ├── original
+│                       │   │   └── profile_picture.jpg
+│                       │   └── thumb
+│                       │       └── profile_picture.jpg
+│                       ├── 014
+│                       │   ├── medium
+│                       │   │   └── profile_picture.jpg
+│                       │   ├── original
+│                       │   │   └── profile_picture.jpg
+│                       │   └── thumb
+│                       │       └── profile_picture.jpg
+│                       ├── 081
+│                       │   ├── medium
+│                       │   │   └── profile_picture.jpg
+│                       │   ├── original
+│                       │   │   └── profile_picture.jpg
+│                       │   └── thumb
+│                       │       └── profile_picture.jpg
+│                       ├── 083
+│                       │   ├── medium
+│                       │   │   └── profile_picture.jpg
+│                       │   ├── original
+│                       │   │   └── profile_picture.jpg
+│                       │   └── thumb
+│                       │       └── profile_picture.jpg
+│                       ├── 085
+│                       │   ├── medium
+│                       │   │   └── profile_picture.jpg
+│                       │   ├── original
+│                       │   │   └── profile_picture.jpg
+│                       │   └── thumb
+│                       │       └── profile_picture.jpg
+│                       ├── 087
+│                       │   ├── medium
+│                       │   │   └── profile_picture.jpg
+│                       │   ├── original
+│                       │   │   └── profile_picture.jpg
+│                       │   └── thumb
+│                       │       └── profile_picture.jpg
+│                       └── 090
+│                           ├── medium
+│                           │   └── profile_picture.jpg
+│                           ├── original
+│                           │   └── profile_picture.jpg
+│                           └── thumb
+│                               └── profile_picture.jpg
+├── script
+│   └── cucumber
 ├── spec
-│   ├── rails_helper.rb
+│   ├── controllers
+│   │   ├── listings_controller_spec.rb
+│   │   └── users_controller_spec.rb
+│   ├── factories
+│   │   ├── listings.rb
+│   │   └── users.rb
+│   ├── helpers
+│   │   ├── listings_helper_spec.rb
+│   │   └── users_helper_spec.rb
+│   ├── images
+│   │   └── profile_picture.jpg
+│   ├── models
+│   │   ├── listing_spec.rb
+│   │   └── user_spec.rb
 │   └── spec_helper.rb
 ├── tmp
 │   ├── cache
 │   │   └── assets
+│   │       ├── development
+│   │       │   ├── sass
+│   │       │   │   ├── 428789202a272b48d80de5156d2cb866450441c4
+│   │       │   │   │   ├── application.css.scssc
+│   │       │   │   │   ├── buyers.css.scssc
+│   │       │   │   │   ├── chatrooms.css.scssc
+│   │       │   │   │   ├── chats.css.scssc
+│   │       │   │   │   ├── comments.css.scssc
+│   │       │   │   │   ├── dashboards.css.scssc
+│   │       │   │   │   ├── image_container.css.scssc
+│   │       │   │   │   ├── listings.css.scssc
+│   │       │   │   │   ├── maps.css.scssc
+│   │       │   │   │   ├── pictures.css.scssc
+│   │       │   │   │   ├── style.css.scssc
+│   │       │   │   │   └── users.css.scssc
+│   │       │   │   ├── 56923b73135e6f6f3cf917d057ca2ca6a80e898e
+│   │       │   │   │   ├── _alerts.scssc
+│   │       │   │   │   ├── _badges.scssc
+│   │       │   │   │   ├── _breadcrumbs.scssc
+│   │       │   │   │   ├── _button-groups.scssc
+│   │       │   │   │   ├── _buttons.scssc
+│   │       │   │   │   ├── _carousel.scssc
+│   │       │   │   │   ├── _close.scssc
+│   │       │   │   │   ├── _code.scssc
+│   │       │   │   │   ├── _component-animations.scssc
+│   │       │   │   │   ├── _dropdowns.scssc
+│   │       │   │   │   ├── _forms.scssc
+│   │       │   │   │   ├── _glyphicons.scssc
+│   │       │   │   │   ├── _grid.scssc
+│   │       │   │   │   ├── _input-groups.scssc
+│   │       │   │   │   ├── _jumbotron.scssc
+│   │       │   │   │   ├── _labels.scssc
+│   │       │   │   │   ├── _list-group.scssc
+│   │       │   │   │   ├── _media.scssc
+│   │       │   │   │   ├── _mixins.scssc
+│   │       │   │   │   ├── _modals.scssc
+│   │       │   │   │   ├── _navbar.scssc
+│   │       │   │   │   ├── _navs.scssc
+│   │       │   │   │   ├── _normalize.scssc
+│   │       │   │   │   ├── _pager.scssc
+│   │       │   │   │   ├── _pagination.scssc
+│   │       │   │   │   ├── _panels.scssc
+│   │       │   │   │   ├── _popovers.scssc
+│   │       │   │   │   ├── _print.scssc
+│   │       │   │   │   ├── _progress-bars.scssc
+│   │       │   │   │   ├── _responsive-embed.scssc
+│   │       │   │   │   ├── _responsive-utilities.scssc
+│   │       │   │   │   ├── _scaffolding.scssc
+│   │       │   │   │   ├── _tables.scssc
+│   │       │   │   │   ├── _thumbnails.scssc
+│   │       │   │   │   ├── _tooltip.scssc
+│   │       │   │   │   ├── _type.scssc
+│   │       │   │   │   ├── _utilities.scssc
+│   │       │   │   │   ├── _variables.scssc
+│   │       │   │   │   └── _wells.scssc
+│   │       │   │   ├── 5ce297088641b04f917f756af551edf7fde7d5a3
+│   │       │   │   │   ├── _alerts.scssc
+│   │       │   │   │   ├── _background-variant.scssc
+│   │       │   │   │   ├── _border-radius.scssc
+│   │       │   │   │   ├── _buttons.scssc
+│   │       │   │   │   ├── _center-block.scssc
+│   │       │   │   │   ├── _clearfix.scssc
+│   │       │   │   │   ├── _forms.scssc
+│   │       │   │   │   ├── _gradients.scssc
+│   │       │   │   │   ├── _grid-framework.scssc
+│   │       │   │   │   ├── _grid.scssc
+│   │       │   │   │   ├── _hide-text.scssc
+│   │       │   │   │   ├── _image.scssc
+│   │       │   │   │   ├── _labels.scssc
+│   │       │   │   │   ├── _list-group.scssc
+│   │       │   │   │   ├── _nav-divider.scssc
+│   │       │   │   │   ├── _nav-vertical-align.scssc
+│   │       │   │   │   ├── _opacity.scssc
+│   │       │   │   │   ├── _pagination.scssc
+│   │       │   │   │   ├── _panels.scssc
+│   │       │   │   │   ├── _progress-bar.scssc
+│   │       │   │   │   ├── _reset-filter.scssc
+│   │       │   │   │   ├── _resize.scssc
+│   │       │   │   │   ├── _responsive-visibility.scssc
+│   │       │   │   │   ├── _size.scssc
+│   │       │   │   │   ├── _tab-focus.scssc
+│   │       │   │   │   ├── _table-row.scssc
+│   │       │   │   │   ├── _text-emphasis.scssc
+│   │       │   │   │   ├── _text-overflow.scssc
+│   │       │   │   │   └── _vendor-prefixes.scssc
+│   │       │   │   └── aa056c410ce6320958c408376f9e79faa401b88b
+│   │       │   │       └── bootstrap.scssc
+│   │       │   └── sprockets
+│   │       │       ├── 0084a98a06dcb1f641d1c0ee170f385f
+│   │       │       ├── 0297440f4f05e835dcca32d73144924e
+│   │       │       ├── 02ce28e587fbf46478e8bf655bd2095b
+│   │       │       ├── 04b58cdc387f97ce4ca5888ec6284d1b
+│   │       │       ├── 05a64f05f85cc44051c23e111f84b821
+│   │       │       ├── 070c0d1d0c0fe8c3acdd5337e66e84dd
+│   │       │       ├── 08d41ca122f4ca6d866941eef5d2fdc0
+│   │       │       ├── 0c5d2913c4dabc05e7a8d596885ab6ed
+│   │       │       ├── 0c6c563476f3c0a819d0d8ffd1684c29
+│   │       │       ├── 13076188032afa0be1fc8a12b3b0262d
+│   │       │       ├── 13112adb85add7d7fc8ec38969ea0a72
+│   │       │       ├── 13877123ff1867000ae66ceaaec1a539
+│   │       │       ├── 13fe41fee1fe35b49d145bcc06610705
+│   │       │       ├── 142cf4a581f8cf79c52fe7834aef3137
+│   │       │       ├── 18a509623ced1527529f13048af67c3c
+│   │       │       ├── 1c743674003b159f5c665fba7f8da053
+│   │       │       ├── 1f6eb3825a922548bac20d2da978ca59
+│   │       │       ├── 239b86d6cbe911cb652fd6a2f4e304a9
+│   │       │       ├── 247bb3e099d704a9d732677013beffc0
+│   │       │       ├── 26a54d5d7a250c80072c49a77e93734b
+│   │       │       ├── 2757fae967a52701ef3724ae5a76c4a8
+│   │       │       ├── 276b18bc238849748e249d78162b730a
+│   │       │       ├── 27d10c2dc56f3e7fd6c59c39d3f909e5
+│   │       │       ├── 2d2cb554d01b1d94d004db84691412dd
+│   │       │       ├── 2f5173deea6c795b8fdde723bb4b63af
+│   │       │       ├── 336f442157fa2fae57880fe1273a583d
+│   │       │       ├── 357970feca3ac29060c1e3861e2c0953
+│   │       │       ├── 35dfa25bdfb4a834adfbbe76ac4d7ac1
+│   │       │       ├── 35f43dd3c4d4d60c8ec4b2f23ed3d00c
+│   │       │       ├── 366d08b7852b007810387450f343a363
+│   │       │       ├── 38a6563fb698e7109def82d568345516
+│   │       │       ├── 399e2bfd4491760e5c0f3c912f6b322d
+│   │       │       ├── 3a7a2ddab0485377f27cfd10503e4be0
+│   │       │       ├── 3cdf090feaa5ebada17156a32245eac4
+│   │       │       ├── 3f300e7b048085a584affc67bb53c411
+│   │       │       ├── 3fa55be1fdc17cab0df2583ee8c6e957
+│   │       │       ├── 4045e653f3d837d6071b87f0c15cd397
+│   │       │       ├── 410e5bbcbb6cb994489821ff1de4da20
+│   │       │       ├── 419b123313fb48d9f35b72374fa5e15c
+│   │       │       ├── 44dcca0d49ee3dd4da5826e56a0034f2
+│   │       │       ├── 481570099fc0b5080450f3d37c1695ac
+│   │       │       ├── 490042f2e01331c4cbada74607a0c80c
+│   │       │       ├── 49eb12cd42b4772d67dd65372b35204a
+│   │       │       ├── 4a49ddf6b8c3551b3a5b6936c419de43
+│   │       │       ├── 4ad413f3e3326481d2f5f9327bbd0e12
+│   │       │       ├── 4c2bf17d7d9dc22145cde41691f04dd9
+│   │       │       ├── 4c9d91eba70a63ec32442580f7c75de6
+│   │       │       ├── 4eed27c13ae18050567dbf89e8f316fc
+│   │       │       ├── 53640067d96589fbc39f702a6e19b645
+│   │       │       ├── 5667f66bfa8361bb1a63654f999d9370
+│   │       │       ├── 57439afeca1c47d9d5b9bfe336ab9e64
+│   │       │       ├── 576741ddf265e77923100dc667699f61
+│   │       │       ├── 5e97005983a27fb8d269e11e4ab9bbd3
+│   │       │       ├── 5ea647cc9182a48328b5bebc4938b1af
+│   │       │       ├── 5f622299dff1ef2f4b8348e65b51c3eb
+│   │       │       ├── 61fbaf7dc95d8213e8ebfbd80480f8e6
+│   │       │       ├── 620c342f8471d4d120978e802a550a75
+│   │       │       ├── 629e455dd1d2d80412f235808aab0358
+│   │       │       ├── 642ed3a85c33e3706dc4b3b26f84630c
+│   │       │       ├── 670ce3569669b20086a57a8f7f0827a3
+│   │       │       ├── 68cc53f28703e19ede06e80a45444b54
+│   │       │       ├── 68db47402feb193d8301e6cbddcdf347
+│   │       │       ├── 6a20d32b183f78f889b35dfc187034c3
+│   │       │       ├── 6c0f2a2c7346b84a92e2cb81473e251b
+│   │       │       ├── 6e32c01842fb1fca5fa82f90e2ba3a79
+│   │       │       ├── 7426b6f68e9b469c71d27cb06634fef1
+│   │       │       ├── 77b18db0da0fc4aee6043b5321420c9e
+│   │       │       ├── 7892b9c4784d006b0e780b8d16ac6334
+│   │       │       ├── 7a4f84557255610eda7b91de57067c9c
+│   │       │       ├── 7aa69ffbf7044cb2fe535dccfe1f7b25
+│   │       │       ├── 7add346eda750c905dbb29c0d5cc2641
+│   │       │       ├── 7bb233520a1cd0e4859a1c490c91ff99
+│   │       │       ├── 7ca5bc41eaa963b9bd5d77fc180b9883
+│   │       │       ├── 8150caf586553427dad1e3c6c66eba61
+│   │       │       ├── 853add0c825b3c03253696a25b2160c2
+│   │       │       ├── 85ae64edf528ce6e981889f3f3c285d9
+│   │       │       ├── 86f909bf5baee50515afadaa3ce2df8f
+│   │       │       ├── 89f66b0263735876dca585951c0d6630
+│   │       │       ├── 8a2a7a2d897f05db0b682c232ff4fade
+│   │       │       ├── 8ab512c9b33ac90e699b73469d71f061
+│   │       │       ├── 8f947331fe01774cdf2918b06dd562f8
+│   │       │       ├── 9237d6d499c68c86cd4ade773ec5a189
+│   │       │       ├── 925c0e76735ac775ab9f4d051983dbd5
+│   │       │       ├── 93aa0ed9523a9fe2cd1b41f7c89f1fca
+│   │       │       ├── 9618485e86fc2a1d22cf814032d80b3e
+│   │       │       ├── 977ead1d20bc9f7e1c191bd4348f9e3a
+│   │       │       ├── 97aa1e406b25da30d8e10ddd933ac39c
+│   │       │       ├── 981fdf59c6c819da5a85424ee749e704
+│   │       │       ├── 98d4c6641092a9aa84c90608ef2ed048
+│   │       │       ├── 9ac645e9d6ec09b9994ae9287582c5d6
+│   │       │       ├── 9b47f330e94dab2a8cd203ff04ccc81f
+│   │       │       ├── 9c540c34c47c2faddb001a76a5c11546
+│   │       │       ├── 9d0f5096ba5cf9c056c4025748b7e042
+│   │       │       ├── a456454fe448de66892d2116abc8beae
+│   │       │       ├── a4fe02a133bb4f3a53c0893902135731
+│   │       │       ├── a804bf64cae11c9f5f1c0633dd9da071
+│   │       │       ├── a995a3b95e4a7b0e5b9fa7c49efd6b74
+│   │       │       ├── abc26cf2707ee32c609e76268d7be2c7
+│   │       │       ├── b073b267126ce5df375b38fcfdd2e496
+│   │       │       ├── b0ededb3ec67aaa7b5ccc03bd498ec33
+│   │       │       ├── b37bf764bb57a091c103e580ee2a865d
+│   │       │       ├── b3ac6ecc0f168639491a1548e9af868f
+│   │       │       ├── b5027648b8c3e706a1eab013dc86ca79
+│   │       │       ├── b78ada3f7f94a0aeaf2b5ad4a7abef93
+│   │       │       ├── b821158abe90fc77bbceebb4db1bb31d
+│   │       │       ├── b82eca0f3d7d0de465663b4015d14ae5
+│   │       │       ├── bcca522c6302f184f12fe0e8a7d7e71a
+│   │       │       ├── bd490e5e3ddd39beaabad6dd9a340552
+│   │       │       ├── bf48d91e5472de4fba1efde6eaf39f6f
+│   │       │       ├── bff2dabdb473dff02f6a63fac247f2bb
+│   │       │       ├── c13fc73ceafa45876a901b3e775b83ae
+│   │       │       ├── c3f329e6db791802aff543159730bc81
+│   │       │       ├── c93510d25a171363a080d9fe9378e153
+│   │       │       ├── cac8346aaa0d8b52da94826f03dd570e
+│   │       │       ├── cae9a29b21d91a4a12697005c6bc2ca6
+│   │       │       ├── cb5a01e759810d4d53e78be17fd861b9
+│   │       │       ├── cc45f4206d64fcdeaf96a542494266ca
+│   │       │       ├── cc96d4f5f41bc2990cc2b1a151027852
+│   │       │       ├── cea19fbdc8148902caacd3468e089799
+│   │       │       ├── cec9071727c35ccfdfb2d5424ec85d39
+│   │       │       ├── cffd775d018f68ce5dba1ee0d951a994
+│   │       │       ├── d771ace226fc8215a3572e0aa35bb0d6
+│   │       │       ├── dab5e71850f4f837098aa81d1325d015
+│   │       │       ├── db82dc6c7d0189174cdc881d6743f977
+│   │       │       ├── dcfac4ca11cf797642fc006911a4dd3e
+│   │       │       ├── de21ec2a9b27f7e8f0fd2ad8701f4af6
+│   │       │       ├── e0c03bbcef64f3ca3492dc707187b62d
+│   │       │       ├── e2e8f7f4c2e46b20bbaa95d67e83c41e
+│   │       │       ├── e37a6bdc2f67b55ace85661b77f404e5
+│   │       │       ├── e397ae8cd24b0296eb7c0eb02f0271df
+│   │       │       ├── e4fd0a8357d935e52bb9c50dd1ae5f24
+│   │       │       ├── e82ee5e03bb4bd3760b4650f0af03b2b
+│   │       │       ├── e87203fde3cf985e22625ffdd070dbda
+│   │       │       ├── e8fe457f5d4fc51c654260b58bbf1b48
+│   │       │       ├── e955934d874f5213baac47a70b61f48a
+│   │       │       ├── ea165ce94b7523cb44c4f1700036a6b8
+│   │       │       ├── ea915a283e201b8ddf1f381851a0d9aa
+│   │       │       ├── eb955148dff1a927d71ba221df32d1ac
+│   │       │       ├── ebcff4320a828e705bee266faecd4525
+│   │       │       ├── ef5e337ef7ccdad2b283685a6b2e1acc
+│   │       │       ├── efc6b5ce2439ebd4fa1c5f30c34dfbf6
+│   │       │       ├── f03bb16e60b5e2e50828c7ed4b5f3f81
+│   │       │       ├── f23e7a1c7fc97a5dc57b3dcc8d6d58eb
+│   │       │       ├── f43a26b8ebbb6616fac0b4a8754a11ce
+│   │       │       ├── f4f3bc4343251002d45f4975c041769e
+│   │       │       ├── f7cbd26ba1d28d48de824f0e94586655
+│   │       │       ├── f811c863e85c62905c90643da7187d93
+│   │       │       ├── f8bb878fdb272908cdc4a6c0326b0c73
+│   │       │       ├── f8dacf0c262da0519192b8c144cbc66b
+│   │       │       ├── f942e6ab22d88426cd1f8134df80ccd7
+│   │       │       ├── faa2b5dbc3609ad66ad4f9d3c00b71d6
+│   │       │       ├── fb6442005e66c1ff92b7945b72adc6e8
+│   │       │       └── fcd394dadc88a2003d225c946cee3c30
+│   │       └── test
+│   │           ├── sass
+│   │           │   ├── 428789202a272b48d80de5156d2cb866450441c4
+│   │           │   │   ├── application.css.scssc
+│   │           │   │   ├── buyers.css.scssc
+│   │           │   │   ├── chatrooms.css.scssc
+│   │           │   │   ├── chats.css.scssc
+│   │           │   │   ├── comments.css.scssc
+│   │           │   │   ├── dashboards.css.scssc
+│   │           │   │   ├── image_container.css.scssc
+│   │           │   │   ├── listings.css.scssc
+│   │           │   │   ├── maps.css.scssc
+│   │           │   │   ├── pictures.css.scssc
+│   │           │   │   ├── style.css.scssc
+│   │           │   │   └── users.css.scssc
+│   │           │   ├── 56923b73135e6f6f3cf917d057ca2ca6a80e898e
+│   │           │   │   ├── _alerts.scssc
+│   │           │   │   ├── _badges.scssc
+│   │           │   │   ├── _breadcrumbs.scssc
+│   │           │   │   ├── _button-groups.scssc
+│   │           │   │   ├── _buttons.scssc
+│   │           │   │   ├── _carousel.scssc
+│   │           │   │   ├── _close.scssc
+│   │           │   │   ├── _code.scssc
+│   │           │   │   ├── _component-animations.scssc
+│   │           │   │   ├── _dropdowns.scssc
+│   │           │   │   ├── _forms.scssc
+│   │           │   │   ├── _glyphicons.scssc
+│   │           │   │   ├── _grid.scssc
+│   │           │   │   ├── _input-groups.scssc
+│   │           │   │   ├── _jumbotron.scssc
+│   │           │   │   ├── _labels.scssc
+│   │           │   │   ├── _list-group.scssc
+│   │           │   │   ├── _media.scssc
+│   │           │   │   ├── _mixins.scssc
+│   │           │   │   ├── _modals.scssc
+│   │           │   │   ├── _navbar.scssc
+│   │           │   │   ├── _navs.scssc
+│   │           │   │   ├── _normalize.scssc
+│   │           │   │   ├── _pager.scssc
+│   │           │   │   ├── _pagination.scssc
+│   │           │   │   ├── _panels.scssc
+│   │           │   │   ├── _popovers.scssc
+│   │           │   │   ├── _print.scssc
+│   │           │   │   ├── _progress-bars.scssc
+│   │           │   │   ├── _responsive-embed.scssc
+│   │           │   │   ├── _responsive-utilities.scssc
+│   │           │   │   ├── _scaffolding.scssc
+│   │           │   │   ├── _tables.scssc
+│   │           │   │   ├── _thumbnails.scssc
+│   │           │   │   ├── _tooltip.scssc
+│   │           │   │   ├── _type.scssc
+│   │           │   │   ├── _utilities.scssc
+│   │           │   │   ├── _variables.scssc
+│   │           │   │   └── _wells.scssc
+│   │           │   ├── 5ce297088641b04f917f756af551edf7fde7d5a3
+│   │           │   │   ├── _alerts.scssc
+│   │           │   │   ├── _background-variant.scssc
+│   │           │   │   ├── _border-radius.scssc
+│   │           │   │   ├── _buttons.scssc
+│   │           │   │   ├── _center-block.scssc
+│   │           │   │   ├── _clearfix.scssc
+│   │           │   │   ├── _forms.scssc
+│   │           │   │   ├── _gradients.scssc
+│   │           │   │   ├── _grid-framework.scssc
+│   │           │   │   ├── _grid.scssc
+│   │           │   │   ├── _hide-text.scssc
+│   │           │   │   ├── _image.scssc
+│   │           │   │   ├── _labels.scssc
+│   │           │   │   ├── _list-group.scssc
+│   │           │   │   ├── _nav-divider.scssc
+│   │           │   │   ├── _nav-vertical-align.scssc
+│   │           │   │   ├── _opacity.scssc
+│   │           │   │   ├── _pagination.scssc
+│   │           │   │   ├── _panels.scssc
+│   │           │   │   ├── _progress-bar.scssc
+│   │           │   │   ├── _reset-filter.scssc
+│   │           │   │   ├── _resize.scssc
+│   │           │   │   ├── _responsive-visibility.scssc
+│   │           │   │   ├── _size.scssc
+│   │           │   │   ├── _tab-focus.scssc
+│   │           │   │   ├── _table-row.scssc
+│   │           │   │   ├── _text-emphasis.scssc
+│   │           │   │   ├── _text-overflow.scssc
+│   │           │   │   └── _vendor-prefixes.scssc
+│   │           │   └── aa056c410ce6320958c408376f9e79faa401b88b
+│   │           │       └── bootstrap.scssc
+│   │           └── sprockets
+│   │               ├── 0297440f4f05e835dcca32d73144924e
+│   │               ├── 02ce28e587fbf46478e8bf655bd2095b
+│   │               ├── 04b58cdc387f97ce4ca5888ec6284d1b
+│   │               ├── 05a64f05f85cc44051c23e111f84b821
+│   │               ├── 070c0d1d0c0fe8c3acdd5337e66e84dd
+│   │               ├── 0c6c563476f3c0a819d0d8ffd1684c29
+│   │               ├── 13076188032afa0be1fc8a12b3b0262d
+│   │               ├── 13112adb85add7d7fc8ec38969ea0a72
+│   │               ├── 13fe41fee1fe35b49d145bcc06610705
+│   │               ├── 142cf4a581f8cf79c52fe7834aef3137
+│   │               ├── 1c743674003b159f5c665fba7f8da053
+│   │               ├── 239b86d6cbe911cb652fd6a2f4e304a9
+│   │               ├── 247bb3e099d704a9d732677013beffc0
+│   │               ├── 26a54d5d7a250c80072c49a77e93734b
+│   │               ├── 2757fae967a52701ef3724ae5a76c4a8
+│   │               ├── 276b18bc238849748e249d78162b730a
+│   │               ├── 27d10c2dc56f3e7fd6c59c39d3f909e5
+│   │               ├── 2d2cb554d01b1d94d004db84691412dd
+│   │               ├── 2f5173deea6c795b8fdde723bb4b63af
+│   │               ├── 336f442157fa2fae57880fe1273a583d
+│   │               ├── 357970feca3ac29060c1e3861e2c0953
+│   │               ├── 35dfa25bdfb4a834adfbbe76ac4d7ac1
+│   │               ├── 35f43dd3c4d4d60c8ec4b2f23ed3d00c
+│   │               ├── 366d08b7852b007810387450f343a363
+│   │               ├── 38a6563fb698e7109def82d568345516
+│   │               ├── 3cdf090feaa5ebada17156a32245eac4
+│   │               ├── 4045e653f3d837d6071b87f0c15cd397
+│   │               ├── 419b123313fb48d9f35b72374fa5e15c
+│   │               ├── 44dcca0d49ee3dd4da5826e56a0034f2
+│   │               ├── 481570099fc0b5080450f3d37c1695ac
+│   │               ├── 49eb12cd42b4772d67dd65372b35204a
+│   │               ├── 4a49ddf6b8c3551b3a5b6936c419de43
+│   │               ├── 4ad413f3e3326481d2f5f9327bbd0e12
+│   │               ├── 4c2bf17d7d9dc22145cde41691f04dd9
+│   │               ├── 4c9d91eba70a63ec32442580f7c75de6
+│   │               ├── 4eed27c13ae18050567dbf89e8f316fc
+│   │               ├── 53640067d96589fbc39f702a6e19b645
+│   │               ├── 57439afeca1c47d9d5b9bfe336ab9e64
+│   │               ├── 576741ddf265e77923100dc667699f61
+│   │               ├── 5e97005983a27fb8d269e11e4ab9bbd3
+│   │               ├── 5ea647cc9182a48328b5bebc4938b1af
+│   │               ├── 5f622299dff1ef2f4b8348e65b51c3eb
+│   │               ├── 61fbaf7dc95d8213e8ebfbd80480f8e6
+│   │               ├── 620c342f8471d4d120978e802a550a75
+│   │               ├── 629e455dd1d2d80412f235808aab0358
+│   │               ├── 642ed3a85c33e3706dc4b3b26f84630c
+│   │               ├── 670ce3569669b20086a57a8f7f0827a3
+│   │               ├── 6c0f2a2c7346b84a92e2cb81473e251b
+│   │               ├── 7426b6f68e9b469c71d27cb06634fef1
+│   │               ├── 77b18db0da0fc4aee6043b5321420c9e
+│   │               ├── 7aa69ffbf7044cb2fe535dccfe1f7b25
+│   │               ├── 7add346eda750c905dbb29c0d5cc2641
+│   │               ├── 7bb233520a1cd0e4859a1c490c91ff99
+│   │               ├── 7ca5bc41eaa963b9bd5d77fc180b9883
+│   │               ├── 8150caf586553427dad1e3c6c66eba61
+│   │               ├── 853add0c825b3c03253696a25b2160c2
+│   │               ├── 85ae64edf528ce6e981889f3f3c285d9
+│   │               ├── 86f909bf5baee50515afadaa3ce2df8f
+│   │               ├── 89f66b0263735876dca585951c0d6630
+│   │               ├── 8a2a7a2d897f05db0b682c232ff4fade
+│   │               ├── 8ab512c9b33ac90e699b73469d71f061
+│   │               ├── 925c0e76735ac775ab9f4d051983dbd5
+│   │               ├── 93aa0ed9523a9fe2cd1b41f7c89f1fca
+│   │               ├── 9618485e86fc2a1d22cf814032d80b3e
+│   │               ├── 977ead1d20bc9f7e1c191bd4348f9e3a
+│   │               ├── 97aa1e406b25da30d8e10ddd933ac39c
+│   │               ├── 98d4c6641092a9aa84c90608ef2ed048
+│   │               ├── 9ac645e9d6ec09b9994ae9287582c5d6
+│   │               ├── a456454fe448de66892d2116abc8beae
+│   │               ├── a4fe02a133bb4f3a53c0893902135731
+│   │               ├── a804bf64cae11c9f5f1c0633dd9da071
+│   │               ├── abc26cf2707ee32c609e76268d7be2c7
+│   │               ├── b073b267126ce5df375b38fcfdd2e496
+│   │               ├── b37bf764bb57a091c103e580ee2a865d
+│   │               ├── b3ac6ecc0f168639491a1548e9af868f
+│   │               ├── b5027648b8c3e706a1eab013dc86ca79
+│   │               ├── b82eca0f3d7d0de465663b4015d14ae5
+│   │               ├── bcca522c6302f184f12fe0e8a7d7e71a
+│   │               ├── bf48d91e5472de4fba1efde6eaf39f6f
+│   │               ├── bff2dabdb473dff02f6a63fac247f2bb
+│   │               ├── c13fc73ceafa45876a901b3e775b83ae
+│   │               ├── cac8346aaa0d8b52da94826f03dd570e
+│   │               ├── cae9a29b21d91a4a12697005c6bc2ca6
+│   │               ├── cb5a01e759810d4d53e78be17fd861b9
+│   │               ├── cc45f4206d64fcdeaf96a542494266ca
+│   │               ├── cc96d4f5f41bc2990cc2b1a151027852
+│   │               ├── cea19fbdc8148902caacd3468e089799
+│   │               ├── cec9071727c35ccfdfb2d5424ec85d39
+│   │               ├── cffd775d018f68ce5dba1ee0d951a994
+│   │               ├── d771ace226fc8215a3572e0aa35bb0d6
+│   │               ├── dab5e71850f4f837098aa81d1325d015
+│   │               ├── db82dc6c7d0189174cdc881d6743f977
+│   │               ├── de21ec2a9b27f7e8f0fd2ad8701f4af6
+│   │               ├── e37a6bdc2f67b55ace85661b77f404e5
+│   │               ├── e397ae8cd24b0296eb7c0eb02f0271df
+│   │               ├── e82ee5e03bb4bd3760b4650f0af03b2b
+│   │               ├── e8fe457f5d4fc51c654260b58bbf1b48
+│   │               ├── e955934d874f5213baac47a70b61f48a
+│   │               ├── ea165ce94b7523cb44c4f1700036a6b8
+│   │               ├── ea915a283e201b8ddf1f381851a0d9aa
+│   │               ├── eb955148dff1a927d71ba221df32d1ac
+│   │               ├── ebcff4320a828e705bee266faecd4525
+│   │               ├── ef5e337ef7ccdad2b283685a6b2e1acc
+│   │               ├── efc6b5ce2439ebd4fa1c5f30c34dfbf6
+│   │               ├── f03bb16e60b5e2e50828c7ed4b5f3f81
+│   │               ├── f7cbd26ba1d28d48de824f0e94586655
+│   │               ├── f811c863e85c62905c90643da7187d93
+│   │               ├── f8dacf0c262da0519192b8c144cbc66b
+│   │               ├── faa2b5dbc3609ad66ad4f9d3c00b71d6
+│   │               └── fcd394dadc88a2003d225c946cee3c30
 │   ├── pids
+│   │   └── server.pid
 │   ├── sessions
 │   └── sockets
 └── vendor
     └── assets
         ├── javascripts
+        │   └── gmaps.js
         └── stylesheets
 
-35 directories, 42 files
+143 directories, 720 files

@@ -18,7 +18,9 @@ Given(/^Ollie is signed in and in the chatroom for his football$/) do
 end
 
 Given(/^Ollie has agreed to sell Louise his football$/) do
-  louise.want_listings << ollies_football
+	ollies_football
+	louise
+  @louise.want_listings << @ollies_football
   @ollies_football.sold = true
 end
 
@@ -28,4 +30,13 @@ end
 
 Then(/^Louise should not see Ollie's football as a listing$/) do
 	expect(page).not_to have_css('.listing-main-pic')
+end
+
+When(/^Ollie is logged in and visits his profile page$/) do
+	login_as @ollie
+	visit user_path(@ollie)
+end
+
+Then(/^Ollie should see "(.*?)" next to his football listing$/) do |content|
+	pending # expect(page).to have_content(content)
 end

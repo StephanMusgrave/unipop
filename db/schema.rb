@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140614173115) do
+ActiveRecord::Schema.define(version: 20140616124314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,13 +39,6 @@ ActiveRecord::Schema.define(version: 20140614173115) do
 
   add_index "comments", ["chatroom_id"], name: "index_comments_on_chatroom_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
-
-  create_table "geocodes", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.float    "latitude"
-    t.float    "longitude"
-  end
 
   create_table "hashtags", force: true do |t|
     t.string   "name"
@@ -97,7 +90,6 @@ ActiveRecord::Schema.define(version: 20140614173115) do
     t.datetime "avatar_updated_at"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "ip_address"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

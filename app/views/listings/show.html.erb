@@ -11,13 +11,39 @@
 	<% end %>
 	<div class="clearfix"></div>
 	<br/>
-	<div id="item-img" class="col-xs-4 text-center img-responsive">
-		
-		<% @listing.image_containers.reverse.each do |imgc| %>
-		  <%= image_tag imgc.picture.url(:medium) %>
-		<% end %>
+	
 
-	</div>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag imgc.picture.url(:medium) %>
+
+
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    ...
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+
 	<div id="item-details" class="col-xs-6">
 		<div id="item-description" class="primary-color">
 			<%= @listing.description %>

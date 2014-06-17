@@ -11,8 +11,12 @@
 	<% end %>
 	<div class="clearfix"></div>
 	<br/>
-	<div id="item-img" class="col-xs-4 text-center">
-		<%= image_tag @listing.main_pic , class: 'img-responsive' %>
+	<div id="item-img" class="col-xs-4 text-center img-responsive">
+		
+		<% @listing.image_containers.reverse.each do |imgc| %>
+		  <%= image_tag imgc.picture.url(:medium) %>
+		<% end %>
+
 	</div>
 	<div id="item-details" class="col-xs-6">
 		<div id="item-description" class="primary-color">
@@ -56,6 +60,4 @@
 	<%=link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'Click OK to confirm the deletion'} %>
 <% end %>
 
-<% @listing.image_containers.each do |imgc| %>
-  <%= image_tag imgc.picture.url(:medium) %>
-<% end %>
+

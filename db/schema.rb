@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617093334) do
+ActiveRecord::Schema.define(version: 20140617110228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,7 +75,11 @@ ActiveRecord::Schema.define(version: 20140617093334) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.integer  "seller_id"
+<<<<<<< HEAD
+    t.boolean  "sold"
+=======
     t.string   "image_container"
+>>>>>>> b1f2d3e38119a3fbc429c5e338ea2fe3ee87f4a7
   end
 
   add_index "listings", ["seller_id"], name: "index_listings_on_seller_id", using: :btree

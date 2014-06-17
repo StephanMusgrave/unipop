@@ -10,3 +10,12 @@
 		<h4><%= time_ago_in_words comment.created_at %> ago, <%= comment.user.first_name %> said:</h4>
 		<p><%= comment.body %>
 	<% end %>
+
+	<% if current_user == @listing.seller && !@listing.sold? %>
+		<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
+    	<%= f.submit "Sell it!", class: 'btn btn-primary' %>
+    <% end %>
+  <% end %>
+
+
+

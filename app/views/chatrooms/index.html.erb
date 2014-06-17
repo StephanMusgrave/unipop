@@ -1,8 +1,10 @@
 <h2>Buying (<%= current_user.want_listings.count%>)</h2>
 
 <% @want_listings.each do |want_listing| %>
-	<% if want_listing.chatroom.comments.any? %>
-		<i><%= want_listing.chatroom.comments.last.body %></i><br>
+	<% if want_listing.last_comment %>
+		<%= time_ago_in_words want_listing.last_comment.created_at %> ago 
+		<%= want_listing.last_comment.user.first_name %> said:
+		<i><%= link_to want_listing.last_comment.body, listing_chatroom_path(want_listing) %></i>
 	<% else %>
 		<%= link_to "Get in touch with the seller!" , listing_chatroom_path(want_listing) %><br>
 	<% end %>
@@ -12,15 +14,13 @@
 <% if @sales_listings.empty? %>
 	<%= link_to "Sell some stuff", new_listing_path %>
 <% else %>
-	<% @sales_listings.each do |sales_listing| %>
-		<% if sales_listing.buyers.count == 0 %>
-			
-		<% elsif sales_listing.chatroom.comments.empty? %>
-			<%= link_to "Get in touch with the buyer!" , listing_chatroom_path(sales_listing) %><br>
-		<% else sales_listing.chatroom.comments.any? %>
+	<% @sales_listings.each do |sales_listing| %>			
+		<% if sales_listing.chatroom && sales_listing.last_comment %>
 			<i>
-			<%= sales_listing.chatroom.comments.last.user.first_name %> said: <%= link_to sales_listing.chatroom.comments.last.body, listing_chatroom_path(sales_listing) %>
+				<%= time_ago_in_words sales_listing.last_comment.created_at %> ago 
+				<%= sales_listing.last_comment.user.first_name %> said:
+				<%= link_to sales_listing.last_comment.body, listing_chatroom_path(sales_listing) %>
 			</i><br>
 		<% end %>
-	<%end%>
+	<% end %>
 <% end %>

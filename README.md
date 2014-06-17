@@ -9,7 +9,7 @@ Technologies used
 -----------------
 - Ruby
 - Rails
-- [Heroku]
+- Heroku
  - Papertrail
  - New Relic
  - Heroku Secrets
@@ -22,6 +22,7 @@ Technologies used
 - Git
 - Paperclip
 - HTML5
+- JavaScript/CoffeeScript
 - CSS3
 
 Production version:

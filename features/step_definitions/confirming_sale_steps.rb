@@ -16,3 +16,16 @@ Given(/^Ollie is signed in and in the chatroom for his football$/) do
 	login_as @ollie
 	visit listing_chatroom_path(@ollies_football)
 end
+
+Given(/^Ollie has agreed to sell Louise his football$/) do
+  louise.want_listings << ollies_football
+  @ollies_football.sold = true
+end
+
+When(/^Louise visits the homepage$/) do
+  visit '/'
+end
+
+Then(/^Louise should not see Ollie's football as a listing$/) do
+  pending # express the regexp above with the code you wish you had
+end

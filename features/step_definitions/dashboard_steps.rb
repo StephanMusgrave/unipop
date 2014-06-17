@@ -67,18 +67,13 @@ Then(/^Ollie should see link "(.*?)"$/) do |link_name|
 end
 
 Given(/^Ollie has one football for sale/) do
-  @ollies_football = Listing.create(description: "a football", price: "2000", seller: ollie)
-  expect(ollie.sales_listings.all.count).to eq 1
+  ollies_football
 end
 
 Given(/^Ollie has one football and one bike for sale$/) do
   Listing.create(description: "a football", price: "2000", seller: ollie)
   Listing.create(description: "fabulous bike", price: "999", seller: ollie)
   expect(ollie.sales_listings.all.count).to eq 2
-end
-
-def ollie
-  @ollie ||= User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
 end
 
 Given(/^Ollie visits the homepage$/) do
@@ -99,6 +94,13 @@ Then(/^Ollie shouldn't see Steve's iphone as a listing$/) do
   expect(page).not_to have_content(@steves_iphone.description)
 end
 
+def ollies_football
+  @ollies_football = Listing.create(description: "a football", price: "2000", seller: ollie)
+end
+
+def ollie
+  @ollie ||= User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
+end
 
 #------- Stuff to do with Louise
 Given(/^Louise has one notebook for sale$/) do

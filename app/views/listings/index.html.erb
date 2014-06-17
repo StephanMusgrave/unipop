@@ -1,3 +1,15 @@
 <div class="listings container">
-	<%= render 'common/listing_grid' %>
+	<% if @all_listings.any? %>
+		<% @all_listings.shuffle.each do |listing| %>
+			<div class="listing col-xs-4">
+				<%= link_to listing_path(listing) do %>
+					<img src="<%= listing.picture %>" class="img-responsive" alt="" />
+				<% end %>	
+			</div>
+		<% end %>
+	<% else %>
+		There are no items yet
+	<% end %>
+	<div class="clearfix"></div>
+	<div id="loading-more" class="primary-light-color text-center"><h3><strong>Loading more...<strong></h3></div>
 </div>

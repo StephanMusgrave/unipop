@@ -120,8 +120,10 @@
 </header>
 
 <% if flash[:notice] %>
-	<div class="container alert alert-success">
-		<%= flash[:notice] %>
+	<div class="container">
+		<div class="alert alert-success">
+			<%= flash[:notice] %>
+		</div>
 	</div>
 <% end %>
 

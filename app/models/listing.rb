@@ -14,8 +14,10 @@ class Listing < ActiveRecord::Base
   
   def self.search(query)
     if query 
-      tag = Hashtag.find_by(name: query)
-      tag ? tag.listings.order(created_at: :desc) : []
+      Hashtag.split(query).map { |name|
+        tag = Hashtag.find_by(name: name)
+        tag ? tag.listings.order(created_at: :desc) : []
+      }.flatten.compact.uniq
     else
       self.all
     end
@@ -28,7 +30,7 @@ class Listing < ActiveRecord::Base
 	def hashtag_names=(hashtag_input)
     hashtags.clear
 		return if hashtag_input.blank?
-		formatted_hashtags = hashtag_input.downcase.split(/[\s,|.]+/).uniq
+		formatted_hashtags = Hashtag.split(hashtag_input)
  		formatted_hashtags.each do |one_hashtag|
 			hashtag = Hashtag.find_or_create_by(name: one_hashtag)
 			hashtags << hashtag

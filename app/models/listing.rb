@@ -16,9 +16,9 @@ class Listing < ActiveRecord::Base
   has_one :chatroom
 
   def self.search(query)
-    if query 
+    if query
       tag = Hashtag.find_by(name: query)
-      tag ? tag.listings.order(created_at: :desc) : []
+      all :conditions => (query ? { :tag => query.split} : [] )
     else
       self.all
     end

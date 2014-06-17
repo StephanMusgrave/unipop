@@ -42,8 +42,6 @@
         <% end %>
       </div>
 
-      <br/>
-
       <% if @listing.new_record? %>
         <div class="form-group">
           <%= f.fields_for :image_containers do |x| %>
@@ -55,6 +53,7 @@
 
       <div id="listing-picture-field"></div>
 
+      <br/>
       <button type="button" id="add-another-pic" class="btn btn-default">+ Add another picture</button>
 
       <div class="clearfix"></div>

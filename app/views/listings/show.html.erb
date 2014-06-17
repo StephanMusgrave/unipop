@@ -42,8 +42,7 @@
   <%= @listing.description %>
 	<%= @listing.price %>
 	<%= @listing.location %>
-  <div id='map' data-listing-id='<%= @listing.id %>'></div>
-
+  
 <% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>
 	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
 <% end %>

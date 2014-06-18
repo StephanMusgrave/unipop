@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   root 'listings#index'
 
   devise_for :users, :controllers => { :registrations => "registrations" }
-  get 'user/profile' => 'users#show'
+  get 'user/pops' => 'users#show'
   resources :users, :only => [:show]
 
 end

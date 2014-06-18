@@ -30,6 +30,7 @@ class BuyersController < ApplicationController
 		elsif @listing.sold
 			@listing.buyers.delete(@first_buyer)
 			@listing.update(sold: false)
+			@listing.chatroom.delete if @listing.buyers.none?
 			flash[:notice] = "Relisted!"
 			redirect_to listing_path(@listing)
 		else

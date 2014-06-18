@@ -10,6 +10,7 @@ Scenario: Default profile information
 	Given I visit Ollie's page
 	Then I should see "Ollie D"
 	And I should see "0 items for sale"
+	And I should see a default profile picture
 
 Scenario: Uploading a profile picture
 	Given I visit Ollie's page

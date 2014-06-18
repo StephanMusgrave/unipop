@@ -1,23 +1,17 @@
-<%= form_tag(listings_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "e.g. shoes" %>
-  <%= submit_tag "Search", :name => nil %>
-<% end %>
-
-<h1><%= link_to '+', new_listing_path %></h1><br>
-<%= flash[:notice] %>
-
-<% if @all_listings.any? %>
-	<% @all_listings.shuffle.each do |listing| %>
-		<%= link_to listing.description, listing_path(listing) %>
-		<%= listing.price %>
-		<%= listing.location %>
-		<% listing.hashtags.each do |hashtag| %>
-			<i><%= hashtag.name %></i>
-    		<% end %><br>
+<div class="listings container">
+	<% if @all_listings.any? %>
+		<% @all_listings.shuffle.each do |listing| %>
+			<% unless listing.sold %>
+				<div class="listing col-xs-4">
+					<%= link_to listing_path(listing) do %>
+						<%= image_tag listing.main_pic, id: 'listing-main-pic',class: 'img-responsive' %>
+					<% end %>	
+				<% end %>
+			</div>
+		<% end %>
+	<% else %>
+		There are no items yet
 	<% end %>
-<% else %>
-	There are no items yet
-<% end %>
-
-<h1><%= link_to "Dashboard", '/dashboard' %></h1> 
-<!-- right now anyone can see this link and it's not linked to any particular user yet -->
+	<div class="clearfix"></div>
+	<div id="loading-more" class="primary-light-color text-center"><h3><strong>Loading more...<strong></h3></div>
+</div>

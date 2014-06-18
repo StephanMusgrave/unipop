@@ -1,0 +1,475 @@
+/*
+COLORS:
+Purple: #9d13ff;
+Dark Purple: #570095;
+Dark Grey: #676767;
+*/
+
+/* Global styles */
+body {
+	padding-bottom: 40px;
+}
+.primary-color {
+	color: #9d13ff !important;
+}
+.primary-dark-color {
+	color: #570095 !important;
+}
+.primary-light-color {
+	color: #ab52ea !important;
+}
+.light-grey {
+	color: #969696 !important;
+}
+.inline {
+	display: inline;
+}
+header {
+	background: #8e2ad5 url(../img/header-bg.png) repeat-x;
+	min-height: 54px;
+	margin-bottom: 20px;
+}
+header #logo {
+	float:left;
+}
+@media (max-width: 991px) {
+	header #logo {
+		display: none;
+	}
+}
+header a,
+header a:link,
+header a:visited {
+	color: #fff;
+}
+header #navigation {
+	margin-top: 2px;
+	width: 275px;
+	float: left;
+}
+header #navigation ul {
+	border-left: 1px solid #b972eb;
+	margin-bottom: 0;
+	margin-left: 5px;
+}
+header #navigation ul li {
+	border-right: 1px solid #b972eb;
+	padding:0;
+}
+header #navigation ul li a,
+header #navigation ul li a:link,
+header #navigation ul li a:visited {
+	padding: 10px 20px;
+	display: block;
+	font-size: 23px;
+	font-weight: bold;
+}
+header #navigation ul li a:hover {
+	text-decoration: none;
+	background: #7b25b7;
+}
+@media (max-width: 370px) {
+	header #navigation {
+		width: 235px;
+	}
+	header #navigation ul {
+		margin-left:0;
+	}
+	header #navigation ul li a,
+	header #navigation ul li a:link,
+	header #navigation ul li a:visited {
+		font-size: 18px;
+		padding: 14px 20px;
+	}
+}
+@media (max-width: 767px) {
+	header #header-right {
+		display: none;
+	}
+}
+header #header-right {
+	margin-top: 2px;
+	float: right;
+}
+
+@media (max-width: 1200px) {
+	header #header-right {
+		width: 560px;
+	}
+}
+@media (max-width: 991px) {
+	header #header-right {
+		width: 400px;
+	}
+}
+@media (max-width: 991px) {
+	header #header-right #search {
+		display:none;
+	}
+}
+header #header-right #search {
+	padding: 8px 8px 10px 0;
+	border-right: 1px solid #b972eb;
+	width: 270px;
+	float: right;
+}
+header #search form,
+header #search-device {
+	position: relative;
+}
+header #search form button,
+header #search-device button {
+	background: none;
+	border: 0;
+	color: #9d13ff;
+	position: absolute;
+	right: 2px;
+	top: 4px;
+	font-size: 20px;
+}
+header #header-right #search form input {
+	font-size: 18px;
+}
+header #search-device {
+	margin: 5px 0px;
+}
+header #header-right #user-menu {
+	padding: 7px 8px 7px 13px;
+	border-right: 1px solid #b972eb;
+	cursor: pointer;
+	position: relative;
+	float: right;
+	width: 220px;
+}
+header #header-right #user-menu.open {
+	background: #7b25b7;
+}
+header #header-right #user-menu:hover {
+	background: #7b25b7;
+}
+header #header-right #user-menu .dropdown-toggle {
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+}
+header #header-right #user-menu .dropdown-toggle .caret {
+	position: absolute;
+	top: 23px;
+	right: 15px;
+	font-size: 20px;
+	border-top: 6px solid;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+}
+header #header-right #user-menu ul.dropdown-menu {
+	box-shadow: none;
+	border: 0;
+	background: #7b25b7;
+	width: 100%;
+	border-radius: 0 0 4px 4px;
+	margin: 0;
+}
+header #header-right #user-menu ul.dropdown-menu li a:hover {
+	background: #570095;
+}
+header #header-right #user-menu ul.dropdown-menu li a {
+	color: #fff !important;
+	font-size: 16px;
+	padding: 8px 20px;
+}
+header #header-right #user-chat {
+	font-size: 23px;
+	border-right: 1px solid #b972eb;
+	padding: 0;
+	width: 45px;
+	float: right;
+}
+header #header-right #user-chat a:hover {
+	background: #7b25b7;
+}
+header #header-right #user-chat a,
+header #header-right #user-chat a:link,
+header #header-right #user-chat a:visited {
+	padding: 11px 10px 7px 11px;
+	display: block;
+}
+header button#menu-btn:hover {
+	background: #7b25b7;
+}
+header button#menu-btn {
+	margin: 13px 0 0 0;
+	border:1px solid #fff;
+}
+header button#menu-btn .icon-bar {
+	background: #fff;
+}
+header #user-device-menu {
+	width: auto;
+}
+header #user-device-menu ul li {
+	font-size: 20px;
+}
+header #user-device-menu ul li#user-id {
+	padding-right: 15px;
+	color: #fff;
+	font-weight: bold;
+}
+header #user-device-menu ul li a,
+header #user-device-menu ul li a:link,
+header #user-device-menu ul li a:visited {
+	padding: 13px 15px;
+}
+header #user-device-menu ul li a:hover {
+	background: #7b25b7;
+}
+
+.listings {
+	margin-top: 25px;
+}
+.listings h2 {
+	margin: 0 0 20px 0;
+}
+.listings .listing {
+	float: left;
+	margin-bottom: 25px;
+}
+.listings .listing img {
+	border-radius: 4px;
+	border:1px solid #E3BBFF;
+}
+.listings .listing img:hover {
+	border:1px solid #9d13ff;
+}
+@media (max-width: 440px) {
+	.listings .listing {
+		width: 50%;
+	}
+}
+
+/* Profile */
+#profile-info {
+	margin-top: 30px;
+}
+#profile-info #picture {
+	width: 170px;
+	float: left;
+	margin-right: 20px;
+}
+@media(max-width:650px) {
+	#profile-info #picture {
+		width: 120px;
+	}
+}
+#profile-info a#edit-link {
+	margin-top: 10px;
+	display: block;
+}
+#profile-info a#edit-link {
+	text-decoration: underline;
+}
+#profile-info a#edit-link:hover {
+	text-decoration: none;
+}
+.listings #tabs {
+	border-bottom: 2px solid #9d13ff;
+}
+.listings #tabs li {
+	margin-bottom: 0;
+}
+.listings #tabs li a {
+	background: #E6E6E6;
+	border:0;
+	color: #585858;
+	font-weight: bold;
+	font-size: 18px;
+}
+.listings #tabs li.active a {
+	background: #9d13ff;
+	color: #fff;
+}
+.listings .tab-content {
+	padding-top: 20px;
+}
+
+#edit-profile-form label {
+	font-size: 18px;
+}
+#edit-profile-form form input[type=file] {
+	width: 200px;
+}
+#edit-profile-form #picture {
+	width: 11%;
+	float: left;
+	margin-bottom: 20px;
+}
+#edit-profile-form #change-picture {
+	margin-top: 40px;
+}
+@media(max-width: 991px) {
+	#edit-profile-form #change-picture {
+		margin-top: 15px;
+	}
+}
+@media(max-width: 400px) {
+	#edit-profile-form input.btn {
+		width:100%;
+	}
+}
+@media(max-width: 650px) {
+	#edit-profile-form #picture {
+		width: 90px;
+	}
+}
+
+/* Sign in */
+#sign-in-form {
+	padding-left: 0;
+}
+@media(max-width: 600px) {
+	#sign-in-form {
+		width: 100%;
+	}
+}
+
+
+/* Sell an item */
+#sell-an-item form input#location {
+	width: 200px;
+}
+
+
+/* Item */
+#single-item #item-description {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+#single-item #item-img {
+	border: 1px solid #9d13ff;
+	border-radius: 4px;
+	overflow: hidden;
+}
+@media(max-width: 700px) {
+	#item-img img {
+		display: inline;
+	}
+	#item-img {
+		width: 100%;
+	}
+	#item-details {
+		width: 100%;
+	}
+	#single-item #item-description {
+		margin-top:20px;
+	}
+}
+#single-item #price-distance {
+	padding-left: 0;
+}
+#single-item #price input {
+	width: 100px;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+#single-item #price {
+	font-size: 29px;
+	font-weight: bold;
+}
+#single-item #distance {
+	font-size: 18px;
+	color: #8d8d8d;
+}
+#single-item #i-want-this-btn {
+	padding: 7px 30px;
+	font-size: 24px;
+	margin-top: 10px;
+}
+
+/* Chat - List */
+#conversations ul li {
+	position: relative;
+	border-bottom: 1px solid #9d13ff;
+	padding: 10px 0;
+}
+#conversations ul li.new .chat-name {
+	font-weight: bold;
+}
+#conversations ul li.new {
+	background: rgb(244, 234, 255);
+}
+#conversations ul li a {
+	display: block;
+}
+#conversations .chat-name {
+	font-size: 19px;
+	margin-top: 12px;
+}
+#conversations .last-msg {
+	color: #B9B6B6;
+}
+#conversations .remove-btn {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto 0;
+	height: 22px;
+	font-size: 20px;
+}
+
+
+/* Chat - Chat */
+#chat-window {
+
+}
+#chat-window .convo-img {
+	padding: 0 10px;
+	float:right;
+	max-width: 60px;
+}
+#chat-window .convo {
+	color: #fff;
+}
+#chat-window .convo .msg-info {
+	color: #D391FF;
+	font-size:12px;
+	margin-top: 5px;
+}
+#chat-window .convo-right {
+	position: relative;
+	padding: 10px;
+	background: #9d13ff;
+	margin: 5px 5px;
+	max-width: 300px;
+	min-width: 280px;
+	float: right;
+	border-radius: 4px;
+}
+#chat-window .convo-right .convo-img {
+	float: right;
+}
+#chat-window .convo-right:after {
+   position:absolute;
+   content: ""; 
+   top:15px;right:-10px;
+   border-width: 10px 0 10px 15px;
+   border-color: transparent  #9d13ff;
+   border-style: solid;
+}
+#chat-window .convo-left {
+	position:relative;
+	left: 15px;
+	padding: 10px;
+	background: #9d13ff;
+	margin: 5px 5px;
+	max-width: 300px;
+	min-width: 280px;
+	border-radius: 4px;
+}
+#chat-window .convo-left:before {
+   position:absolute;
+   content: ""; 
+   top:15px;left:-10px;
+   border-width: 10px 15px 10px 0px;
+   border-color: transparent  #9d13ff;
+   border-style: solid;
+}

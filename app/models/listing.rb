@@ -1,34 +1,45 @@
-class Listing < ActiveRecord::Base
-	has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>" },
-  :default_url => "/images/:style/missing.png",
-  storage: :s3,
-  s3_credentials: {
-    bucket: 'ProjectX-Makers',
-    access_key_id: Rails.application.secrets.s3_access_key,
-    secret_access_key: Rails.application.secrets.s3_secret_key
-  }
-
-  validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
-
+class Listing < ActiveRecord::Base   
+  
+  #attr_accessible :name, :image_containers_attributes
   belongs_to :seller, class_name: 'User'
   has_and_belongs_to_many :buyers, class_name: 'User', association_foreign_key: 'buyer_id', join_table: 'buyers_listings'
   has_and_belongs_to_many :hashtags
   has_one :chatroom
+  has_many :image_containers
+  accepts_nested_attributes_for :image_containers, allow_destroy: true
 
+  def main_pic
+    image_containers.any? ? image_containers.first.picture : 'no image'
+  end
+  
+  def self.search(query)
+    if query 
+      Hashtag.split(query).map { |name|
+        tag = Hashtag.find_by(name: name)
+        tag ? tag.listings.order(created_at: :desc) : []
+      }.flatten.compact.uniq
+    else
+      self.all
+    end
+  end
 
   def hashtag_names
-  	''
+  	hashtags.map(&:name).join(', ')
   end
 
 	def hashtag_names=(hashtag_input)
+    hashtags.clear
 		return if hashtag_input.blank?
-		formatted_hashtags = hashtag_input.downcase.split(/[\s,|.]+/).uniq
+		formatted_hashtags = Hashtag.split(hashtag_input)
  		formatted_hashtags.each do |one_hashtag|
 			hashtag = Hashtag.find_or_create_by(name: one_hashtag)
 			hashtags << hashtag
 		end
 	end
 
+  def last_comment
+    chatroom.comments.last
+  end
 end
 
 

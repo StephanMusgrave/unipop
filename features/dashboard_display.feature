@@ -21,4 +21,3 @@ Scenario: Ollie can see the two listings he wants
   And Ollie visits "dashboard"
   Then Ollie should see "my makers academy black notebook"
   Then Ollie should see "an iphone"
-

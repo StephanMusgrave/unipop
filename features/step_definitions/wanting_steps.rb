@@ -3,7 +3,7 @@ Given(/^Ollie is on the homepage$/) do
 end
 
 Given(/^Ollie clicks on Louise's notebook listing$/) do
-  click_on @louises_notebook.description
+  find('.listing:first a').click
   expect(current_path).to eq listing_path @louises_notebook
 end
 
@@ -37,7 +37,7 @@ Then(/^Ollie is told he's been added to the waitlist$/) do
 end
 
 Given(/^Ollie clicks on his football listing$/) do
-  click_on @ollies_football.description
+  first('.listing a').click
   expect(current_path).to eq listing_path @ollies_football
 end
 

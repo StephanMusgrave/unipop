@@ -1,29 +1,60 @@
-<% if @listing.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this post from being saved:</h2>
-<% end %>
+<div class="container">
+  <div id="edit-listing" class="col-xs-12 col-sm-7">
+    <% if @listing.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <% end %>
 
-<%= form_for @listing, html: { multipart: true } do |f| %>
+    <%= form_for @listing, html: { multipart: true, "data-listing-id" => @listing.id }, class: 'form' do |f| %>
 
-	<%= f.label :description %>
-	<%= f.text_field :description %>
+      <div class="clearfix"></div>
+      <div class="form-group">
+        <%= f.label :description, class: 'primary-color' %>
+        <%= f.text_field :description, class: 'form-control' %>
+      </div>
 
-	<%= f.label :price %>
-	<%= f.text_field :price %>
+      <div class="form-group">
+        <%= f.label :price, class: 'primary-color' %>
+        <%= f.text_field :price, class: 'form-control' %>
+      </div>
 
-	<%= f.label :location %>
-	<%= f.text_field :location %>
+      <div class="form-group">
+        <%= f.label :location, class: 'primary-color' %>
+        <%= f.text_field :location, class: 'form-control' %>
+      </div>
 
-	<%= f.label :picture %>	
-	<%= f.file_field :picture %>
+      <div class="form-group">
+        <%= f.label :hashtag_names, "Hashtags", class: 'primary-color' %>
+        <%= f.text_field :hashtag_names, class: 'form-control' %>
+      </div>
 
-	<%= f.label :hashtag_names, "Hashtags" %>	
-	<%= f.text_field :hashtag_names %>
+      <div id="listing-images">
+        <% @listing.image_containers.each do |image| %>
+          <div class="listing-image" id="listing-image-<%= image.id %>" data-id='<%= image.id %>'>
+            <%= image_tag image.picture, width: 100 %>
+            <button type="button" class="btn btn-sm btn-danger remove-listing-image-btn">
+              <i class="glyphicon glyphicon-remove"></i>
+              Delete image
+            </button>
+          </div>
+        <% end %>
+      </div>
 
-	<% if @listing.new_record? %>
-  <%= f.submit "Add my stuff" %>
-  <% else %>
-  <%= f.submit "Save" %>
-	<% end %>
+      <br/>
 
-<% end %>
+      <div id="listing-picture-field"></div>
+
+      <button type="button" id="add-another-pic" class="btn btn-default">+ Add another picture</button>
+
+      <div class="clearfix"></div>
+      <br/>
+
+      <% if @listing.new_record? %>
+        <%= f.submit "Add my stuff", class: 'btn btn-primary' %>
+      <% else %>
+        <%= f.submit "Save", class: 'btn btn-primary' %>
+      <% end %>
+
+    <% end %>
+  </div>
+</div>

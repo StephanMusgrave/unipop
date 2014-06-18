@@ -18,4 +18,20 @@ class BuyersController < ApplicationController
 	  redirect_to '/'
 	  flash[:notice] = "You've just unwanted an item, why not check out some more cool stuff?"
 	end
+
+	def update
+		@listing = Listing.find params[:listing_id]
+		@first_buyer = @listing.buyers.first
+		if @listing.sold == nil
+			@listing.update(sold: true)
+			flash[:notice] = "Sale confirmed!"
+			redirect_to listing_chatroom_path(@listing)
+		else
+			@first_buyer.delete
+			@listing.update(sold: nil) 
+			flash[:notice] = "Relisted!"
+			redirect_to listing_path(@listing)
+		end
+	end
+
 end

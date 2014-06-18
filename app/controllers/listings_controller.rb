@@ -6,7 +6,7 @@ class ListingsController < ApplicationController
     @all_listings = Listing.search(params[:search])
 
     if @all_listings.empty? && params[:search]
-      flash[:notice] = "Couldn't find that tag"
+      flash[:notice] = "Couldn't find that"
     else
       flash[:notice] = nil
     end

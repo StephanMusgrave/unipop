@@ -49,6 +49,8 @@
 		<div id="listing-btns" class="col-xs-6">
 			<% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>
 				<%= link_to "I want it!", listing_buyers_path(@listing), method: :post, class: 'btn btn-primary btn-lg', id: 'i-want-this-btn' %>
+				<br>
+				<br>
 			<% end %>
 			<% if @listing.buyers.first == current_user || ((@listing.seller == current_user) && @listing.buyers.any?) %>
 				<%= link_to "Go to chatroom!", listing_chatroom_path(@listing), class: 'btn btn-primary btn-lg' %>
@@ -59,6 +61,13 @@
 				<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, id: 'changed-my-mind-btn', class: 'btn btn-warning btn-lg', data: { confirm: "Click OK if you definitely don't want this anymore"} %>
 				<br/>
 				<br/>
+			<% end %>
+			<% if current_user == @listing.seller && @listing.sold? %>
+				<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
+    			<%= f.submit "Relist", class: 'btn btn-warning btn-lg', data: { confirm: "This will relist your item to the public and remove the previous buyer. Click 'OK' to continue"} %>
+					<br/>
+					<br/>
+				<% end %>
 			<% end %>
 			<button id="view-on-map-btn" class="btn btn-default btn-lg" data-toggle="modal" data-target="#listing-map-modal">
 				<i class="glyphicon glyphicon-map-marker"></i>

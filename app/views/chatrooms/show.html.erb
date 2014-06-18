@@ -12,6 +12,8 @@
 		<%= form_for [@listing, @chatroom, @comment] do |f| %>
 		<%= f.text_area :body, placeholder: "chat away..."%><br />
 		<%= f.submit %>
+		<br>
+		<br>
 	<%end%>				
 
 
@@ -21,7 +23,7 @@
     <% end %>    
   <% elsif current_user == @listing.seller && @listing.sold? %>
 		<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
-    	<%= f.submit "Relist", class: 'btn btn-primary' %>
+    	<%= f.submit "Relist", class: 'btn btn-warning btn-lg', data: { confirm: "This will relist your item to the public and remove the previous buyer. Click 'OK' to continue"} %>
   	<% end %>    
   <% end %>
   <% if @listing.buyers.many? %>

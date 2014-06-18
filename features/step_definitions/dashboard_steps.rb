@@ -45,10 +45,6 @@ Given(/^Ollie doesn't have any listings to sell$/) do
   expect(ollie.sales_listings.all.count).to eq 0
 end
 
-Given(/^Ollie visits "(.*?)"$/) do |page_name|
-  visit "/#{page_name}"
-end
-
 Given(/^Ollie is signed in and on the homepage$/) do
   login_as ollie
   visit '/'
@@ -67,8 +63,7 @@ Then(/^Ollie should see link "(.*?)"$/) do |link_name|
 end
 
 Given(/^Ollie has one football for sale/) do
-  @ollies_football = Listing.create(description: "a football", price: "2000", seller: ollie)
-  expect(ollie.sales_listings.all.count).to eq 1
+  ollies_football
 end
 
 Given(/^Ollie has one football and one bike for sale$/) do
@@ -77,12 +72,12 @@ Given(/^Ollie has one football and one bike for sale$/) do
   expect(ollie.sales_listings.all.count).to eq 2
 end
 
-def ollie
-  @ollie ||= User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
-end
-
 Given(/^Ollie visits the homepage$/) do
   visit '/'
+end
+
+Given(/^Ollie visits his profile page$/) do
+  visit user_path(@ollie)
 end
 
 Given(/^Ollie enters "(.*?)" in the search box$/) do |search_words|
@@ -99,6 +94,13 @@ Then(/^Ollie shouldn't see Steve's iphone as a listing$/) do
   expect(page).not_to have_content(@steves_iphone.description)
 end
 
+def ollies_football
+  @ollies_football = Listing.create(description: "a football", price: "2000", seller: ollie)
+end
+
+def ollie
+  @ollie ||= User.create(email:'ollie@ollie.com', password:'12345678', password_confirmation:'12345678', first_name:'Ollie', last_name:'Delevingne')
+end
 
 #------- Stuff to do with Louise
 Given(/^Louise has one notebook for sale$/) do

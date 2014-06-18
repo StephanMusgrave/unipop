@@ -38,19 +38,28 @@
 			<div id="price" class="primary-color">
 				£<%= @listing.price %>
 			</div>
+			<div id="seller-name" class="primary-color">
+				Pop posted by <%= @listing.seller.first_name %>
+			</div>
 			<div id="distance"></div>
 		</div>
 		<div class="col-xs-6">
 			<% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>
 				<%= link_to "I want it!", listing_buyers_path(@listing), method: :post, class: 'btn btn-primary btn-lg', id: 'i-want-this-btn' %>
 				<br/>
-					<br/>
+				<br/>
 				<%= link_to "#{@listing.seller.first_name}'s pops", user_path(@listing.seller), class: 'btn btn-primary btn-lg' %>
 			<% end %>
+
+			<% if @listing.buyers.first == current_user || ((@listing.seller == current_user) && @listing.buyers.any?) %>
+				<%= link_to "Go to chatroom!", listing_chatroom_path(@listing), class: 'btn btn-primary btn-lg' %>
+			<% end %>			
+			<br/>	
+			<br/>	
 			<% if current_user.want_listings.include?(@listing) %>
 				<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, class: 'btn btn-warning btn-lg', data: { confirm: "Click OK if you definitely don't want this anymore"} %>
 				<br/>
-					<br/>
+				<br/>
 				<%= link_to "#{@listing.seller.first_name}'s pops", user_path(@listing.seller), class: 'btn btn-primary btn-lg' %>
 			<% end %>
 			<br/><br/>

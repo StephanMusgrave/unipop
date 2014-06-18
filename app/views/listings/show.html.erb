@@ -13,20 +13,20 @@
 	<br/>
 	<div id="item-img" class="col-xs-4 text-center">
 		<div id="listing-carousel" class="carousel slide" data-ride="carousel">
-		  <div class="carousel-inner">
-		  	<% image_count=0;
+			<div class="carousel-inner">
+				<% image_count=0;
 				@listing.image_containers.each do |imgc| image_count+=1 %>
 					<div class="item <%= image_count==1 ? 'active' : ''%>">
 						<%= image_tag imgc.picture.url(:medium), class: 'img-responsive' %>
 					</div>
 				<% end %>
-		  </div>
-		  <a class="left carousel-control" href="#listing-carousel" data-slide="prev">
-		    <span class="glyphicon glyphicon-chevron-left"></span>
-		  </a>
-		  <a class="right carousel-control" href="#listing-carousel" data-slide="next">
-		    <span class="glyphicon glyphicon-chevron-right"></span>
-		  </a>
+			</div>
+			<a class="left carousel-control" href="#listing-carousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#listing-carousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
 		</div>
 	</div>
 	<div id="item-details" class="col-xs-6">
@@ -47,6 +47,30 @@
 			<% if current_user.want_listings.include?(@listing) %>
 				<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, class: 'btn btn-warning btn-lg', data: { confirm: "Click OK if you definitely don't want this anymore"} %>
 			<% end %>
+			<br/><br/>
+			<button class="btn btn-default btn-lg" data-toggle="modal" data-target="#listing-map-modal">
+				<i class="glyphicon glyphicon-map-marker"></i>
+				View on map
+			</button>
+			<div class="modal fade" id="listing-map-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">Item location</h4>
+						</div>
+						<div class="modal-body">
+							<div id='map' data-listing-id='<%= @listing.id %>'></div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">
+								<i class="glyphicon glyphicon-remove"></i>
+								Close map
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -54,6 +78,8 @@
 
 	<br/>
 
-	<div id='map' data-listing-id='<%= @listing.id %>'></div>
+
+
+
 
 </div>

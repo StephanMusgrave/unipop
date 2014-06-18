@@ -1,3 +1,32 @@
 // Place all the styles related to the chatrooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.chatroom-comments-container {
+	border-style: solid;
+	border-width: 1px;
+	width: 70%;
+	height: 200px;
+	margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+}
+
+.chat-form {
+	width: 100%;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+.chat-form input[type=submit] {
+	display: none;
+}
+
+textarea[id=comment_body] {
+	border-style: solid;
+	border-width: 1px;
+	width: 70%;
+	height: 30px;
+	margin-left: auto;
+  margin-right: auto;
+}

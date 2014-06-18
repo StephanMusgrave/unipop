@@ -1,26 +1,30 @@
+<script type="text/javascript" src="script.js"></script>
+
 <h1><%= image_tag @listing.main_pic, width: '100px', id: 'listing-main-pic' %>Chatroom</h1>
 
-	<%= form_for [@listing, @chatroom, @comment] do |f| %>
-		<%= f.label :body, "Comment" %>
-		<%= f.text_area :body, placeholder: "chat"%><br />
-		<%= f.submit %>
-	<%end%>				
-
-	<% @chatroom.comments.each do |comment| %>
+	<div class="chatroom-comments-container">
+	<div>
+		<% @chatroom.comments.each do |comment| %>
 		<h4><%= time_ago_in_words comment.created_at %> ago, <%= comment.user.first_name %> said:</h4>
-		<p><%= comment.body %>
-	<% end %>
+		<p><%= comment.body %></p>
+	<% end %></div>
+	</div>
+
+		<div class='chat-form'><%= form_for [@listing, @chatroom, @comment] do |f| %>
+		<%= f.text_area :body, placeholder: "chat away..."%><br />
+		<%= f.submit %>
+		<%end%></div>
 
 	<% if current_user == @listing.seller && !@listing.sold? %>
 		<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
-    	<%= f.submit "Confirm sale", class: 'btn btn-primary' %>
+    	<%= f.submit "Confirm sale", class: 'btn btn-primary', data: { confirm: 'Confirming the sale will remove your listing from the public listing page. You will still be able to access the listing from your Pops page'} %>
     <% end %>    
   <% elsif current_user == @listing.seller && @listing.sold? %>
 		<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
-    	<%= f.submit "Relist", class: 'btn btn-primary' %>
+    	<%= f.submit "Relist", class: 'btn btn-warning btn-lg', data: { confirm: "This will relist your item to the public and remove the previous buyer. Click 'OK' to continue"} %>
   	<% end %>    
   <% end %>
-  <% if @listing.buyers.many? %>
+  <% if @listing.buyers.many? && @listing.seller == current_user && @listing.sold != true %>
 		<%= button_to 'Next buyer', listing_buyer_path(@listing, @listing.buyers.first, next_buyer: true), method: :patch %>
 	<% end %>
 

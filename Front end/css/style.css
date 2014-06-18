@@ -51,6 +51,7 @@ header #section-title {
 .listings-grid .listing img {
 	border-radius: 4px;
 	border:1px solid #c9c9c9;
+
 }
 .listings-grid .listing img:hover {
 	border: 1px solid #888;
@@ -228,4 +229,9 @@ header #section-title {
 }
 #chat-convo-section form #send-btn {
 	margin-left:;
+}
+
+.img-responsive {
+  width: 100px;
+  height: 100px;
 }

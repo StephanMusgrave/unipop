@@ -1,4 +1,6 @@
-<h2>Buying (<%= current_user.want_listings.count%>)</h2>
+<h2> LIVE CHATROOMS <h2>
+
+<h2>Buying:</h2>
 
 <% @want_listings.each do |want_listing| %>
 	<% if want_listing.chatroom.comments.empty? %>
@@ -19,7 +21,7 @@
 	<% end %>
 <%end%>
 
-<h2>Selling (<%= current_user.sales_listings.count%>)</h2>
+<h2>Selling:</h2>
 <% if @sales_listings.empty? %>
 	<%= link_to "Sell some stuff", new_listing_path %>
 <% else %>

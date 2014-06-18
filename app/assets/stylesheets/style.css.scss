@@ -417,18 +417,20 @@ header #user-device-menu ul li a:hover {
 #single-item #price-distance {
 	padding-left: 0;
 }
+#single-item #price {
+	font-size: 29px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
 #single-item #price input {
 	width: 100px;
 	margin-left: 5px;
 	margin-bottom: 10px;
 }
-#single-item #price {
-	font-size: 29px;
-	font-weight: bold;
-}
 #single-item #distance {
 	font-size: 18px;
 	color: #8d8d8d;
+	margin-bottom: 10px;
 }
 #single-item #i-want-this-btn {
 	padding: 7px 30px;

@@ -2,18 +2,18 @@
 
 <h1><%= image_tag @listing.main_pic, width: '100px', id: 'listing-main-pic' %>Chatroom</h1>
 
-	<div class="chatroom-comments-container"></div>
-
-	<% @chatroom.comments.each do |comment| %>
+	<div class="chatroom-comments-container">
+	<div>
+		<% @chatroom.comments.each do |comment| %>
 		<h4><%= time_ago_in_words comment.created_at %> ago, <%= comment.user.first_name %> said:</h4>
-		<p><%= comment.body %>
-	<% end %>
+		<p><%= comment.body %></p>
+	<% end %></div>
+	</div>
 
-		<%= form_for [@listing, @chatroom, @comment] do |f| %>
+		<div class='chat-form'><%= form_for [@listing, @chatroom, @comment] do |f| %>
 		<%= f.text_area :body, placeholder: "chat away..."%><br />
 		<%= f.submit %>
-	<%end%>				
-
+	<%end%></div>
 
 	<% if current_user == @listing.seller && !@listing.sold? %>
 		<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>

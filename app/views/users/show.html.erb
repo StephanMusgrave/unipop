@@ -9,7 +9,7 @@
 	<div id="info">
 		<h2 class="primary-color"><%= @user_info.first_name %> <%= @user_info.last_name %></h2>
 		<div class="light-grey" style="display:none;">London, UK</div>
-		<%= link_to 'Edit Profile', edit_user_registration_path, id:'edit-link' %>
+		
 	</div>
 </div>
 
@@ -57,7 +57,9 @@
 					</div>
 				<% end %>
 			</div>
+		<%= link_to 'Edit My Profile', edit_user_registration_path, class:'label label-danger' %>
 		<% end %>
+
 	</div>
 
 </div>

@@ -28,7 +28,7 @@
 			<% @user_selling.each do |listing| %>
 				<div class="listing col-xs-4">
 					<%= link_to listing_path(listing) do %>
-						<img src="<%= listing.main_pic %>" class="img-responsive" />
+						<img src="<%= listing.main_pic.url(:medium) %>" class="img-responsive" />
 					<% end %>
 					<% if listing.sold %>
 						<%= link_to 'SOLD', listing_chatroom_path(listing), class:'label label-default' %>

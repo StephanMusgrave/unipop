@@ -27,7 +27,6 @@ class BuyersController < ApplicationController
 			flash[:notice] = "Sale confirmed!"
 			redirect_to listing_chatroom_path(@listing)
 		else
-			@first_buyer.delete
 			@listing.update(sold: nil) 
 			flash[:notice] = "Relisted!"
 			redirect_to listing_path(@listing)

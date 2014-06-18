@@ -25,6 +25,7 @@ class BuyersController < ApplicationController
 
 		if params[:next_buyer]
 			@listing.buyers.delete(@first_buyer)
+			@listing.chatroom.comments.delete_all
 			redirect_to listing_chatroom_path(@listing)
 		elsif @listing.sold
 			@listing.buyers.delete(@first_buyer)

@@ -1,6 +1,6 @@
 class Chatroom < ActiveRecord::Base
   belongs_to :listing
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   def buyer
   	listing.buyers.first

@@ -38,6 +38,9 @@
 			<div id="price" class="primary-color">
 				£<%= @listing.price %>
 			</div>
+			<div id="seller-name" class="primary-color">
+				Pop posted by <%= @listing.seller.first_name %>
+			</div>
 			<div id="distance"></div>
 		</div>
 		<div class="col-xs-6">

@@ -33,7 +33,7 @@
 		<div id="posted-by" class="primary-dark-color">
 			Pop posted by
 			<%= link_to '/users/'+@listing.seller.id.to_s do %>
-				<strong><%= @listing.seller.first_name %> <%= @listing.seller.last_name %></strong>
+				<strong><%= @listing.seller.first_name %> <%= @listing.seller.last_name.chars.first %></strong>
 			<% end %>
 		</div>
 		<div id="item-description" class="primary-color">

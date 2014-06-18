@@ -60,7 +60,7 @@
       <br/>
 
       <% if @listing.new_record? %>
-        <%= f.submit "Add my stuff", class: 'btn btn-primary' %>
+        <%= submit_tag 'Add my stuff', data: { disable_with: 'Adding ....' }, class: 'btn btn-primary' %>
       <% else %>
         <%= f.submit "Save", class: 'btn btn-primary' %>
       <% end %>

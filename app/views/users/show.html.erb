@@ -10,7 +10,6 @@
 		<h2 class="primary-color"><%= @user_info.first_name %> <%= @user_info.last_name.chars.first %></h2>
 		<div class="light-grey" style="display:none;">London, UK</div>
 		<% if current_user.id == @user_info.id %>
-			<%= link_to 'Edit My Profile', edit_user_registration_path, class:'label label-primary' %>
 		<% end %>
 	</div>
 </div>

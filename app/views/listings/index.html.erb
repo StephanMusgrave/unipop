@@ -1,17 +1,27 @@
 <div class="listings container">
-	<% if @all_listings.any? %>
-		<% listingCount=0; @all_listings.shuffle.each do |listing| listingCount+=1 %>
-			<% unless listing.sold %>
-				<div class="listing col-xs-6	 col-sm-4">
-					<%= link_to listing_path(listing) do %>
-						<%= image_tag listing.image_containers.first.picture(:medium), class: 'img-responsive' %>
+
+	<% if @listings_per_page.any? %>
+		<% @listings_per_page.shuffle.each do |listing| %>
+		<% unless listing.sold %>
+			<div class="listing col-xs-4">
+				<%= link_to listing_path(listing) do %>
+					<%= image_tag listing.main_pic, width: '100%', id: 'listing-main-pic',class: 'img-responsive' %>
 					<% end %>
-				</div>
-			<% end %>
+				<% end %>
+			</div>	
 		<% end %>
 	<% else %>
 		There are no items yet
 	<% end %>
-	<div class="clearfix"></div>
-	<div id="loading-more" class="primary-light-color text-center"><h3><strong>Loading more...<strong></h3></div>
+
+	<div id="infinite-scrolling">
+		<%= will_paginate @listings_per_page %>
+	</div>
+
+	<div class="loader">
+			<p>
+				<img src="/images/ajax-loader.gif" alt="Loading..." title="Loading..." />
+			</p>
+	</div>
+
 </div>

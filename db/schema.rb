@@ -29,12 +29,11 @@ ActiveRecord::Schema.define(version: 20140617110228) do
 
   add_index "chatrooms", ["listing_id"], name: "index_chatrooms_on_listing_id", using: :btree
 
-  create_table "comments", force: true do |t|
-    t.integer  "chatroom_id"
-    t.text     "body"
+  create_table "geocodes", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "comments", ["chatroom_id"], name: "index_comments_on_chatroom_id", using: :btree

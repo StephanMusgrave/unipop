@@ -23,7 +23,6 @@ Given(/^Ollie has agreed to sell Louise his football$/) do
   @louise.want_listings << @ollies_football
   @ollies_football.sold = true
   Chatroom.create(listing:@ollies_football)
-
 end
 
 When(/^Louise visits the homepage$/) do
@@ -45,6 +44,7 @@ end
 
 Given(/^Louise has decided she doesn't want it anymore$/) do
 	@ollies_football.chatroom.comments.create(body:"I don't want your stupid football anymore", user:@louise)
+	visit listing_chatroom_path(@ollies_football)
 end
 
 Given(/^Ollie goes to the home page$/) do

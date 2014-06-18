@@ -28,11 +28,20 @@
 		<div class="col-xs-6">
 			<% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>
 				<%= link_to "I want it!", listing_buyers_path(@listing), method: :post, class: 'btn btn-primary btn-lg', id: 'i-want-this-btn' %>
+				<br/>
+					<br/>
+				<%= link_to "#{@listing.seller.first_name}'s pops", user_path(@listing.seller), class: 'btn btn-primary btn-lg' %>
 			<% end %>
 			<% if current_user.want_listings.include?(@listing) %>
 				<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, class: 'btn btn-warning btn-lg', data: { confirm: "Click OK if you definitely don't want this anymore"} %>
+				<br/>
+					<br/>
+				<%= link_to "#{@listing.seller.first_name}'s pops", user_path(@listing.seller), class: 'btn btn-primary btn-lg' %>
 			<% end %>
+		
+
 		</div>
+
 	</div>
 </div>
 

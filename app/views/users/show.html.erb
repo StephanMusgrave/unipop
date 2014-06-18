@@ -10,7 +10,6 @@
 		<h2 class="primary-color"><%= @user_info.first_name %> <%= @user_info.last_name.chars.first %></h2>
 		<div class="light-grey" style="display:none;">London, UK</div>
 		<% if current_user.id == @user_info.id %>
-			<%= link_to 'Edit My Profile', edit_user_registration_path, class:'label label-primary' %>
 		<% end %>
 	</div>
 </div>
@@ -28,7 +27,7 @@
 			<% @user_selling.each do |listing| %>
 				<div class="listing col-xs-4">
 					<%= link_to listing_path(listing) do %>
-						<img src="<%= listing.main_pic %>" class="img-responsive" />
+						<img src="<%= listing.main_pic.url(:medium) %>" class="img-responsive" />
 					<% end %>
 					<% if listing.sold %>
 						<%= link_to 'SOLD', listing_chatroom_path(listing), class:'label label-default' %>
@@ -49,8 +48,10 @@
 						<%= link_to '/listings/' + listing.id.to_s do %>
 							<img src="<%= listing.main_pic %>" class="img-responsive" />
 						<% end %>
-						<% if listing.sold %>
+						<% if listing.sold && listing.buyers.first != current_user %>
 							<%= link_to 'No longer available', listing_path(listing), class:'label label-default' %>
+						<% elsif listing.sold && listing.buyers.first == current_user %>
+							<%= link_to 'You bought it!', listing_chatroom_path(listing), class:'label label-success' %>
 						<% elsif listing.buyers.first == current_user %>
 							<%= link_to 'Chatroom live!', listing_chatroom_path(listing), class:'label label-danger' %>
 						<% else %>

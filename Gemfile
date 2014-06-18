@@ -44,6 +44,8 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'newrelic_rpm'
 gem 'gmaps4rails', '~> 2.1.2'
 gem 'geocoder'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :test do
   # gem 'rmagick'

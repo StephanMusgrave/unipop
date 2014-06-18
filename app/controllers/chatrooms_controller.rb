@@ -18,8 +18,8 @@ def show
 end
 
 def index
-	@want_listings = current_user.want_listings
-	@sales_listings = current_user.sales_listings
+	@want_listings_chatrooms = current_user.want_listings.map(&:chatroom).compact
+	@sales_listings_chatrooms = current_user.sales_listings.map(&:chatroom).compact
 end
 
 end

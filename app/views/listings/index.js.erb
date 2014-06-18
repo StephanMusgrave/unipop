@@ -1,0 +1,8 @@
+$('#infinite-scrolling').append("<%= j render @listings_per_page %>");
+<% if @listings_per_page.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate @listings_per_page %>');
+<% else %>
+  $(window).off('scroll');
+  $('.pagination').remove();
+  
+<% end %>

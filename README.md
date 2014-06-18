@@ -3,7 +3,7 @@ Project X
 
 Team members
 ----
-[Emma], [Louise], [Muhanad], [Ollie], [Shelley], [Stefania] and [Steve]
+[Emma], [Louise], [Muhanad], [Ollie], [Shelley], [Stefania] and [Steve] 
 
 Technologies used
 -----------------
@@ -20,7 +20,8 @@ Technologies used
 - Postgresql
 - Devise
 - Git
-- Paperclip
+- AWS
+ - Paperclip
 - HTML5
 - JavaScript/CoffeeScript
 - CSS3

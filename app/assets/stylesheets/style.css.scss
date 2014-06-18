@@ -25,10 +25,24 @@ body {
 	display: inline;
 }
 header {
-	background: #8e2ad5 image-url('header-bg.png') repeat-x;
+	/*background: #8e2ad5 image-url('header-bg.png') repeat-x;*/
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, rgb(72, 220, 190)),
+	color-stop(0.68, rgb(3, 111, 115))
+);
+background-image: -o-linear-gradient(bottom, rgb(72, 220, 190) 0%, rgb(3, 111, 115) 68%);
+background-image: -moz-linear-gradient(bottom, rgb(72, 220, 190) 0%, rgb(3, 111, 115) 68%);
+background-image: -webkit-linear-gradient(bottom, rgb(72, 220, 190) 0%, rgb(3, 111, 115) 68%);
+background-image: -ms-linear-gradient(bottom, rgb(72, 220, 190) 0%, rgb(3, 111, 115) 68%);
+background-image: linear-gradient(to bottom, rgb(72, 220, 190) 0%, rgb(3, 111, 115) 68%);
 	min-height: 54px;
 	margin-bottom: 20px;
 }
+
+
 header #logo {
 	float:left;
 }
@@ -53,7 +67,7 @@ header #navigation ul {
 	margin-left: 5px;
 }
 header #navigation ul li {
-	border-right: 1px solid #b972eb;
+	border-right: 1px solid #036F73;
 	padding:0;
 }
 header #navigation ul li a,

@@ -19,6 +19,8 @@
 		<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
     	<%= f.submit "Relist", class: 'btn btn-primary' %>
   	<% end %>    
-  <% end %>     
-
+  <% end %>
+  <% if @listing.buyers.many? %>
+		<%= button_to 'Next buyer', listing_buyer_path(@listing, @listing.buyers.first, next_buyer: true), method: :patch %>
+	<% end %>
 

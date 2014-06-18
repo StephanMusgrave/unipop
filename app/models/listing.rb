@@ -40,6 +40,7 @@ class Listing < ActiveRecord::Base
   def last_comment
     chatroom.comments.last
   end
+  
 end
 
 

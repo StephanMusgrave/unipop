@@ -1,13 +1,16 @@
 <div class="listings container">
 	<% if @all_listings.any? %>
-		<% @all_listings.shuffle.each do |listing| %>
+		<% listingCount=0; @all_listings.shuffle.each do |listing| listingCount+=1 %>
 			<% unless listing.sold %>
 				<div class="listing col-xs-4">
 					<%= link_to listing_path(listing) do %>
-						<%= image_tag listing.main_pic, id: 'listing-main-pic',class: 'img-responsive' %>
-					<% end %>	
-				<% end %>
-			</div>
+						<%= image_tag listing.main_pic, width: '100%', id: 'listing-main-pic',class: 'img-responsive' %>
+					<% end %>
+					<% if listingCount%3==0 %>
+						<div class="clearfix"></div>
+					<% end %>
+				</div>
+			<% end %>
 		<% end %>
 	<% else %>
 		There are no items yet

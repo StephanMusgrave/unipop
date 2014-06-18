@@ -8,7 +8,7 @@ Background: Being logged in
 	And Ollie doesn't have any listings to sell
 
 Scenario: Ollie wants no listings
-	Given Ollie visits "dashboard"
+	Given Ollie visits his profile page
 	Then Ollie should see "You want 0 items."
 	And Ollie should see link "Browse"
 
@@ -25,7 +25,7 @@ Scenario: Ollie wants two listings
 	And Ollie is signed in
 	And Ollie wants Louise's notebook
 	And Ollie wants Steve's iphone
-	And Ollie visits "dashboard"
+	And Ollie visits his profile page
 	Then Ollie should see "You want 2 items."
 
 Scenario: Ollie has no listings to sell

@@ -49,8 +49,10 @@
 						<%= link_to '/listings/' + listing.id.to_s do %>
 							<img src="<%= listing.main_pic %>" class="img-responsive" />
 						<% end %>
-						<% if listing.sold %>
+						<% if listing.sold && listing.buyers.first != current_user %>
 							<%= link_to 'No longer available', listing_path(listing), class:'label label-default' %>
+						<% elsif listing.sold && listing.buyers.first == current_user %>
+							<%= link_to 'You bought it!', listing_chatroom_path(listing), class:'label label-success' %>
 						<% elsif listing.buyers.first == current_user %>
 							<%= link_to 'Chatroom live!', listing_chatroom_path(listing), class:'label label-danger' %>
 						<% else %>

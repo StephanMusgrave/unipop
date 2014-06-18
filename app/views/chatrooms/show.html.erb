@@ -26,7 +26,7 @@
     	<%= f.submit "Relist", class: 'btn btn-warning btn-lg', data: { confirm: "This will relist your item to the public and remove the previous buyer. Click 'OK' to continue"} %>
   	<% end %>    
   <% end %>
-  <% if @listing.buyers.many? %>
+  <% if @listing.buyers.many? && @listing.seller == current_user && @listing.sold != true %>
 		<%= button_to 'Next buyer', listing_buyer_path(@listing, @listing.buyers.first, next_buyer: true), method: :patch %>
 	<% end %>
 

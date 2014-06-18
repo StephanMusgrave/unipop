@@ -4,4 +4,5 @@ $('#infinite-scrolling').append("<%= j render @listings %>");
 <% else %>
   $(window).off('scroll');
   $('.pagination').remove();
+  
 <% end %>

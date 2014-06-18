@@ -4,8 +4,8 @@
 			<div class="listing col-xs-4">
 				<%= link_to listing_path(listing) do %>
 					<%= image_tag listing.main_pic, class: 'img-responsive' %>
-				<% end %>	
-			</div>
+				<% end %>
+			</div>	
 		<% end %>
 	<% else %>
 		There are no items yet
@@ -15,6 +15,10 @@
 		<%= will_paginate @listings%>
 	</div>
 
-	<div class="clearfix"></div>
-	<div id="loading-more" class="primary-light-color text-center"><h3><strong>Loading more...<strong></h3></div>
+	<div>
+			<p>
+				<img src="/images/ajax-loader.gif" alt="Loading..." title="Loading..." />
+			</p>
+	</div>
+
 </div>

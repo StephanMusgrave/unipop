@@ -14,6 +14,7 @@ class BuyersController < ApplicationController
 
 	def destroy
 	  @listing = Listing.find params[:listing_id]
+	  @listing.chatroom.delete
 	  current_user.want_listings.delete(@listing)
 	  redirect_to '/'
 	  flash[:notice] = "You've just unwanted an item, why not check out some more cool stuff?"

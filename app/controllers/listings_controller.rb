@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
 
   before_action :authenticate_user!, except:[:index]
-	
+  
   def index
     @all_listings = Listing.search(params[:search])
 
@@ -11,7 +11,7 @@ class ListingsController < ApplicationController
       flash[:notice] = nil
     end
 
-		# @all_listings = Listing.all
+    # @all_listings = Listing.all
 
     # @current_location = Listing.geocoded 
       
@@ -36,16 +36,16 @@ class ListingsController < ApplicationController
     # @listings = Listing.all.order('created_at DESC')
     # end
 
-	end
+  end
 
 	def new
 		@listing = Listing.new
+    @listing.image_containers.new
 	end
 
   def create    
     @listing = Listing.create(params['listing'].permit(:description, :price, :location, :hashtag_names, :image_containers_attributes => [:picture, :original_filename, :content_type, :headers]))
     @listing.seller = current_user
-
     if @listing.save
       redirect_to '/dashboard'
       else 
@@ -53,13 +53,13 @@ class ListingsController < ApplicationController
       end
   end
 
-	def show
-		@listing = Listing.find params[:id]
-	end
+  def show
+    @listing = Listing.find params[:id]
+  end
 
-	def edit
-		@listing = Listing.find params[:id]
-	end
+  def edit
+    @listing = Listing.find params[:id]
+  end
 
   def update
     @listing = Listing.find(params[:id])
@@ -67,7 +67,7 @@ class ListingsController < ApplicationController
     if @listing.update(params[:listing].permit(:description, :price, :location, :image_containers_attributes => [:picture, :original_filename, :content_type, :headers]))
       redirect_to listing_path @listing
     else
-    	flash[:notice] = 'Edits not saved'
+      flash[:notice] = 'Edits not saved'
       render 'edit'
     end
   end

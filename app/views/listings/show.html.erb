@@ -12,7 +12,22 @@
 	<div class="clearfix"></div>
 	<br/>
 	<div id="item-img" class="col-xs-4 text-center">
-		<%= image_tag @listing.main_pic , class: 'img-responsive' %>
+		<div id="listing-carousel" class="carousel slide" data-ride="carousel">
+		  <div class="carousel-inner">
+		  	<% image_count=0;
+				@listing.image_containers.each do |imgc| image_count+=1 %>
+					<div class="item <%= image_count==1 ? 'active' : ''%>">
+						<%= image_tag imgc.picture.url(:medium), class: 'img-responsive' %>
+					</div>
+				<% end %>
+		  </div>
+		  <a class="left carousel-control" href="#listing-carousel" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left"></span>
+		  </a>
+		  <a class="right carousel-control" href="#listing-carousel" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right"></span>
+		  </a>
+		</div>
 	</div>
 	<div id="item-details" class="col-xs-6">
 		<div id="item-description" class="primary-color">
@@ -43,29 +58,11 @@
 		</div>
 
 	</div>
+
+	<div class="clearfix"></div>
+
+	<br/>
+
+	<div id='map' data-listing-id='<%= @listing.id %>'></div>
+
 </div>
-
-<div id='map' data-listing-id='<%= @listing.id %>' style="display:none;">
-</div>
-
-  <%= @listing.description %>
-	<%= @listing.price %>
-	<%= @listing.location %>
-  <div id='map' data-listing-id='<%= @listing.id %>'></div>
-
-<% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>
-	<%= link_to "I want it!", listing_buyers_path(@listing), method: :post %>
-<% end %>
-
-<% if current_user.want_listings.include?(@listing) %>
-	<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, data: { confirm: "Click OK if you definitely don't want this anymore"} %>
-<% end %>
-
-<% if current_user == @listing.seller %>
-	<%=link_to 'Edit', edit_listing_path %>
-	<%=link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'Click OK to confirm the deletion'} %>
-<% end %>
-
-<% @listing.image_containers.each do |imgc| %>
-  <%= image_tag imgc.picture.url(:medium) %>
-<% end %>

@@ -45,10 +45,6 @@ Given(/^Ollie doesn't have any listings to sell$/) do
   expect(ollie.sales_listings.all.count).to eq 0
 end
 
-Given(/^Ollie visits "(.*?)"$/) do |page_name|
-  visit "/#{page_name}"
-end
-
 Given(/^Ollie is signed in and on the homepage$/) do
   login_as ollie
   visit '/'
@@ -78,6 +74,10 @@ end
 
 Given(/^Ollie visits the homepage$/) do
   visit '/'
+end
+
+Given(/^Ollie visits his profile page$/) do
+  visit user_path(@ollie)
 end
 
 Given(/^Ollie enters "(.*?)" in the search box$/) do |search_words|

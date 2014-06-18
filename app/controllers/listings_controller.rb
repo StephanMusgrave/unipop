@@ -47,7 +47,7 @@ class ListingsController < ApplicationController
     @listing = Listing.create(params['listing'].permit(:description, :price, :location, :hashtag_names, :image_containers_attributes => [:picture, :original_filename, :content_type, :headers]))
     @listing.seller = current_user
     if @listing.save
-      redirect_to '/dashboard'
+      redirect_to user_path(current_user)
       else 
         render 'new'
       end

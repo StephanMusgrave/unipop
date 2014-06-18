@@ -1,6 +1,5 @@
-$(document).ready(function(){
+function initListingMap() {
   var listingId = $('#map').data('listing-id');
-
   if(listingId) {
     $.get('/listings/' + listingId + '.json', function(listing){
       map = new GMaps({
@@ -25,5 +24,10 @@ $(document).ready(function(){
       });
     })
   }
-});
+}
 
+$(document).ready(function() {
+  $('#listing-map-modal').on('shown.bs.modal', function () {
+      initListingMap();
+  });
+});

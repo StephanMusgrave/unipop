@@ -51,7 +51,7 @@
 				<%= link_to "#{@listing.seller.first_name}'s pops", user_path(@listing.seller), class: 'btn btn-primary btn-lg' %>
 			<% end %>
 
-			<% if @listing.buyers.first == current_user || @listing.seller == current_user %>
+			<% if @listing.buyers.first == current_user || ((@listing.seller == current_user) && @listing.buyers.any?) %>
 				<%= link_to "Go to chatroom!", listing_chatroom_path(@listing), class: 'btn btn-primary btn-lg' %>
 			<% end %>			
 			<br/>	

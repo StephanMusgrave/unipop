@@ -22,14 +22,19 @@ class BuyersController < ApplicationController
 	def update
 		@listing = Listing.find params[:listing_id]
 		@first_buyer = @listing.buyers.first
-		if @listing.sold == nil
+
+		if params[:next_buyer]
+			@listing.buyers.delete(@first_buyer)
+			redirect_to listing_chatroom_path(@listing)
+		elsif @listing.sold
+			@listing.buyers.delete(@first_buyer)
+			@listing.update(sold: false)
+			flash[:notice] = "Relisted!"
+			redirect_to listing_path(@listing)
+		else
 			@listing.update(sold: true)
 			flash[:notice] = "Sale confirmed!"
 			redirect_to listing_chatroom_path(@listing)
-		else
-			@listing.update(sold: nil) 
-			flash[:notice] = "Relisted!"
-			redirect_to listing_path(@listing)
 		end
 	end
 

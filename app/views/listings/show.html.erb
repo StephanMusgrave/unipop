@@ -30,34 +30,31 @@
 		</div>
 	</div>
 	<div id="item-details" class="col-xs-6">
+		<div id="posted-by" class="primary-dark-color">
+			Pop posted by
+			<%= link_to '/users/'+@listing.seller.id.to_s do %>
+				<strong><%= @listing.seller.first_name %> <%= @listing.seller.last_name %></strong>
+			<% end %>
+		</div>
 		<div id="item-description" class="primary-color">
 			<%= @listing.description %>
 		</div>
 		<div class="clearfix"></div>
 		<div id="price-distance" class="col-xs-6">
 			<div id="price" class="primary-color">
-				£<%= @listing.price %>
-			</div>
-			<div id="seller-name" class="primary-color">
-				Pop posted by <%= @listing.seller.first_name %>
+				&pound;<%= @listing.price %>
 			</div>
 			<div id="distance"></div>
 		</div>
-		<div class="col-xs-6">
+		<div id="listing-btns" class="col-xs-6">
 			<% unless user_signed_in? && current_user.want_listings.include?(@listing) || current_user == @listing.seller %>
 				<%= link_to "I want it!", listing_buyers_path(@listing), method: :post, class: 'btn btn-primary btn-lg', id: 'i-want-this-btn' %>
-				<br/>
-					<br/>
-				<%= link_to "#{@listing.seller.first_name}'s pops", user_path(@listing.seller), class: 'btn btn-primary btn-lg' %>
 			<% end %>
 			<% if current_user.want_listings.include?(@listing) %>
-				<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, class: 'btn btn-warning btn-lg', data: { confirm: "Click OK if you definitely don't want this anymore"} %>
-				<br/>
-					<br/>
-				<%= link_to "#{@listing.seller.first_name}'s pops", user_path(@listing.seller), class: 'btn btn-primary btn-lg' %>
+				<%= link_to "Changed my mind", listing_buyer_path(@listing, current_user), method: :delete, id: 'changed-my-mind-btn', class: 'btn btn-warning btn-lg', data: { confirm: "Click OK if you definitely don't want this anymore"} %>
 			<% end %>
 			<br/><br/>
-			<button class="btn btn-default btn-lg" data-toggle="modal" data-target="#listing-map-modal">
+			<button id="view-on-map-btn" class="btn btn-default btn-lg" data-toggle="modal" data-target="#listing-map-modal">
 				<i class="glyphicon glyphicon-map-marker"></i>
 				View on map
 			</button>

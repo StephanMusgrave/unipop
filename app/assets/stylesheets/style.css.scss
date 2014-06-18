@@ -353,6 +353,9 @@ header #user-device-menu ul li a:hover {
 
 
 /* Item */
+#single-item #posted-by {
+	margin-bottom: 10px;
+}
 #single-item #item-description {
 	font-size: 20px;
 	margin-bottom: 20px;
@@ -379,6 +382,9 @@ header #user-device-menu ul li a:hover {
 	background: none;
 }
 @media(max-width: 700px) {
+	#single-item #posted-by {
+		margin-top: 10px;
+	}
 	#single-item #item-img {
 		width: 100%;
 	}
@@ -387,6 +393,25 @@ header #user-device-menu ul li a:hover {
 	}
 	#single-item #item-description {
 		margin-top:20px;
+	}
+	
+}
+@media(max-width: 460px) {
+	#single-item #price-distance {
+		width: 100%;
+	}
+	#single-item #listing-btns {
+		text-align: center;
+		width: 100%;
+	}
+	#single-item #i-want-this-btn {
+		width: 100%;
+	}
+	#single-item #changed-my-mind-btn {
+		width: 100%;
+	}
+	#single-item #view-on-map-btn {
+		width: 100%;
 	}
 }
 #single-item #price-distance {

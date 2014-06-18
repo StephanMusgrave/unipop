@@ -5,7 +5,7 @@ class BuyersController < ApplicationController
 	  current_user.want_listings << @listing
 
 	  if @listing.buyers.many?
-	  	redirect_to '/dashboard'
+	  	redirect_to user_path(current_user)
 	  	flash[:notice] = 'You have been added to the waiting list for this item'
 	  else
 	  	redirect_to listing_chatroom_path(@listing)
@@ -21,10 +21,21 @@ class BuyersController < ApplicationController
 
 	def update
 		@listing = Listing.find params[:listing_id]
-		@listing.update(sold: true) 
-		flash[:notice] = "Sale confirmed!"
+		@first_buyer = @listing.buyers.first
 
-		redirect_to listing_chatroom_path(@listing)
+		if params[:next_buyer]
+			@listing.buyers.delete(@first_buyer)
+			redirect_to listing_chatroom_path(@listing)
+		elsif @listing.sold
+			@listing.buyers.delete(@first_buyer)
+			@listing.update(sold: false)
+			flash[:notice] = "Relisted!"
+			redirect_to listing_path(@listing)
+		else
+			@listing.update(sold: true)
+			flash[:notice] = "Sale confirmed!"
+			redirect_to listing_chatroom_path(@listing)
+		end
 	end
 
 end

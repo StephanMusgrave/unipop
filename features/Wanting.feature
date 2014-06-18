@@ -19,7 +19,7 @@ Scenario: Trying to buy as the second buyer of a listing
 	And Ollie is on the homepage
 	And Ollie clicks on Louise's notebook listing
 	And Ollie clicks "I want it!"
-	Then Ollie is referred to his dashboard
+	Then Ollie is redirected to his profile page
 	And Ollie is told he's been added to the waitlist
 
 Scenario: A user cannot want their own listing

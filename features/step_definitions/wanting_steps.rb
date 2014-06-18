@@ -31,6 +31,11 @@ Then(/^Ollie is referred to his dashboard$/) do
   expect(current_path).to eq '/dashboard'
 end
 
+Then(/^Ollie is redirected to his profile page$/) do
+  expect(current_path).to eq user_path(@ollie)
+end
+
+
 Then(/^Ollie is told he's been added to the waitlist$/) do
   expect(page).to have_content "You have been added to the waiting list for this item"
   expect(page).to have_content "my makers academy black notebook"

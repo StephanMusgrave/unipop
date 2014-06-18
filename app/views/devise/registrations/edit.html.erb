@@ -25,18 +25,17 @@
 			<% end %>
 
 			<div class='form-group'>
-
-				<%= f.label :current_password, class: 'primary-color' %> <i>(Enter your current password)</i><br />
+				<%= f.label :current_password, class: 'primary-color' %> <i>(Required to confirm changes)</i><br />
 				<%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
 			</div>
 			
 			<div class='form-group'>
-				<%= f.label :password, class: 'primary-color' %> <i>(New Password - blank if you don't want to change it)</i><br />
+				<%= f.label :password, "New Password", class: 'primary-color' %> <i>(Optional)</i><br />
 				<%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
 			</div>
 
 			<div class='form-group'>
-				<%= f.label :password_confirmation, class: 'primary-color' %> <i>(Confirm New Password)</i><br />
+				<%= f.label :password_confirmation, "Confirm New Password",class: 'primary-color' %> <i>(Optional)</i><br />
 				<%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
 			</div>
 
@@ -49,8 +48,6 @@
 		<% end %>
 
 		<br/>
-		<h4 class="primary-dark-color"><strong>Cancel my account</strong></h4>
-
 		<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
 	</div>
 </div>

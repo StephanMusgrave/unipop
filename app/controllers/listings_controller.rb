@@ -11,12 +11,11 @@ class ListingsController < ApplicationController
       flash[:notice] = nil
     end
 
-    @listings_per_page = Listing.paginate(page: params[:page], per_page: 10).order('created_at DESC')
+    @listings = @all_listings.paginate(page: params[:page], per_page: 10).order('created_at DESC')
     respond_to do |format|
       format.html
       format.js
     end
-
 
     # @all_listings = Listing.all
 

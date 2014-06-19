@@ -6,7 +6,6 @@ $(document).ready(function() {
   });
   
   $('#listing-map-modal').on('shown.bs.modal', function () {
-      // init_map_distance();
       map.refresh();
   });
 

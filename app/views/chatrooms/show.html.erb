@@ -60,7 +60,7 @@
 			<% end %>
 		</div>
 		<br/>
-		<%= form_for [@listing, @chatroom, @comment], class: 'form form-inline', :html => {'data-user-id' => current_user.id, 'data-listing-id' => @listing.id} do |f| %>
+		<%= form_for [@listing, @chatroom, @comment], class: 'form form-inline', :html => {'data-user-id' => current_user.id, 'data-chatroom-id' => @chatroom.id, 'data-listing-id' => @listing.id} do |f| %>
 			<div id="chat-textbox" class="col-xs-11">
 				<%= f.text_area :body, placeholder: "chat away...", class: 'form-control' %><br />
 			</div>

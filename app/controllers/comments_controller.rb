@@ -15,7 +15,8 @@ class CommentsController < ApplicationController
 				user_full_name: current_user.first_name + ' ' + current_user.last_name,
 				user_avatar: current_user.user_avatar,
 				timestamp: time_ago_in_words(Time.now) + ' ago',
-				user_id: current_user.id
+				user_id: current_user.id,
+				chatroom_id: @comment.chatroom.id
 			}
 			@comment.save
 			redirect_to listing_chatroom_path(@chatroom.listing)

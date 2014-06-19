@@ -37,8 +37,10 @@
 	  	<% end %>
 	  <% end %>
 	  <% if @listing.buyers.many? && @listing.seller == current_user && @listing.sold != true %>
-			<%= button_to 'Next buyer', listing_buyer_path(@listing, @listing.buyers.first, next_buyer: true), method: :patch %>
+			<%= button_to 'Next buyer', listing_buyer_path(@listing, @listing.buyers.first, class: 'btn btn-warning btn-lg', next_buyer: true), method: :patch %>
 		<% end %>
+		<br>
+		<%= link_to '<', "/listings/#{@listing.id}", class: 'btn btn-default btn-lg' %>
 	</div>
 
 </div>

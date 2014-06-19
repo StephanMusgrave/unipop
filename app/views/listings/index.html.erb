@@ -1,15 +1,7 @@
 <div class="listings container">
 
 	<% if @listings_per_page.any? %>
-		<% @listings_per_page.shuffle.each do |listing| %>
-		<% unless listing.sold %>
-			<div class="listing col-xs-4">
-				<%= link_to listing_path(listing) do %>
-					<%= image_tag listing.main_pic, width: '100%', id: 'listing-main-pic',class: 'img-responsive' %>
-					<% end %>
-				<% end %>
-			</div>	
-		<% end %>
+		<%= render @listings_per_page %>
 	<% else %>
 		<% if current_user %>
 		

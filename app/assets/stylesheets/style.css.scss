@@ -526,6 +526,13 @@ header #user-device-menu ul li a:hover {
 	float: right;
 	border-radius: 4px;
 }
+@media(max-width: 676px) {
+	#chat-window .convo-right,
+	#chat-window .convo-left {
+		width: 90%;
+		max-width: none !important;
+	}
+}
 #chat-window .convo-right .convo-img {
 	float: right;
 }

@@ -14,7 +14,7 @@ def show
 	@comment = Comment.new
 	@seller = @listing.seller
 	@buyer = @listing.buyers.first
-	unless current_user == @chatroom.buyer || current_user == @chatroom.seller
+	unless current_user == @chatroom.listing.buyers.first || current_user == @chatroom.listing.seller
 		flash[:notice] = 'Access unauthorized'
 		redirect_to '/'
 	end

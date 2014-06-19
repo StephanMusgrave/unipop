@@ -1,0 +1,1 @@
+$(".form_control").val()

@@ -1,7 +1,7 @@
 <div class="listings container">
 
 	<% if @listings_per_page.any? %>
-		<%= render @listings_per_page %>
+		<%= render @listings_per_page.shuffle %>
 	<% else %>
 		<% if current_user %>
 		

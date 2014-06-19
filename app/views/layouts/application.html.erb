@@ -28,11 +28,7 @@
 			<div id="user-menu">
 				<% if current_user %>
 					<div class="dropdown-toggle" data-toggle="dropdown">
-						<% if current_user.avatar.blank? %>
-							<img src="/images/default_avatar.jpg" width="30" alt="Default avatar" class="img-circle" />
-						<% else %>
-							<img src="<%= current_user.avatar %>" width="30" alt="Default avatar" class="img-circle" />
-						<% end %>
+							<img src="<%= current_user.user_avatar %>" width="30" alt="Default avatar" class="img-circle" />
 						<%= current_user.first_name %> <span class="caret"></span>
 					</div>
 					<ul class="dropdown-menu" role="menu">
@@ -80,11 +76,7 @@
 			<ul class="nav navbar-nav visible-xs text-right">
 				<% if current_user %>
 					<li id="user-id">
-						<% if current_user.avatar.blank? %>
-							<img src="/images/default_avatar.jpg" width="30" alt="Default avatar" class="img-circle" />
-						<% else %>
-							<img src="<%= current_user.avatar %>" width="30" alt="Default avatar" class="img-circle" />
-						<% end %>
+							<img src="<%= current_user.user_avatar %>" width="30" alt="Default avatar" class="img-circle" />
 						&nbsp;<%= current_user.first_name %>
 					</li>
 					<li>

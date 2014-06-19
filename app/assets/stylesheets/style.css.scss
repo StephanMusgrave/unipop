@@ -490,6 +490,14 @@ header #user-device-menu ul li a:hover {
 #chat-window {
 
 }
+@media(max-width: 767px) {
+	#chat-window #chat-window-container {
+		width: 100%;
+	}
+}
+#chat-window #chat-messages {
+	overflow-x: hidden !important;
+}
 #chat-window .convo-img {
 	padding: 0 10px;
 	max-width: 60px;
@@ -512,7 +520,7 @@ header #user-device-menu ul li a:hover {
 	position: relative;
 	padding: 10px;
 	background: #9d13ff;
-	margin: 5px 5px;
+	margin: 5px 10px 5px 5px;
 	max-width: 300px;
 	min-width: 280px;
 	float: right;

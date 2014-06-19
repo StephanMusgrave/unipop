@@ -11,7 +11,13 @@
 			</div>	
 		<% end %>
 	<% else %>
-		There are no items yet
+		<% if current_user %>
+			No items yet.
+		<% else %>
+			Welcome to UniPop! 
+			Sign up to start buying and selling from your tribe.
+			Click on Sell to add your first pop!
+		<% end %>
 	<% end %>
 
 	<div id="infinite-scrolling">

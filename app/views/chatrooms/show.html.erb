@@ -1,27 +1,54 @@
-<h1><%= image_tag @listing.main_pic, width: '100px', id: 'listing-main-pic' %>Chatroom</h1>
+<div id="chat-window" class="container">
+	
+	<div id="chat-window-container" class="col-xs-8">
+		<%= link_to "/listings/#{@listing.id}", class: 'btn btn-default btn-sm' do %>
+			<i class="glyphicon glyphicon-chevron-left"></i> Back to item
+		<% end %>
+		<br/><br/>
+		<div id="chat-messages">
+			<% @chatroom.comments.each do |comment| %>
+				<div class="convo convo-<%= current_user == comment.user ? 'right' : 'left' %>">
+					<% if comment.user.avatar.blank? %>
+						<%= image_tag '/images/default_avatar.jpg', class: 'img-responsive img-circle convo-img' %>
+					<% else %>
+						<%= image_tag comment.user.avatar, class: 'img-responsive img-circle convo-img' %>
+					<% end %>
+					<div class="col-xs-8 convo-text">
+						<%= comment.body %>
+						<div class="msg-info"><%= time_ago_in_words comment.created_at %> ago</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			<% end %>
+		</div>
+		<br/>
+		<%= form_for [@listing, @chatroom, @comment], class: 'form form-inline', :html => {'data-user-id' => current_user.id, 'data-listing-id' => @listing.id} do |f| %>
+			<%= f.text_area :body, placeholder: "chat away...", class: 'form-control' %><br />
+			<%= f.submit 'SEND', class: 'btn btn-primary' %>
+		<%end%>
+	
+		<div class="clearfix"></div>
+		<br/>
 
-	<div class="chatroom-comments-container">
-	<div>
-		<% @chatroom.comments.each do |comment| %>
-		<h4><%= time_ago_in_words comment.created_at %> ago, <%= comment.user.first_name %> said:</h4>
-		<p><%= comment.body %></p>
-	<% end %></div>
+		<%= link_to "/listings/#{@listing.id}", class: 'btn btn-default btn-sm' do %>
+			<i class="glyphicon glyphicon-chevron-left"></i> Back to item
+		<% end %>
+
+		<% if current_user == @listing.seller && !@listing.sold? %>
+			<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form', :html => { id: "confirm-sale-btn" } do |f| %>
+	    	<%= f.submit "Confirm sale", class: 'btn btn-success', data: { confirm: 'Confirming the sale will remove your listing from the public listing page. You will still be able to access the listing from your Pops page'} %>
+	    <% end %>
+	  <% elsif current_user == @listing.seller && @listing.sold? %>
+			<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
+	    	<%= f.submit "Relist", class: 'btn btn-warning btn-lg', data: { confirm: "This will relist your item to the public and remove the previous buyer. Click 'OK' to continue"} %>
+	  	<% end %>
+	  <% end %>
+	  <% if @listing.buyers.many? && @listing.seller == current_user && @listing.sold != true %>
+			<%= button_to 'Next buyer', listing_buyer_path(@listing, @listing.buyers.first, class: 'btn btn-warning btn-lg', next_buyer: true), method: :patch %>
+		<% end %>
+
+		
 	</div>
 
-		<div class='chat-form'><%= form_for [@listing, @chatroom, @comment] do |f| %>
-		<%= f.text_area :body, placeholder: "chat away..."%><br />
-		<%= f.submit %>
-		<%end%></div>
-
-	<% if current_user == @listing.seller && !@listing.sold? %>
-		<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
-    	<%= f.submit "Confirm sale", class: 'btn btn-primary', data: { confirm: 'Confirming the sale will remove your listing from the public listing page. You will still be able to access the listing from your Pops page'} %>
-    <% end %>    
-  <% elsif current_user == @listing.seller && @listing.sold? %>
-		<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
-    	<%= f.submit "Relist", class: 'btn btn-warning btn-lg', data: { confirm: "This will relist your item to the public and remove the previous buyer. Click 'OK' to continue"} %>
-  	<% end %>    
-  <% end %>
-  <% if @listing.buyers.many? && @listing.seller == current_user && @listing.sold != true %>
-		<%= button_to 'Next buyer', listing_buyer_path(@listing, @listing.buyers.first, next_buyer: true), method: :patch %>
-	<% end %>
+</div>

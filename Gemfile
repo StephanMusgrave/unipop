@@ -33,13 +33,14 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'
+gem 'websocket-rails'
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # gem 'paperclip-rack', require: 'paperclip/rack'
 gem 'aws-sdk'
 gem 'bootstrap-sass'
 gem 'thin'
-gem 'websocket-rails'
+
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'newrelic_rpm'
 gem 'gmaps4rails', '~> 2.1.2'

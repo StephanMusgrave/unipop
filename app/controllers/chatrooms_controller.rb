@@ -1,5 +1,7 @@
 class ChatroomsController < ApplicationController
 
+	before_action :authenticate_user!
+
 def create
 	# @listing = Listing.find(params:[:listing_id])
 	# @buyer = User.find(params:[:buyer_id])
@@ -18,8 +20,8 @@ def show
 end
 
 def index
-	@want_listings = current_user.want_listings
-	@sales_listings = current_user.sales_listings
+	@want_listings_chatrooms = current_user.want_listings.map(&:chatroom).compact
+	@sales_listings_chatrooms = current_user.sales_listings.map(&:chatroom).compact
 end
 
 end

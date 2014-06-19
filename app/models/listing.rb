@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class Listing < ActiveRecord::Base   
   
   #attr_accessible :name, :image_containers_attributes

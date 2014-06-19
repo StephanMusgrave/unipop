@@ -1,50 +1,92 @@
-<h2> LIVE CHATROOMS <h2>
-
-<h2>Buying:</h2>
-
-<% @want_listings.each do |want_listing| %>
-	<% if want_listing.chatroom.comments.empty? %>
-		<%= image_tag want_listing.main_pic, width: '100px', id: 'listing-main-pic' %>
-		<i><%= link_to "Chat to the seller!" , listing_chatroom_path(want_listing) %></i><br>
-	<% end %>
-
-	<% if want_listing.last_comment %>
-		<%= image_tag want_listing.main_pic, width: '100px', id: 'listing-main-pic' %>
-		<% if current_user == want_listing.last_comment.user %>
-			<i><%= time_ago_in_words want_listing.last_comment.created_at %> ago you said: 
-				<%= link_to want_listing.last_comment.body, listing_chatroom_path(want_listing) %></i><br>
-		<% else %>
-			<i><%= time_ago_in_words want_listing.last_comment.created_at %> ago 
-			<%= want_listing.last_comment.user.first_name %> said:
-			<%= link_to want_listing.last_comment.body, listing_chatroom_path(want_listing) %></i><br>
-		<%end%>
-	<% end %>
-<%end%>
-
-<h2>Selling:</h2>
-<% if @sales_listings.empty? %>
-	<%= link_to "Sell some stuff", new_listing_path %>
-<% else %>
-	<% @sales_listings.each do |sales_listing| %>		
-		<% if sales_listing.chatroom && sales_listing.chatroom.comments.empty? %>
-			<%= image_tag sales_listing.main_pic, width: '100px', id: 'listing-main-pic' %>
-			<i><%= link_to "Chat to the buyer!" , listing_chatroom_path(sales_listing) %></i><br>
-		<% end %>
-	
-		<% if sales_listing.chatroom && sales_listing.last_comment %>
-			<%= image_tag sales_listing.main_pic, width: '100px', id: 'listing-main-pic' %>
-			<% if current_user == sales_listing.last_comment.user %>
-				<i>
-				<%= time_ago_in_words sales_listing.last_comment.created_at %> ago you said:
-				<%= link_to sales_listing.last_comment.body, listing_chatroom_path(sales_listing) %>
-			</i><br>
-			<% else %>
-			<i>
-				<%= time_ago_in_words sales_listing.last_comment.created_at %> ago 
-				<%= sales_listing.last_comment.user.first_name %> said:
-				<%= link_to sales_listing.last_comment.body, listing_chatroom_path(sales_listing) %>
-			</i><br>
+<div id="conversations" class="container">
+	<h2 class="primary-dark-color"><strong>Selling</strong></h2>
+	<div class="col-xs-9">
+		<ul class="list-unstyled">
+			<% @sales_listings_chatrooms.each do |chatroom| %>
+				<li>
+					<div class="col-xs-11">
+						<%= link_to listing_chatroom_path(chatroom.listing) do %>
+							<div class="chat-img col-xs-2">
+								<%= image_tag chatroom.listing.main_pic, class: 'img-responsive', id: 'listing-main-pic' %>
+							</div>
+							<div class="col-xs-7">
+								<div class="chat-name">
+									<% if current_user == chatroom.listing.seller %>
+										<%= chatroom.listing.buyers.first.first_name %>
+									<% else %>
+										<%= chatroom.listing.seller.first_name %>
+									<% end %>
+								</div>
+								<div class="last-msg">
+									<% if chatroom.comments.any? %>
+										<% if chatroom.comments.any? && current_user == chatroom.comments.last.user %>
+											<strong>Me:</strong>
+										<% else %>
+											<strong><%= chatroom.comments.last.user.first_name %>:</strong>
+										<% end %>
+										<%= chatroom.comments.last.body %>
+									<% else %>
+										No comments yet
+									<% end %>
+								</div>
+							</div>
+						<% end %>
+					</div>
+					<div class="remove-btn col-xs-1" style="display:none;">
+						<%= link_to edit_listing_chatroom_path(chatroom), method: :delete do %>
+							<i class="glyphicon glyphicon-remove"></i>
+						<% end %>
+					</div>
+					<div class="clearfix"></div>
+				</li>
 			<% end %>
-		<% end %>
-	<% end %>
-<% end %>
+		</ul>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<h2 class="primary-dark-color"><strong>Buying</strong></h2>
+	<div class="col-xs-9">
+		<ul class="list-unstyled">
+			<% @want_listings_chatrooms.each do |chatroom| %>
+				<li>
+					<div class="col-xs-11">
+						<%= link_to listing_chatroom_path(chatroom.listing) do %>
+							<div class="chat-img col-xs-2">
+								<%= image_tag chatroom.listing.main_pic, class: 'img-responsive', id: 'listing-main-pic' %>
+							</div>
+							<div class="col-xs-7">
+								<div class="chat-name">
+									<% if current_user == chatroom.listing.seller %>
+										<%= chatroom.listing.buyers.first.first_name %>
+									<% else %>
+										<%= chatroom.listing.seller.first_name %>
+									<% end %>
+								</div>
+								<div class="last-msg">
+									<% if chatroom.comments.any? %>
+										<% if chatroom.comments.any? && current_user == chatroom.comments.last.user %>
+											<strong>Me:</strong>
+										<% else %>
+											<strong><%= chatroom.comments.last.user.first_name %>:</strong>
+										<% end %>
+										<%= chatroom.comments.last.body %>
+									<% else %>
+										No comments yet
+									<% end %>
+								</div>
+							</div>
+						<% end %>
+					</div>
+					<div class="remove-btn col-xs-1" style="display:none;">
+						<%= link_to edit_listing_chatroom_path(chatroom), method: :delete do %>
+							<i class="glyphicon glyphicon-remove"></i>
+						<% end %>
+					</div>
+					<div class="clearfix"></div>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+
+</div>

@@ -1,9 +1,10 @@
 <div id="chat-window" class="container">
 	
-	<div class="col-xs-8">
-		<%= link_to "/listings/#{@listing.id}", class: 'btn btn-default btn-lg' do %>
+	<div id="chat-window-container" class="col-xs-8">
+		<%= link_to "/listings/#{@listing.id}", class: 'btn btn-default btn-sm' do %>
 			<i class="glyphicon glyphicon-chevron-left"></i> Back to item
 		<% end %>
+		<br/><br/>
 		<div id="chat-messages">
 			<% @chatroom.comments.each do |comment| %>
 				<div class="convo convo-<%= current_user == comment.user ? 'right' : 'left' %>">
@@ -30,8 +31,12 @@
 		<div class="clearfix"></div>
 		<br/>
 
+		<%= link_to "/listings/#{@listing.id}", class: 'btn btn-default btn-sm' do %>
+			<i class="glyphicon glyphicon-chevron-left"></i> Back to item
+		<% end %>
+
 		<% if current_user == @listing.seller && !@listing.sold? %>
-			<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
+			<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form', :html => { id: "confirm-sale-btn" } do |f| %>
 	    	<%= f.submit "Confirm sale", class: 'btn btn-success', data: { confirm: 'Confirming the sale will remove your listing from the public listing page. You will still be able to access the listing from your Pops page'} %>
 	    <% end %>
 	  <% elsif current_user == @listing.seller && @listing.sold? %>
@@ -42,10 +47,8 @@
 	  <% if @listing.buyers.many? && @listing.seller == current_user && @listing.sold != true %>
 			<%= button_to 'Next buyer', listing_buyer_path(@listing, @listing.buyers.first, class: 'btn btn-warning btn-lg', next_buyer: true), method: :patch %>
 		<% end %>
-		<br>
-		<%= link_to "/listings/#{@listing.id}", class: 'btn btn-default btn-lg' do %>
-			<i class="glyphicon glyphicon-chevron-left"></i> Back to item
-		<% end %>
+
+		
 	</div>
 
 </div>

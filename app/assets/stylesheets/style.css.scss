@@ -53,7 +53,7 @@ header #logo {
 header a,
 header a:link,
 header a:visited {
-	color: #fff;
+	color: #FEF2D8;
 }
 header #navigation {
 	margin-top: 2px;
@@ -75,7 +75,6 @@ header #navigation ul li a:visited {
 	padding: 10px 20px;
 	display: block;
 	font-size: 23px;
-	font-weight: bold;
 }
 header #navigation ul li a:hover {
 	text-decoration: none;
@@ -134,7 +133,7 @@ header #search form button,
 header #search-device button {
 	background: none;
 	border: 0;
-	color: #036F73;
+	color: #EF504F;
 	position: absolute;
 	right: 2px;
 	top: 4px;
@@ -191,28 +190,28 @@ header #header-right #user-menu .dropdown-toggle .caret {
 header #header-right #user-menu ul.dropdown-menu {
 	box-shadow: none;
 	border: 0;
-	background: #FEF2D8;
+	background: #F18C79;
 	width: 100%;
 	border-radius: 0 0 4px 4px;
 	margin: 0;
 }
 header #header-right #user-menu ul.dropdown-menu li a:hover {
-	background: #570095;
+	background: #84CDC2;
 }
 header #header-right #user-menu ul.dropdown-menu li a {
-	color: #fff !important;
+	color: #036F73 !important;
 	font-size: 16px;
 	padding: 8px 20px;
 }
 header #header-right #user-chat {
 	font-size: 23px;
-	border-right: 1px solid #b972eb;
+	border-right: 1px solid #036F73;
 	padding: 0;
 	width: 45px;
 	float: right;
 }
 header #header-right #user-chat a:hover {
-	background: #7b25b7;
+	background: #84CDC2;
 }
 header #header-right #user-chat a,
 header #header-right #user-chat a:link,
@@ -221,11 +220,11 @@ header #header-right #user-chat a:visited {
 	display: block;
 }
 header button#menu-btn:hover {
-	background: #7b25b7;
+	background: #84CDC2;
 }
 header button#menu-btn {
 	margin: 13px 0 0 0;
-	border:1px solid #fff;
+	border:1px solid #036F73;
 }
 header button#menu-btn .icon-bar {
 	background: #fff;

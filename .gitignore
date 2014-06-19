@@ -17,4 +17,5 @@
 secrets.yml
 .DS_Store
 *.jpg
+*.jpeg
 *.png

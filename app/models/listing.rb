@@ -20,7 +20,7 @@ class Listing < ActiveRecord::Base
   def main_pic
     image_containers.any? ? image_containers.first.picture : 'no image'
   end
-  
+
   def self.search(query)
     if query 
       Hashtag.split(query).map { |name|

@@ -1,10 +1,6 @@
 <div id="profile-info" class="container">
 	<div id="picture">
-		<% if @user_info.avatar.blank? %>
-			<img src="/images/default_avatar.jpg" class="img-circle default-profile-picture">
-		<% else %>
-			<%= image_tag @user_info.avatar.url(:medium), class: 'img-responsive img-circle' %>
-		<% end %>
+		<%= image_tag @user_info.user_avatar, :class=> "img-responsive img-circle default-profile-picture" %>
 	</div>
 	<div id="info">
 		<h2 class="primary-color"><%= @user_info.first_name %> <%= @user_info.last_name.chars.first %></h2>
@@ -61,7 +57,6 @@
 				<% end %>
 			</div>
 		<% end %>
-
 	</div>
 
 </div>

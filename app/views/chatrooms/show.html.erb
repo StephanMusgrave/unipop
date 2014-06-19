@@ -1,4 +1,18 @@
 <div id="chat-window" class="container">
+
+	<div class="col-xs-8">
+		<% if current_user == @buyer %>
+			<%= link_to "/users/#{@seller.id}" do %>
+				<%= image_tag @seller.user_avatar, width: '25', :class=>"img-circle" %>
+			<% end %>
+			<%= link_to "#{@seller.first_name}", "/users/#{@seller.id}" %>
+		<% else %>
+			<%= link_to "/users/#{@buyer.id}" do %>
+				<%= image_tag @buyer.user_avatar, width: '25', :class=>"img-circle" %>
+			<% end %>
+			<%= link_to "#{@buyer.first_name}", "/users/#{@buyer.id}" %>
+		<% end %>
+		<div class="clearfix"></div>
 	
 	<div id="chat-window-container" class="col-xs-8">
 	
@@ -10,7 +24,10 @@
 		<div class="col-xs-6">
 			<% if current_user == @listing.seller && !@listing.sold? %>
 				<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form', :html => { id: "confirm-sale-btn" } do |f| %>
-					<%= f.submit "Confirm sale", class: 'btn btn-success', data: { confirm: 'Confirming the sale will remove your listing from the public listing page. You will still be able to access the listing from your Pops page'} %>
+					<%= f.submit data: { confirm: 'Confirming the sale will remove your listing from the public listing page. You will still be able to access the listing from your Pops page'}, class: 'btn btn-success' do %>
+						<i class="glyphicon glyphicon-ok"></i>
+						Confirm sale
+					<% end %>
 				<% end %>
 			<% elsif current_user == @listing.seller && @listing.sold? %>
 				<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
@@ -18,7 +35,10 @@
 				<% end %>
 			<% end %>
 			<% if @listing.buyers.many? && @listing.seller == current_user && @listing.sold != true %>
-				<%= button_to 'Next buyer', listing_buyer_path(@listing, @listing.buyers.first, class: 'btn btn-warning btn-lg', next_buyer: true), method: :patch %>
+				<%= button_to listing_buyer_path(@listing, @listing.buyers.first, next_buyer: true), method: :patch, class: 'btn btn-warning btn-sm' do %>
+					Next buyer
+					<i class="glyphicon glyphicon-chevron-right"></i>
+				<%end %>
 			<% end %>
 		</div>
 
@@ -29,11 +49,7 @@
 		<div id="chat-messages">
 			<% @chatroom.comments.each do |comment| %>
 				<div class="convo convo-<%= current_user == comment.user ? 'right' : 'left' %>">
-					<% if comment.user.avatar.blank? %>
-						<%= image_tag '/images/default_avatar.jpg', class: 'img-responsive img-circle convo-img' %>
-					<% else %>
-						<%= image_tag comment.user.avatar, class: 'img-responsive img-circle convo-img' %>
-					<% end %>
+					<%= image_tag comment.user.user_avatar, class: 'img-responsive img-circle convo-img' %>
 					<div class="col-xs-8 convo-text">
 						<%= comment.body %>
 						<div class="msg-info"><%= time_ago_in_words comment.created_at %> ago</div>

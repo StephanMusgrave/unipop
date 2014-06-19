@@ -31,7 +31,7 @@
 
       <div class="form-group">
         <%= f.label :hashtag_names, "Search Words", class: 'primary-color' %>
-        <%= f.text_field :hashtag_names, class: 'form-control' %>
+        <%= f.text_field :hashtag_names, class: 'form-control', id: 'hashtags', data: {role:'tagsinput'} %>
       </div>
 
       <div id="listing-images">

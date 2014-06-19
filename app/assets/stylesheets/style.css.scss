@@ -74,7 +74,8 @@ header #navigation ul li a:link,
 header #navigation ul li a:visited {
 	padding: 10px 20px;
 	display: block;
-	font-size: 23px;
+	font-size: 18px;
+	font-weight: lighter;
 }
 header #navigation ul li a:hover {
 	text-decoration: none;
@@ -141,7 +142,9 @@ header #search-device button {
 	font-size: 20px;
 }
 header #header-right #search form input {
-	font-size: 18px;
+	font-size: 14px;
+	color: #036F73;
+	opacity: .8;
 }
 header #search-device {
 	margin: 5px 0px;
@@ -175,7 +178,7 @@ header #header-right #user-menu:hover {
 }
 header #header-right #user-menu .dropdown-toggle {
 	color: #FEF2D8;
-	font-weight: bold;
+	font-weight: lighter;
 	font-size: 18px;
 	padding: 11px 8px 11px 13px;
 }
@@ -187,6 +190,7 @@ header #header-right #user-menu .dropdown-toggle .caret {
 	border-top: 6px solid;
 	border-right: 6px solid transparent;
 	border-left: 6px solid transparent;
+	font-weight: light;
 }
 header #header-right #user-menu ul.dropdown-menu {
 	box-shadow: none;
@@ -202,6 +206,7 @@ header #header-right #user-menu ul.dropdown-menu li a:hover {
 header #header-right #user-menu ul.dropdown-menu li a {
 	color: #FEF2D8 !important;
 	font-size: 16px;
+	font-weight: lighter;
 	padding: 8px 20px;
 }
 header #header-right #user-chat {
@@ -239,7 +244,6 @@ header #user-device-menu ul li {
 header #user-device-menu ul li#user-id {
 	padding-right: 15px;
 	color: #fff;
-	font-weight: bold;
 }
 header #user-device-menu ul li a,
 header #user-device-menu ul li a:link,

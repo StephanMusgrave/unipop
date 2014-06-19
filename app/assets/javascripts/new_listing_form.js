@@ -1,1 +1,1 @@
-$(".form_control").val()
+$("#hashtags").val()

@@ -496,7 +496,7 @@ header #user-device-menu ul li a:hover {
 }
 #chat-window #chat-messages {
 	overflow-x: hidden !important;
-	height: 240px;
+	height: 300px;
 	overflow:scroll;
 }
 #chat-window .convo-img {
@@ -569,4 +569,17 @@ header #user-device-menu ul li a:hover {
 }
 #chat-window #confirm-sale-btn {
 	display: inline;
+}
+#chat-window #chat-textbox {
+	width: 80%;
+	padding-right: 0;
+	padding-left: 10px;
+}
+@media(max-width: 400px) {
+	#chat-window #chat-textbox {
+		width: 70%;
+	}
+}
+#chat-window #chat-send-btn {
+	width: 20%;
 }

@@ -1,7 +1,7 @@
 require 'will_paginate/array'
 
 class Listing < ActiveRecord::Base   
-  
+  validates :description, presence: true, length: { minimum: 4 }
   #attr_accessible :name, :image_containers_attributes
   belongs_to :seller, class_name: 'User'
   has_and_belongs_to_many :buyers, class_name: 'User', association_foreign_key: 'buyer_id', join_table: 'buyers_listings'

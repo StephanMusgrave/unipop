@@ -15,7 +15,10 @@ $(document).ready(function() {
 		});
 	});
 
-  $("#chat-messages").animate({"scrollTop": $('#chat-messages')[0].scrollHeight}, "slow");
+  var chat_messages_container = $("#chat-messages").html();
+  if(chat_messages_container !== undefined) {
+  	$("#chat-messages").animate({"scrollTop": $('#chat-messages')[0].scrollHeight}, "slow");
+  }
 
 	var connection = new WebSocketRails(window.location.host + '/websocket');
   channel = connection.subscribe('chat_comments');

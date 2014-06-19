@@ -15,7 +15,7 @@
 
       <div class="clearfix"></div>
       <div class="form-group">
-        <%= f.label :description, class: 'primary-color' %>
+        <%= f.label :description,  "Description *", class: 'primary-color' %>
         <%= f.text_field :description, class: 'form-control' %>
       </div>
 
@@ -51,7 +51,7 @@
       <% if @listing.new_record? %>
         <div class="form-group">
           <%= f.fields_for :image_containers do |x| %>
-            <%= x.label :picture, "Picture", class: 'primary-color' %>
+            <%= x.label :picture, "Picture *", class: 'primary-color' %>
             <%= x.file_field :picture, class: 'form-control' %>
           <% end %>
         </div>

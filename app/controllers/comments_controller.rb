@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
 			WebsocketRails[:chat_comments].trigger 'new', {
 				body: params[:comment]['body'],
 				user_full_name: current_user.first_name + ' ' + current_user.last_name,
-				user_avatar: current_user.user_avatar
+				user_avatar: current_user.user_avatar,
 				timestamp: time_ago_in_words(Time.now) + ' ago',
 				user_id: current_user.id
 			}

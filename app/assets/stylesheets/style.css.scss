@@ -375,8 +375,8 @@ header #user-device-menu ul li a:hover {
 	margin-bottom: 20px;
 }
 #single-item #map {
-  width: 100%;
-  height: 250px;
+  width: 100% !important;
+  height: 250px !important;
   background: grey;
 }
 #single-item #item-img {

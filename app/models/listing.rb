@@ -7,6 +7,13 @@ class Listing < ActiveRecord::Base
   has_one :chatroom
   has_many :image_containers
   accepts_nested_attributes_for :image_containers, allow_destroy: true
+  validate :at_least_one_picture
+
+  def at_least_one_picture
+    unless image_containers.any?
+      errors[:base] << 'You must add at least one picture'
+    end
+  end
 
   def main_pic
     image_containers.any? ? image_containers.first.picture : 'no image'

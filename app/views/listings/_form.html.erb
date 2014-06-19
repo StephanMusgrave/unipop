@@ -3,6 +3,12 @@
     <% if @listing.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% @listing.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
     <% end %>
 
     <%= form_for @listing, html: { multipart: true, "data-listing-id" => @listing.id }, class: 'form' do |f| %>

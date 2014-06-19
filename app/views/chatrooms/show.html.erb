@@ -24,7 +24,10 @@
 		<div class="col-xs-6">
 			<% if current_user == @listing.seller && !@listing.sold? %>
 				<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form', :html => { id: "confirm-sale-btn" } do |f| %>
-					<%= f.submit "Confirm sale", class: 'btn btn-success', data: { confirm: 'Confirming the sale will remove your listing from the public listing page. You will still be able to access the listing from your Pops page'} %>
+					<%= f.submit data: { confirm: 'Confirming the sale will remove your listing from the public listing page. You will still be able to access the listing from your Pops page'}, class: 'btn btn-success' do %>
+						<i class="glyphicon glyphicon-ok"></i>
+						Confirm sale
+					<% end %>
 				<% end %>
 			<% elsif current_user == @listing.seller && @listing.sold? %>
 				<%= form_for @listing, url: listing_buyer_path(@listing, @listing.buyers.first), class: 'form' do |f| %>
@@ -32,7 +35,10 @@
 				<% end %>
 			<% end %>
 			<% if @listing.buyers.many? && @listing.seller == current_user && @listing.sold != true %>
-				<%= button_to 'Next buyer', listing_buyer_path(@listing, @listing.buyers.first, class: 'btn btn-warning btn-lg', next_buyer: true), method: :patch %>
+				<%= button_to listing_buyer_path(@listing, @listing.buyers.first, next_buyer: true), method: :patch, class: 'btn btn-warning btn-sm' do %>
+					Next buyer
+					<i class="glyphicon glyphicon-chevron-right"></i>
+				<%end %>
 			<% end %>
 		</div>
 

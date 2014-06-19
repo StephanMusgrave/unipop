@@ -1,6 +1,6 @@
 <div id="profile-info" class="container">
 	<div id="picture">
-		<%= image_tag @user_info.user_avatar, :class=> "img-circle default-profile-picture" %>
+		<%= image_tag @user_info.user_avatar, :class=> "img-responsive img-circle default-profile-picture" %>
 	</div>
 	<div id="info">
 		<h2 class="primary-color"><%= @user_info.first_name %> <%= @user_info.last_name.chars.first %></h2>

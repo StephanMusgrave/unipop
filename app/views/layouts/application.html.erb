@@ -54,7 +54,11 @@
 						</li>
 					</ul>
 				<% else %>
-					<%= link_to('Sign in', new_user_session_path, id: 'sign-in-link') %>
+
+					<%= link_to new_user_session_path, id: 'sign-in-link' do %>
+						<i class="glyphicon glyphicon-log-in"></i>&nbsp;
+						Sign in
+					<% end %>
 				<% end %>
 			</div>
 			<div id="search">

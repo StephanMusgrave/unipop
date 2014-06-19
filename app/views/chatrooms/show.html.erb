@@ -1,17 +1,26 @@
 <div id="chat-window" class="container">
-	
+
 	<div class="col-xs-8">
+		<% if current_user == @buyer %>
+			<%= link_to "/users/#{@seller.id}" do %>
+				<%= image_tag @seller.user_avatar, width: '25', :class=>"img-circle" %>
+			<% end %>
+			<%= link_to "#{@seller.first_name}", "/users/#{@seller.id}" %>
+		<% else %>
+			<%= link_to "/users/#{@buyer.id}" do %>
+				<%= image_tag @buyer.user_avatar, width: '25', :class=>"img-circle" %>
+			<% end %>
+			<%= link_to "#{@buyer.first_name}", "/users/#{@buyer.id}" %>
+		<% end %>
+		<div class="clearfix"></div>
+
 		<%= link_to "/listings/#{@listing.id}", class: 'btn btn-default btn-lg' do %>
 			<i class="glyphicon glyphicon-chevron-left"></i> Back to item
 		<% end %>
 		<div id="chat-messages">
 			<% @chatroom.comments.each do |comment| %>
 				<div class="convo convo-<%= current_user == comment.user ? 'right' : 'left' %>">
-					<% if comment.user.avatar.blank? %>
-						<%= image_tag '/images/default_avatar.jpg', class: 'img-responsive img-circle convo-img' %>
-					<% else %>
-						<%= image_tag comment.user.avatar, class: 'img-responsive img-circle convo-img' %>
-					<% end %>
+					<%= image_tag comment.user.user_avatar, class: 'img-responsive img-circle convo-img' %>
 					<div class="col-xs-8 convo-text">
 						<%= comment.body %>
 						<div class="msg-info"><%= time_ago_in_words comment.created_at %> ago</div>

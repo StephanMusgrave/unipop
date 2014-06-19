@@ -22,5 +22,13 @@ class User < ActiveRecord::Base
     (sales_listings.map(&:chatroom)).compact
   end
 
+  def user_avatar
+    if avatar.blank?
+      "/images/default_avatar.jpg"
+    else
+      avatar.url(:medium)
+    end
+  end
+
 end
 

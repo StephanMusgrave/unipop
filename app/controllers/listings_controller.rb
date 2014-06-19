@@ -54,7 +54,7 @@ class ListingsController < ApplicationController
     @listing.seller = current_user
     if @listing.save
       redirect_to user_path(current_user)
-      else 
+      else
         @listing.image_containers.new
         render 'new'
       end

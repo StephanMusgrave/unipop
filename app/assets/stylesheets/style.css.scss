@@ -10,13 +10,13 @@ body {
 	padding-bottom: 40px;
 }
 .primary-color {
-	color: #9d13ff !important;
+	color: #036F73 !important;
 }
 .primary-dark-color {
-	color: #570095 !important;
+	color: #036F73 !important;
 }
 .primary-light-color {
-	color: #ab52ea !important;
+	color: #F18C79 !important;
 }
 .light-grey {
 	color: #969696 !important;
@@ -30,14 +30,13 @@ header {
 	linear,
 	left top,
 	left bottom,
-	color-stop(0, rgb(72, 220, 190)),
-	color-stop(0.68, rgb(3, 111, 115))
+	color-stop(0.94, rgb(3, 111, 115))
 );
-background-image: -o-linear-gradient(bottom, rgb(72, 220, 190) 0%, rgb(3, 111, 115) 68%);
-background-image: -moz-linear-gradient(bottom, rgb(72, 220, 190) 0%, rgb(3, 111, 115) 68%);
-background-image: -webkit-linear-gradient(bottom, rgb(72, 220, 190) 0%, rgb(3, 111, 115) 68%);
-background-image: -ms-linear-gradient(bottom, rgb(72, 220, 190) 0%, rgb(3, 111, 115) 68%);
-background-image: linear-gradient(to bottom, rgb(72, 220, 190) 0%, rgb(3, 111, 115) 68%);
+background-image: -o-linear-gradient(bottom, rgb(3, 111, 115) 94%);
+background-image: -moz-linear-gradient(bottom, rgb(3, 111, 115) 94%);
+background-image: -webkit-linear-gradient(bottom, rgb(3, 111, 115) 94%);
+background-image: -ms-linear-gradient(bottom, rgb(3, 111, 115) 94%);
+background-image: linear-gradient(to bottom, rgb(3, 111, 115) 94%);
 	min-height: 54px;
 	margin-bottom: 20px;
 }
@@ -54,7 +53,7 @@ header #logo {
 header a,
 header a:link,
 header a:visited {
-	color: #fff;
+	color: #FEF2D8;
 }
 header #navigation {
 	margin-top: 2px;
@@ -62,7 +61,7 @@ header #navigation {
 	float: left;
 }
 header #navigation ul {
-	border-left: 1px solid #b972eb;
+	border-left: 1px solid #036F73;
 	margin-bottom: 0;
 	margin-left: 5px;
 }
@@ -76,11 +75,10 @@ header #navigation ul li a:visited {
 	padding: 10px 20px;
 	display: block;
 	font-size: 23px;
-	font-weight: bold;
 }
 header #navigation ul li a:hover {
 	text-decoration: none;
-	background: #7b25b7;
+	background: #84CDC2;
 }
 @media (max-width: 370px) {
 	header #navigation {
@@ -123,7 +121,7 @@ header #header-right {
 }
 header #header-right #search {
 	padding: 8px 8px 10px 8px;
-	border-right: 1px solid #b972eb;
+	border-right: 1px solid #036F73;
 	width: 270px;
 	float: right;
 }
@@ -135,7 +133,8 @@ header #search form button,
 header #search-device button {
 	background: none;
 	border: 0;
-	color: #9d13ff;
+	color: #036F73;
+	opacity: .6;
 	position: absolute;
 	right: 2px;
 	top: 4px;
@@ -148,7 +147,7 @@ header #search-device {
 	margin: 5px 0px;
 }
 header #header-right #user-menu {
-	border-right: 1px solid #b972eb;
+	border-right: 1px solid #036F73;
 	cursor: pointer;
 	position: relative;
 	float: right;
@@ -169,13 +168,13 @@ header #header-right #user-menu a#sign-in-link:hover {
 	text-decoration: none;
 }
 header #header-right #user-menu.open {
-	background: #7b25b7;
+	background: #84CDC2;
 }
 header #header-right #user-menu:hover {
-	background: #7b25b7;
+	background: #84CDC2;
 }
 header #header-right #user-menu .dropdown-toggle {
-	color: #fff;
+	color: #FEF2D8;
 	font-weight: bold;
 	font-size: 18px;
 	padding: 11px 8px 11px 13px;
@@ -192,28 +191,28 @@ header #header-right #user-menu .dropdown-toggle .caret {
 header #header-right #user-menu ul.dropdown-menu {
 	box-shadow: none;
 	border: 0;
-	background: #7b25b7;
+	background: #036F73;
 	width: 100%;
 	border-radius: 0 0 4px 4px;
 	margin: 0;
 }
 header #header-right #user-menu ul.dropdown-menu li a:hover {
-	background: #570095;
+	background: #84CDC2;
 }
 header #header-right #user-menu ul.dropdown-menu li a {
-	color: #fff !important;
+	color: #FEF2D8 !important;
 	font-size: 16px;
 	padding: 8px 20px;
 }
 header #header-right #user-chat {
 	font-size: 23px;
-	border-right: 1px solid #b972eb;
+	border-right: 1px solid #036F73;
 	padding: 0;
 	width: 45px;
 	float: right;
 }
 header #header-right #user-chat a:hover {
-	background: #7b25b7;
+	background: #84CDC2;
 }
 header #header-right #user-chat a,
 header #header-right #user-chat a:link,
@@ -222,11 +221,11 @@ header #header-right #user-chat a:visited {
 	display: block;
 }
 header button#menu-btn:hover {
-	background: #7b25b7;
+	background: #84CDC2;
 }
 header button#menu-btn {
 	margin: 13px 0 0 0;
-	border:1px solid #fff;
+	border:1px solid #036F73;
 }
 header button#menu-btn .icon-bar {
 	background: #fff;
@@ -262,11 +261,11 @@ header #user-device-menu ul li a:hover {
 	margin-bottom: 25px;
 }
 .listings .listing img {
-	border-radius: 4px;
-	border:1px solid #E3BBFF;
+	/*border-radius: 4px;
+	border:1px solid #E3BBFF*/;
 }
 .listings .listing img:hover {
-	border:1px solid #9d13ff;
+	border:1px solid #036F73;
 }
 @media (max-width: 440px) {
 	.listings .listing {
@@ -299,21 +298,21 @@ header #user-device-menu ul li a:hover {
 	text-decoration: none;
 }
 .listings #tabs {
-	border-bottom: 2px solid #9d13ff;
+	border-bottom: 2px solid #84CDC2;
 }
 .listings #tabs li {
 	margin-bottom: 0;
 }
 .listings #tabs li a {
-	background: #E6E6E6;
+	background: #036F73;
 	border:0;
-	color: #585858;
+	color: #FEF2D8;
 	font-weight: bold;
 	font-size: 18px;
 }
 .listings #tabs li.active a {
-	background: #9d13ff;
-	color: #fff;
+	background: #84CDC2;
+	color: #FEF2D8;
 }
 .listings .tab-content {
 	padding-top: 20px;
@@ -380,8 +379,8 @@ header #user-device-menu ul li a:hover {
   background: grey;
 }
 #single-item #item-img {
-	border: 1px solid #9d13ff;
-	border-radius: 4px;
+	/*border: 1px solid #9d13ff;
+	border-radius: 4px;*/
 	overflow: hidden;
 	padding: 0;
 }

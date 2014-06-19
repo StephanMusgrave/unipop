@@ -490,6 +490,16 @@ header #user-device-menu ul li a:hover {
 #chat-window {
 
 }
+@media(max-width: 767px) {
+	#chat-window #chat-window-container {
+		width: 100%;
+	}
+}
+#chat-window #chat-messages {
+	overflow-x: hidden !important;
+	height: 300px;
+	overflow:scroll;
+}
 #chat-window .convo-img {
 	padding: 0 10px;
 	max-width: 60px;
@@ -512,11 +522,19 @@ header #user-device-menu ul li a:hover {
 	position: relative;
 	padding: 10px;
 	background: #9d13ff;
-	margin: 5px 5px;
+	margin: 5px 10px 5px 5px;
 	max-width: 300px;
 	min-width: 280px;
 	float: right;
 	border-radius: 4px;
+}
+@media(max-width: 676px) {
+	#chat-window .convo-right,
+	#chat-window .convo-left {
+		width: 90%;
+		max-width: none !important;
+		min-width: inherit;
+	}
 }
 #chat-window .convo-right .convo-img {
 	float: right;
@@ -549,4 +567,20 @@ header #user-device-menu ul li a:hover {
 }
 #chat-window #comment_body {
 	width: 100%;
+}
+#chat-window #confirm-sale-btn {
+	display: inline;
+}
+#chat-window #chat-textbox {
+	width: 80%;
+	padding-right: 0;
+	padding-left: 10px;
+}
+@media(max-width: 400px) {
+	#chat-window #chat-textbox {
+		width: 70%;
+	}
+}
+#chat-window #chat-send-btn {
+	width: 20%;
 }

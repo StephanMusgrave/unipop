@@ -50,7 +50,11 @@
 						</li>
 					</ul>
 				<% else %>
-					<%= link_to('Sign in', new_user_session_path, id: 'sign-in-link') %>
+
+					<%= link_to new_user_session_path, id: 'sign-in-link' do %>
+						<i class="glyphicon glyphicon-log-in"></i>&nbsp;
+						Sign in
+					<% end %>
 				<% end %>
 			</div>
 			<div id="search">
@@ -79,6 +83,12 @@
 						<%= link_to mypops_path do %>
 							<i class="glyphicon glyphicon-user"></i>
 							&nbsp;myPops
+						<% end %>
+					</li>
+					<li>
+						<%= link_to '/chatrooms' do %>
+							<i class="glyphicon glyphicon-comment"></i>
+							&nbsp;Chat
 						<% end %>
 					</li>
 					<li>

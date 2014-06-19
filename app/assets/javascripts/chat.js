@@ -15,6 +15,11 @@ $(document).ready(function() {
 		});
 	});
 
+  var chat_messages_container = $("#chat-messages").html();
+  if(chat_messages_container !== undefined) {
+  	$("#chat-messages").animate({"scrollTop": $('#chat-messages')[0].scrollHeight}, "slow");
+  }
+
 	var connection = new WebSocketRails(window.location.host + '/websocket');
   channel = connection.subscribe('chat_comments');
   channel.bind('new', function(comment) {
@@ -28,5 +33,7 @@ $(document).ready(function() {
 		comment_html += '</div>';
 		comment_html += '<div class="clearfix"></div>';
     $('#chat-messages').append(comment_html);
+		var $t = $('#chat-messages');
+    $t.animate({"scrollTop": $('#chat-messages')[0].scrollHeight}, "slow");
   });
 });

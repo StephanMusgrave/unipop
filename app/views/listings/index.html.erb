@@ -14,9 +14,20 @@
 		<% if current_user %>
 			No items yet.
 		<% else %>
-			Welcome to UniPop! 
-			Sign up to start buying and selling from your tribe.
-			Click on Sell to add your first pop!
+		  <div class="jumbotron">
+    		<div class="container">
+					<h1>Welcome to UniPop!</h1>
+					<h3>Sign up to start buying and selling from your tribe.
+					Click on Sell to add your first pop!</h3>
+					<p>
+
+					</p>
+					<p align="right">
+						Don't have a UniPop account yet?
+        		<%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary btn-lg" %>
+      		</p>
+				</div>
+			</div>
 		<% end %>
 	<% end %>
 

@@ -51,7 +51,7 @@
 					</ul>
 				<% else %>
 
-					<%= link_to new_user_session_path, id: 'sign-in-link' do %>
+				<%= link_to "#", id: 'sign-in-link',  "data-toggle" => "modal", "data-target" => "#myModal" do %>
 						<i class="glyphicon glyphicon-log-in"></i>&nbsp;
 						Sign in
 					<% end %>
@@ -130,6 +130,18 @@
 <% end %>
 
 <%= yield %>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+      	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <%= render 'layouts/sign_in' %>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

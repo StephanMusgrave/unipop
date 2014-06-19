@@ -1,5 +1,7 @@
 class ChatroomsController < ApplicationController
 
+	before_action :authenticate_user!
+
 def create
 	# @listing = Listing.find(params:[:listing_id])
 	# @buyer = User.find(params:[:buyer_id])

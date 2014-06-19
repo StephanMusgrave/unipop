@@ -1,5 +1,18 @@
-<div class="listing col-xs-4">
-	<%= link_to listing_path(listing) do %>
-		<%= image_tag listing.main_pic, class: 'img-responsive' %>
-	<% end %>	
-</div>
+<% unless listing.sold %>
+	<div class="listing col-xs-4">
+		<%= link_to listing_path(listing) do %>
+			<%= image_tag listing.image_containers.first.picture.url(:medium), width: '100%', id: 'listing-main-pic',class: 'img-responsive' %>
+		<% end %>
+		<% if params[:controller] == 'users' && params[:action] == 'show' %>
+			<% if listing.sold %>
+				<%= link_to 'SOLD', listing_chatroom_path(listing), class:'label label-default' %>
+			<% elsif current_user.id == listing.seller.id && listing.buyers.count == 0 %>
+				<%= link_to '0 in queue', listing_path(listing), class:'label label-primary' %>
+			<% elsif current_user.id == listing.seller.id && listing.buyers.count == 1 %>
+					<%= link_to '1 in queue', listing_chatroom_path(listing), class:'label label-primary' %>
+			<% elsif current_user.id == listing.seller.id && listing.buyers.count > 1 %>
+					<%= link_to '1+ in queue', listing_chatroom_path(listing), class:'label label-primary' %>
+			<% end %>
+		<% end %>
+	</div>	
+<% end %>

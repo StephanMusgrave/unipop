@@ -11,7 +11,7 @@ $(document).ready(function() {
     field_html += '<div class="form-group">';
     field_html += '<label class="primary-color" for="listing_image_containers_attributes_' + image_fields_count_start + '_picture">Extra picture ' + image_fields_count_start + '</label>';
     field_html += '<input class="form-control" id="listing_image_containers_attributes_' + image_fields_count_start + '_picture" name="listing[image_containers_attributes][' + image_fields_count_start + '][picture]" type="file">';
-    field_html += '<button class="remove-picture-field-btn btn btn-default btn-sm" type="button"><i class="glyphicon glyphicon-remove"></i> Remove field</button>';
+    field_html += '<button class="remove-picture-field-btn btn btn-default btn-sm" type="button"><i class="glyphicon glyphicon-remove"></i> Remove picture</button>';
     field_html += '</div>';
     $('#listing-picture-field').append(field_html);
     image_fields_count_start += 1;

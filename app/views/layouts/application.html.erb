@@ -52,7 +52,7 @@
 					</ul>
 				<% else %>
 
-				<%= link_to "#", id: 'sign-in-link',  "data-toggle" => "modal", "data-target" => "#myModal" do %>
+				<%= link_to "#", id: 'sign-in-link', "data-toggle" => "modal", "data-target" => "#sign-in-modal" do %>
 						<i class="glyphicon glyphicon-log-in"></i>&nbsp;
 						Sign in
 					<% end %>
@@ -104,7 +104,7 @@
 					</li>
 				<% else %>
 					<li>
-						<%= link_to(new_user_session_path) do %>
+						<%= link_to "#", "data-toggle" => "modal", "data-target" => "#sign-in-modal" do %>
 							<i class="glyphicon glyphicon-log-in"></i>
 							&nbsp;Sign In
 						<% end %>
@@ -133,7 +133,7 @@
 <%= yield %>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">

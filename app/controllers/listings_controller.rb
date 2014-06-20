@@ -71,7 +71,7 @@ class ListingsController < ApplicationController
   def update
     @listing = Listing.find(params[:id])
 
-    if @listing.update(params[:listing].permit(:description, :price, :location, :image_containers_attributes => [:picture, :original_filename, :content_type, :headers]))
+    if @listing.update(params[:listing].permit(:description, :price, :location, :hashtag_names, :image_containers_attributes => [:picture, :original_filename, :content_type, :headers]))
       redirect_to listing_path @listing
     else
       flash[:notice] = 'Edits not saved'

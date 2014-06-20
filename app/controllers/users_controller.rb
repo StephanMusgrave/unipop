@@ -13,6 +13,9 @@ class UsersController < ApplicationController
 		@user_info = User.find(user_id)
 		@user_wants = @user_info.want_listings.all
 		@user_selling = @user_info.sales_listings.all
+		puts '##############'
+		puts @user_selling.count
+		puts '##############'
 	end
 
 end

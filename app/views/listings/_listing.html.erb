@@ -1,7 +1,7 @@
 
 	<div class="listing col-xs-4">
 		<%= link_to listing_path(listing) do %>
-			<% if listing.image_containers.first.picture.any? %>
+			<% if listing.image_containers.any? %>
 				<%= image_tag listing.image_containers.first.picture.url(:medium), width: '100%', id: 'listing-main-pic',class: 'img-responsive' %>
 			<% end %>
 		<% end %>

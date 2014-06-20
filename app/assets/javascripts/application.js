@@ -16,4 +16,5 @@
 //= require bootstrap-tagsinput
 //= require bootstrap
 //= require websocket_rails/main
+//= require underscore
 //= require_tree .

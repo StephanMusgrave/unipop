@@ -1,0 +1,437 @@
+  140  git push
+  141  git pull
+  142  git push heroku master
+  143  git branch
+  144  git pull
+  145  cucumber
+  146  heroku run console
+  159  bin/rails s
+  160  bundle install
+  162  bin/rails s
+  163  bin/rake db:migrate
+  165  bin/rails s
+  166  bin/rake rails 
+  167  bin/rake db:migrate 
+  168  bin/rails s
+  174  bin/rake db:migrate
+  175  bin/rails s
+  179  psql
+  180  cd ../instamaker
+  181  bin/rails s
+  182  cd ~
+  183  ls
+  184  cd dropbox
+  185  l
+  186  cd makers/html
+  187  l
+  188  cd html_foundations
+  189  cd html5_foundations
+  190  l
+  191  cd l
+  192  ls
+  193  cd final_code
+  194  subl .
+  195  git pull
+  196  p
+  197  history | grep "rails"
+  198  history | grep "migrate
+  199  tree | grep "migrate
+  200  tree
+  201  history | grep "migrate
+  202  tree | grep "migrate
+  207  man grep
+  208  quit
+  209  exit
+  210  man grep
+  212  heroku pg:psql
+  213  p
+  214  cd projectx
+  215  git checkout -b carousel
+  216  git push origin carousel
+  217  gl
+  218  gs
+  219  git add .
+  220  gti commit -m "seting up a branch for carousel display of multiple pictures"
+  222  gl
+  223  gs
+  224  git add .
+  225  git commit -m "problem with editing a picture fixed"
+  226  gs
+  227  git push origin carousel
+  228  cucumber
+  229  gs
+  230  git add .
+  231  git commit -m "extra images now styled as main pic"
+  232  git push origin carousel
+  233  bin/rake routes
+  234  gs
+  235  git add .
+  236  git commit -m "bootstrap-carousel.js downloaded"
+  237  git push
+  238  git push origin carousel
+  239  git push --set-upstream origin carousel
+  240  gs
+  241  gs
+  242  git add -A
+  243  git commit -m "modified set up"
+  244  git push origin carousel
+  245  git checkout master
+  246  git pull
+  247  git branch
+  248  git checkout master
+  249  l
+  250  tree > ProjectX_tree.txt
+  251  cat projectx_tree
+  252  cat projectx_tree.txt
+  253  c
+  254  gs
+  255  git add .
+  256  git checkout carousel
+  257  git branch
+  258  git checkout master
+  259  gs
+  260  git diff app/views/layouts/application.html.erb
+  261  git diff app/views/listings/show.html.erb
+  262  git diff app/views/listings/show.json.jbuilder
+  263  git add app/views/listings/show.json.jbuilder
+  264  git branch
+  265  gs
+  266  git commit -m "fixed show.json"
+  267  git push origin carousel
+  268  gs
+  269  git checkout --app/views/layouts/application.html.erb
+  270  git checkout -- app/views/layouts/application.html.erb
+  271  gs
+  272  git checkout -- app/views/layouts/show.html.erb
+  273  git checkout -- app/views/listings/show.html.erb
+  274  gs
+  275  git pull
+  276  git branch
+  277  git checkout master
+  278  git pull
+  279  git push heroku master
+  280  git checkout master
+  281  git pull
+  282  gs
+  283  git add .
+  284  gs
+  285  git add .
+  286  git commit -m "currency problem fixed"
+  287  git pull
+  288  git push
+  289  gs
+  290  git add .
+  291  git commit -m "currency again"
+  292  git push origin master
+  293  gs
+  294  git branch
+  295  heroku pg:psql --app projectx-makers charcoal
+  296  psql
+  298  bin/rails s
+  299  bin/rake db:migrate
+  302  bin/rails s
+  304  heroku run rake db:migrate
+  305  heroku console
+  306  heroku run console
+  307  Listings.delete_all
+  308  heroku run console
+  309  heroku run rails console
+  310  gs
+  311  git pull
+  312  git push heroku master
+  313  heroku run rake db:migrate
+  314  git pull
+  315  heroku run bundle exec rake db:migrate
+  316  gs
+  317  git push heroku master
+  319  heroku run bundle exec rake db:migrate
+  320  gs
+  321  git checkout -- app/assets/stylesheets/bootstrap-theme.min.css
+  322  gs
+  323  git pull
+  324  gs
+  325  git add
+  326  git add .
+  327  git commit -m "added some images for testing"
+  328  git pull
+  329  git push origin master
+  330  git branch
+  331  gs
+  332  git add .
+  333  git commit -m "Sell it button renamed to Confirm sale"
+  334  git push origin master
+  335  git pull
+  336  heroku login
+  337  heroku info
+  338  heroku logs
+  339  heroku open
+  340  heroku config
+  341  git branch
+  342  git pull
+  343  gs
+  344  git add .
+  345  git pull
+  346  gs
+  347  git add .
+  348  gs
+  349  git push origin master
+  350  gs
+  351  git blame
+  352  gs
+  353  git push origin master
+  354  gs
+  355  git push
+  356  gs
+  357  git pull
+  358  git push origin master
+  359  gs
+  360  git branch
+  361  git pull origin master
+  362  gs
+  363  git push origin master
+  364  gs
+  365  gs
+  366  git add .
+  367  gs
+  368  git commit -m "application.html updated"
+  369  git push origin master
+  370  git pull
+  372  gs
+  373  git push heroku master
+  374  git pull
+  375  git push origin master
+  376  git pull 
+  377  git push heroku master
+  378  gs
+  379  git add .
+  380  git commit -m "£ and eye glyphicons removed"
+  381  git push origin master
+  382  git pull
+  383  git push heroku master
+  384  git push heroku master
+  385  gs
+  386  git add . 
+  387  git commit -m "removed edit profile link from Sellers Pops page"
+  388  gs
+  389  git push origin master
+  390  git add . 
+  391  git commit -m "changed edit profile link on MyPops page to a button"
+  392  git push origin master
+  393  git pull
+  394  git push heroku master
+  395  git branch
+  396  git pull
+  399  heroku run rake db:migrate
+  400  heroku open
+  401  heroku pg:psql --app projectx-makers charcoal
+  402  '/Applications/Postgres.app/Contents/Versions/9.3/bin'/psql -p5432
+  403  gs
+  404  git add .
+  405  git commit -m 'edit user profile password changed"
+  406  git push
+  407  git pull
+  408  git commit -m 'edit user profile password changed'
+  409  gs
+  410  git push origin master
+  411  git pull
+  412  git push
+  413  git pull origin master
+  415  gs
+  416  git add .
+  417  git commit 'merge changes'
+  418  git commit -m 'merge changes'
+  419  gs
+  420  git push 
+  421  gs
+  422  git pull
+  423  git push heroku master
+  424  gs
+  425  git add .
+  426  git commit -m
+  427  git commit -m 'Passwords fixed'
+  428  git push origin master
+  429  git push heroku master
+  430  gs
+  431  git pull
+  432  git push heroku master
+  433  heroku run db:migrate
+  434    heroku run rake db:migrate
+  435  gs
+  436  git add .
+  437  gs
+  438  git add -A
+  439  git commit -m "heroku update prep"
+  440  git pull
+  441  git push origin master
+  442  gs
+  443  git branch
+  444  git add .
+  445  git commit -m "more stuff"
+  446  git push origin master
+  447  git pull
+  448  git push origin master
+  449  git push heroku master
+  450  heroku run rake db:migrate
+  451  heroku open
+  452  gs
+  453  git pull
+  454  git push heroku master
+  455  heroku run rake db:migrate
+  456  git pull heroku master
+  457  git push heroku master
+  458  bundle update
+  459  git status
+  460  git push heroku master
+  461  gs
+  462  git add .
+  463  git commit "bundle install"
+  464  git commit -m "bundle install"
+  465  gs
+  466  heroku run rake db:migrate
+  467  heroku pg:reset
+  468  heroku pg
+  469  heroku pg:reset HEROKU_POSTGRESQL_CHARCOAL_URL
+  470  heroku run rake db:migrate
+  471  heroku open
+  472  git push heroku master
+  475  bin/rake assets:precompile RAILS_ENV=production
+  477  bin/rake assets:precompile RAILS_ENV=production  --trace
+  478  rm -rf public/assets/
+  479  git status
+  480  git checkout -- config/initializers/backtrace_silencers.rb 
+  481  git status
+  482  git commit -am "Disable JS compression"
+  483  git push heroku master
+  484  heroku open
+  485  history
+  486  c
+  487  git pull
+  488  gitk
+  489  git branch
+  490  git pull
+  491  gs
+  492  git pull origin master
+  493  git stash
+  494  git pull origin master
+  495  rake db:reset
+  501  git push heroku master
+  502  p
+  503  cd instamaker
+  504  subl .
+  505  git pull
+  506  cucumber
+  507  gs
+  508  p
+  509  cd projectx
+  510  gs
+  511  git checkout -- app/models/listing.rb
+  512  gs
+  513  git pull
+  514  gs
+  515  bundle install
+  519  git add .
+  520  gs
+  521  git commit -m "minor button change"
+  522  bundle 
+  523  git pull
+  524  bundle
+  525  bundle install
+  526  c
+  527  git pull
+  528  git pull
+  529  gs
+  530  git push origin master
+  531  gs
+  532  bin/rake routes
+  533  gs
+  534  git add .
+  535  git add -A
+  536  gs
+  537  git commit -m "Registrations_controller.rb changed from user_pops_path to mypops_path - fixes edit user problem"
+  538  gs
+  541  git push origin master
+  542  git pull
+  543  git push origin master
+  544  git push heroku master
+  545  gs
+  546  git add .
+  547  git commit -m "removed duplicate web-sockets rails gem from gemfile"
+  548  git pull
+  549  git push origin master
+  550  heroku run rake db:migrate
+  553  git pull origin master
+  554  git push heroku master
+  555  gs
+  556  gs
+  557  git add .
+  558  git commit -m "validates that description is not empty"
+  559  git push origin master
+  560  git pull origin master
+  561  git push origin master
+  562  gs
+  563  git pull origin master
+  564  gs
+  565  git pull
+  566  gs
+  567  git pull origin master
+  568  git push heroku master
+  569  git pull
+  570  git pull origin master
+  573  git pull
+  578  git push heroku master
+  579  git pull origin master
+  580  gs
+  581  git add .
+  582  git commit -m "prior to pulling tags fix"
+  583  git pull
+  584  gs
+  585  git pull
+  586  gs
+  587  git pull
+  588  git push heroku master
+  589  heroku run rake db:reset
+  590  gs
+  591  git pull
+  592  gs
+  593  git add .
+  594  git commit -m "removed extraneous button that Shelley was really worried about"
+  595  git push
+  596  git pull
+  597  gs
+  598  git pull
+  599  git push heroku master
+  600  git add -A
+  601  gs
+  602  git commit -m "pics cleaned up"
+  603  git push origin master
+  605  git pull
+  606  git push origin master
+  607  git add .
+  608  gs
+  609  git commit -m "reinstated shuffle for pictures on index page"
+  610  git push
+  611  git pull
+  612  git push heroku master
+  613  git add .
+  614  gs
+  615  git commit -m "changes to new listing form"
+  616  git push origin master
+  617  gs
+  618  git add .
+  619  git commit -m "update listing button in chat room changed to Confirm sale"
+  620  git push
+  623  git pull
+  624  git push heroku master
+  626  git pull
+  627  git push heroku master
+  628  gs
+  629  git commit -m "last commit?"
+  630  git add .
+  631  git commit -m "last commit?"
+  632  git push
+  633  git pull
+  634  git push
+  636  gs
+  637  git pull
+  638  history
+  639  history >> Steve_history-20_June.txt

@@ -13,6 +13,17 @@
 			<% elsif current_user.id == listing.seller.id && listing.buyers.count > 1 %>
 					<%= link_to '1+ in queue', listing_chatroom_path(listing), class:'label label-primary' %>
 			<% end %>
+			<% if current_user.want_listings.include? listing %>
+				<% if listing.sold && listing.buyers.first != current_user %>
+					<%= link_to 'No longer available', listing_path(listing), class:'label label-default' %>
+				<% elsif listing.sold && listing.buyers.first == current_user %>
+					<%= link_to 'You bought it!', listing_chatroom_path(listing), class:'label label-success' %>
+				<% elsif listing.buyers.first == current_user %>
+					<%= link_to 'Chatroom live!', listing_chatroom_path(listing), class:'label label-danger' %>
+				<% else %>
+					<%= link_to 'In queue', listing_path(listing), class:'label label-primary' %>
+				<% end %>
+			<% end %>
 		<% end %>
 	</div>	
 <% end %>

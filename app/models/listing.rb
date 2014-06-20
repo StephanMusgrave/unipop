@@ -1,7 +1,7 @@
 require 'will_paginate/array'
 
 class Listing < ActiveRecord::Base   
-  validates :description, presence: true, length: { minimum: 4 }
+  validates :description, presence: true
   #attr_accessible :name, :image_containers_attributes
   belongs_to :seller, class_name: 'User'
   has_and_belongs_to_many :buyers, class_name: 'User', association_foreign_key: 'buyer_id', join_table: 'buyers_listings'
@@ -9,7 +9,14 @@ class Listing < ActiveRecord::Base
   has_one :chatroom
   has_many :image_containers
   accepts_nested_attributes_for :image_containers, allow_destroy: true
-
+  validate :at_least_one_picture
+  
+  def at_least_one_picture
+    unless image_containers.any?
+      errors[:base] << 'You must add at least one picture'
+    end 
+  end
+  
   def main_pic
     image_containers.any? ? image_containers.first.picture : 'no image'
   end

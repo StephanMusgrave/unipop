@@ -3,7 +3,7 @@ class ListingsController < ApplicationController
   before_action :authenticate_user!, except:[:index]
   
   def index
-    @all_listings = Listing.search(params[:search])
+    @all_listings = Listing.search(params[:search]).select do |listing| !listing.sold end
 
     if @all_listings.empty? && params[:search]
       flash[:notice] = "Couldn't find that"

@@ -1,4 +1,4 @@
-<% unless listing.sold %>
+
 	<div class="listing col-xs-4">
 		<%= link_to listing_path(listing) do %>
 			<%= image_tag listing.image_containers.first.picture.url(:medium), width: '100%', id: 'listing-main-pic',class: 'img-responsive' %>
@@ -26,4 +26,3 @@
 			<% end %>
 		<% end %>
 	</div>	
-<% end %>

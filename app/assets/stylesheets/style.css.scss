@@ -9,6 +9,14 @@ Dark Grey: #676767;
 body {
 	padding-bottom: 40px;
 }
+.btn-primary {
+	background-color: #007F80 !important;
+	border-color: #005657 !important;
+}
+.btn-success {
+	background-color: #71DEDF !important;
+	border-color: #3AB4B6 !important;
+}
 .primary-color {
 	color: #036F73 !important;
 }
@@ -518,14 +526,14 @@ header #user-device-menu ul li a:hover {
 	color: #fff;
 }
 #chat-window .convo .msg-info {
-	color: #D391FF;
+	color: #86CBCC;
 	font-size:12px;
 	margin-top: 5px;
 }
 #chat-window .convo-right {
 	position: relative;
 	padding: 10px;
-	background: #9d13ff;
+	background: #007F80;
 	margin: 5px 10px 5px 5px;
 	max-width: 300px;
 	min-width: 280px;
@@ -548,14 +556,14 @@ header #user-device-menu ul li a:hover {
    content: ""; 
    top:15px;right:-10px;
    border-width: 10px 0 10px 15px;
-   border-color: transparent  #9d13ff;
+   border-color: transparent  #007F80;
    border-style: solid;
 }
 #chat-window .convo-left {
 	position:relative;
 	left: 15px;
 	padding: 10px;
-	background: #9d13ff;
+	background: #007F80;
 	margin: 5px 5px;
 	max-width: 300px;
 	min-width: 280px;
@@ -566,7 +574,7 @@ header #user-device-menu ul li a:hover {
    content: ""; 
    top:15px;left:-10px;
    border-width: 10px 15px 10px 0px;
-   border-color: transparent  #9d13ff;
+   border-color: transparent  #007F80;
    border-style: solid;
 }
 #chat-window #comment_body {

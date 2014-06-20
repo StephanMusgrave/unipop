@@ -1,6 +1,6 @@
 jQuery ->
   if $('#infinite-scrolling').size() > 0
-  	paginationScroller ->
+  	paginationScroller = ->
       more_listings_url = $('.pagination .next_page a').attr('href')
       
       if more_listings_url && $(window).scrollTop() > $(document).height() - $(window).height() - 60

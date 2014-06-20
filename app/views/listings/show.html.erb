@@ -1,14 +1,5 @@
 <div id="single-item" class="container">
-	<% if current_user == @listing.seller %>
-		<%= link_to edit_listing_path, class: 'btn btn-primary' do %>
-			<i class="glyphicon glyphicon-pencil"></i>
-			&nbsp;Edit listing
-		<% end %>
-		<%= link_to listing_path(@listing), class: 'btn btn-danger', method: :delete, data: { confirm: 'Click OK to confirm the deletion'} do %>
-			<i class="glyphicon glyphicon-remove"></i>
-			&nbsp;Remove
-		<% end %>
-	<% end %>
+	
 	<div class="clearfix"></div>
 	<br/>
 	<div id="item-img" class="col-xs-4 text-center">
@@ -27,11 +18,26 @@
 			<a class="right carousel-control" href="#listing-carousel" data-slide="next">
 				<span class="glyphicon glyphicon-chevron-right"></span>
 			</a>
+			
+			<br/>
+			<br/>
+
 		</div>
+		<% if current_user == @listing.seller %>
+		<%= link_to edit_listing_path, class: 'btn btn-primary' do %>
+			<i class="glyphicon glyphicon-pencil"></i>
+			&nbsp;Edit listing
+		<% end %>
+		<%= link_to listing_path(@listing), class: 'btn btn-danger', method: :delete, data: { confirm: 'Click OK to confirm the deletion'} do %>
+			<i class="glyphicon glyphicon-remove"></i>
+			&nbsp;Remove
+		<% end %>
+	<% end %>
 	</div>
+
 	<div id="item-details" class="col-xs-6">
 		<div id="posted-by" class="primary-dark-color">
-			Pop posted by
+			Pop added by
 			<%= link_to '/users/'+@listing.seller.id.to_s do %>
 				<strong><%= @listing.seller.first_name %> <%= @listing.seller.last_name.chars.first %></strong>
 			<% end %>

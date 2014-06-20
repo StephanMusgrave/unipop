@@ -9,4 +9,4 @@ paginationScroller = ->
 
 jQuery ->
   if $('#infinite-scrolling').size() > 0
-    $(window).on 'scroll', _.throttle(paginationScroller, 500)
+    $(window).on 'scroll', _.throttle(paginationScroller, 1500)

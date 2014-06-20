@@ -1,6 +1,6 @@
 <div id="chat-window" class="container">
 
-	<div class="col-xs-8">
+	<div id="chat-window-container" class="col-xs-8">
 		<% if current_user == @buyer %>
 			<%= link_to "/users/#{@seller.id}" do %>
 				<%= image_tag @seller.user_avatar, width: '25', :class=>"img-circle" %>
@@ -13,8 +13,7 @@
 			<%= link_to "#{@buyer.first_name}", "/users/#{@buyer.id}" %>
 		<% end %>
 		<div class="clearfix"></div>
-	
-	<div id="chat-window-container" class="col-xs-8">
+		<br/>
 	
 		<div class="col-xs-6">
 				<%= link_to "/listings/#{@listing.id}", class: 'btn btn-default btn-sm' do %>
@@ -64,6 +63,5 @@
 			<div id="chat-send-btn" class="col-xs-1">
 				<%= f.submit 'SEND', class: 'btn btn-primary' %>
 			</div>
-		<%end%>	
-	</div>
+		<%end%>
 </div>

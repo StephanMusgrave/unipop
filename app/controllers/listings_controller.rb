@@ -11,7 +11,7 @@ class ListingsController < ApplicationController
       flash[:notice] = nil
     end
 
-    @listings_per_page = @all_listings.paginate(page: params[:page])
+    @listings_per_page = @all_listings.paginate(page: params[:page], per_page: 12) 
     respond_to do |format|
       format.html
       format.js

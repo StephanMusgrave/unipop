@@ -24,19 +24,20 @@ Technologies Used
 
 |Technology                 |Used for                        |
 |---------------------------|--------------------------------|
-|Ruby                       |Main language                   |
-|Javascript                 |    |
+|Ruby                       |Main programming language                   |
+|Javascript                 |Maps/Ajax/jQuery/... |
+|Ajax                       |Mainly used in the chatroom |
 |HTML5                      |Styling and using smartphone camera |
-|jQuery                     |{{muhanad}}}                    |
-|Rails                      |Framework                       |
+|jQuery                     |Manipulating the DOM for a dynamic experience |
+|Rails                      |MVC Framework                   |
 |[Heroku]                   |Deployment                      |
-|Cucumber/Capybara          |Feature testing                 |
+|Cucumber/Capybara          |Feature testing             |
 |Rspec                      |Unit testing                    |
 |Postgrsql                  |Database                        |
 |Devise                     |Creating users                  |
 |Amazon Web Services        |Bulk image hosting              |
 |Paperclip                  |Uploading images                |
-|Bootstrap                  |Styling                         |
+|Bootstrap                  |Base theme                      |
 |CSS3                       |Styling                         |
 |Websockets                 |Real-time updates in Chatroom   |
 |Geolocation/Geomapper      |{{stef/steve}}                  |

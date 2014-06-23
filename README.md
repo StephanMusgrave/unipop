@@ -1,16 +1,19 @@
 unipop
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
+![Unipop on an iMac](readme_images/iMacTemplate.jpg)	
+![Unipop on an iPhone](readme_images/iPhoneTemplate.jpg)
+![Unipop in an Apple workplace](readme_images/WorkspaceTemplate.jpg)
 
 [Emma Williams] | [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Stefania Cardenas] | [Steve Musgrave]
 
 The unipop vision
 ===
 
-How to use Unipop as a developer
+How to use unipop as a developer
 ===
 
-How to use Unipop as a normal person
+How to use unipop as a normal person
 ===
 
 Design Principles
@@ -19,8 +22,26 @@ Design Principles
 Technologies Used
 ====
 
-Features explained
----
+|Technology                 |Used for                        |
+|---------------------------|--------------------------------|
+|Ruby                       |Main language                   |
+|Javascript                 |{{muhanad}}}                    |
+|HTML5                      |Styling and using smartphone camera |
+|jQuery                     |{{muhanad}}}                    |
+|Rails                      |Framework                       |
+|[Heroku]                   |Deployment                      |
+|Cucumber/Capybara          |Integration testing             |
+|Rspec                      |Unit testing                    |
+|Postgrsql                  |Database                        |
+|Devise                     |Creating users                  |
+|Amazon Web Services        |Bulk image hosting              |
+|Paperclip                  |Uploading images                |
+|Bootstrap                  |Styling                         |
+|Boostrap Carousel          |{{steve/stef}}                  |
+|CSS3                       |Styling                         |
+|Websockets                 |Real-time updates in Chatroom   |
+|Geolocation/Geomapper      |{{stef/steve}}                  |
+
 
 Homepage
 ===
@@ -36,35 +57,35 @@ Chatroom
 
 Queue management
 ===
+{{hi guys what I mean by this is the end negotion buttons, next buyer etc.}}
 
-Private user profile page
+Private user 'pops' page
 ===
 
-Public user profile page
+Public user 'pops' page
 ===
 
+Agile Management
+===
 
-More about the team
----
+Meet the team!
+===
 ![Louise Lai](public/readme_images/louise.jpg) 
 
 ![Muhanad Al-Rubaiee](public/readme_images/muhanad.jpg) 
 
 ![Ollie Delevingne](public/readme_images/ollie.jpg) 
 
-![](public/readme_images/shelley.jpg) 
+![Shelley Hope](public/readme_images/shelley.jpg) 
 
-![](public/readme_images/steve.jpg) 
+![Emma Williams](public/readme_images/emma.jpg) 
 
-![](public/readme_images/stef.jpg)
+![Stefania Cardenas](public/readme_images/stef.jpg)
 
+![Steve Musgrave](public/readme_images/steve.jpg) 
 
-![](public/readme_images/emma.jpg) 
+[Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
 
-
-
-Agile Management
-===
 
 
 [Emma Williams]:https://github.com/Em01
@@ -74,3 +95,4 @@ Agile Management
 [Shelley Hope]:https://github.com/ShelleyHope
 [Stefania Cardenas]:https://github.com/stefaniacardenas
 [Steve Musgrave]:https://github.com/StephanMusgrave
+[Heroku]:http://unipop.herokuapp.com/

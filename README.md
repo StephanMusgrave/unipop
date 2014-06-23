@@ -1,9 +1,9 @@
 unipop
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
-![Unipop on an iMac](readme_images/iMacTemplate.jpg)	
-![Unipop on an iPhone](readme_images/iPhoneTemplate.jpg)
-![Unipop in an Apple workplace](readme_images/WorkspaceTemplate.jpg)
+![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	
+![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
+![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
 [Emma Williams] | [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Stefania Cardenas] | [Steve Musgrave]
 

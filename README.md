@@ -25,19 +25,18 @@ Technologies Used
 |Technology                 |Used for                        |
 |---------------------------|--------------------------------|
 |Ruby                       |Main language                   |
-|Javascript                 |{{muhanad}}}                    |
+|Javascript                 |    |
 |HTML5                      |Styling and using smartphone camera |
 |jQuery                     |{{muhanad}}}                    |
 |Rails                      |Framework                       |
 |[Heroku]                   |Deployment                      |
-|Cucumber/Capybara          |Integration testing             |
+|Cucumber/Capybara          |Feature testing                 |
 |Rspec                      |Unit testing                    |
 |Postgrsql                  |Database                        |
 |Devise                     |Creating users                  |
 |Amazon Web Services        |Bulk image hosting              |
 |Paperclip                  |Uploading images                |
 |Bootstrap                  |Styling                         |
-|Boostrap Carousel          |{{steve/stef}}                  |
 |CSS3                       |Styling                         |
 |Websockets                 |Real-time updates in Chatroom   |
 |Geolocation/Geomapper      |{{stef/steve}}                  |

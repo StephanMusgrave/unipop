@@ -48,17 +48,19 @@ More about the team
 ---
 ![](public/readme_images/louise.jpg) 
 
-![](public/readme_images/louise.jpg) 
+![](public/readme_images/muhanad.jpg) 
 
-![](public/readme_images/louise.jpg) 
+![](public/readme_images/ollie.jpg) 
 
-![](public/readme_images/louise.jpg) 
+![](public/readme_images/shelley.jpg) 
 
-![](public/readme_images/louise.jpg) 
+![](public/readme_images/steve.jpg) 
 
-![](public/readme_images/louise.jpg) 
+![](public/readme_images/stef.jpg)
 
-![](public/readme_images/louise.jpg) 
+![](public/readme_images/emma.jpg) 
+
+
 
 Agile Management
 ===

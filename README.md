@@ -1,1 +1,1 @@
-![](public/readme_images/unipop.png) 	
+![](public/readme_images/unipop.jpg) 	

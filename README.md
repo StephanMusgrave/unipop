@@ -1,12 +1,68 @@
-Unipop
+unipop
+====
+Connecting student buyers and sellers quickly, efficiently, and beautifully
+---
+* by [Emma Williams], [Louise Lai], [Muhanad Al-Rubaiee], [Ollie Delevingne], [Shelley Hope], [Stefania Cardenas] and [Steve Musgrave]*
+
+The unipop vision
+===
+
+How to use Unipop as a developer
+===
+
+How to use Unipop as a normal person
+===
+
+Design Principles
+===
+
+Technologies Used
 ====
 
--> *by [Emma], [Louise Lai], [Muhanad Al-Rubaiee], [Ollie Delevingne], [Shelley Hope], [Stefania Cardenas] and [Steve Musgrave]* <-
+Features explained
+---
+
+Homepage
+===
+
+Item display page
+===
+
+I want it button
+===
+
+Chatroom
+===
+
+Queue management
+===
+
+Private user profile page
+===
+
+Public user profile page
+===
 
 
+More about the team
+---
+![](public/readme_images/louise.jpg) 
 
+![](public/readme_images/louise.jpg) 
 
-![](public/readme_images/unipop.jpg) 	
+![](public/readme_images/louise.jpg) 
+
+![](public/readme_images/louise.jpg) 
+
+![](public/readme_images/louise.jpg) 
+
+![](public/readme_images/louise.jpg) 
+
+![](public/readme_images/louise.jpg) 
+
+Agile Management
+===
+
 
 [Emma Williams]:https://github.com/Em01
 [Louise Lai]:https://github.com/loulai

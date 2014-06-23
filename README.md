@@ -1,8 +1,8 @@
 unipop
 ====
 Connecting student buyers and sellers quickly, efficiently, and beautifully
----
-* by [Emma Williams], [Louise Lai], [Muhanad Al-Rubaiee], [Ollie Delevingne], [Shelley Hope], [Stefania Cardenas] and [Steve Musgrave]*
+
+*by [Emma Williams], [Louise Lai], [Muhanad Al-Rubaiee], [Ollie Delevingne], [Shelley Hope], [Stefania Cardenas] and [Steve Musgrave]*
 
 The unipop vision
 ===

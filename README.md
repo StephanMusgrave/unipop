@@ -1,11 +1,11 @@
-unipop
+[unipop]
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
 ![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
-*by* [Emma Williams] | [Louise Lai] | [Muhanad Al-Rubaiee] | Ollie Delevingne] | [Shelley Hope] | [Stefania Cardenas] | [Steve Musgrave]
+by [Emma Williams] | [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Stefania Cardenas] | [Steve Musgrave]
 
 The unipop vision
 ===
@@ -96,3 +96,4 @@ Meet the team!
 [Stefania Cardenas]:https://github.com/stefaniacardenas
 [Steve Musgrave]:https://github.com/StephanMusgrave
 [Heroku]:http://unipop.herokuapp.com/
+[unipop]:http://unipop.herokuapp.com/

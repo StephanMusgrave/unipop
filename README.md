@@ -31,7 +31,7 @@ Technologies Used
 |jQuery                     |Manipulating the DOM for a dynamic experience |
 |Rails                      |MVC Framework                   |
 |[Heroku]                   |Deployment                      |
-|Cucumber/Capybara          |Feature testing             |
+|Cucumber/Capybara          |Feature testing                 |
 |Rspec                      |Unit testing                    |
 |Postgrsql                  |Database                        |
 |Devise                     |Creating users                  |
@@ -40,7 +40,7 @@ Technologies Used
 |Bootstrap                  |Base theme                      |
 |CSS3                       |Styling                         |
 |Websockets                 |Real-time updates in Chatroom   |
-|Geolocation/Geomapper      |{{stef/steve}}                  |
+|Geolocation/Geomapper      |Distance and maps               |
 
 
 Homepage

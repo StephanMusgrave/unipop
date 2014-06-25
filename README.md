@@ -5,7 +5,8 @@
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
-by [Emma Williams] | [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Stefania Cardenas] | [Steve Musgrave]
+by 
+[Emma Williams] | [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Stefania Cardenas] | [Steve Musgrave]
 
 The unipop vision
 ===
@@ -42,28 +43,31 @@ Technologies Used
 |Websockets                 |Real-time updates in Chatroom   |
 |Geolocation/Geomapper      |Distance and maps               |
 
+Features
+===
+There are several core features that make up the backbone of unipop. These features are unipop's cannot-do-without's; they all play a unique and neccessary role in the overall intent of this application.
 
 Homepage
-===
+---
 
 Item display page
-===
+---
 
 I want it button
-===
+---
 
 Chatroom
-===
+---
 
 Queue management
-===
+---
 {{hi guys what I mean by this is the end negotion buttons, next buyer etc.}}
 
 Private user 'pops' page
-===
+---
 
 Public user 'pops' page
-===
+---
 
 Agile Management
 ===
@@ -86,7 +90,7 @@ Meet the team!
 
 [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
 
-
+**Thanks for reading!**
 
 [Emma Williams]:https://github.com/Em01
 [Louise Lai]:https://github.com/loulai

@@ -1,3 +1,5 @@
+<!-- hey guys! I'm working on this slowly each day, and please change it to your liking -->
+<!-- note: Shelley, Ollie, Steve, Emma, Stef blurb still needed -->
 [unipop]
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
@@ -5,7 +7,12 @@
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
-  unipop is website that allows students buy and sell things in a speedy and trusting environment. Unipop connects you only to the students with your university, and is optimized for iPhones. 
+  unipop is website that allows students buy and sell things in a speedy and trusting environment. Unipop connects you only to the students with your university. 
+
+  Unipop is optimized for iPhones. 
+
+Table of Contents
+===
 
 * [How to use unipop]
 * [Key features]
@@ -13,7 +20,6 @@
 * [Technologies used]
 * [Learning objectives]
 * [Meet the team!]
-
 
 How to use unipop
 ===
@@ -39,13 +45,11 @@ Chatroom
 
 Queue management
 ---
-{{hi guys what I mean by this is the end negotion buttons, next buyer etc.}}
+<!-- hi guys what I mean by this is the end negotion buttons, next buyer etc. -->
 
-Private user 'pops' page
+'Pops' page
 ---
 
-Public user 'pops' page
----
 
 Design Principles
 ===
@@ -73,26 +77,17 @@ Technologies Used
 |Websockets                 |Real-time updates in Chatroom   |
 |Geolocation/Geomapper      |Distance and maps               |
 
-
-
 Learning Objectives
 ===
-
 
 Meet the team!
 ===
 ![Louise Lai](public/readme_images/louise.jpg) 
-
 ![Muhanad Al-Rubaiee](public/readme_images/muhanad.jpg) 
-
 ![Ollie Delevingne](public/readme_images/ollie.jpg) 
-
 ![Shelley Hope](public/readme_images/shelley.jpg) 
-
 ![Emma Williams](public/readme_images/emma.jpg) 
-
 ![Stefania Cardenas](public/readme_images/stef.jpg)
-
 ![Steve Musgrave](public/readme_images/steve.jpg) 
 
 [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
@@ -100,11 +95,11 @@ Meet the team!
 **Thanks for reading!**
 [Back to the top]
 
-#---- links, in order of appearance
+<!-- links, in order of appearance -->
 
 [unipop]:http://unipop.herokuapp.com/
 
-[How to use unipop]:https://github.com/StephanMusgrave/ProjectX#the-unipop-vision
+[How to use unipop]:https://github.com/StephanMusgrave/ProjectX#how-to-use-unipop
 [Key features]:https://github.com/StephanMusgrave/ProjectX#key-features
 [Design principles]:https://github.com/StephanMusgrave/ProjectX#design-principles
 [Technologies used]:https://github.com/StephanMusgrave/ProjectX#technologies-used
@@ -121,7 +116,4 @@ Meet the team!
 [Stefania Cardenas]:https://github.com/stefaniacardenas
 [Steve Musgrave]:https://github.com/StephanMusgrave
 
-[Back to the top]:https://github.com/StephanMusgrave/ProjectX#readme
-
-
-
+[Back to the top]:https://github.com/StephanMusgrave/ProjectX#table-of-contents

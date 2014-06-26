@@ -1,11 +1,12 @@
 [unipop]
 ====
-Connecting student buyers and sellers quickly, efficiently, and beautifully.
+**Connecting student buyers and sellers quickly, efficiently, and beautifully.**
 ![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
-* [The unipop vision]
+  unipop is website that allows students buy and sell things in a speedy and trusting environment. Unipop connects you only to the students with your university, and is optimized for iPhones. 
+
 * [How to use unipop]
 * [Key features]
 * [Design principles]
@@ -13,14 +14,12 @@ Connecting student buyers and sellers quickly, efficiently, and beautifully.
 * [Learning objectives]
 * [Meet the team!]
 
-The unipop vision
-===
 
 How to use unipop
 ===
-**... as a developer**
-
 **... as a normal person**
+
+**... as a developer**
 
 Key Features
 ===
@@ -105,7 +104,6 @@ Meet the team!
 
 [unipop]:http://unipop.herokuapp.com/
 
-[The unipop vision]:https://github.com/StephanMusgrave/ProjectX#meet-the-team
 [How to use unipop]:https://github.com/StephanMusgrave/ProjectX#the-unipop-vision
 [Key features]:https://github.com/StephanMusgrave/ProjectX#key-features
 [Design principles]:https://github.com/StephanMusgrave/ProjectX#design-principles

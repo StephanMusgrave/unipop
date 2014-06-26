@@ -1,5 +1,6 @@
-<!-- hey guys! I'm working on this slowly each day, and please change it to your liking -->
-<!-- note: Shelley, Ollie, Steve, Emma, Stef blurb still needed -->
+<!-- hey guys! I'm working on this slowly each day, and please contribute to your liking -->
+<!--- Got Steve's and Muhana's blurb --->
+<!-- Shelley, Ollie, Emma, Stef blurb still needed -->
 [unipop]
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
@@ -7,7 +8,7 @@
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
-  unipop is website that allows students buy and sell things in a speedy and trusting environment. Unipop connects you only to the students with your university. 
+  Unipop is website that allows students buy and sell things in a speedy and trusting environment. Unipop connects you only to the students with your university. 
 
   Unipop is optimized for iPhones. 
 
@@ -93,6 +94,7 @@ Meet the team!
 [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
 
 **Thanks for reading!**
+
 [Back to the top]
 
 <!-- links, in order of appearance -->

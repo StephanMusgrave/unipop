@@ -8,9 +8,9 @@
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
-  Unipop is website that allows students buy and sell things in a speedy and trusting environment. Unipop connects you only to the students with your university. 
+  Unipop is a website and mobile app that enables students to buy and sell things in a speedy and trusting environment. Unipop connects you only to the students with your university. 
 
-  Unipop is optimized for iPhones. 
+  Unipop is optimized for iPhone 5, but still supports other mobile devices.
 
 Table of Contents
 ===
@@ -76,7 +76,7 @@ Technologies Used
 |Bootstrap                  |Base theme                      |
 |CSS3                       |Styling                         |
 |Websockets                 |Real-time updates in Chatroom   |
-|Geolocation/Geomapper      |Distance and maps               |
+|Geolocation/Geomapper      |Calculating distance and showing maps  |
 
 Learning Objectives
 ===

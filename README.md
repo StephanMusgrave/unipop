@@ -1,6 +1,6 @@
 <!-- hey guys! I'm working on this slowly each day, and please contribute to your liking -->
-<!--- Got Steve's and Muhana's blurb --->
-<!-- Shelley, Ollie, Emma, Stef blurb still needed -->
+<!--- Got Steve, Muhanad and Emma's blurb --->
+<!-- Shelley, Ollie, Stef blurb still needed -->
 [unipop]
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**

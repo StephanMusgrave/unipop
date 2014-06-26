@@ -1,51 +1,30 @@
 [unipop]
 ====
-**Connecting student buyers and sellers quickly, efficiently, and beautifully.**
+Connecting student buyers and sellers quickly, efficiently, and beautifully.
 ![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
-by 
-[Emma Williams] | [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Stefania Cardenas] | [Steve Musgrave]
+* [The unipop vision]
+* [How to use unipop]
+* [Key features]
+* [Design principles]
+* [Technologies used]
+* [Learning objectives]
+* [Meet the team!]
 
 The unipop vision
 ===
 
-How to use unipop as a developer
+How to use unipop
 ===
+**... as a developer**
 
-How to use unipop as a normal person
+**... as a normal person**
+
+Key Features
 ===
-
-Design Principles
-===
-
-Technologies Used
-====
-
-|Technology                 |Used for                        |
-|---------------------------|--------------------------------|
-|Ruby                       |Main programming language                   |
-|Javascript                 |Maps/Ajax/jQuery/... |
-|Ajax                       |Mainly used in the chatroom |
-|HTML5                      |Styling and using smartphone camera |
-|jQuery                     |Manipulating the DOM for a dynamic experience |
-|Rails                      |MVC Framework                   |
-|[Heroku]                   |Deployment                      |
-|Cucumber/Capybara          |Feature testing                 |
-|Rspec                      |Unit testing                    |
-|Postgrsql                  |Database                        |
-|Devise                     |Creating users                  |
-|Amazon Web Services        |Bulk image hosting              |
-|Paperclip                  |Uploading images                |
-|Bootstrap                  |Base theme                      |
-|CSS3                       |Styling                         |
-|Websockets                 |Real-time updates in Chatroom   |
-|Geolocation/Geomapper      |Distance and maps               |
-
-Features
-===
-There are several core features that make up the backbone of unipop. These features are unipop's cannot-do-without's; they all play a unique and neccessary role in the overall intent of this application.
+There are several core features that make up the backbone of unipop. These features are unipop's cannot-do-without's.
 
 Homepage
 ---
@@ -69,8 +48,37 @@ Private user 'pops' page
 Public user 'pops' page
 ---
 
-Agile Management
+Design Principles
 ===
+
+Technologies Used
+====
+
+|Technology                 |Used for                        |
+|---------------------------|--------------------------------|
+|Ruby                       |Main programming language       |
+|Javascript                 |Maps/Ajax & jQuery              |
+|Ajax                       |Mainly used in the chatroom     |
+|HTML5                      |Styling and using smartphone camera |
+|jQuery                     |Manipulating the DOM for a dynamic experience |
+|Rails                      |MVC Framework                   |
+|[Heroku]                   |Deployment                      |
+|Cucumber/Capybara          |Feature testing                 |
+|Rspec                      |Unit testing                    |
+|Postgrsql                  |Database                        |
+|Devise                     |Creating users                  |
+|Amazon Web Services        |Bulk image hosting              |
+|Paperclip                  |Uploading images                |
+|Bootstrap                  |Base theme                      |
+|CSS3                       |Styling                         |
+|Websockets                 |Real-time updates in Chatroom   |
+|Geolocation/Geomapper      |Distance and maps               |
+
+
+
+Learning Objectives
+===
+
 
 Meet the team!
 ===
@@ -91,13 +99,31 @@ Meet the team!
 [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
 
 **Thanks for reading!**
+[Back to the top]
 
-[Emma Williams]:https://github.com/Em01
+#---- links, in order of appearance
+
+[unipop]:http://unipop.herokuapp.com/
+
+[The unipop vision]:https://github.com/StephanMusgrave/ProjectX#meet-the-team
+[How to use unipop]:https://github.com/StephanMusgrave/ProjectX#the-unipop-vision
+[Key features]:https://github.com/StephanMusgrave/ProjectX#key-features
+[Design principles]:https://github.com/StephanMusgrave/ProjectX#design-principles
+[Technologies used]:https://github.com/StephanMusgrave/ProjectX#technologies-used
+[Learning objectives]:https://github.com/StephanMusgrave/ProjectX#learning-objectives
+[Meet the team!]: https://github.com/StephanMusgrave/ProjectX#meet-the-team
+
+[Heroku]:http://unipop.herokuapp.com/
+
 [Louise Lai]:https://github.com/loulai
 [Muhanad Al-Rubaiee]:https://github.com/muhanad40
 [Ollie Delevingne]:https://github.com/odelevingne
 [Shelley Hope]:https://github.com/ShelleyHope
+[Emma Williams]:https://github.com/Em01
 [Stefania Cardenas]:https://github.com/stefaniacardenas
 [Steve Musgrave]:https://github.com/StephanMusgrave
-[Heroku]:http://unipop.herokuapp.com/
-[unipop]:http://unipop.herokuapp.com/
+
+[Back to the top]:https://github.com/StephanMusgrave/ProjectX#readme
+
+
+

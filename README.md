@@ -70,6 +70,8 @@ Technologies Used
 |jQuery                     |Manipulating the DOM for a dynamic experience |
 |Rails                      |MVC Framework                   |
 |[Heroku]                   |Deployment                      |
+| - New Relic               |Real time application monitoring|
+| - Papertrail              |Log management
 |Cucumber/Capybara          |Feature testing                 |
 |Rspec                      |Unit testing                    |
 |Postgrsql                  |Database                        |

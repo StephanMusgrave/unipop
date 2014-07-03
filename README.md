@@ -28,7 +28,8 @@ How to use unipop
 
 
 **... as a coder**
-Unipop can be run in your localhost if you wish to play around with the code. You can do so easily by following these few steps.
+
+Unipop can be run in your localhost if you wish to play around with the code. You can do so easily by following these steps.
 
 First you'll need to clone this repo by typing this snippet into your terminal:
 ```
@@ -61,7 +62,7 @@ localhost:3000
 ```
 
 Now your browser should look something like this:
-![unipop](public/readme_images/unipop_initial.jpg)
+![unipop](public/readme_images/initial_unipop.jpg)
 
 Key Features
 ===

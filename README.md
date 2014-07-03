@@ -5,7 +5,7 @@
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
-![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	
+<!-- ![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	 -->
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
   Unipop is a website and mobile app that enables students to buy and sell things speedily. Unipop only connects you to students within your university.
@@ -26,6 +26,7 @@ Table of Contents
 How to use unipop
 ===
 
+[Back to the top]
 
 Key Features
 ===
@@ -50,11 +51,12 @@ Queue management
 
 'Pops' page
 ---
-
+[Back to the top]
 
 Design Principles
 ===
 <!-- mobile first, responsive design, bootstrap elements, bootstrap buttons, grid/image-central view etc. Muhanad, Emma? -->
+[Back to the top]
 
 Technologies Used
 ====
@@ -79,6 +81,7 @@ Technologies Used
 |Websockets                 |Real-time updates in Chatroom   |
 |Geolocation/Geomapper      |Calculating distance and showing maps  |
 
+[Back to the top]
 
 Unipop for Coders
 ===
@@ -117,9 +120,11 @@ localhost:3000
 Now your browser should look something like this:
 ![unipop](public/readme_images/initial_unipop.jpg)
 
+[Back to the top]
 
 Learning Objectives
 ===
+[Back to the top]
 
 Meet the team!
 ===

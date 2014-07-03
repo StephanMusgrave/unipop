@@ -4,8 +4,8 @@
 [unipop]
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
-![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
+![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
   Unipop is a website and mobile app that enables students to buy and sell things speedily. Unipop only connects you to students within your university.
@@ -19,16 +19,69 @@ Table of Contents
 * [Key features]
 * [Design principles]
 * [Technologies used]
+* [Unipop for Coders]
 * [Learning objectives]
 * [Meet the team!]
 
 How to use unipop
 ===
-**... as a normal person**
 
 
-**... as a coder**
+Key Features
+===
+There are several core features that make up the backbone of unipop. These features are unipop's cannot-do-without's.
 
+Homepage
+---
+
+Item display page
+---
+<!-- getagging here. Stef, Steve? -->
+
+I want it button
+---
+
+Chatroom
+---
+
+Queue management
+---
+<!-- hi guys what I mean by this is the end negotion buttons, next buyer etc. -->
+
+'Pops' page
+---
+
+
+Design Principles
+===
+<!-- mobile first, responsive design, bootstrap elements, bootstrap buttons, grid/image-central view etc. Muhanad, Emma? -->
+
+Technologies Used
+====
+
+|Technology                 |Used for                        |
+|---------------------------|--------------------------------|
+|Ruby                       |Main programming language       |
+|Javascript                 |Maps/Ajax & jQuery              |
+|Ajax                       |Mainly used in the chatroom     |
+|HTML5                      |Styling and using smartphone camera |
+|jQuery                     |Manipulating the DOM for a dynamic experience |
+|Rails                      |MVC Framework                   |
+|[Heroku]                   |Deployment                      |
+|Cucumber/Capybara          |Feature testing                 |
+|Rspec                      |Unit testing                    |
+|Postgrsql                  |Database                        |
+|Devise                     |Creating users                  |
+|Amazon Web Services        |Bulk image hosting              |
+|Paperclip                  |Uploading images                |
+|Bootstrap                  |Base theme                      |
+|CSS3                       |Styling                         |
+|Websockets                 |Real-time updates in Chatroom   |
+|Geolocation/Geomapper      |Calculating distance and showing maps  |
+
+
+Unipop for Coders
+===
 Unipop can be run in your localhost if you wish to play around with the code. You can do so easily by following these steps.
 
 First you'll need to clone this repo by typing this snippet into your terminal:
@@ -57,62 +110,13 @@ $ bin/rails server
 ```
 
 Finally, open up your web broswer, and in the URL field type:
-```
+``
 localhost:3000
-```
+``
 
 Now your browser should look something like this:
 ![unipop](public/readme_images/initial_unipop.jpg)
 
-Key Features
-===
-There are several core features that make up the backbone of unipop. These features are unipop's cannot-do-without's.
-
-Homepage
----
-
-Item display page
----
-
-I want it button
----
-
-Chatroom
----
-
-Queue management
----
-<!-- hi guys what I mean by this is the end negotion buttons, next buyer etc. -->
-
-'Pops' page
----
-
-
-Design Principles
-===
-
-Technologies Used
-====
-
-|Technology                 |Used for                        |
-|---------------------------|--------------------------------|
-|Ruby                       |Main programming language       |
-|Javascript                 |Maps/Ajax & jQuery              |
-|Ajax                       |Mainly used in the chatroom     |
-|HTML5                      |Styling and using smartphone camera |
-|jQuery                     |Manipulating the DOM for a dynamic experience |
-|Rails                      |MVC Framework                   |
-|[Heroku]                   |Deployment                      |
-|Cucumber/Capybara          |Feature testing                 |
-|Rspec                      |Unit testing                    |
-|Postgrsql                  |Database                        |
-|Devise                     |Creating users                  |
-|Amazon Web Services        |Bulk image hosting              |
-|Paperclip                  |Uploading images                |
-|Bootstrap                  |Base theme                      |
-|CSS3                       |Styling                         |
-|Websockets                 |Real-time updates in Chatroom   |
-|Geolocation/Geomapper      |Calculating distance and showing maps  |
 
 Learning Objectives
 ===
@@ -141,6 +145,7 @@ Meet the team!
 [Key features]:https://github.com/StephanMusgrave/ProjectX#key-features
 [Design principles]:https://github.com/StephanMusgrave/ProjectX#design-principles
 [Technologies used]:https://github.com/StephanMusgrave/ProjectX#technologies-used
+[Unipop for Coders]: https://github.com/StephanMusgrave/ProjectX#unipop-for-coders
 [Learning objectives]:https://github.com/StephanMusgrave/ProjectX#learning-objectives
 [Meet the team!]: https://github.com/StephanMusgrave/ProjectX#meet-the-team
 

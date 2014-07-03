@@ -26,7 +26,7 @@ Table of Contents
 How to use unipop
 ===
 
-[Back to the top]
+Get started with unipop here: [Heroku]
 
 Key Features
 ===

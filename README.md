@@ -1,6 +1,6 @@
 <!-- hey guys! I'm working on this slowly each day, and please contribute to your liking -->
-<!--- Got Steve, Muhanad and Emma's blurb --->
-<!-- Shelley, Ollie, Stef blurb still needed -->
+<!--- Got Steve, Muhanad, Emma and Stef's blurb --->
+<!-- Shelley and Ollie blurb still needed -->
 [unipop]
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
@@ -8,9 +8,9 @@
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
-  Unipop is a website and mobile app that enables students to buy and sell things in a speedy and trusting environment. Unipop connects you only to the students with your university. 
+  Unipop is a website and mobile app that enables students to buy and sell things speedily. Unipop only connects you to students within your university.
 
-  Unipop is optimized for iPhone 5, but still supports other mobile devices.
+  Unipop is optimized for iPhone 5 and supports other mobile devices.
 
 Table of Contents
 ===
@@ -26,7 +26,42 @@ How to use unipop
 ===
 **... as a normal person**
 
-**... as a developer**
+
+**... as a coder**
+Unipop can be run in your localhost if you wish to play around with the code. You can do so easily by following these few steps.
+
+First you'll need to clone this repo by typing this snippet into your terminal:
+```
+$ git clone git@github.com:StephanMusgrave/ProjectX.git
+```
+
+Then change into the newly cloned directory:
+```
+$ cd projectx
+```
+
+Acquire the necessary gems to run unipop:
+```
+$ bundle install
+```
+
+Update your database by running the migration:
+```
+$ bin/rake db:migrate
+```
+
+Run the application on your localhost (defaults to port 3000):
+```
+$ bin/rails server
+```
+
+Finally, open up your web broswer, and in the URL field type:
+```
+localhost:3000
+```
+
+Now your browser should look something like this:
+![unipop](public/readme_images/unipop_initial.jpg)
 
 Key Features
 ===

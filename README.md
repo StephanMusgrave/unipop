@@ -68,17 +68,20 @@ Technologies Used
 |Ajax                       |Mainly used in the chatroom     |
 |HTML5                      |Styling and using smartphone camera |
 |jQuery                     |Manipulating the DOM for a dynamic experience |
-|Rails                      |MVC Framework                   |
+|Ruby on Rails              |Model View Controller web application framework |
 |[Heroku]                   |Deployment                      |
-| - New Relic               |Real time application monitoring|
-| - Papertrail              |Log management
+|heroku_secrets            |to push secrets to Heroku in Rails |
+|New Relic                  |Real time application monitoring|
+|Papertrail                 |Tracking events & Log management|
 |Cucumber/Capybara          |Feature testing                 |
 |Rspec                      |Unit testing                    |
+|Factory Girl               |A library for setting up Ruby objects as test data  |
 |Postgrsql                  |Database                        |
 |Devise                     |Creating users                  |
 |Amazon Web Services        |Bulk image hosting              |
 |Paperclip                  |Uploading images                |
 |Bootstrap                  |Base theme                      |
+|will_paginate              |A pagination library that integrates with Ruby on Rails and Sinatra |
 |CSS3                       |Styling                         |
 |Websockets                 |Real-time updates in Chatroom   |
 |Geolocation/Geomapper      |Calculating distance and showing maps  |

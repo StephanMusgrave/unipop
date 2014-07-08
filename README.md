@@ -4,6 +4,7 @@
 [unipop]
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
+Created as our Final Project at Makers Academy
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
 <!-- ![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	 -->
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)

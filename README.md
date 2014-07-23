@@ -4,7 +4,7 @@
 [unipop]
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
-Created as our Final Project at Makers Academy
+Created as our Final Project at [Makers Academy]
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
 <!-- ![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	 -->
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
@@ -169,5 +169,6 @@ Meet the team!
 [Emma Williams]:https://github.com/Em01
 [Stefania Cardenas]:https://github.com/stefaniacardenas
 [Steve Musgrave]:https://github.com/StephanMusgrave
+[Makers Academy]:http://www.makersacademy.com
 
 [Back to the top]:https://github.com/StephanMusgrave/ProjectX#table-of-contents

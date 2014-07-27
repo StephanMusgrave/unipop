@@ -57,14 +57,16 @@ I want it button
 ---
 The I want it button changes its function according to different conditions. It can change to several different buttons:
 
-*I want it*
+**I want it**
+
 Let's say you wanted to buy a toaster. You browse on the homepage and find a nice shiny image of a toaster and decide you want it, so you click the I want it button.
 
 If you are the first buyer: you will be taken to a brand new chatroom, and you start talking to the seller about his/her toaster.
 
 If you are NOT the first buyer: you will be placed on the waitlist for this particularly popular toaster
 
-*I changed my mind*
+**I changed my mind**
+
 Let's say you changed your mind about the toaster you just wanted. There will always be a I changed my mind button present that rescinds your want. Don't worry if you accidentaly clicked it; unipop will flash an alert for double-confirmation.
 
 Chatroom

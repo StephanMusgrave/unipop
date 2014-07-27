@@ -37,24 +37,39 @@ There are several core features that make up the backbone of unipop. These featu
 
 Homepage
 ---
-The homepage is where all the images of stuff to sell are displayed. The design is clean and all images are contained within a beautiful, infinitely scrolling grid. 
-From here, the user can click on images to navigate to the rest of the application.
+The homepage is where all the images of stuff to sell are displayed. The design is clean and all images are contained within a beautiful, infinitely scrolling grid.
+
+From here, the user can easily click on things to navigate to the rest of the application.
 
 Item display page
 ---
 <!-- getagging here. Stef, Steve? -->
-When a user click on an item to see more information, they will be taken to the item's display page. They will see:
+When a user clicks on an item to see more information, they will be taken to the item's display page. 
+They will see:
 * who is selling the item
 * its price
 * the distance from the user to the item 
 * auto-changing extra images
-
+* an option to view its location on Google Maps
+* I want it button
 
 I want it button
 ---
+The I want it button changes its function according to different conditions. It can change to several different buttons:
+
+*I want it*
+Let's say you wanted to buy a toaster. You browse on the homepage and find a nice shiny image of a toaster and decide you want it, so you click the I want it button.
+
+If you are the first buyer: you will be taken to a brand new chatroom, and you start talking to the seller about his/her toaster.
+
+If you are NOT the first buyer: you will be placed on the waitlist for this particularly popular toaster
+
+*I changed my mind*
+Let's say you changed your mind about the toaster you just wanted. There will always be a I changed my mind button present that rescinds your want. Don't worry if you accidentaly clicked it; unipop will flash an alert for double-confirmation.
 
 Chatroom
 ---
+Connecting buyers and sellers is what unipop is all about. So the need of a chatroom comes naturally.
 
 Queue management
 ---

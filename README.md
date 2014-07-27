@@ -150,9 +150,9 @@ Meet the team!
 ![Stefania Cardenas](public/readme_images/stef.jpg)
 ![Steve Musgrave](public/readme_images/steve.jpg) 
 
-[Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
-
 **Thanks for reading!**
+
+[Louise Lai] [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
 
 [Back to the top]
 

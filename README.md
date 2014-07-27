@@ -37,11 +37,18 @@ There are several core features that make up the backbone of unipop. These featu
 
 Homepage
 ---
-The homepage is where all the images of stuff to sell are displayed. The design is clean and all images are contained within a beautiful, infinitely scrolling grid. From here, the user can click on images to register their interest as a buyer. The ever-present navbar allows the user to access the homepage and other cool things at any time.
+The homepage is where all the images of stuff to sell are displayed. The design is clean and all images are contained within a beautiful, infinitely scrolling grid. 
+From here, the user can click on images to navigate to the rest of the application.
 
 Item display page
 ---
 <!-- getagging here. Stef, Steve? -->
+When a user click on an item to see more information, they will be taken to the item's display page. They will see:
+* who is selling the item
+* its price
+* the distance from the user to the item 
+* auto-changing extra images
+
 
 I want it button
 ---

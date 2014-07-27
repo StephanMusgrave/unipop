@@ -4,9 +4,11 @@
 [unipop]
 ====
 **Connecting student buyers and sellers quickly, efficiently, and beautifully.**
-Created as our Final Project at [Makers Academy]
+
+Created as our Final Project at [Makers Academy], London.
+
 ![Unipop on an iPhone](public/readme_images/iPhoneTemplate.jpg)
-<!-- ![Unipop on an iMac](public/readme_images/iMacTemplate.jpg)	 -->
+<!-- Commented out because thought there were too many images-Lou ![Unipop on an iMac](public/readme_images/iMacTemplate.jpg) -->
 ![Unipop in an Apple workplace](public/readme_images/WorkspaceTemplate.jpg)
 
   Unipop is a website and mobile app that enables students to buy and sell things speedily. Unipop only connects you to students within your university.
@@ -27,7 +29,7 @@ Table of Contents
 How to use unipop
 ===
 
-Get started with unipop here: [Heroku]
+Get started with unipop [here].
 
 Key Features
 ===
@@ -71,7 +73,7 @@ Technologies Used
 |jQuery                     |Manipulating the DOM for a dynamic experience |
 |Ruby on Rails              |Model View Controller web application framework |
 |[Heroku]                   |Deployment                      |
-|heroku_secrets            |to push secrets to Heroku in Rails |
+|heroku_secrets             |to push secrets to Heroku in Rails |
 |New Relic                  |Real time application monitoring|
 |Papertrail                 |Tracking events & Log management|
 |Cucumber/Capybara          |Feature testing                 |
@@ -130,6 +132,12 @@ Now your browser should look something like this:
 
 Learning Objectives
 ===
+* Materializing a concept into a functional product
+* Adding to and reinforcing our knowledge of Ruby and Rails
+* Using testing to drive the direction of our product (specifically, behaviour driven test driven developement)
+* Agile team management
+* Pair programming
+
 [Back to the top]
 
 Meet the team!
@@ -160,6 +168,7 @@ Meet the team!
 [Learning objectives]:https://github.com/StephanMusgrave/ProjectX#learning-objectives
 [Meet the team!]: https://github.com/StephanMusgrave/ProjectX#meet-the-team
 
+[here]:http://unipop.herokuapp.com/
 [Heroku]:http://unipop.herokuapp.com/
 
 [Louise Lai]:https://github.com/loulai

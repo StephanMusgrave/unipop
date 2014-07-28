@@ -29,11 +29,11 @@ Table of Contents
 Try unipop
 ===
 
-Get started with unipop [here]. You will need to sign up in order to access the full range of unipop's features. For now, you may sign in with any email, as long as it contains a '@' sign.
+Get started with unipop [here]. You will need to sign to access the full range of unipop's features. For now, you may sign in with any email, as long as it contains an '@' symbol.
 
 Key Features
 ===
-There are several core features that make up the backbone of unipop. A lot of time was spent debating over the details of each feature, because each detail had implications on the rest of the unipop. 
+There are several core features that shape unipop's personality. A lot of time was spent debating over the details of each feature, because each detail had implications on the greater application.
 
 Homepage
 ---
@@ -43,11 +43,13 @@ From here, the user can easily click on things to navigate anywhere.
 
 University verification
 ---
-Nowadays, each university assigns a unique email address to its students. For example, New York University (NYU) will assign an alpha numeric email address like 'jk2662@nyu.edu' to each student.
+Nowadays, each university assigns a unique email address to its students. 
 
-Unipop requires each student to have a valid university email address in order to sign up. Once signed up successfully, the user will automatically see all items sold by users that have the same email address. 
+Unipop requires each student to have a valid university email address in order to sign up. 
 
-E.g. People with an '@nyu.edu' address will see all posts by '@nyu.edu' users. They won't see posts by other universities, like'@harvard.edu' or '@lse.ac.uk'.
+Once signed up successfully, the user has access to all items sold by users with the similar email ending.
+
+E.g. For example, New York University (NYU) will assign an alpha numeric email address like 'jk2662@nyu.edu' to each student. People with an '@nyu.edu' address will see all posts by '@nyu.edu' users. They won't see posts by other universities, like'@harvard.edu' or '@lse.ac.uk'.
 
 A future consideration is to customize access to suit each university, as some universities are smaller and lack critical mass for unipop to be successful.
 
@@ -104,16 +106,16 @@ However, in the name of fairness, the seller cannot arbitrarily choose who he/sh
 
 Each item a user tries to sell is referred to as a 'pop'.
 
-Your 'pops page' is similar to a profile page, where all the pops you're selling or wanting can be seen.
+Your 'pops page' is similar to a profile page, where all the pops you are selling or wanting can be seen.
 
-[Back to the top]
+[Back to the index]
 
 Design Principles
 ===
 <!-- mobile first, responsive design, bootstrap elements, bootstrap buttons, grid/image-central view etc. Muhanad, Emma? -->
-Mobile first was our motto for the design. The design is responsive and uses bootstrap elements. The overall theme is self-created.
+Mobile first was our design motto. The design is responsive and uses bootstrap elements. The overall theme is self-created.
 
-[Back to the top]
+[Back to the index]
 
 Technologies Used
 ====
@@ -143,7 +145,7 @@ Technologies Used
 |Websockets                 |Real-time updates in Chatroom   |
 |Geolocation/Geomapper      |Calculating distance and showing maps  |
 
-[Back to the top]
+[Back to the index]
 
 Unipop for Coders
 ===
@@ -182,7 +184,7 @@ localhost:3000
 Now your browser should look something like this:
 ![unipop](public/readme_images/initial_unipop.jpg)
 
-[Back to the top]
+[Back to the index]
 
 Learning Objectives
 ===
@@ -192,7 +194,7 @@ Learning Objectives
 * Agile team management
 * Pair programming
 
-[Back to the top]
+[Back to the index]
 
 Meet the team!
 ===
@@ -208,7 +210,7 @@ Meet the team!
 
 [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
 
-[Back to the top]
+[Back to the index]
 
 <!-- links, in order of appearance -->
 
@@ -234,4 +236,4 @@ Meet the team!
 [Steve Musgrave]:https://github.com/StephanMusgrave
 [Makers Academy]:http://www.makersacademy.com
 
-[Back to the top]:https://github.com/StephanMusgrave/unipop#table-of-contents
+[Back to the index]:https://github.com/StephanMusgrave/unipop#table-of-contents

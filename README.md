@@ -61,9 +61,9 @@ The I want it button changes its function according to different conditions. It 
 
 Let's say you wanted to buy a toaster. You browse on the homepage and find a nice shiny image of a toaster and decide you want it, so you click the I want it button.
 
-If you are the first buyer: you will be taken to a brand new chatroom, and you start talking to the seller about his/her toaster.
+If you are the first buyer, you will be taken to a brand new chatroom, and you start talking to the seller about his/her toaster.
 
-If you are NOT the first buyer: you will be placed on the waitlist for this particularly popular toaster
+If you are NOT the first buyer, you will be placed on the waitlist for this particularly popular toaster
 
 **I changed my mind**
 

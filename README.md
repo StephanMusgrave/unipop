@@ -77,14 +77,16 @@ Connecting buyers and sellers is what unipop is all about.
 
 Each item only ever has one active chatroom, because the seller only chats to the first buyer in the waitlist. It's much like a marketplace, where the vendor only talks to the the first customer in the queue.
 
-The chatroom is real-time using Websockets.
+The chatroom is made real-time using Websockets.
 
 Queue management
 ---
 <!-- hi guys what I mean by this is the end negotion buttons, next buyer etc. -->
 Through the chatroom, the seller has control over his/her queue. 
 
+The seller can choose to end the negotiation with the current buyer and move on to the next buyer. 
 
+However, in the name of fairness, the seller cannot arbitrarily choose who he/she chats to. He/she can only see and chat to the first person in the queue, and not the people behind. This is important because it guards unipop against becoming an unwieldy and ultimately inefficient auctioning site.
 
 'Pops' page
 ---

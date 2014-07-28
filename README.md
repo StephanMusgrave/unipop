@@ -26,14 +26,14 @@ Table of Contents
 * [Learning objectives]
 * [Meet the team!]
 
-How to use unipop
+Try unipop
 ===
 
 Get started with unipop [here].
 
 Key Features
 ===
-There are several core features that make up the backbone of unipop. These features are unipop's cannot-do-without's.
+There are several core features that make up the backbone of unipop. A lot of time was spent debating over the details of each feature, because each detail had implications on the rest of the unipop. 
 
 Homepage
 ---
@@ -51,11 +51,11 @@ They will see:
 * the distance from the user to the item 
 * auto-changing extra images
 * an option to view its location on Google Maps
-* I want it button
+* an I want it button
 
 I want it button
 ---
-The I want it button changes its function depending on the conditions. It can change to several different buttons:
+The I want it button adjusts its functionality to suit different conditions:
 
 **I want it**
 
@@ -63,7 +63,7 @@ Let's say you wanted to buy a toaster. You browse on the homepage and find a nic
 
 If you are the first buyer, you will be taken to a brand new chatroom, and you start talking to the seller about his/her toaster.
 
-If you are NOT the first buyer, you will be placed on the waitlist for this particularly popular toaster
+If you are NOT the first buyer, you will be placed on the waitlist for this particularly popular toaster.
 
 **I changed my mind**
 
@@ -86,11 +86,13 @@ Through the chatroom, the seller has control over his/her queue.
 
 The seller can choose to end the negotiation with the current buyer and move on to the next buyer. 
 
-However, in the name of fairness, the seller cannot arbitrarily choose who he/she chats to. He/she can only see and chat to the first person in the queue, and not the people behind. This is important because it guards unipop against becoming an unwieldy and ultimately inefficient auctioning site.
+However, in the name of fairness, the seller cannot arbitrarily choose who he/she chats to. He/she can only see and chat to the first person in the queue, and not anyone behind. This is important because it guards unipop against becoming an unwieldy and ultimately inefficient auctioning site.
 
 'Pops' page
 ---
-You pop something on unipop to sell; so each item a user tries to sell is referred to as a 'pop'.
+"Pop something on unipop!"
+
+Each item a user tries to sell is referred to as a 'pop'.
 
 Your 'pops page' is similar to a profile page, where all the pops you're selling or wanting can be seen.
 
@@ -99,7 +101,8 @@ Your 'pops page' is similar to a profile page, where all the pops you're selling
 Design Principles
 ===
 <!-- mobile first, responsive design, bootstrap elements, bootstrap buttons, grid/image-central view etc. Muhanad, Emma? -->
-Mobile first was our motto for the design. The design is responsive and uses bootstrap elements.
+Mobile first was our motto for the design. The design is responsive and uses bootstrap elements. The overall theme is self-created.
+
 [Back to the top]
 
 Technologies Used
@@ -193,7 +196,7 @@ Meet the team!
 
 **Thanks for reading!**
 
-[Louise Lai] [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
+[Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
 
 [Back to the top]
 

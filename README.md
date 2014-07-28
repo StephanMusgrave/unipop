@@ -37,9 +37,9 @@ There are several core features that make up the backbone of unipop. These featu
 
 Homepage
 ---
-The homepage is where all the images of stuff to sell are displayed. The design is clean and all images are contained within a beautiful, infinitely scrolling grid.
+The homepage is where all the images of stuff to sell are displayed. All images are contained within a beautiful, infinitely scrolling grid.
 
-From here, the user can easily click on things to navigate to the rest of the application.
+From here, the user can easily click on things to navigate anywhere.
 
 Item display page
 ---
@@ -55,7 +55,7 @@ They will see:
 
 I want it button
 ---
-The I want it button changes its function according to different conditions. It can change to several different buttons:
+The I want it button changes its function depending on the conditions. It can change to several different buttons:
 
 **I want it**
 
@@ -67,15 +67,24 @@ If you are NOT the first buyer, you will be placed on the waitlist for this part
 
 **I changed my mind**
 
-Let's say you changed your mind about the toaster you just wanted. There will always be a I changed my mind button present that rescinds your want. Don't worry if you accidentaly clicked it; unipop will flash an alert for double-confirmation.
+Let's say you changed your mind about the toaster you just wanted. There will always be a I changed my mind button present that rescinds your want.
+
+Don't worry if you accidentaly clicked it; unipop will flash an alert for double-confirmation.
 
 Chatroom
 ---
-Connecting buyers and sellers is what unipop is all about. So the need of a chatroom comes naturally.
+Connecting buyers and sellers is what unipop is all about.
+
+Each item only ever has one active chatroom, because the seller only chats to the first buyer in the waitlist. It's much like a marketplace, where the vendor only talks to the the first customer in the queue.
+
+The chatroom is real-time using Websockets.
 
 Queue management
 ---
 <!-- hi guys what I mean by this is the end negotion buttons, next buyer etc. -->
+Through the chatroom, the seller has control over his/her queue. 
+
+
 
 'Pops' page
 ---
@@ -122,12 +131,12 @@ Unipop can be run in your localhost if you wish to play around with the code. Yo
 
 First you'll need to clone this repo by typing this snippet into your terminal:
 ```
-$ git clone git@github.com:StephanMusgrave/ProjectX.git
+$ git clone git@github.com:StephanMusgrave/unipop.git
 ```
 
 Then change into the newly cloned directory:
 ```
-$ cd projectx
+$ cd unipop
 ```
 
 Acquire the necessary gems to run unipop:
@@ -185,13 +194,13 @@ Meet the team!
 
 [unipop]:http://unipop.herokuapp.com/
 
-[How to use unipop]:https://github.com/StephanMusgrave/ProjectX#how-to-use-unipop
-[Key features]:https://github.com/StephanMusgrave/ProjectX#key-features
-[Design principles]:https://github.com/StephanMusgrave/ProjectX#design-principles
-[Technologies used]:https://github.com/StephanMusgrave/ProjectX#technologies-used
-[Unipop for Coders]: https://github.com/StephanMusgrave/ProjectX#unipop-for-coders
-[Learning objectives]:https://github.com/StephanMusgrave/ProjectX#learning-objectives
-[Meet the team!]: https://github.com/StephanMusgrave/ProjectX#meet-the-team
+[How to use unipop]:https://github.com/StephanMusgrave/unipop#how-to-use-unipop
+[Key features]:https://github.com/StephanMusgrave/unipop#key-features
+[Design principles]:https://github.com/StephanMusgrave/unipop#design-principles
+[Technologies used]:https://github.com/StephanMusgrave/unipop#technologies-used
+[Unipop for Coders]: https://github.com/StephanMusgrave/unipop#unipop-for-coders
+[Learning objectives]:https://github.com/StephanMusgrave/unipop#learning-objectives
+[Meet the team!]: https://github.com/StephanMusgrave/unipop#meet-the-team
 
 [here]:http://unipop.herokuapp.com/
 [Heroku]:http://unipop.herokuapp.com/
@@ -205,4 +214,4 @@ Meet the team!
 [Steve Musgrave]:https://github.com/StephanMusgrave
 [Makers Academy]:http://www.makersacademy.com
 
-[Back to the top]:https://github.com/StephanMusgrave/ProjectX#table-of-contents
+[Back to the top]:https://github.com/StephanMusgrave/unipop#table-of-contents

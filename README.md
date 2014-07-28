@@ -29,7 +29,7 @@ Table of Contents
 Try unipop
 ===
 
-Get started with unipop [here].
+Get started with unipop [here]. You will need to sign up in order to access the full range of unipop's features. For now, you may sign in with any email, as long as it contains a '@' sign.
 
 Key Features
 ===
@@ -40,6 +40,16 @@ Homepage
 The homepage is where all the images of stuff to sell are displayed. All images are contained within a beautiful, infinitely scrolling grid.
 
 From here, the user can easily click on things to navigate anywhere.
+
+University verification
+---
+Nowadays, each university assigns a unique email address to its students. For example, New York University (NYU) will assign an alpha numeric email address like 'jk2662@nyu.edu' to each student.
+
+Unipop requires each student to have a valid university email address in order to sign up. Once signed up successfully, the user will automatically see all items sold by users that have the same email address. 
+
+E.g. People with an '@nyu.edu' address will see all posts by '@nyu.edu' users. They won't see posts by other universities, like'@harvard.edu' or '@lse.ac.uk'.
+
+A future consideration is to customize access to suit each university, as some universities are smaller and lack critical mass for unipop to be successful.
 
 Item display page
 ---

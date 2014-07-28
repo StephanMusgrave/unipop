@@ -90,11 +90,16 @@ However, in the name of fairness, the seller cannot arbitrarily choose who he/sh
 
 'Pops' page
 ---
+You pop something on unipop to sell; so each item a user tries to sell is referred to as a 'pop'.
+
+Your 'pops page' is similar to a profile page, where all the pops you're selling or wanting can be seen.
+
 [Back to the top]
 
 Design Principles
 ===
 <!-- mobile first, responsive design, bootstrap elements, bootstrap buttons, grid/image-central view etc. Muhanad, Emma? -->
+Mobile first was our motto for the design. The design is responsive and uses bootstrap elements.
 [Back to the top]
 
 Technologies Used

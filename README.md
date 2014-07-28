@@ -33,7 +33,7 @@ Get started with unipop [here]. You will need to sign to access the full range o
 
 Key Features
 ===
-There are several core features that shape unipop's personality. A lot of time was spent debating over the details of each feature, because each detail had implications on the greater application.
+There are several core features that shape unipop's personality. A lot of time was spent debating over the details of each feature, because each detail had implications on the greater whole.
 
 Homepage
 ---
@@ -49,9 +49,9 @@ Unipop requires each student to have a valid university email address in order t
 
 Once signed up successfully, the user has access to all items sold by users with the similar email ending.
 
-E.g. For example, New York University (NYU) will assign an alpha numeric email address like 'jk2662@nyu.edu' to each student. People with an '@nyu.edu' address will see all posts by '@nyu.edu' users. They won't see posts by other universities, like'@harvard.edu' or '@lse.ac.uk'.
+For example, New York University (NYU) will assign an alpha numeric email address like 'jk2662@nyu.edu' to each student. People with an '@nyu.edu' address will see all posts by '@nyu.edu' users. They won't see posts by other universities, like'@harvard.edu' or '@lse.ac.uk'.
 
-A future consideration is to customize access to suit each university, as some universities are smaller and lack critical mass for unipop to be successful.
+A future consideration is to customize access for each university, as some universities are smaller and lack critical mass for unipop to be successful.
 
 Item display page
 ---
@@ -87,7 +87,7 @@ Chatroom
 ---
 Connecting buyers and sellers is what unipop is all about.
 
-Each item only ever has one active chatroom, because the seller only chats to the first buyer in the waitlist. It's much like a marketplace, where the vendor only talks to the the first customer in the queue.
+Each item only ever has one active chatroom, because the seller only chats to the first buyer in the waitlist. It's like a marketplace, where the vendor only talks to the the first customer in the queue.
 
 The chatroom is made real-time using Websockets.
 
@@ -96,9 +96,11 @@ Queue management
 <!-- hi guys what I mean by this is the end negotion buttons, next buyer etc. -->
 Through the chatroom, the seller has control over his/her queue. 
 
-The seller can choose to end the negotiation with the current buyer and move on to the next buyer. 
+The seller can choose to end the negotiation with the current buyer and move on to the next buyer.
 
-However, in the name of fairness, the seller cannot arbitrarily choose who he/she chats to. He/she can only see and chat to the first person in the queue, and not anyone behind. This is important because it guards unipop against becoming an unwieldy and ultimately inefficient auctioning site.
+However, in the name of fairness, the seller cannot arbitrarily choose who he/she chats to. He/she can only identify and chat to the first person in the queue, and not anyone behind. 
+
+This is important because it guards unipop against becoming an unwieldy and ultimately inefficient auctioning site.
 
 'Pops' page
 ---
@@ -113,7 +115,7 @@ Your 'pops page' is similar to a profile page, where all the pops you are sellin
 Design Principles
 ===
 <!-- mobile first, responsive design, bootstrap elements, bootstrap buttons, grid/image-central view etc. Muhanad, Emma? -->
-Mobile first was our design motto. The design is responsive and uses bootstrap elements. The overall theme is self-created.
+Mobile first was our design motto. The design is responsive and uses bootstrap elements. The theme was created by ourselves.
 
 [Back to the index]
 

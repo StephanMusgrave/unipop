@@ -124,7 +124,7 @@ Technologies Used
 |---------------------------|--------------------------------|
 |Ruby                       |Main programming language       |
 |Javascript                 |Maps/Ajax & jQuery              |
-|Ajax                       |Instantaneous chat and better design  |
+|Ajax                       |Instantaneous chat and dynamic design  |
 |Websockets                 |Instantaneous chat  |
 |HTML5                      |Styling and using smartphone camera |
 |jQuery                     |Manipulating the DOM for a dynamic experience |
@@ -206,7 +206,7 @@ Meet the team!
 
 **Thanks for reading!**
 
-View our individual GitHubs:[Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
+View our individual GitHubs: [Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
 
 [Back to the index]
 

@@ -1,4 +1,3 @@
-
 Feature: Wanting an item
   In order to buy an item
   As a user

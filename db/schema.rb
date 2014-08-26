@@ -76,8 +76,6 @@ ActiveRecord::Schema.define(version: 20140617110228) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.integer  "seller_id"
-    t.string   "image_container"
-    t.string   "picture"
     t.boolean  "sold"
   end
 

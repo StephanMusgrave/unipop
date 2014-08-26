@@ -124,26 +124,24 @@ Technologies Used
 |---------------------------|--------------------------------|
 |Ruby                       |Main programming language       |
 |Javascript                 |Maps/Ajax & jQuery              |
-|Ajax                       |Instantaeous chat    |
+|Ajax                       |Instantaneous chat and better design  |
 |Websockets                 |Instantaneous chat  |
 |HTML5                      |Styling and using smartphone camera |
 |jQuery                     |Manipulating the DOM for a dynamic experience |
 |Ruby on Rails              |Web application framework |
 |[Heroku]                   |Deployment                      |
-|Heroku Secrets           |Pushing secrets to Heroku in Rails |
-|New Relic                  |Real time application monitoring|
-|Papertrail                 |Tracking events & log management|
 |Cucumber/Capybara          |Feature testing                 |
 |Rspec                      |Unit testing                    |
 |Factory Girl               |Quicker data generation for testing  |
-|Postgrsql                  |Database                        |
+|Postgresql                  |Database                        |
 |Devise                     |Creating users                  |
 |Amazon Web Services        |Hosting images              |
 |Paperclip                  |Uploading images                |
-|Bootstrap                  |Base theme                      |
-|CSS3                       |Styling                         |
 |Geolocation/Geomapper      |Calculating distance and showing maps  |
 |Will Paginate              |Infinite scrolling |
+|Heroku Secrets           |Pushing secrets to Heroku in Rails |
+|New Relic                  |Real time application monitoring|
+|Papertrail                 |Tracking events & log management|
 
 [Back to the index]
 
@@ -166,9 +164,9 @@ Acquire the necessary gems to run unipop:
 $ bundle install
 ```
 
-Update your database by running the migration:
+Update your database by running the migrations:
 ```
-$ bin/rake db:migrate
+$ bin/rake db:create db:migrate
 ```
 
 Run the application on your localhost (defaults to port 3000):
@@ -190,7 +188,7 @@ Learning Objectives
 ===
 * Materializing a concept into a functional product
 * Adding to and reinforcing our knowledge of Ruby and Rails
-* Using testing to drive the direction of our product (specifically, behaviour driven test driven developement)
+* Using testing to drive the direction of our product (behaviour driven test driven developement)
 * Agile team management
 * Pair programming
 
@@ -208,7 +206,7 @@ Meet the team!
 
 **Thanks for reading!**
 
-[Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
+View our individual GitHubs:[Louise Lai] | [Muhanad Al-Rubaiee] | [Ollie Delevingne] | [Shelley Hope] | [Emma Williams] | [Stefania Cardenas] | [Steve Musgrave]
 
 [Back to the index]
 

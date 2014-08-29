@@ -22,3 +22,17 @@
   font-family: 'target_font'; 
   src: url('../fonts/target_font.otf'); 
 }
+
+#logo_container {
+  display: flex;
+}
+
+.logo_text {
+  font-family: 'unipop_font';
+  font-size:  45px;
+}
+
+.logo_target {
+ font-family: 'target_font'; 
+ font-size:  25px;
+}

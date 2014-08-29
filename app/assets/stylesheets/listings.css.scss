@@ -2,3 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.listings_container {
+	background-image: url("../../images/background2.png");
+	color: #FEF2D8;
+	font-weight: 200;
+	font-family: 'unipop_font'
+}
+
+@font-face {
+  font-family: 'unipop_font'; 
+  src: url('../fonts/unipop1.otf');
+}
+
+@font-face {
+  font-family: 'target_font'; 
+  src: url('../fonts/target_font.otf'); 
+}

@@ -1,18 +1,17 @@
-<div class="listings container">
+<div class="listings_container">
 
 	<% if current_user %>
 		<% if @listings_per_page.any? %>
 			<%= render partial: 'listings/listing', collection: @listings_per_page.shuffle %>
 		<% else %>
 		  <div class="jumbotron">
-    		<div class="container">
+    		<div class="landing_container">
 					<h3>Hey, time to add some items!</h3>
 		<% end %>
 	<% else %>
 					<h1>Welcome to unipop!</h1>
 					<h3>Sign up to start buying and selling from your tribe.
 					Click on Sell to add your first pop!</h3>
-					<p></p>
 					<p align="right">
 						Don't have a unipop account yet?
         		<%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary btn-lg" %>

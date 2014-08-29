@@ -3,7 +3,9 @@ Feature: Showing a landing page
 	As a logged out user
 	I want to see a landing page
 
-Scenario: Show a welcome message
+Backgound:
 	Given I am on the homepage
-	And I am not logged in
-	Then I should see the message "Welcome to unipop!"
+	Given I am not logged in
+
+Scenario: Show a welcome message
+	Then I should see a messege "Welcome to unipop!"

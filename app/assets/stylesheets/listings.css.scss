@@ -6,7 +6,11 @@
 	background-image: url("../../images/background2.png");
 	color: #FEF2D8;
 	font-weight: 200;
-	font-family: 'unipop_font'
+	font-family: 'unipop_font';
+	background-repeat: repeat-y;
+	width: auto;
+	height: 500px;
+	background-size: 120%;
 }
 
 @font-face {

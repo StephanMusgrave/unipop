@@ -10,10 +10,6 @@ body {
 	padding-bottom: 40px;
 }
 
-#logo_img {
-	height: auto;
-}
-
 #navbar_container {
 	display: flex;
 }
@@ -64,19 +60,15 @@ background-image: linear-gradient(to bottom, rgb(3, 111, 115) 94%);
 	margin-bottom: 20px;
 }
 
-
 header #logo {
-	float:left;
-	margin-left: 5%;
+	float: left;
+	margin-left: 2%;
+	margin-top: 2px;
 }
-
 
 @media (max-width: 991px) {
 	header #logo {
 		display: none;
-	}
-	header #logo img.resize {
-		max-width: 30%;
 	}
 }
 header a,

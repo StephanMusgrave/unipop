@@ -136,7 +136,7 @@ Technologies Used
 |Postgresql                  |Database                        |
 |Devise                     |Creating users                  |
 |Amazon Web Services        |Hosting images              |
-|Paperclip                  |Uploading images                |
+|Paperclip                  |A file attachment library for Active Record, used for uploading images|
 |Geolocation/Geomapper      |Calculating distance and showing maps  |
 |Will Paginate              |Infinite scrolling |
 |Heroku Secrets           |Pushing secrets to Heroku in Rails |

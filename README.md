@@ -79,7 +79,7 @@ If you are NOT the first buyer, you will be placed on the waitlist for this part
 
 Let's say you changed your mind about the kettle you just wanted. There will always be a I changed my mind button present that rescinds your want.
 
-Don't worry if you accidentaly clicked it; unipop will flash an alert for double-confirmation.
+Don't worry if you accidentally clicked it; unipop will flash an alert for double-confirmation.
 
 Chatroom
 ---
